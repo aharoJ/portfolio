@@ -1,59 +1,204 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore general generated files
+tools/
+dev/
+link.py
+unlink.py
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       aharoJ         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ }
-**test.js
-**00
-
-# misc
-.DS_Store
-*.pem
-
-# ignore ".trash" directory
+# Ignore specific directories
 /.trash
-
-# Ignore the ".obsidian" folder
 /.obsidian
 
-# Ignore .DS_Store files
+# Ignore system files
 .DS_Store
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ...........         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Recommended Default         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ }
+# Ignore my school stuff
+school/
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore general directories
+00/
+01/
+02/
+mynotes/
+notes/
+script.sh
+*.zip
+/.script
+/.scripts
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+# Ignore general settings
+github-copilot
+nvim/.vscode
 
-# testing
-/coverage
+# Ignore Python bytecode and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# next.js
-/.next/
-/out/
+# Ignore C extensions
+*.so
 
-# production
-/build
+# Ignore distribution/packaging files
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# misc
-.DS_Store
-*.pem
+# Ignore PyInstaller files
+*.manifest
+*.spec
 
-# debug
+# Ignore installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore unit test/coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Ignore translation files
+*.mo
+*.pot
+
+# Ignore Django specific files
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Ignore Flask specific files
+instance/
+.webassets-cache
+
+# Ignore Scrapy specific files
+.scrapy
+
+# Ignore Sphinx documentation
+docs/_build/
+
+# Ignore PyBuilder files
+target/
+
+# Ignore Jupyter Notebook files
+.ipynb_checkpoints
+
+# Ignore IPython files
+profile_default/
+ipython_config.py
+
+# Ignore pyenv files
+.python-version
+
+# Ignore pipenv files
+#Pipfile.lock
+
+# Ignore PEP 582 files
+__pypackages__/
+
+# Ignore Celery files
+celerybeat-schedule
+celerybeat.pid
+
+# Ignore SageMath parsed files
+*.sage.py
+
+# Ignore environment directories and files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore Spyder project settings
+.spyderproject
+.spyproject
+
+# Ignore Rope project settings
+.ropeproject
+
+# Ignore mkdocs documentation
+/site
+
+# Ignore mypy files
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ignore Pyre type checker files
+.pyre/
+
+# Ignore Java build files
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+
+# Ignore Eclipse IDE files
+.project
+.classpath
+.settings/
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+out/
+
+# Ignore Spring Boot specific files
+logs/
+*.log
+*.swp
+spring.log
+
+# Ignore TypeScript build files
+*.tsbuildinfo
+
+# Ignore React specific files
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.cache/
+.parcel-cache/
+dist/
 
-# local env files
-.env*.local
+# Ignore WebStorm files
+.idea/
+.vscode/
+backend/src/main/resources/application.properties
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ...........         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Ignore Obsidian specific files
+programming/app projects/twitter/.obsidian/workspace.json
+.next
