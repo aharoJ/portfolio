@@ -1,6 +1,7 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
+import LandingStats from "@/components/casa/LandingStats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -14,12 +15,12 @@ const Home = () => {
         >
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl"> Software Developer </span>
+            <span className="text-xl"> Full Stack Software Engineer </span>
             <h1 className="h1">
-              Hello I am <br />{" "}
-              <span className="text-accent"> Angel J Haro </span>
+              Angel Jair Haro <br />{" "}
+              <h3 className="text-main justify-center text-center"> aharoJ </h3>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] my-2 text-white/80">
               I excel in backend developemnt and i am proficient in various
               programming languages and frameworks.
             </p>
@@ -47,7 +48,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats />
+      {/* <Stats /> */}
+      <LandingStats />
     </section>
   );
 };
