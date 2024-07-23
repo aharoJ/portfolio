@@ -1,5 +1,7 @@
 # TEMP
 components.json
+package-lock.json
+package.json
 tsconfig.json
 
 
@@ -209,6 +211,8 @@ backend/src/main/resources/application.properties
 programming/app projects/twitter/.obsidian/workspace.json
 .next
 components.json
+package-lock.json
+package.json
 tsconfig.json
 next-env.d.ts
 next.config.mjs
