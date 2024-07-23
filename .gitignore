@@ -1,7 +1,5 @@
 # TEMP
 components.json
-package-lock.json
-package.json
 tsconfig.json
 
 
@@ -218,3 +216,4 @@ next-env.d.ts
 next.config.mjs
 postcss.config.mjs
 tailwind.config.ts
+.vercel
