@@ -21,28 +21,27 @@ const EducationInfo: React.FC<EducationInfoProps> = ({
 }) => {
   const listItemRef = useRef<HTMLLIElement | null>(null);
   return (
-    <div className="w-full">
+    <div className="w-full mx-auto container">
       <div className="flex justify-between items-start w-full">
         <div className="flex flex-col">
-          <h1 className="text-xl font-medium text-white/80">{school}</h1>
-          <h2 className="text-xl font-light tracking-wide text-white/70">
+          <h1 className="text-3xl font-medium text-white/80">
+            {school}
+          </h1>
+          <h2 className="text-2xl font-light tracking-wide text-white/70">
             {degree}
           </h2>
         </div>
         <div className="flex flex-col text-right">
-          <p className="text-base font-normal text-white/70">{date}</p>
+          <p className="text-xl hidden lg:block font-normal text-white/70">{date}</p>
           {gpa && (
-            <p className="text-base font-normal text-white/70">GPA: {gpa}</p>
+            <p className="text-xl hidden lg:block font-normal text-white/70">GPA: {gpa}</p>
           )}
         </div>
       </div>
       {achievements && (
-        <ul className="mt-2 list-disc pl-5">
+        <ul className="mt-6 list-disc pl-5">
           {achievements.map((achievement, index) => (
-            <li
-              className="mt-2 text-base font-normal text-white/80"
-              key={index}
-            >
+            <li className="my-4 lg:text-lg text-base font-normal text-white/80" key={index}>
               {achievement}
             </li>
           ))}
@@ -77,7 +76,7 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
   return (
     <li
       ref={listItemRef}
-      className="mx-auto my-10 flex w-[90%] flex-col items-start first:mt-0 last:mb-0 "
+      className="mx-auto my-14 flex w-[90%] flex-col items-start first:mt-0 last:mb-0 "
     >
       <ScrollListAnimation reference={listItemRef} />
 
@@ -87,23 +86,27 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
         transition={{ duration: 1.5, type: "spring" }}
         className="w-full"
       >
-        <div className="flex justify-between items-start w-full">
+        <div className="flex  justify-between items-start w-full mx-4 lg:mx-auto">
           <div className="flex flex-col">
-            <h1 className="text-xl font-medium ita text-white/80">{title}</h1>
-            <h2 className="text-xl font-light tracking-wide text-white/70">
+            <h1 className="text-3xl  font-medium  text-white/80 ">{title}</h1>
+            <h2 className="text-2xl  font-light tracking-wide  text-white/70">
               {company}
             </h2>
           </div>
           <div className="flex flex-col text-right">
-            <p className="text-base font-normal text-white/70">{date}</p>
-            <p className="text-base font-normal text-white/80">{location}</p>
+            <p className="lg:text-xl hidden lg:block lg:font-normal text-white/70">
+              {date}
+            </p>
+            <p className="lg:text-xl hidden lg:block lg:font-normal text-white/80">
+              {location}
+            </p>
           </div>
         </div>
         {bullets && (
           <ul className="mt-2 list-disc pl-5">
             {bullets.map((bullet, index) => (
               <li
-                className="mt-2 text-base font-normal text-white/80"
+                className="mt-2 lg:text-lg text-base font-normal text-white/80"
                 key={index}
               >
                 {bullet}
@@ -125,7 +128,6 @@ const Timeline: React.FC = () => {
 
   return (
     <div className="flex container w-full flex-col">
-
       {/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
       <h2 className="my-12 w-full text-center text-7xl font-light tracking-tight text-white ">
         Education
@@ -140,7 +142,7 @@ const Timeline: React.FC = () => {
           "Google Scholarship, December (2023): Awarded a scholarship under the mentorship of Dr. Tang as a Google Explorer.",
           "GMiS Conference, October (2023): Achieved 2nd place out of 300+ contestants, competed in a hackathon and placed 5th place.",
           "Research for LREU, May (2023): Received funding for Mutation Research.",
-          "Summer Cord, Jun (2022): Led a competitive robotics summer course, engaging over 40 students in advanced problem-solving and coding. Designed a maze challenge, which students navigated using robots programmed with JavaScript and Swift.",
+          "Summer Cord, Jun (2022): Led a competitive robotics summer course, engaging over 40 students in advanced problem-solving, coding and designed a maze challenge, which students navigated using robots programmed with JavaScript and Swift.",
           "T-Mobile Regional Best Seller, Jun (2021): Recognized as the most influential M-expert & shadow Trainer for the East Los Angeles Region.",
           "Awards: Latinos for Engineering Class Scholarship - Fall (2022), Latinos for Engineering Class Scholarship - Spring (2023), Honors Society within the Universities club to receive external benefits.",
           "Technical Coursework: Intro to CS and Programming (I, II, III), Software Development, Assembly, Discrete Structures, Applied Data Structures, Data Structures, Computer Organization, Machine Learning, Analysis of Algorithms, Relational Database, Senior Design.",
