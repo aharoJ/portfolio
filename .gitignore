@@ -219,3 +219,4 @@ next.config.mjs
 postcss.config.mjs
 tailwind.config.ts
 .vercel
+frontend/src/components/about/ScrollListAnimation.tsx
