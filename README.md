@@ -8,7 +8,7 @@
 ![alt text](frontend/public/projects/portfolio.png)
 
 
-> Dedicated dynamic code for iPhone | iPad | Desktop | Ultrawide
+> Responsive and Adaptive Code for iPhone, iPad, Desktop, and Ultrawide Displays
 
 ![alt text](frontend/public/projects/DedicatedDynamicCodebase.png)
 
