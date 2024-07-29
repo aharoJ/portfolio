@@ -5,8 +5,7 @@
 <img src="https://docs.google.com/uc?export=download&id=1HsBpakQVutfOmxBcPbGpKdo_oGEoKJZT" alt="" height="35" >
 </h1>
 
-![alt text](frontend/public/projects/portfolio.png)
-
+![alt text](frontend/public/projects/ResponsiveCodebase.png)
 
 > Responsive and Adaptive Code for iPhone, iPad, Desktop, and Ultrawide Displays
 
