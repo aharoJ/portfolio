@@ -7,8 +7,12 @@
 
 ![alt text](frontend/public/projects/portfolio.png)
 
-# How To Run 
 
+> Dedicated dynamic code for iPhone | iPad | Desktop | Ultrawide
+
+![alt text](frontend/public/projects/DedicatedDynamicCodebase.png)
+
+# How To Run 
 
 ## Frontend 
 1. Clone 
@@ -35,14 +39,14 @@ npm install --force
 ---
 
 ## Backend
-- No backend as of 07.28.2024
+- No backend integration rebase yet. 
 
 
 
 # Technologies Used
-TypeScript
-Next.js 14
-Tailwind CSS
-Framer Motion
-React Icon
+- TypeScript
+- Next.js 14
+- Tailwind CSS
+- Framer Motion
+- React Icon
 
