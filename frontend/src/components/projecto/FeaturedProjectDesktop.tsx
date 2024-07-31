@@ -26,20 +26,23 @@ const FeaturedProjectDesktop: React.FC<BigProjectProps> = ({
   github,
 }) => {
   return (
-    <div className="container hidden lg:block">
-      <article className="container mx-auto relative flex flex-col w-full items-center rounded-3xl border-2 border-solid border-dark bg-main p-4">
+    <div className="container hidden lg:block w-[95%]">
+      <article
+        className="container mx-auto relative flex flex-col w-full items-center rounded-3xl 
+        border-2 border-solid border-dark bg-main p-4"
+      >
         <div className="absolute -right-3 top-0 -z-10 h-[101%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-white" />
 
-        <div className="flex w-full">
+        <div className="flex flex-col w-full items-center">
           <Link
             href={link}
             target="_blank"
-            className="w-[60%] cursor-pointer overflow-hidden rounded-3xl"
+            className="w-full cursor-pointer overflow-hidden rounded-3xl"
           >
             <FramerImage
               src={img}
               alt={title}
-              className="h-full w-full"
+              className="h-auto w-full"
               priority
               whileHover={{ scale: 1.25 }}
               transition={{ duration: 0.2 }}
@@ -49,21 +52,22 @@ const FeaturedProjectDesktop: React.FC<BigProjectProps> = ({
             />
           </Link>
 
-          <div className="flex w-[40%] flex-col p-4">
-            <div className="flex flex-wrap justify-start space-x-2">
+          <div className="flex w-full flex-col p-4">
+            <div className="flex flex-wrap justify-start space-x-8 mb-4">
               {hashtags.map((tag, index) => (
-                <span key={index} className="text-base font-light text-dark/80">
+                <span key={index} className="text-lg  font-light text-dark/80">
                   #{tag}
                 </span>
               ))}
             </div>
 
-            <div className="flex w-full justify-start space-x-12 items-center my-4">
-              <h2 className="text-5xl font-semibold text-gray-400">{title}</h2>
+            <div className="flex w-full justify-between space-x-0 items-center mb-4">
+              <h2 className="text-6xl  font-semibold text-gray-400">{title}</h2>
               <GithubProjectIcon path={github} />
+              <br />
             </div>
 
-            <p className="text-base font-normal text-dark/80 ">{description}</p>
+            <p className="text-xl font-normal text-dark/80 ">{description}</p>
           </div>
         </div>
       </article>
