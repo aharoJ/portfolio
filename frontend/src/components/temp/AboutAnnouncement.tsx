@@ -4,7 +4,7 @@ const AboutAnnouncement = () => {
   return (
     <div className="container mx-auto h-full my-24">
       <h2 className="h2 justify-center flex "> NOTICE </h2>
-      <span className="text-green-300 text-3xl">Announcement: 07.31.2024</span>
+      <span className="text-green-300 text-3xl">Announcement: 08.15.2024</span>
       <p> • Updating description </p>
       <p> • Updating titles </p>
       <p> • Updating dates </p>
