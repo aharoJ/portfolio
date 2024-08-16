@@ -2,7 +2,7 @@ import Timeline from "@/components/about/Timeline";
 import AboutAnnouncement from "@/components/temp/AboutAnnouncement";
 import React from "react";
 
-const page = () => {
+const About = () => {
   return (
     <>
       <div>
@@ -10,9 +10,9 @@ const page = () => {
       </div>
 
       {/* <h1 className="flex container justify-center text-9xl"> DIVIDER </h1> */}
-      <AboutAnnouncement/>
+      <AboutAnnouncement />
     </>
   );
 };
 
-export default page;
+export default About;
