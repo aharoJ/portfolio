@@ -13,16 +13,16 @@ const Header = () => {
         {/* logo */}
         <Link href="/">
           <h1 className="text-4xl font-semibold">
-            aharoJ <span className="text-accent">. </span>
+            aharo<span className="text-primary">J</span>
           </h1>
         </Link>
 
         {/* desktop nav && hire me button */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="/contact">
-            <Button> Contact </Button>
-          </Link>
+          {/* <Link href="/contact"> */}
+          {/*   <Button> Contact </Button> */}
+          {/* </Link> */}
         </div>
 
         {/* mobile nav */}
