@@ -1,15 +1,61 @@
 "use client";
 import React, { ReactNode } from "react";
+
 import {
+  FaJava,
   FaHtml5,
   FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs, SiNextui } from "react-icons/si";
+import {
+  SiSpring,
+  SiPostman,
+  SiReact,
+  SiPython,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiApachecassandra,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiBootstrap,
+  SiRedux,
+  SiFramer,
+  SiThreedotjs,
+  SiFlask,
+  SiDjango,
+  SiTypescript,
+  SiJavascript,
+  SiKubernetes,
+  SiGooglecloud,
+  SiMicrosoftazure,
+  SiAmazonaws,
+  SiZsh,
+  SiGnubash,
+  SiFishshell,
+  SiThymeleaf,
+  SiApachemaven,
+  SiSpringboot,
+  SiApachetomcat,
+  SiVite,
+  SiRust,
+  SiTmux,
+  // SiYabai,
+  SiToml,
+  SiLua,
+} from "react-icons/si";
+
+import { BsFiletypeXml } from "react-icons/bs";
+
+import { GiEgyptianBird } from "react-icons/gi";
+
+import { DiVim } from "react-icons/di";
+
+import { GiDwarfFace } from "react-icons/gi";
+
+import { FaDocker, FaJenkins } from "react-icons/fa";
+
+import { TbH2 } from "react-icons/tb";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -23,61 +69,6 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { motion } from "framer-motion";
-
-// ************** EXPERIENCE ********************
-interface ExperienceItem {
-  company: string;
-  position: string;
-  duration: string;
-}
-
-interface ExperienceList {
-  icon: string;
-  title: string;
-  description: string;
-  items: ExperienceItem[];
-}
-
-const experience: ExperienceList = {
-  icon: "/assets/resume/badge.svg",
-  title: "My experience",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
-  items: [
-    {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-    {
-      company: "Unity Backend Dev",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-    {
-      company: "Discord Mod ",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-
-    {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-    {
-      company: "Unity Backend Dev",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-    {
-      company: "Discord Mod ",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-  ],
-};
-// **********************************
 
 // ************** EDUCATION ********************
 interface EducationItem {
@@ -118,214 +109,302 @@ const education: EducationList = {
 
 // **********************************
 
-// ************** SKILLS ********************
-interface SkillItem {
+// ************** BACKEND SKILLS ********************
+interface BackendItem {
   icon: ReactNode;
-  name: string;
+  icon_name: string;
 }
 
-interface SkillList {
+interface BackendList {
   title: string;
-  skillList: SkillItem[];
+  backendList: BackendItem[];
 }
 
-const skills: SkillList = {
-  title: "My skills",
-  skillList: [
-    { icon: <FaHtml5 />, name: "HTML 5" },
-    { icon: <FaCss3 />, name: "CSS 3" },
-    { icon: <FaJs />, name: "JavaScript" },
-    { icon: <FaReact />, name: "React" },
-    { icon: <FaFigma />, name: "Figma" },
-    { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-    { icon: <SiNextdotjs />, name: "Next.js" },
-    { icon: <SiNextui />, name: "NextUI" },
-
-    { icon: <FaHtml5 />, name: "HTML 5" },
-    { icon: <FaCss3 />, name: "CSS 3" },
-    { icon: <FaJs />, name: "JavaScript" },
-    { icon: <FaReact />, name: "React" },
-    { icon: <FaFigma />, name: "Figma" },
-    { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-    { icon: <SiNextdotjs />, name: "Next.js" },
-    { icon: <SiNextui />, name: "NextUI" },
+const backend: BackendList = {
+  title: "Backend Stuff",
+  backendList: [
+    { icon: <FaJava />, icon_name: "Java" },
+    { icon: <SiPython />, icon_name: "Python" },
+    { icon: <SiRust />, icon_name: "Rust" },
+    { icon: <BsFiletypeXml />, icon_name: "XML" },
+    { icon: <SiApachemaven />, icon_name: "Apachemaven" },
+    { icon: <GiDwarfFace />, icon_name: "LittleDarwin" },
+    { icon: <GiEgyptianBird />, icon_name: "Pitest" },
+    { icon: <SiSpring />, icon_name: "Spring" },
+    { icon: <SiSpringboot />, icon_name: "Spring Boot" },
+    { icon: <SiThymeleaf />, icon_name: "Thymeleaf" },
+    { icon: <SiFlask />, icon_name: "Flask" },
+    { icon: <SiDjango />, icon_name: "Django" },
+    { icon: <SiPostman />, icon_name: "Postman" },
   ],
 };
 // **********************************
 
-// ************** ABOUT ********************
-interface AboutItem {
-  fieldName: string;
-  fieldValue: string;
+// ************** DATABASE SKILLS ********************
+interface DatabaseItem {
+  icon: ReactNode;
+  icon_name: string;
 }
 
-interface AboutList {
+interface DatabaseList {
   title: string;
-  description: string;
-  info: AboutItem[];
+  databaseList: DatabaseItem[];
 }
 
-const about: AboutList = {
-  title: "About me",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  info: [
-    { fieldName: "Name", fieldValue: "Angel J Haro" },
-    { fieldName: "Phone", fieldValue: "+1 (562) 000 - 0000" },
-    { fieldName: "Experience", fieldValue: "2+ years" },
-    { fieldName: "Email", fieldValue: "hehe@gmail.com" },
+const database: DatabaseList = {
+  title: "Database Stuff",
+  databaseList: [
+    { icon: <SiPostgresql />, icon_name: "PostgreSQL" },
+    { icon: <TbH2 />, icon_name: "H2 Database" },
+    { icon: <SiMysql />, icon_name: "MySQL" },
+    { icon: <SiApachecassandra />, icon_name: "Apache Cassandra" },
+    { icon: <SiMongodb />, icon_name: "MongoDB" },
+  ],
+};
+// **********************************
+
+// ************** DEVOPS SKILLS ********************
+interface DevOpsItem {
+  icon: ReactNode;
+  icon_name: string;
+}
+
+interface DevOpsList {
+  title: string;
+  devopsList: DevOpsItem[];
+}
+
+const devops: DevOpsList = {
+  title: "DevOps Stuff",
+  devopsList: [
+    { icon: <SiFishshell />, icon_name: "Fish Shell" },
+    { icon: <DiVim />, icon_name: "Nvim / Vim" },
+    { icon: <SiGnubash />, icon_name: "Bash" },
+    { icon: <SiZsh />, icon_name: "Zsh" },
+    { icon: <SiToml />, icon_name: "TOML" },
+    { icon: <SiLua />, icon_name: "Nvim / Vim" },
+    { icon: <FaDocker />, icon_name: "Docker" },
+    { icon: <SiApachetomcat />, icon_name: "Apachetomcat" },
+    { icon: <SiKubernetes />, icon_name: "Kubernetes" },
+    { icon: <FaJenkins />, icon_name: "Jenkins" },
+    { icon: <SiGooglecloud />, icon_name: "Google Cloud Platform" },
+    { icon: <SiMicrosoftazure />, icon_name: "Microsoft Azure" },
+    { icon: <SiAmazonaws />, icon_name: "AWS" },
+    { icon: <SiTmux />, icon_name: "Tmux" },
+  ],
+};
+// **********************************
+
+// ************** FRONTEND SKILLS ********************
+interface FrontendItem {
+  icon: ReactNode;
+  icon_name: string;
+}
+
+interface FrontendList {
+  title: string;
+  frontendList: FrontendItem[];
+}
+
+const frontend: FrontendList = {
+  title: "Frontend Stuff",
+  frontendList: [
+    { icon: <SiTypescript />, icon_name: "TypeScript" },
+    { icon: <SiJavascript />, icon_name: "JavaScript" },
+    { icon: <FaHtml5 />, icon_name: "HTML 5" },
+    { icon: <FaCss3 />, icon_name: "CSS 3" },
+    { icon: <SiReact />, icon_name: "React" },
+    { icon: <SiNextdotjs />, icon_name: "Next.js" },
+    { icon: <SiVite />, icon_name: "Vite.js" },
+    { icon: <SiTailwindcss />, icon_name: "Tailwind CSS" },
+    { icon: <SiBootstrap />, icon_name: "Bootstrap" },
+    { icon: <SiRedux />, icon_name: "Redux" },
+    { icon: <SiFramer />, icon_name: "Framer Motion" },
+    { icon: <SiThreedotjs />, icon_name: "Three.js" },
   ],
 };
 // **********************************
 
 const Resume = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
-    >
-      <div className="container mx-auto">
-        <Tabs
-          defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
-        >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience"> Experience </TabsTrigger>
-            <TabsTrigger value="education"> Education </TabsTrigger>
-            <TabsTrigger value="skills"> Skills </TabsTrigger>
-            <TabsTrigger value="about"> About me </TabsTrigger>
-          </TabsList>
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        }}
+        className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      >
+        <div className="container mx-auto">
+          <Tabs
+            defaultValue="education"
+            className="flex flex-col md:flex-row gap-[60px]"
+          >
+            <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+              <TabsTrigger value="education"> Education </TabsTrigger>
+              <TabsTrigger value="backend"> Backend </TabsTrigger>
+              <TabsTrigger value="database"> Database </TabsTrigger>
+              <TabsTrigger value="devops"> DevOps </TabsTrigger>
+              <TabsTrigger value="frontend"> Frontend </TabsTrigger>
+            </TabsList>
 
-          <div className="min-h-[70vh] w-full ">
-            {/* RETURN EXPERIENCE */}
-            <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold "> {experience.title} </h3>
-                <div className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
-                  <ScrollArea className="h-[400px]">
-                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] ">
-                      {experience.items.map((item, index) => (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className=" text-primary">{item.duration}</span>
-                          <h3 className=" text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-primary">
-                              {" "}
-                            </span>
-                            <p className="text-white/60"> {item.company} </p>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </ScrollArea>
+            <div className="min-h-[70vh] w-full ">
+              {/* RETURN EDUCATION */}
+              <TabsContent value="education" className="w-full">
+                <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold"> {education.title} </h3>
+                  <div className="max-w-[1200px] text-white/60 mx-auto ">
+                    <ScrollArea className="h-[400px] rounded-xl ">
+                      {/* Added ScrollArea */}
+                      <div className="bg-[#232329] p-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2 mt-2 shadow-lg">
+                        <div className="flex justify-between w-full">
+                          <span className="text-white/60 text-lg font-semibold">
+                            {education.items[0].location}
+                          </span>
+                          <span className="text-white/60 text-lg font-semibold">
+                            GPA: {education.items[0].gpa}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-normal text-center lg:text-left ">
+                          {education.items[0].degree}
+                        </h3>
+                        <div className="text-primary tracking-wide text-xl">
+                          {education.items[0].institution}
+                        </div>
+                        {/* Bullet Points Inside the Background */}
+                        <ul className="list-disc pl-6 mt-4 space-y-2 text-white/60">
+                          {education.items[0].details.map((detail, index) => (
+                            <li key={index}>{detail}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </ScrollArea>
+                  </div>
                 </div>
-              </div>
-            </TabsContent>
+              </TabsContent>
 
-            {/* RETURN EDUCATION */}
-            <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[10px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold"> {education.title} </h3>
-                <div className="max-w-[1200px] text-white/60 mx-auto ">
-                  <ScrollArea className="h-[400px] rounded-xl ">
-                    {" "}
-                    {/* Added ScrollArea */}
-                    <div className="bg-[#232329] p-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2 mt-8 shadow-lg">
-                      <div className="flex justify-between w-full">
-                        <span className="text-white/60 text-lg font-semibold">
-                          {education.items[0].location}
-                        </span>
-                        <span className="text-white/60 text-lg font-semibold">
-                          GPA: {education.items[0].gpa}
-                        </span>
-                      </div>
-                      <h3 className="text-2xl font-normal text-center lg:text-left ">
-                        {education.items[0].degree}
-                      </h3>
-                      <div className="text-primary tracking-wide text-xl">
-                        {education.items[0].institution}
-                      </div>
-                      {/* Bullet Points Inside the Background */}
-                      <ul className="list-disc pl-6 mt-4 space-y-2 text-white/60">
-                        {education.items[0].details.map((detail, index) => (
-                          <li key={index}>{detail}</li>
+              {/* RETURN BACKEND SKILLS */}
+              <TabsContent value="backend" className="w-full h-full">
+                <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold"> {backend.title} </h3>
+                  <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
+                    <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
+                      <ul className="grid grid-cols-3 gap-[30px] gap-y-14">
+                        {backend.backendList.map((backend, index) => (
+                          <li key={index}>
+                            <TooltipProvider delayDuration={100}>
+                              <Tooltip>
+                                <TooltipTrigger className="w-full h-[150px] bg-[#1e1e24] rounded-xl flex items-center justify-center group">
+                                  <div className="text-8xl group-hover:text-primary transition-all duration-300">
+                                    {backend.icon}
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p> {backend.icon_name} </p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          </li>
                         ))}
                       </ul>
-                    </div>
-                  </ScrollArea>
+                    </ScrollArea>
+                  </div>
                 </div>
-              </div>
-            </TabsContent>
+              </TabsContent>
 
-            {/* RETURN SKILLS */}
-            <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[10px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold"> {skills.title} </h3>
-                <div className="max-w-[1200] mx-auto xl:mx-0 mt-8">
-                  <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
-                    <ul className="grid grid-cols-3 gap-[30px] gap-y-14">
-                      {skills.skillList.map((skill, index) => (
-                        <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className="w-full h-[150px] bg-[#1e1e24] rounded-xl flex items-center justify-center group">
-                                <div className="text-8xl group-hover:text-primary transition-all duration-300">
-                                  {skill.icon}
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p> {skill.name} </p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </li>
-                      ))}
-                    </ul>
-                  </ScrollArea>
+              {/* RETURN DATABASE SKILLS */}
+              <TabsContent value="database" className="w-full h-full">
+                <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold"> {database.title} </h3>
+                  <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
+                    <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
+                      <ul className="grid grid-cols-3 gap-[30px] gap-y-14">
+                        {database.databaseList.map((database, index) => (
+                          <li key={index}>
+                            <TooltipProvider delayDuration={100}>
+                              <Tooltip>
+                                <TooltipTrigger className="w-full h-[150px] bg-[#1e1e24] rounded-xl flex items-center justify-center group">
+                                  <div className="text-8xl group-hover:text-primary transition-all duration-300">
+                                    {database.icon}
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p> {database.icon_name} </p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          </li>
+                        ))}
+                      </ul>
+                    </ScrollArea>
+                  </div>
                 </div>
-              </div>
-            </TabsContent>
-            {/* RETURN ABOUT */}
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold "> {about.title}</h3>
-                <p className="max-w-[600px] text-white/60 max-auto xl:mx-0 ">
-                  {about.description}
-                </p>
-                <ul
-                  className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
-                  mx-auto"
-                >
-                  {about.info.map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center justify-center xl:justify-start gap-4"
-                    >
-                      <span className="text-white/60"> {item.fieldName}</span>
-                      <span className=" text-xl"> {item.fieldValue}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </TabsContent>
-          </div>
-        </Tabs>
-      </div>
-    </motion.div>
+              </TabsContent>
+
+              {/* RETURN DEVOPS SKILLS */}
+              <TabsContent value="devops" className="w-full h-full">
+                <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold"> {devops.title} </h3>
+                  <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
+                    <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
+                      <ul className="grid grid-cols-3 gap-[30px] gap-y-14">
+                        {devops.devopsList.map((devopsItem, index) => (
+                          <li key={index}>
+                            <TooltipProvider delayDuration={100}>
+                              <Tooltip>
+                                <TooltipTrigger className="w-full h-[150px] bg-[#1e1e24] rounded-xl flex items-center justify-center group">
+                                  <div className="text-8xl group-hover:text-primary transition-all duration-300">
+                                    {devopsItem.icon}
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p> {devopsItem.icon_name} </p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          </li>
+                        ))}
+                      </ul>
+                    </ScrollArea>
+                  </div>
+                </div>
+              </TabsContent>
+
+              {/* RETURN FRONTEND SKILLS */}
+              <TabsContent value="frontend" className="w-full h-full">
+                <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold"> {frontend.title} </h3>
+                  <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
+                    <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
+                      <ul className="grid grid-cols-3 gap-[30px] gap-y-14">
+                        {frontend.frontendList.map((frontend, index) => (
+                          <li key={index}>
+                            <TooltipProvider delayDuration={100}>
+                              <Tooltip>
+                                <TooltipTrigger className="w-full h-[150px] bg-[#1e1e24] rounded-xl flex items-center justify-center group">
+                                  <div className="text-8xl group-hover:text-primary transition-all duration-300">
+                                    {frontend.icon}
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p> {frontend.icon_name} </p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          </li>
+                        ))}
+                      </ul>
+                    </ScrollArea>
+                  </div>
+                </div>
+              </TabsContent>
+            </div>
+          </Tabs>
+        </div>
+      </motion.div>
+      <h1 className="text-5xl justify-center"> LALALA</h1>
+    </>
   );
 };
 
