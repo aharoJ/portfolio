@@ -1,19 +1,20 @@
 import React from "react";
-import twitter from "../../../public/projects/twitter.png";
-import FeaturedProject from "@/components/proj/FeaturedProject";
+import StandardGridDesktop from "@/components/projecto/standard/grid/StandardGridDesktop";
+import StandardGridMobile from "@/components/projecto/standard/grid/StandardGridMobile";
 
-const Featured: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <>
-      <div>
-        <h1>HELLOW </h1>
-      </div>
+      {/* <h1 className="h1 flex justify-center mb-24"> Featured Desktop </h1> */}
+      <StandardGridDesktop />
 
-      <div>
-        <FeaturedProject />
-      </div>
+      {/* <h1 className="h1 flex justify-center mb-24">Standard Desktop Project</h1> */}
+      <StandardGridMobile />
+
+      {/* <h1 className="h1 flex justify-center mb-24"> Standard Mobile Project </h1> */}
+      {/* <LandingStandardMobile/> */}
     </>
   );
 };
 
-export default Featured;
+export default Projects;
