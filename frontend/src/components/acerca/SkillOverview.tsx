@@ -24,8 +24,6 @@ import {
   SiJavascript,
   SiKubernetes,
   SiGooglecloud,
-  SiMicrosoftazure,
-  SiAmazonaws,
   SiZsh,
   SiGnubash,
   SiFishshell,
@@ -40,6 +38,9 @@ import {
   SiToml,
   SiLua,
 } from "react-icons/si";
+
+import { FaAws } from "react-icons/fa";
+
 
 import { BsFiletypeXml } from "react-icons/bs";
 
@@ -184,8 +185,7 @@ const devops: DevOpsList = {
     { icon: <SiKubernetes />, icon_name: "Kubernetes" },
     { icon: <FaJenkins />, icon_name: "Jenkins" },
     { icon: <SiGooglecloud />, icon_name: "Google Cloud Platform" },
-    { icon: <SiMicrosoftazure />, icon_name: "Microsoft Azure" },
-    { icon: <SiAmazonaws />, icon_name: "AWS" },
+    { icon: <FaAws/>, icon_name: "AWS" },
     { icon: <SiTmux />, icon_name: "Tmux" },
   ],
 };
