@@ -7,9 +7,11 @@ import { CiMenuFries } from "react-icons/ci";
 
 const links = [
   { name: "home", path: "/" },
-  { name: "services", path: "/services" },
-  { name: "resume", path: "/resume" },
-  { name: "work", path: "/work" },
+  // { name: "services", path: "/services" },
+  // { name: "resume", path: "/resume" },
+  // { name: "work", path: "/work" },
+  { name: "about", path: "/about" },
+  { name: "projects", path: "/projects" },
   { name: "contact", path: "/contact" },
 ];
 
@@ -19,14 +21,14 @@ const MobileNav: React.FC = () => {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent" />
+        <CiMenuFries className="text-[32px] text-primary" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
-            <h1>
-              Luke <span className="text-accent">.</span>
+            <h1 className="h1">
+              aharo<span className="text-primary">J</span>
             </h1>
           </Link>
         </div>
@@ -38,8 +40,8 @@ const MobileNav: React.FC = () => {
               key={index}
               className={`${
                 link.path === path_name &&
-                "text-accent border-b-2 border-accent"
-              } text-xl capitalize hover:text-accent transition-all`}
+                "text-primary border-b-2 border-primary"
+              } text-xl capitalize hover:text-primary/50 transition-all`}
             >
               {link.name}
             </Link>
