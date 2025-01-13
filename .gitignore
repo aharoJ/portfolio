@@ -221,3 +221,4 @@ tailwind.config.ts
 .vercel
 frontend/src/components/about/ScrollListAnimation.tsx
 frontend/src/components/ui/scroll-area.tsx
+frontend/src/components/PageTransition.tsx
