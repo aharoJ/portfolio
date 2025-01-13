@@ -27,7 +27,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    descrition: "haro.j.angel@gmail.com",
+    descrition: "angel@aharoj.io",
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -54,7 +54,8 @@ const Contact: FC = () => {
               <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl ">
                 <h3 className="text-4xl text-primary "> Contact me (:</h3>
                 <p className="text-white/60">
-                  The &quot;Send Message&quot; has not yet been connected to an API. 
+                  The &quot;Send Message&quot; has not yet been connected to an
+                  API.
                 </p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <Input type="first_name" placeholder="First Name" />
@@ -71,7 +72,10 @@ const Contact: FC = () => {
                     <SelectGroup>
                       <SelectLabel> Select a service</SelectLabel>
                       <SelectItem value="back"> Backend Development</SelectItem>
-                      <SelectItem value="front"> Frontend Development</SelectItem>
+                      <SelectItem value="front">
+                        {" "}
+                        Frontend Development
+                      </SelectItem>
                       <SelectItem value="spring"> Spring Framework</SelectItem>
                     </SelectGroup>
                   </SelectContent>
@@ -107,11 +111,8 @@ const Contact: FC = () => {
         </div>
       </motion.section>
 
-            {/* ANNOUNCEMENT */}
-      <ContactAnnouncement/ >
-      
-      
-
+      {/* ANNOUNCEMENT */}
+      <ContactAnnouncement />
     </>
   );
 };
