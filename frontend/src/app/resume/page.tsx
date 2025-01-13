@@ -188,7 +188,6 @@ const devops: DevOpsList = {
     { icon: <SiKubernetes />, icon_name: "Kubernetes" },
     { icon: <FaJenkins />, icon_name: "Jenkins" },
     { icon: <SiGooglecloud />, icon_name: "Google Cloud Platform" },
-    { icon: <SiMicrosoftazure />, icon_name: "Microsoft Azure" },
     { icon: <FaAws/>, icon_name: "AWS" },
     { icon: <SiTmux />, icon_name: "Tmux" },
   ],

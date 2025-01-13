@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { JSX } from "react";
 
 import { SiLeetcode } from "react-icons/si";
 
