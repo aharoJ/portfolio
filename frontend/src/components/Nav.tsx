@@ -1,24 +1,32 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link"; // Correct import for Next.js links
+import Link from "next/link"; 
 
 const links = [
   {
     name: "home",
     path: "/",
   },
+  // {
+  //   name: "services",
+  //   path: "/services",
+  // },
+  // {
+  //   name: "resume",
+  //   path: "/resume",
+  // },
+  // {
+  //   name: "work",
+  //   path: "/work",
+  // },
   {
-    name: "services",
-    path: "/services",
+    name: "about",
+    path: "/about",
   },
   {
-    name: "resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
+    name: "projects",
+    path: "/projects",
   },
   {
     name: "contact",
@@ -37,8 +45,8 @@ const Nav = () => {
             href={link.path}
             key={index}
             className={`${
-              link.path === path_name && "text-accent border-b-2 border-accent"
-            } capitalize font-medium hover:text-accent transition-all`}
+              link.path === path_name && "text-primary border-b-2 border-primary"
+            } capitalize font-medium hover:text-primary transition-all`}
           >
             {link.name}
           </Link>
