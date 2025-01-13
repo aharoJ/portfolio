@@ -124,7 +124,7 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
   );
 };
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------------------
 
 // Timeline component
 const Timeline: React.FC = () => {
@@ -132,6 +132,8 @@ const Timeline: React.FC = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
     // offset: ["center end", "center center"],
+    // ADDED LINE BELOW MAY CAUSE ISSUES
+    layoutEffect: false,
   });
 
   return (
