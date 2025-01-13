@@ -1,10 +1,15 @@
-import Timeline from "@/components/about/Timeline";
+import SkillOverview from "@/components/acerca/SkillOverview";
+import Timeline from "@/components/acerca/Timeline";
 import AboutAnnouncement from "@/components/temp/AboutAnnouncement";
 import React from "react";
 
 const About = () => {
   return (
     <>
+      <div>
+        <SkillOverview />
+      </div>
+
       <div>
         <Timeline />
       </div>
