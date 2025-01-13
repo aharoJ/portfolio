@@ -5,7 +5,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import GithubFeaturedIcon from "../icon/GithubFeaturedIcon";
 
-const FramerImage = motion(Image);
+// Use motion.create() to define motion-wrapped Image
+// OLD const FramerImage = motion(Image);
+const FramerImage = motion.create(Image);
 
 interface BigProjectProps {
   hashtags?: string[];
