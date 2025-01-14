@@ -4,8 +4,6 @@ package-lock.json
 package.json
 tsconfig.json
 
-
-
 # Ignore general generated files
 tools/
 dev/
@@ -219,6 +217,6 @@ next.config.mjs
 postcss.config.mjs
 tailwind.config.ts
 .vercel
-frontend/src/components/about/ScrollListAnimation.tsx
-frontend/src/components/ui/scroll-area.tsx
-frontend/src/components/PageTransition.tsx
+src/components/about/ScrollListAnimation.tsx
+src/components/ui/scroll-area.tsx
+src/components/PageTransition.tsx
