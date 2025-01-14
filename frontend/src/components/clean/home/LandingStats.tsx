@@ -2,10 +2,8 @@
 import React, { useRef, useEffect, FC } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { IconType } from "react-icons";
-import { FaSchool, FaDatabase } from "react-icons/fa";
+import { FaSchool } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
-import { RiOpenSourceFill } from "react-icons/ri";
-import { BsFileEarmarkBinary } from "react-icons/bs";
 import { FiGitCommit } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 
@@ -17,12 +15,12 @@ interface StatItemData {
 }
 
 const statItems: StatItemData[] = [
-  { icon: BsFileEarmarkBinary, value: 5, label: "LANGUAGES" },
-  { icon: FaDatabase, value: 4, label: "DATABASES" },
+  // { icon: BsFileEarmarkBinary, value: 5, label: "LANGUAGES" },
+  // { icon: FaDatabase, value: 4, label: "DATABASES" },
   { icon: FaSchool, value: 13, label: "PARTNERSHIPS" },
   { icon: GiTeacher, value: 127, label: "STUDENTS" },
-  { icon: FiGitCommit, value: 2303, label: "COMMITS" },
-  { icon: SiLeetcode, value: 111, label: "LeetCode" },
+  { icon: FiGitCommit, value: 3003, label: "COMMITS" },
+  { icon: SiLeetcode, value: 214, label: "LeetCode" },
 ];
 
 // AnimateNumbers component
@@ -86,17 +84,17 @@ const LoadIcon: FC<LoadIconProps> = ({
 // Main LandingStats component
 const LandingStats: FC = () => {
   return (
-    <section className="contianer flex flex-wrap justify-center items-center  mx-auto p-2">
-      <div className=" grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 ">
+    <section className="contianer flex flex-wrap justify-center items-center  mx-auto p-2 my-6">
+      <div className=" grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 ">
         {statItems.map((item, index) => (
           <LoadIcon
             key={index}
             icon={item.icon}
             value={item.value}
             label={item.label}
-            iconStyles="lg:text-4xl lg:mr-2 text-xl "
+            iconStyles="lg:text-5xl lg:mx-4 text-xl "
             numberStyles="inline-block text-xl lg:text-6xl font-light"
-            labelStyles="text-base xl:text-xl font-light capitalize tracking-wide text-dark/75 dark:text-light/75"
+            labelStyles="text-base xl:text-2xl font-light capitalize tracking-wide text-dark/75 dark:text-light/75"
           />
         ))}
       </div>

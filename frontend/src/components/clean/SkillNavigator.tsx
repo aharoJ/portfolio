@@ -1,8 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
 
-import { FaJava, FaHtml5, FaCss3 } from "react-icons/fa";
-
 import {
   SiSpring,
   SiPostman,
@@ -10,7 +8,6 @@ import {
   SiPython,
   SiPostgresql,
   SiMysql,
-  SiMongodb,
   SiApachecassandra,
   SiTailwindcss,
   SiNextdotjs,
@@ -34,23 +31,37 @@ import {
   SiVite,
   SiRust,
   SiTmux,
-  // SiYabai,
+  SiYabai,
   SiToml,
   SiLua,
+  SiSpringsecurity,
+  SiGit,
+  SiHomebrew,
+  SiVirtualbox,
+  SiYaml,
+  SiNeovim,
 } from "react-icons/si";
 
-import { FaAws } from "react-icons/fa";
-
+import {
+  FaKey,
+  FaAws,
+  FaDocker,
+  FaJenkins,
+  FaJava,
+  FaHtml5,
+  FaCss3,
+  FaCubes, // microservices
+  FaCube, // monolithic
+  FaProjectDiagram, // MVC 
+} from "react-icons/fa";
 
 import { BsFiletypeXml } from "react-icons/bs";
 
-import { GiEgyptianBird } from "react-icons/gi";
+import { GiEgyptianBird, GiDwarfFace, 
+  GiSewingNeedle //  Dependency Injection
+  } from "react-icons/gi";
 
 import { DiVim } from "react-icons/di";
-
-import { GiDwarfFace } from "react-icons/gi";
-
-import { FaDocker, FaJenkins } from "react-icons/fa";
 
 import { TbH2 } from "react-icons/tb";
 
@@ -90,7 +101,7 @@ const education: EducationList = {
       institution: "California State University, Dominguez Hills (CSUDH)",
       degree: "Bachelor of Science in Computer Science",
       location: "Carson, California",
-      gpa: "3.4", // Add your GPA here
+      gpa: "3.4",
       details: [
         "Google Scholarship: Awarded a scholarship under the mentorship of Dr. Tang as a Google Explorer.",
         "GMiS Conference: Achieved 2nd place out of 300+ contestants, competed in a hackathon and placed 5th place.",
@@ -104,7 +115,30 @@ const education: EducationList = {
   ],
 };
 
-// **********************************
+// ************** LANGUAGES SKILLS ********************
+interface LanguageItem {
+  icon: ReactNode;
+  icon_name: string;
+}
+
+interface LanguageList {
+  title: string;
+  languageList: LanguageItem[];
+}
+
+const language: LanguageList = {
+  title: "Languages",
+  languageList: [
+    { icon: <FaJava />, icon_name: "Java" },
+    { icon: <SiPython />, icon_name: "Python" },
+    { icon: <SiRust />, icon_name: "Rust" },
+    { icon: <SiTypescript />, icon_name: "TypeScript" },
+    { icon: <SiJavascript />, icon_name: "JavaScript" },
+    { icon: <FaHtml5 />, icon_name: "HTML" },
+    { icon: <FaCss3 />, icon_name: "CSS" },
+    { icon: <SiLua />, icon_name: "Lua" },
+  ],
+};
 
 // ************** BACKEND SKILLS ********************
 interface BackendItem {
@@ -118,24 +152,26 @@ interface BackendList {
 }
 
 const backend: BackendList = {
-  title: "Backend Stuff",
+  title: "Backend",
   backendList: [
-    { icon: <FaJava />, icon_name: "Java" },
-    { icon: <SiPython />, icon_name: "Python" },
-    { icon: <SiRust />, icon_name: "Rust" },
-    { icon: <BsFiletypeXml />, icon_name: "XML" },
-    { icon: <SiApachemaven />, icon_name: "Apachemaven" },
-    { icon: <GiDwarfFace />, icon_name: "LittleDarwin" },
-    { icon: <GiEgyptianBird />, icon_name: "Pitest" },
     { icon: <SiSpring />, icon_name: "Spring" },
     { icon: <SiSpringboot />, icon_name: "Spring Boot" },
+    { icon: <FaKey />, icon_name: "JWT Security" },
+    { icon: <SiSpringsecurity />, icon_name: "Spring Security" },
+    { icon: <FaCube />, icon_name: "Monolithic" },
+    { icon: <GiSewingNeedle />, icon_name: "Dependency Injection" },
+    { icon: <FaProjectDiagram />, icon_name: "MVC Pattern" },
+    { icon: <FaCubes />, icon_name: "Microservices" },
+    { icon: <BsFiletypeXml />, icon_name: "XML" },
+    { icon: <SiApachemaven />, icon_name: "Apachemaven" },
     { icon: <SiThymeleaf />, icon_name: "Thymeleaf" },
+    { icon: <GiDwarfFace />, icon_name: "LittleDarwin" },
+    { icon: <GiEgyptianBird />, icon_name: "Pitest" },
     { icon: <SiFlask />, icon_name: "Flask" },
     { icon: <SiDjango />, icon_name: "Django" },
     { icon: <SiPostman />, icon_name: "Postman" },
   ],
 };
-// **********************************
 
 // ************** DATABASE SKILLS ********************
 interface DatabaseItem {
@@ -149,16 +185,14 @@ interface DatabaseList {
 }
 
 const database: DatabaseList = {
-  title: "Database Stuff",
+  title: "Database",
   databaseList: [
     { icon: <SiPostgresql />, icon_name: "PostgreSQL" },
     { icon: <TbH2 />, icon_name: "H2 Database" },
     { icon: <SiMysql />, icon_name: "MySQL" },
     { icon: <SiApachecassandra />, icon_name: "Apache Cassandra" },
-    { icon: <SiMongodb />, icon_name: "MongoDB" },
   ],
 };
-// **********************************
 
 // ************** DEVOPS SKILLS ********************
 interface DevOpsItem {
@@ -172,24 +206,29 @@ interface DevOpsList {
 }
 
 const devops: DevOpsList = {
-  title: "DevOps Stuff",
+  title: "DevOps",
   devopsList: [
-    { icon: <SiFishshell />, icon_name: "Fish Shell" },
-    { icon: <DiVim />, icon_name: "Nvim / Vim" },
     { icon: <SiGnubash />, icon_name: "Bash" },
     { icon: <SiZsh />, icon_name: "Zsh" },
+    { icon: <SiFishshell />, icon_name: "Fish Shell" },
+    { icon: <SiNeovim />, icon_name: "Neovim" },
     { icon: <SiToml />, icon_name: "TOML" },
-    { icon: <SiLua />, icon_name: "Nvim / Vim" },
+    { icon: <SiYaml />, icon_name: "YAML" },
     { icon: <FaDocker />, icon_name: "Docker" },
     { icon: <SiApachetomcat />, icon_name: "Apachetomcat" },
     { icon: <SiKubernetes />, icon_name: "Kubernetes" },
     { icon: <FaJenkins />, icon_name: "Jenkins" },
     { icon: <SiGooglecloud />, icon_name: "Google Cloud Platform" },
-    { icon: <FaAws/>, icon_name: "AWS" },
+    { icon: <FaAws />, icon_name: "AWS" },
     { icon: <SiTmux />, icon_name: "Tmux" },
+
+    { icon: <SiTmux />, icon_name: "Tmux" },
+    { icon: <SiHomebrew />, icon_name: "Homebrew" },
+    { icon: <SiVirtualbox />, icon_name: "Virtualbox" },
+    { icon: <SiYabai />, icon_name: "Yabai" },
+    { icon: <SiGit />, icon_name: "Git" },
   ],
 };
-// **********************************
 
 // ************** FRONTEND SKILLS ********************
 interface FrontendItem {
@@ -203,12 +242,8 @@ interface FrontendList {
 }
 
 const frontend: FrontendList = {
-  title: "Frontend Stuff",
+  title: "Frontend",
   frontendList: [
-    { icon: <SiTypescript />, icon_name: "TypeScript" },
-    { icon: <SiJavascript />, icon_name: "JavaScript" },
-    { icon: <FaHtml5 />, icon_name: "HTML 5" },
-    { icon: <FaCss3 />, icon_name: "CSS 3" },
     { icon: <SiReact />, icon_name: "React" },
     { icon: <SiNextdotjs />, icon_name: "Next.js" },
     { icon: <SiVite />, icon_name: "Vite.js" },
@@ -219,9 +254,8 @@ const frontend: FrontendList = {
     { icon: <SiThreedotjs />, icon_name: "Three.js" },
   ],
 };
-// **********************************
 
-const SkillOverview: React.FC = () => {
+const SkillNavigator: React.FC = () => {
   return (
     <>
       <motion.div
@@ -234,47 +268,43 @@ const SkillOverview: React.FC = () => {
       >
         <div className="container mx-auto">
           <Tabs
-            defaultValue="education"
+            defaultValue="languages"
             className="flex flex-col md:flex-row gap-[60px]"
           >
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-              <TabsTrigger value="education"> Education </TabsTrigger>
+              {/* <TabsTrigger value="education"> Education </TabsTrigger> */}
+              <TabsTrigger value="languages"> Languages </TabsTrigger>
               <TabsTrigger value="backend"> Backend </TabsTrigger>
               <TabsTrigger value="database"> Database </TabsTrigger>
               <TabsTrigger value="devops"> DevOps </TabsTrigger>
               <TabsTrigger value="frontend"> Frontend </TabsTrigger>
             </TabsList>
 
-            <div className="min-h-[40vh] w-full ">
-              {/* RETURN EDUCATION */}
-              <TabsContent value="education" className="w-full">
+            <div className="min-h-[40vh] w-full">
+              {/* RETURN LANGUAGES SKILLS */}
+              <TabsContent value="languages" className="w-full h-full">
                 <div className="flex flex-col gap-[10px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold"> {education.title} </h3>
-                  <div className="max-w-[1200px] text-white/60 mx-auto ">
-                    <ScrollArea className="h-[400px] rounded-xl ">
-                      {/* Added ScrollArea */}
-                      <div className="bg-[#232329] p-6 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2 mt-2 shadow-lg">
-                        <div className="flex justify-between w-full">
-                          <span className="text-white/60 text-lg font-semibold">
-                            {education.items[0].location}
-                          </span>
-                          <span className="text-white/60 text-lg font-semibold">
-                            GPA: {education.items[0].gpa}
-                          </span>
-                        </div>
-                        <h3 className="text-2xl font-normal text-center lg:text-left ">
-                          {education.items[0].degree}
-                        </h3>
-                        <div className="text-primary tracking-wide text-xl">
-                          {education.items[0].institution}
-                        </div>
-                        {/* Bullet Points Inside the Background */}
-                        <ul className="list-disc pl-6 mt-4 space-y-2 text-white/60">
-                          {education.items[0].details.map((detail, index) => (
-                            <li key={index}>{detail}</li>
-                          ))}
-                        </ul>
-                      </div>
+                  <h3 className="text-4xl font-bold"> {language.title} </h3>
+                  <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
+                    <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
+                      <ul className="grid grid-cols-2 md:grid-cols-3 gap-[30px] gap-y-14">
+                        {language.languageList.map((lang, index) => (
+                          <li key={index}>
+                            <TooltipProvider delayDuration={100}>
+                              <Tooltip>
+                                <TooltipTrigger className="w-auto h-auto md:w-full md:h-auto bg-[#1e1e24] p-0 md:p-8 rounded-xl flex items-center justify-center group">
+                                  <div className="text-8xl group-hover:text-primary transition-all duration-300">
+                                    {lang.icon}
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p> {lang.icon_name} </p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                          </li>
+                        ))}
+                      </ul>
                     </ScrollArea>
                   </div>
                 </div>
@@ -287,17 +317,17 @@ const SkillOverview: React.FC = () => {
                   <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
                     <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
                       <ul className="grid grid-cols-2 md:grid-cols-3 gap-[30px] gap-y-14">
-                        {backend.backendList.map((backend, index) => (
+                        {backend.backendList.map((item, index) => (
                           <li key={index}>
                             <TooltipProvider delayDuration={100}>
                               <Tooltip>
                                 <TooltipTrigger className="w-auto h-auto md:w-full md:h-auto bg-[#1e1e24] p-0 md:p-8 rounded-xl flex items-center justify-center group">
                                   <div className="text-8xl group-hover:text-primary transition-all duration-300">
-                                    {backend.icon}
+                                    {item.icon}
                                   </div>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                  <p> {backend.icon_name} </p>
+                                  <p> {item.icon_name} </p>
                                 </TooltipContent>
                               </Tooltip>
                             </TooltipProvider>
@@ -316,17 +346,17 @@ const SkillOverview: React.FC = () => {
                   <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
                     <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
                       <ul className="grid grid-cols-2 md:grid-cols-3 gap-[30px] gap-y-14">
-                        {database.databaseList.map((database, index) => (
+                        {database.databaseList.map((db, index) => (
                           <li key={index}>
                             <TooltipProvider delayDuration={100}>
                               <Tooltip>
                                 <TooltipTrigger className="w-auto h-auto md:w-full md:h-auto bg-[#1e1e24] p-0 md:p-8 rounded-xl flex items-center justify-center group">
                                   <div className="text-8xl group-hover:text-primary transition-all duration-300">
-                                    {database.icon}
+                                    {db.icon}
                                   </div>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                  <p> {database.icon_name} </p>
+                                  <p> {db.icon_name} </p>
                                 </TooltipContent>
                               </Tooltip>
                             </TooltipProvider>
@@ -374,17 +404,17 @@ const SkillOverview: React.FC = () => {
                   <div className="max-w-[1200] mx-auto xl:mx-0 mt-2">
                     <ScrollArea className="h-[400px] rounded-xl bg-[#232329] p-6 shadow-lg">
                       <ul className="grid grid-cols-2 md:grid-cols-3 gap-[30px] gap-y-14">
-                        {frontend.frontendList.map((frontend, index) => (
+                        {frontend.frontendList.map((front, index) => (
                           <li key={index}>
                             <TooltipProvider delayDuration={100}>
                               <Tooltip>
                                 <TooltipTrigger className="w-auto h-auto md:w-full md:h-auto bg-[#1e1e24] p-0 md:p-8 rounded-xl flex items-center justify-center group">
                                   <div className="text-8xl group-hover:text-primary transition-all duration-300">
-                                    {frontend.icon}
+                                    {front.icon}
                                   </div>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                  <p> {frontend.icon_name} </p>
+                                  <p> {front.icon_name} </p>
                                 </TooltipContent>
                               </Tooltip>
                             </TooltipProvider>
@@ -403,4 +433,4 @@ const SkillOverview: React.FC = () => {
   );
 };
 
-export default SkillOverview;
+export default SkillNavigator;

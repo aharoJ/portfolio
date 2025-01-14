@@ -1,7 +1,8 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
-import ScrollListAnimation from "./ScrollListAnimation";
+import ScrollListAnimation from "../acerca/ScrollListAnimation";
+
 
 interface EducationInfoProps {
   school: string;
@@ -138,9 +139,8 @@ const Timeline: React.FC = () => {
 
   return (
     <div className="flex container w-full flex-col">
-
       {/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-      <h2 className="mb-12 w-full text-center text-7xl font-light tracking-tight text-white ">
+      <h2 className="mb-12 w-full text-center text-7xl font-light tracking-tight text-white my-16">
         Experience
       </h2>
 
