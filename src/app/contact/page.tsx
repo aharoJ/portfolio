@@ -16,7 +16,6 @@ import {
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 import { motion } from "framer-motion";
-import ContactAnnouncement from "@/components/temp/ContactAnnouncement";
 
 const info = [
   {
@@ -110,9 +109,6 @@ const Contact: FC = () => {
           </div>
         </div>
       </motion.section>
-
-      {/* ANNOUNCEMENT */}
-      <ContactAnnouncement />
     </>
   );
 };

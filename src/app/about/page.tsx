@@ -2,7 +2,6 @@ import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesk
 import Timeline from "@/components/clean/Timeline";
 
 import Education from "@/components/clean/education/Education";
-import AboutAnnouncement from "@/components/temp/AboutAnnouncement";
 import React from "react";
 
 const About = () => {
@@ -21,7 +20,6 @@ const About = () => {
       </section>
 
       {/* <h1 className="flex container justify-center text-9xl"> DIVIDER </h1> */}
-      <AboutAnnouncement />
     </>
   );
 };
