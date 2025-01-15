@@ -1,4 +1,4 @@
-import SkillOverview from "@/components/clean/SkillNavigator";
+import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
 import Timeline from "@/components/clean/Timeline";
 
 import Education from "@/components/clean/education/Education";
