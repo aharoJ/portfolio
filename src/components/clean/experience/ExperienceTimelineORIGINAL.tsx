@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import ScrollListAnimation from "./ScrollListAnimationDesktop";
 
+
 interface EducationInfoProps {
   school: string;
   degree: string;
@@ -11,6 +12,7 @@ interface EducationInfoProps {
   achievements?: string[];
 }
 
+// EducationInfo component
 const EducationInfo: React.FC<EducationInfoProps> = ({
   school,
   degree,
@@ -55,6 +57,8 @@ const EducationInfo: React.FC<EducationInfoProps> = ({
   );
 };
 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // ------------------------------------------------------------------------------------------------
 // -------------------- Types --------------------
 interface ExperienceInfoProps {
@@ -92,12 +96,24 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
         transition={{ duration: 1.5, type: "spring" }}
         className="w-full"
       >
-        <div className="flex justify-start items-end w-full mx-4">
+        <div className="flex justify-between items-start w-full mx-4 lg:mx-auto">
           <div>
-            <h1 className="text-xl font-medium text-white/80">{title}</h1>
-            <h2 className="text-xl font-light tracking-wide text-white/70">
-              {company}
-            </h2>
+            <h1 className="text-3xl font-medium text-white/80">{title}</h1>
+            {/* If a link is provided, wrap the company in an <a> */}
+            {companyLink ? (
+              <a
+                href={companyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl font-light tracking-wide text-white/70 underline"
+              >
+                {company}
+              </a>
+            ) : (
+              <h2 className="text-2xl font-light tracking-wide text-white/70">
+                {company}
+              </h2>
+            )}
           </div>
           <div className="flex flex-col text-right">
             {location && (
@@ -115,7 +131,7 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
 
         {/* Bullets */}
         {bullets?.length > 0 && (
-          <ul className="mt-2 list-disc pl-7">
+          <ul className="mt-2 list-disc pl-8 lg:pl-5">
             {bullets.map((bullet, index) => (
               <li
                 key={index}
@@ -138,7 +154,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "exploreCSR (Google)",
     location: "Carson, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -147,7 +163,7 @@ const experienceData: ExperienceInfoProps[] = [
     companyLink: "#LINK",
     location: "McLean, Virginia",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -155,7 +171,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "Computing Alliance of Hispanic Serving Institutions",
     location: "Union, New Jersey",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -164,7 +180,7 @@ const experienceData: ExperienceInfoProps[] = [
     companyLink: "https://csudh.edu",
     location: "Los Angeles Unified School District, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -172,7 +188,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "T-Mobile",
     location: "Whittier, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -180,13 +196,13 @@ const experienceData: ExperienceInfoProps[] = [
     company: "M&M Restaurant",
     location: "Downey, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
 ];
 
 // -------------------- TimelineMobile Component --------------------
-const ExperienceTimelineMobile: React.FC = () => {
+const ExperienceTimelineDesktop: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -196,7 +212,7 @@ const ExperienceTimelineMobile: React.FC = () => {
 
   return (
     <div className="container w-full flex flex-col mb-44">
-      <h2 className="my-6 w-full text-center text-5xl font-bold text-white">
+      <h2 className="mb-12 w-full text-center text-7xl font-bold text-white my-12">
         Experience
       </h2>
 
@@ -218,4 +234,4 @@ const ExperienceTimelineMobile: React.FC = () => {
   );
 };
 
-export default ExperienceTimelineMobile;
+export default ExperienceTimelineDesktop;
