@@ -12,7 +12,7 @@ import vivaldi from "../../../../../public/projects/vivaldi.png";
 import alacritty from "../../../../../public/projects/vim.png";
 import notebook from "../../../../../public/projects/notebook.png";
 import gpt3 from "../../../../../public/projects/gpt3.png";
-import StandardCardMobile from "../../standard/StandardCardMobile";
+import StandardCardMobile from "../StandardCardMobile";
 
 const webAppsProjects = [
   {

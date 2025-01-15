@@ -190,7 +190,7 @@ const skillCategories: SkillCategory[] = [
 const SkillGridMobile: React.FC<{ data: SkillCategory }> = ({ data }) => {
   return (
     <div className="flex flex-col gap-y-6 text-center">
-      <h3 className="text-5xl font-bold">{data.title}</h3>
+      <h3 className="text-2xl font-bold">{data.title}</h3>
       <div className="mx-auto">
         {/* 
           Example styles:
@@ -199,14 +199,14 @@ const SkillGridMobile: React.FC<{ data: SkillCategory }> = ({ data }) => {
             - smaller icons (text-4xl)
             - grid with 3 columns 
         */}
-        <ScrollArea className="h-[200px] w-[400px] rounded-xl bg-[#232329] p-4 shadow-lg">
-          <ul className="grid grid-cols-3 gap-[30px] gap-y-6">
+        <ScrollArea className="h-[200px] w-auto rounded-xl bg-[#232329] p-4 shadow-lg">
+          <ul className="grid grid-cols-2 gap-[30px] gap-y-6">
             {data.skills.map((skill, i) => (
               <li key={i}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger className="w-auto h-auto bg-[#1e1e24] p-4 rounded-xl flex items-center justify-center group">
-                      <div className="text-5xl group-hover:text-primary transition-all duration-300">
+                    <TooltipTrigger className="w-auto h-auto bg-[#1e1e24] p-2 rounded-xl flex items-center justify-center group">
+                      <div className="text-3xl group-hover:text-primary transition-all duration-300">
                         {skill.icon}
                       </div>
                     </TooltipTrigger>
@@ -256,7 +256,7 @@ const SkillNavigatorMobile: React.FC = () => {
                 <TabsContent
                   key={cat.value}
                   value={cat.value}
-                  className="w-full h-full"
+                  className="w-auto h-auto"
                 >
                   <SkillGridMobile data={cat} />
                 </TabsContent>
