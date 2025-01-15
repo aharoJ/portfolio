@@ -242,7 +242,7 @@ const SkillNavigatorMobile: React.FC = () => {
             className="flex flex-row gap-6"
           >
             {/* 6) Dynamically render tab triggers */}
-            <TabsList className="flex flex-col w-full max-w-[200px] mx-auto gap-4">
+            <TabsList className="flex flex-col w-full max-w-[150px] mx-auto gap-3">
               {skillCategories.map((cat) => (
                 <TabsTrigger key={cat.value} value={cat.value}>
                   {cat.label}
