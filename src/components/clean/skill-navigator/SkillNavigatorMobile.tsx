@@ -191,7 +191,7 @@ const SkillGridMobile: React.FC<{ data: SkillCategory }> = ({ data }) => {
   return (
     <div className="flex flex-col gap-y-6 text-center">
       <h3 className="text-2xl font-bold">{data.title}</h3>
-      <div className="mx-auto">
+      <div className="mx-auto my-auto">
         {/* 
           Example styles:
             - limit the height (h-[200px]) 
@@ -200,13 +200,13 @@ const SkillGridMobile: React.FC<{ data: SkillCategory }> = ({ data }) => {
             - grid with 3 columns 
         */}
         <ScrollArea className="h-[200px] w-auto rounded-xl bg-[#232329] p-4 shadow-lg">
-          <ul className="grid grid-cols-2 gap-[30px] gap-y-6">
+          <ul className="grid grid-cols-2 gap-[20px] gap-y-6">
             {data.skills.map((skill, i) => (
               <li key={i}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
                     <TooltipTrigger className="w-auto h-auto bg-[#1e1e24] p-2 rounded-xl flex items-center justify-center group">
-                      <div className="text-3xl group-hover:text-primary transition-all duration-300">
+                      <div className="text-4xl group-hover:text-primary transition-all duration-300">
                         {skill.icon}
                       </div>
                     </TooltipTrigger>
