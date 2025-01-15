@@ -1,9 +1,11 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
-import SkillOverview from "@/components/clean/SkillNavigator";
-import LandingStats from "@/components/clean/home/LandingStats";
+import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
+import LandingStatsDesktop from "@/components/clean/home/LandingStatsDesktop";
 import HomeAnnouncement from "@/components/temp/HomeAnnouncement";
 import HomeGoToProjectsBtn from "@/components/clean/home/HomeGoToProjectsBtn";
+import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
+import LandingStatsMobile from "@/components/clean/home/LandingStatsMobile";
 
 const Home = () => {
   return (
@@ -58,16 +60,28 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <LandingStats />
+      <section title="ANIMATED STATS">
+        <div className="hidden lg:block">
+          <LandingStatsDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <LandingStatsMobile/>
+        </div>
       </section>
 
-      <section>
-        <SkillOverview />
+      <section title="SKILL NAVIGATOR">
+        <div className="hidden lg:block">
+          <SkillNavigatorDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <SkillNavigatorMobile />
+        </div>
       </section>
 
+      <section title="FEATURED PROJECT">
       {/* <LandingDesktopProject /> */}
       {/* <LandingMobileProject /> */}
+      </section>
 
       {/* ANNOUNCEMENT */}
       <HomeAnnouncement />
