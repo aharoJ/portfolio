@@ -6,6 +6,7 @@ import HomeAnnouncement from "@/components/temp/HomeAnnouncement";
 import HomeGoToProjectsBtn from "@/components/clean/home/HomeGoToProjectsBtn";
 import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
 import LandingStatsMobile from "@/components/clean/home/LandingStatsMobile";
+import ScrollToTopButton from "@/components/clean/ScrollToTopButton";
 
 const Home = () => {
   return (
@@ -19,9 +20,7 @@ const Home = () => {
             {/* text */}
             <div className="text-center xl:text-left order-2 xl:order-none">
               <span className="text-xl"> Software Engineer </span>
-              <span className="text-base italic text-primary  xl:text-lg">
-                / aharoJ
-              </span>
+              <span className="text-base italic text-primary  xl:text-lg"> / aharoJ </span>
               <h1 className="h1">
                 Angel Jair Haro <br />
               </h1>
@@ -65,7 +64,7 @@ const Home = () => {
           <LandingStatsDesktop />
         </div>
         <div className="block lg:hidden">
-          <LandingStatsMobile/>
+          <LandingStatsMobile />
         </div>
       </section>
 
@@ -79,9 +78,10 @@ const Home = () => {
       </section>
 
       <section title="FEATURED PROJECT">
-      {/* <LandingDesktopProject /> */}
-      {/* <LandingMobileProject /> */}
+        {/* <LandingDesktopProject /> */}
+        {/* <LandingMobileProject /> */}
       </section>
+
 
       {/* ANNOUNCEMENT */}
       <HomeAnnouncement />

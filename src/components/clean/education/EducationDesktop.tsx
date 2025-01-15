@@ -68,9 +68,9 @@ const EducationSection = ({
   title: string;
   items: string[];
 }) => (
-  <div className="mt-4 text-start">
+  <div className="mt-2 text-start">
     <h4 className="text-white/80 text-xl font-bold mb-2">{title}</h4>
-    <ul className="list-disc pl-6 space-y-2 text-xl text-white/60">
+    <ul className="list-disc pl-4 space-y-2 text-xl text-white/60">
       {items.map((item, index) => (
         <li key={index}>{item}</li>
       ))}
@@ -78,7 +78,7 @@ const EducationSection = ({
   </div>
 );
 
-const Education = () => {
+const EducationDesktop = () => {
   const {
     degree,
     institution,
@@ -90,8 +90,8 @@ const Education = () => {
   } = education.items[0];
 
   return (
-    <div className="flex flex-col text-center xl:text-center">
-      <h3 className="text-7xl font-bold my-16">{education.title}</h3>
+    <div className="flex flex-col text-center ">
+      <h3 className="text-7xl font-bold my-12">{education.title}</h3>
       <div className="max-w-[1200px] text-white/60 mx-auto">
         <ScrollArea className="h-[400px] rounded-xl">
           {/* Main content container */}
@@ -117,4 +117,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default EducationDesktop;

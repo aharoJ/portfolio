@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import Head from "next/head";
+import ScrollToTopButton from "@/components/clean/ScrollToTopButton";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
+        <ScrollToTopButton />
       </body>
     </html>
   );

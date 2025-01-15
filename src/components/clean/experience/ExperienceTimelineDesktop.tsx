@@ -1,63 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
-import ScrollListAnimation from "../acerca/ScrollListAnimation";
+import ScrollListAnimationDesktop from "./ScrollListAnimationDesktop";
 
-
-interface EducationInfoProps {
-  school: string;
-  degree: string;
-  date?: string;
-  gpa?: string;
-  achievements?: string[];
-}
-
-// EducationInfo component
-const EducationInfo: React.FC<EducationInfoProps> = ({
-  school,
-  degree,
-  date,
-  gpa,
-  achievements,
-}) => {
-  const listItemRef = useRef<HTMLLIElement | null>(null);
-  return (
-    <div className="w-full mx-auto container">
-      <div className="flex justify-between items-start w-full">
-        <div className="flex flex-col">
-          <h1 className="text-3xl font-medium text-white/80">{school}</h1>
-          <h2 className="text-2xl font-light tracking-wide text-white/70">
-            {degree}
-          </h2>
-        </div>
-        <div className="flex flex-col text-right">
-          <p className="text-xl hidden lg:block font-normal text-white/70">
-            {date}
-          </p>
-          {gpa && (
-            <p className="text-xl hidden lg:block font-normal text-white/70">
-              GPA: {gpa}
-            </p>
-          )}
-        </div>
-      </div>
-      {achievements && (
-        <ul className="mt-6 list-disc pl-5">
-          {achievements.map((achievement, index) => (
-            <li
-              className="my-4 lg:text-lg text-base font-normal text-white/80"
-              key={index}
-            >
-              {achievement}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-};
-
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------
 
 // Define types for props
 interface ExperienceInfoProps {
@@ -84,7 +30,7 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
       ref={listItemRef}
       className="mx-auto my-14 flex w-[90%] flex-col items-start first:mt-0 last:mb-0 "
     >
-      <ScrollListAnimation reference={listItemRef} />
+      <ScrollListAnimationDesktop reference={listItemRef} />
 
       <motion.div
         initial={{ y: 58, x: 0 }}
@@ -125,10 +71,10 @@ const ExperienceInfo: React.FC<ExperienceInfoProps> = ({
   );
 };
 
-// -----------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------
 
 // Timeline component
-const Timeline: React.FC = () => {
+const ExperienceTimelineDesktop: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -138,15 +84,15 @@ const Timeline: React.FC = () => {
   });
 
   return (
-    <div className="flex container w-full flex-col">
-      {/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
+    <div className="flex container w-full flex-col mt-24 mb-64">
+      {/* ------------------------------------------------------------------------------------------------------------*/}
       <h2 className="mb-12 w-full text-center text-7xl font-light tracking-tight text-white my-16">
         Experience
       </h2>
 
       <div ref={ref} className="relative mx-auto w-full">
         <motion.div
-          className="absolute top-0 h-full origin-top bg-primary  left-[28px] w-[2px]"
+          className="absolute top-4 h-full origin-top bg-primary left-[28px] w-[2px]"
           style={{ scaleY: scrollYProgress }}
         />
 
@@ -219,4 +165,4 @@ const Timeline: React.FC = () => {
   );
 };
 
-export default Timeline;
+export default ExperienceTimelineDesktop;

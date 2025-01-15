@@ -1,8 +1,10 @@
 import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
-import Timeline from "@/components/clean/Timeline";
+import TimelineDesktop from "@/components/clean/experience/ExperienceTimelineDesktop";
 
-import Education from "@/components/clean/education/Education";
+import EducationDesktop from "@/components/clean/education/EducationDesktop";
 import React from "react";
+import EducationMobile from "@/components/clean/education/EducationMobile";
+import TimelineMobile from "@/components/clean/experience/ExperienceTimelineMobile";
 
 const About = () => {
   return (
@@ -11,13 +13,24 @@ const About = () => {
         <SkillOverview />
       </div> */}
 
-      <section>
-        <Education />
+      <section title="EDUCATION">
+        <div className="hidden lg:block">
+          <EducationDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <EducationMobile/>
+        </div>
+      </section>
+      
+      <section title="EXPERIENCE">
+        <div className="hidden lg:block">
+          <TimelineDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <TimelineMobile/>
+        </div>
       </section>
 
-      <section>
-        <Timeline />
-      </section>
 
       {/* <h1 className="flex container justify-center text-9xl"> DIVIDER </h1> */}
     </>

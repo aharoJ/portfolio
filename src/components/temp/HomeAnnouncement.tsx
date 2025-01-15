@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeAnnouncement = () => {
   return (
-    <div className="container mx-auto h-full my-24">
+    <div className="container mx-auto h-full my-12">
       <h2 className="h2 justify-center flex "> NOTICE </h2>
       <span className="text-green-300 text-3xl">Announcement: 01.14.2025</span>
 

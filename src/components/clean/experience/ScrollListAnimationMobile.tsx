@@ -2,14 +2,14 @@
 import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 
-const ScrollListAnimation: React.FC<{
+const ScrollListAnimationMobile: React.FC<{
   reference: React.RefObject<HTMLLIElement | null>;
 }> = ({ reference }) => {
   const { scrollYProgress } = useScroll({
     target: reference,
     offset: ["center end", "center center"],
     // ADDED LINE BELOW MAY CAUSE ISSUES
-    layoutEffect: false,
+    // layoutEffect: false,
   });
 
   return (
@@ -46,4 +46,4 @@ const ScrollListAnimation: React.FC<{
     </figure>
   );
 };
-export default ScrollListAnimation;
+export default ScrollListAnimationMobile;
