@@ -4,7 +4,7 @@ import Stats from "@/components/Stats";
 import TestingStats from "@/components/TestingStats";
 import LandingDesktopProject from "@/components/casa/LandingDesktopProject";
 import LandingMobileProject from "@/components/casa/LandingMobileProject:";
-import LandingStats from "@/components/clean/home/LandingStats";
+import LandingStats from "@/components/clean/home/LandingStatsDesktop";
 import HomeAnnouncement from "@/components/temp/HomeAnnouncement";
 import { Button } from "@/components/ui/button";
 import { ACTION_SUFFIX } from "next/dist/lib/constants";
