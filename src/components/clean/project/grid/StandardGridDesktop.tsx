@@ -12,7 +12,8 @@ import vivaldi from "../../../../../public/projects/vivaldi.png";
 import alacritty from "../../../../../public/projects/vim.png";
 import notebook from "../../../../../public/projects/notebook.png";
 import gpt3 from "../../../../../public/projects/gpt3.png";
-import StandardCardMobile from "../StandardCardMobile";
+import StandardCardDesktop from "@/app/dev/standard/StandardCardDesktop";
+
 
 const webAppsProjects = [
   {
@@ -20,28 +21,28 @@ const webAppsProjects = [
     img: twitter,
     github: "https://github.com/aharoJ/Twitter",
     link: "https://github.com/aharoJ/Twitter",
-    hashtags: ["Java", "Spring Boot", "React", "TypeScript", "HTML", "CSS"],
+    hashtags: ["Java", "Spring", "React", "Typescript", "HTML&CSS"],
   },
   {
     title: "3D Portfolio",
     img: threeD,
     github: "https://github.com/aharoJ/3D-Portfolio",
     link: "https://github.com/aharoJ/3D-Portfolio",
-    hashtags: ["React", "Tailwind CSS", "JavaScript", "Vite"],
+    hashtags: ["React", "Tailwindcss", "Javascript", "Vite"],
   },
   {
     title: "EmployeeTracker",
     img: ems,
     github: "https://github.com/aharoJ/EmployeeManagementSystemApp",
     link: "https://github.com/aharoJ/EmployeeManagementSystemApp",
-    hashtags: ["Java", "Spring Boot", "Vite", "React", "Tailwind CSS"],
+    hashtags: ["Java", "Spring", "Vite", "React", "Tailwindcss"],
   },
   {
     title: "Apple",
     img: apple,
     github: "https://github.com/aharoJ/Apple",
     link: "https://github.com/aharoJ/Apple",
-    hashtags: ["React", "HTML", "CSS", "TypeScript", "Sanity.io"],
+    hashtags: ["React", "HTML&CSS", "Typescript", "Sanity"],
   },
 ];
 
@@ -51,14 +52,19 @@ const dotFilesProjects = [
     img: skhd_yabai,
     github: "https://github.com/aharoJ/yabai-skhd-config",
     link: "https://github.com/aharoJ/yabai-skhd-config",
-    hashtags: ["macOS Configuration", "Shell Scripting", "SKHD", "Yabai"],
+    hashtags: [
+      "hacking MacOS",
+      "shell scripting",
+      "skhd-config",
+      "yabai-config",
+    ],
   },
   {
     title: "tmux-config",
     img: tmux,
     github: "https://github.com/aharoJ/tmux-config",
     link: "https://github.com/aharoJ/tmux-config",
-    hashtags: ["TMUX", "Custom Design", "Catppuccin"],
+    hashtags: ["handcrafted design", "catppuccin", "tmux-config"],
   },
   {
     title: "lf-config",
@@ -66,10 +72,10 @@ const dotFilesProjects = [
     github: "https://github.com/aharoJ/lf-config",
     link: "https://github.com/aharoJ/lf-config",
     hashtags: [
-      "Shell Scripting",
-      "Custom Scripts",
-      "Kitty Configuration",
-      "LF File Manager",
+      "shell scripting",
+      "custom Scripts",
+      "kitty-config",
+      "lf-config",
     ],
   },
   {
@@ -78,13 +84,10 @@ const dotFilesProjects = [
     github: "https://github.com/aharoJ/starship-config",
     link: "https://github.com/aharoJ/starship-config",
     hashtags: [
-      "TOML",
-      "Custom Coloscheme",
-      "Timezone",
-      "Git",
-      "Branches",
-      "Commits",
-      "Spotify",
+      "custom toml file",
+      "hand-picked colors",
+      "timezone",
+      "starship-config",
     ],
   },
   {
@@ -92,14 +95,14 @@ const dotFilesProjects = [
     img: vivaldi,
     github: "https://github.com/aharoJ/vivaldi-config",
     link: "https://themes.vivaldi.net/themes/nV6vpPxDvdN",
-    hashtags: ["Custom Keybindings", "Hotkeys", "Vivaldi Configuration"],
+    hashtags: ["custom binds", "hotkeys", "vivaldi-config"],
   },
   {
     title: "alacritty-config",
     img: alacritty,
     github: "https://github.com/aharoJ/alacritty-config",
     link: "https://github.com/aharoJ/alacritty-config",
-    hashtags: ["Terminal Emulator", "YAML"],
+    hashtags: ["terminal emulator", "yalm file", "alacritty-config"],
   },
 ];
 
@@ -110,11 +113,11 @@ const machineLearningProjects = [
     github: "https://github.com/aharoJ/opensource/tree/main/machine-learning",
     link: "https://github.com/aharoJ/opensource/tree/main/machine-learning",
     hashtags: [
-      "AI",
-      "Machine Learning",
-      "Capstone Project",
-      "Deep Learning",
-      "Jupyter Notebooks",
+      "ai",
+      "machine learning",
+      "capstone",
+      "deep learning",
+      "jupyter",
     ],
   },
   {
@@ -122,19 +125,19 @@ const machineLearningProjects = [
     img: gpt3,
     github: "https://github.com/aharoJ/chatGPT3",
     link: "https://github.com/aharoJ/chatGPT3",
-    hashtags: ["React", "HTML", "CSS", "JavaScript", "Machine Learning"],
+    hashtags: ["react", "html", "css", "javascript", "ml"],
   },
 ];
 
-const StandardGridMobile: React.FC = () => {
+const StandardGridDesktop: React.FC = () => {
   return (
     <>
       {/* Web Apps Section */}
-      <div className="block lg:hidden">
-        <h2 className="justify-center h1 font-bold mb-8 flex "> Web Apps </h2>
-        <main className="container mx-auto my-24 grid grid-cols-1 gap-y-14 gap-x-10">
+      <div className="hidden lg:block">
+        <h2 className="flex justify-center h1 font-bold mb-8"> Web Apps </h2>
+        <main className="container mx-auto my-24 grid grid-cols-2 gap-y-14 gap-x-10">
           {webAppsProjects.map((project, index) => (
-            <StandardCardMobile
+            <StandardCardDesktop
               key={index}
               title={project.title}
               img={project.img}
@@ -147,11 +150,11 @@ const StandardGridMobile: React.FC = () => {
       </div>
 
       {/* Dot Files Section */}
-      <div className="block lg:hidden">
-        <h2 className="justify-center h1 font-bold mb-8 flex "> Dot Files</h2>
-        <main className="container mx-auto my-24 grid grid-cols-1 gap-y-14 gap-x-10">
+      <div className="hidden lg:block">
+        <h2 className="flex justify-center h1 font-bold mb-8"> Dot Files</h2>
+        <main className="container mx-auto my-24 grid grid-cols-2 gap-y-14 gap-x-10">
           {dotFilesProjects.map((project, index) => (
-            <StandardCardMobile
+            <StandardCardDesktop
               key={index}
               title={project.title}
               img={project.img}
@@ -164,13 +167,13 @@ const StandardGridMobile: React.FC = () => {
       </div>
 
       {/* Machine Learning Section */}
-      <div className="block lg:hidden">
-        <h2 className="justify-center h1 font-bold mb-8 flex">
+      <div className="hidden lg:block">
+        <h2 className="flex justify-center h1 font-bold mb-8">
           Machine Learning
         </h2>
-        <main className="container mx-auto my-24 grid grid-cols-1 gap-y-14 gap-x-10">
+        <main className="container mx-auto my-24 grid grid-cols-2 gap-y-14 gap-x-10">
           {machineLearningProjects.map((project, index) => (
-            <StandardCardMobile
+            <StandardCardDesktop
               key={index}
               title={project.title}
               img={project.img}
@@ -185,4 +188,4 @@ const StandardGridMobile: React.FC = () => {
   );
 };
 
-export default StandardGridMobile;
+export default StandardGridDesktop;

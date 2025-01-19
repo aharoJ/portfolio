@@ -1,15 +1,24 @@
 import React from "react";
-import StandardGridDesktop from "@/components/projecto/standard/grid/StandardGridDesktop";
-import StandardGridMobile from "@/components/projecto/standard/grid/StandardGridMobile";
+import ProjectDesktop from "@/components/clean/project/ProjectDesktop";
+import ProjectMobile from "@/components/clean/project/ProjectMobile";
 
 const Projects: React.FC = () => {
   return (
     <>
       {/* <h1 className="h1 flex justify-center mb-24"> Featured Desktop </h1> */}
-      <StandardGridDesktop />
-
-      {/* <h1 className="h1 flex justify-center mb-24">Standard Desktop Project</h1> */}
-      <StandardGridMobile />
+      {/* <StandardGridDesktop /> */}
+      
+      <section title="Projects">
+        <div className="hidden lg:block">
+          {/* <Tim=elineDesktop /> */}
+          {/* <StandardGridDesktop /> */}
+          <ProjectDesktop />
+        </div>
+        <div className="block lg:hidden">
+          {/* <StandardGridMobile /> */}
+          <ProjectMobile/>
+        </div>
+      </section>
 
       {/* <h1 className="h1 flex justify-center mb-24"> Standard Mobile Project </h1> */}
       {/* <LandingStandardMobile/> */}
