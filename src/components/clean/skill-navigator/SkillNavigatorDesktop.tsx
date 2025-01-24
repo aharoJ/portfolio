@@ -105,7 +105,6 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { icon: <FaJava />, icon_name: "Java" },
       { icon: <SiPython />, icon_name: "Python" },
-      { icon: <SiRust />, icon_name: "Rust" },
       { icon: <SiTypescript />, icon_name: "TypeScript" },
       { icon: <SiJavascript />, icon_name: "JavaScript" },
       { icon: <FaHtml5 />, icon_name: "HTML" },
