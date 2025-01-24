@@ -7,6 +7,7 @@ import HomeGoToProjectsBtn from "@/components/clean/home/HomeGoToProjectsBtn";
 import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
 import LandingStatsMobile from "@/components/clean/home/LandingStatsMobile";
 import ScrollToTopButton from "@/components/clean/ScrollToTopButton";
+import LandingDesktopProject from "@/components/casa/LandingDesktopProject";
 
 const Home = () => {
   return (
@@ -78,6 +79,7 @@ const Home = () => {
       </section>
 
       <section title="FEATURED PROJECT">
+        {/* import LandingDesktopProject from "@/components/casa/LandingDesktopProject"; */}
         {/* <LandingDesktopProject /> */}
         {/* <LandingMobileProject /> */}
       </section>
