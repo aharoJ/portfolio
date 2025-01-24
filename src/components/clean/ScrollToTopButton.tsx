@@ -1,11 +1,10 @@
-// ScrollToTopButton.tsx
 "use client";
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
 
-const SCROLL_THRESHOLD = 300; // px to scroll before button appears
+const SCROLL_THRESHOLD = 100; // px to scroll before button appears
 
 const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,7 +48,7 @@ const ScrollToTopButton: React.FC = () => {
             bottom-6 
             right-6 
             z-50 
-            p-3 
+            p-3
             rounded-full 
             bg-primary
             text-black 
@@ -61,7 +60,7 @@ const ScrollToTopButton: React.FC = () => {
           "
           aria-label="Scroll to top"
         >
-          <FaArrowUp className="w-5 h-5" />
+          <FaArrowUp className="w-5 h-5 lg:w-8 lg:h-8" />
         </motion.button>
       )}
     </AnimatePresence>
