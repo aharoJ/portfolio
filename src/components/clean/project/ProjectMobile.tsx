@@ -13,10 +13,12 @@ import vivaldi from "../../../../public/projects/vivaldi.png";
 import alacritty from "../../../../public/projects/vim.png";
 import notebook from "../../../../public/projects/notebook.png";
 import gpt3 from "../../../../public/projects/gpt3.png";
+import QuantumAnnealing from "../../../../public/projects/QuantumAnnealing.png";
 
 // -- import your mobile card
 import StandardCardMobile from "@/app/dev/standard/StandardCardMobile";
 
+// Combine all of your projects into one array, adding a "category" property:
 const allProjects = [
   // Web Apps
   {
@@ -24,7 +26,7 @@ const allProjects = [
     img: twitter,
     github: "https://github.com/aharoJ/Twitter",
     link: "https://github.com/aharoJ/Twitter",
-    hashtags: ["Java", "Spring Boot", "React", "TypeScript", "HTML", "CSS"],
+    hashtags: ["Java", "Spring", "React", "Typescript", "HTML&CSS"],
     category: "Web Apps",
   },
   {
@@ -32,7 +34,7 @@ const allProjects = [
     img: threeD,
     github: "https://github.com/aharoJ/3D-Portfolio",
     link: "https://github.com/aharoJ/3D-Portfolio",
-    hashtags: ["React", "Tailwind CSS", "JavaScript", "Vite"],
+    hashtags: ["React", "Tailwindcss", "Javascript", "Vite"],
     category: "Web Apps",
   },
   {
@@ -40,7 +42,7 @@ const allProjects = [
     img: ems,
     github: "https://github.com/aharoJ/EmployeeManagementSystemApp",
     link: "https://github.com/aharoJ/EmployeeManagementSystemApp",
-    hashtags: ["Java", "Spring Boot", "Vite", "React", "Tailwind CSS"],
+    hashtags: ["Java", "Spring", "Vite", "React", "Tailwindcss"],
     category: "Web Apps",
   },
   {
@@ -48,7 +50,15 @@ const allProjects = [
     img: apple,
     github: "https://github.com/aharoJ/Apple",
     link: "https://github.com/aharoJ/Apple",
-    hashtags: ["React", "HTML", "CSS", "TypeScript", "Sanity.io"],
+    hashtags: ["React", "HTML&CSS", "Typescript", "Sanity"],
+    category: "Web Apps",
+  },
+  {
+    title: "chatGPT3",
+    img: gpt3,
+    github: "https://github.com/aharoJ/chatGPT3",
+    link: "https://github.com/aharoJ/chatGPT3",
+    hashtags: ["react", "html", "css", "javascript", "ml"],
     category: "Web Apps",
   },
 
@@ -58,7 +68,12 @@ const allProjects = [
     img: skhd_yabai,
     github: "https://github.com/aharoJ/yabai-skhd-config",
     link: "https://github.com/aharoJ/yabai-skhd-config",
-    hashtags: ["macOS Configuration", "Shell Scripting", "SKHD", "Yabai"],
+    hashtags: [
+      "hacking MacOS",
+      "shell scripting",
+      "skhd-config",
+      "yabai-config",
+    ],
     category: "Dot Files",
   },
   {
@@ -66,7 +81,7 @@ const allProjects = [
     img: tmux,
     github: "https://github.com/aharoJ/tmux-config",
     link: "https://github.com/aharoJ/tmux-config",
-    hashtags: ["TMUX", "Custom Design", "Catppuccin"],
+    hashtags: ["handcrafted design", "catppuccin", "tmux-config"],
     category: "Dot Files",
   },
   {
@@ -75,10 +90,10 @@ const allProjects = [
     github: "https://github.com/aharoJ/lf-config",
     link: "https://github.com/aharoJ/lf-config",
     hashtags: [
-      "Shell Scripting",
-      "Custom Scripts",
-      "Kitty Configuration",
-      "LF File Manager",
+      "shell scripting",
+      "custom Scripts",
+      "kitty-config",
+      "lf-config",
     ],
     category: "Dot Files",
   },
@@ -88,13 +103,10 @@ const allProjects = [
     github: "https://github.com/aharoJ/starship-config",
     link: "https://github.com/aharoJ/starship-config",
     hashtags: [
-      "TOML",
-      "Custom Coloscheme",
-      "Timezone",
-      "Git",
-      "Branches",
-      "Commits",
-      "Spotify",
+      "custom toml file",
+      "hand-picked colors",
+      "timezone",
+      "starship-config",
     ],
     category: "Dot Files",
   },
@@ -103,7 +115,7 @@ const allProjects = [
     img: vivaldi,
     github: "https://github.com/aharoJ/vivaldi-config",
     link: "https://themes.vivaldi.net/themes/nV6vpPxDvdN",
-    hashtags: ["Custom Keybindings", "Hotkeys", "Vivaldi Configuration"],
+    hashtags: ["custom binds", "hotkeys", "vivaldi-config"],
     category: "Dot Files",
   },
   {
@@ -111,7 +123,7 @@ const allProjects = [
     img: alacritty,
     github: "https://github.com/aharoJ/alacritty-config",
     link: "https://github.com/aharoJ/alacritty-config",
-    hashtags: ["Terminal Emulator", "YAML"],
+    hashtags: ["terminal emulator", "yalm file", "alacritty-config"],
     category: "Dot Files",
   },
 
@@ -122,24 +134,25 @@ const allProjects = [
     github: "https://github.com/aharoJ/opensource/tree/main/machine-learning",
     link: "https://github.com/aharoJ/opensource/tree/main/machine-learning",
     hashtags: [
-      "AI",
-      "Machine Learning",
-      "Capstone Project",
-      "Deep Learning",
-      "Jupyter Notebooks",
+      "ai",
+      "machine learning",
+      "capstone",
+      "deep learning",
+      "jupyter",
     ],
     category: "Machine Learning",
   },
   {
-    title: "chatGPT3",
-    img: gpt3,
-    github: "https://github.com/aharoJ/chatGPT3",
-    link: "https://github.com/aharoJ/chatGPT3",
-    hashtags: ["React", "HTML", "CSS", "JavaScript", "Machine Learning"],
+    title: "Quantum Annealing",
+    img: QuantumAnnealing, // MUST UPLOAD AN IMAGE HERE
+    github: "https://github.com/aharoJ/QuantumAnnealing",
+    link: "https://github.com/aharoJ/QuantumAnnealing",
+    hashtags: ["python", "matplot", ""],
     category: "Machine Learning",
   },
 ];
 
+// We’ll define all categories we want to show in the filter bar:
 const categories = ["All", "Web Apps", "Dot Files", "Machine Learning"];
 
 const StandardGridMobile: React.FC = () => {

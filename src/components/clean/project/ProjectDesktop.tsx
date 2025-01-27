@@ -13,6 +13,7 @@ import vivaldi from "../../../../public/projects/vivaldi.png";
 import alacritty from "../../../../public/projects/vim.png";
 import notebook from "../../../../public/projects/notebook.png";
 import gpt3 from "../../../../public/projects/gpt3.png";
+import QuantumAnnealing from "../../../../public/projects/QuantumAnnealing.png";
 
 // -- import your StandardCardDesktop component
 import StandardCardDesktop from "@/app/dev/standard/StandardCardDesktop";
@@ -50,6 +51,14 @@ const allProjects = [
     github: "https://github.com/aharoJ/Apple",
     link: "https://github.com/aharoJ/Apple",
     hashtags: ["React", "HTML&CSS", "Typescript", "Sanity"],
+    category: "Web Apps",
+  },
+  {
+    title: "chatGPT3",
+    img: gpt3,
+    github: "https://github.com/aharoJ/chatGPT3",
+    link: "https://github.com/aharoJ/chatGPT3",
+    hashtags: ["react", "html", "css", "javascript", "ml"],
     category: "Web Apps",
   },
 
@@ -134,11 +143,11 @@ const allProjects = [
     category: "Machine Learning",
   },
   {
-    title: "chatGPT3",
-    img: gpt3,
-    github: "https://github.com/aharoJ/chatGPT3",
-    link: "https://github.com/aharoJ/chatGPT3",
-    hashtags: ["react", "html", "css", "javascript", "ml"],
+    title: "Quantum Annealing",
+    img: QuantumAnnealing, // MUST UPLOAD AN IMAGE HERE
+    github: "https://github.com/aharoJ/QuantumAnnealing",
+    link: "https://github.com/aharoJ/QuantumAnnealing",
+    hashtags: ["python", "matplot", ""],
     category: "Machine Learning",
   },
 ];
