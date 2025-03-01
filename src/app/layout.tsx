@@ -8,6 +8,7 @@ import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import Head from "next/head";
 import ScrollToTopButton from "@/components/clean/ScrollToTopButton";
+import EndOfPageMessage from "@/modules/layouts/EndOfPageMessage";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -16,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  // 𒌐  <--- Berserk ICON 
+  // 𒌐  <--- Berserk ICON
   title: "aharoJ",
   description: "My personal porfolio",
 };
@@ -40,7 +41,8 @@ export default function RootLayout({
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-        <ScrollToTopButton />
+        <EndOfPageMessage />
+        {/* <ScrollToTopButton /> */}
       </body>
     </html>
   );

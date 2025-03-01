@@ -9,7 +9,6 @@ import GithubFeaturedIcon from "./icon/GithubFeaturedIcon";
 // OLD const FramerImage = motion(Image);
 const FramerImage = motion.create(Image);
 
-
 interface BigProjectProps {
   hashtags?: string[];
   title: string;

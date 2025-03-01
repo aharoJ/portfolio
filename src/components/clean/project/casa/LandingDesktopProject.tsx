@@ -1,11 +1,11 @@
 import React from "react";
 import portfolio from "../../../public/projects/portfolio.png";
-import FeaturedCardMobile from "../clean/project/featured/FeaturedCardMobile";
+import DesktopFeaturedProject from "../DesktopFeaturedProject";
 
-const LandingMobileProject: React.FC = () => {
+const LandingDesktopProject: React.FC = () => {
   return (
-    <main className="container mx-auto my-24 flex w-auto">
-      <FeaturedCardMobile
+    <main className="container mx-auto my-24 flex w-full">
+      <DesktopFeaturedProject
         title="Portfolio"
         img={portfolio}
         description="View the portfolio codebase. Along with a variety of projects, including backend, frontend, full-stack, machine learning, devops, 
@@ -18,4 +18,4 @@ const LandingMobileProject: React.FC = () => {
   );
 };
 
-export default LandingMobileProject;
+export default LandingDesktopProject;

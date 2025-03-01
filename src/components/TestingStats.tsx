@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React, { JSX } from "react";
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 
 // Define the data for the portfolio items
@@ -25,14 +25,18 @@ interface PortfolioProps {
 }
 
 // Implement the Portfolio component
-const Portfolio: React.FC<PortfolioProps> = ({ containerStyles, itemStyles, iconStyles, numberStyles, titleStyles }) => {
+const Portfolio: React.FC<PortfolioProps> = ({
+  containerStyles,
+  itemStyles,
+  iconStyles,
+  numberStyles,
+  titleStyles,
+}) => {
   return (
     <div className={containerStyles}>
       {portfolioItems.map((item, index) => (
         <div key={index} className={itemStyles}>
-          <div className={iconStyles}>
-            {item.icon}
-          </div>
+          <div className={iconStyles}>{item.icon}</div>
           <div>
             <div className={numberStyles}>{item.number}</div>
             <div className={titleStyles}>{item.title}</div>

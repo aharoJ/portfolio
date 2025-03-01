@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link"; 
+import Link from "next/link";
 
 const links = [
   {
@@ -45,7 +45,8 @@ const Nav = () => {
             href={link.path}
             key={index}
             className={`${
-              link.path === path_name && "text-primary border-b-2 border-primary"
+              link.path === path_name &&
+              "text-primary border-b-2 border-primary"
             } capitalize font-medium hover:text-primary transition-all`}
           >
             {link.name}

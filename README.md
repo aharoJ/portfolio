@@ -1,4 +1,3 @@
-
 <!-- START -->
 <h1 align="center"><b> Angel J. Haro 
 <img src="https://docs.google.com/uc?export=download&id=1JqFc6WL-cTtJBQgW9tusQAZhQ3H9hGae" alt="" height="25" >
@@ -11,10 +10,12 @@
 
 ![alt text](public/projects/ResponsiveCodebase.png)
 
-# How To Run 
+# How To Run
 
-## Frontend 
-1. Clone 
+## Frontend
+
+1. Clone
+
 ```sh
 git clone https://github.com/aharoJ/portfolio.git
 ```
@@ -38,14 +39,13 @@ npm install --force
 ---
 
 ## Backend
-- No backend integration rebase yet. 
 
-
+- No backend integration rebase yet.
 
 # Technologies Used
+
 - TypeScript
 - Next.js 14
 - Tailwind CSS
 - Framer Motion
 - React Icon
-

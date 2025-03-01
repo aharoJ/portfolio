@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
 const HomeAnnouncement = () => {
   return (
     <div className="container mx-auto h-full my-12">
       <h2 className="h2 justify-center flex "> NOTICE </h2>
-      <span className="text-green-300 text-3xl">Announcement: 01.14.2025</span>
+      <span className="text-green-300 text-3xl">Announcement: 02.28.2025</span>
 
       <p>
         • Currently <span className="text-red-400"> refactoring </span>
@@ -25,17 +25,8 @@ const HomeAnnouncement = () => {
         </a>
         .
       </p>
-      
-
-      <p> • Updating descriptions in Home, About, Contact. </p>
-      <p> • Updating titles in Home, About, Contact.</p>
-      <p> • Updating dates in Home, About, Contact.</p>
-      <p> • Updating mobile view in Home, About, Contact.</p>
-      <p> • Updating size for both mobile and desktop in Home, About, Contact.</p>
-      <p> • Updating animation smoothness on mobile and tablet devices in Home, About, Contact.</p>
-      <p> • Updating padding for all devices in Home, About, Contact.</p>
     </div>
   );
-}
+};
 
-export default HomeAnnouncement
+export default HomeAnnouncement;

@@ -1,11 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
 
-import {
-  FaJava,
-  FaHtml5,
-  FaCss3,
-} from "react-icons/fa";
+import { FaJava, FaHtml5, FaCss3 } from "react-icons/fa";
 
 import {
   SiSpring,
@@ -188,7 +184,7 @@ const devops: DevOpsList = {
     { icon: <SiKubernetes />, icon_name: "Kubernetes" },
     { icon: <FaJenkins />, icon_name: "Jenkins" },
     { icon: <SiGooglecloud />, icon_name: "Google Cloud Platform" },
-    { icon: <FaAws/>, icon_name: "AWS" },
+    { icon: <FaAws />, icon_name: "AWS" },
     { icon: <SiTmux />, icon_name: "Tmux" },
   ],
 };
