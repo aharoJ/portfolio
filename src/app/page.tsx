@@ -1,13 +1,12 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
-import LandingStatsDesktop from "@/components/clean/home/LandingStatsDesktop";
+import LandingStatsDesktop from "@/modules/homes/LandingStatsDesktop";
 import HomeAnnouncement from "@/components/temp/HomeAnnouncement";
-import HomeGoToProjectsBtn from "@/components/clean/home/HomeGoToProjectsBtn";
+import HomeGoToProjectsBtn from "@/modules/homes/HomeGoToProjectsBtn";
 import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
-import LandingStatsMobile from "@/components/clean/home/LandingStatsMobile";
-import ScrollToTopButton from "@/components/clean/ScrollToTopButton";
-import LandingDesktopProject from "@/components/casa/LandingDesktopProject";
+import LandingStatsMobile from "@/modules/homes/LandingStatsMobile";
+import SpecialFeatureProject from "@/components/clean/project/SpecialFeatureProject";
 
 const Home = () => {
   return (
@@ -21,7 +20,10 @@ const Home = () => {
             {/* text */}
             <div className="text-center xl:text-left order-2 xl:order-none">
               <span className="text-xl"> Software Engineer </span>
-              <span className="text-base italic text-primary  xl:text-lg"> / aharoJ </span>
+              <span className="text-base italic text-primary  xl:text-lg">
+                {" "}
+                / aharoJ{" "}
+              </span>
               <h1 className="h1">
                 Angel Jair Haro <br />
               </h1>
@@ -79,11 +81,18 @@ const Home = () => {
       </section>
 
       <section title="FEATURED PROJECT">
-        {/* import LandingDesktopProject from "@/components/casa/LandingDesktopProject"; */}
-        {/* <LandingDesktopProject /> */}
-        {/* <LandingMobileProject /> */}
+        <div className="hidden lg:block">
+          <SpecialFeatureProject />
+        </div>
+        <div className="block lg:hidden">
+          {/* HERE WE HAVE TO MAKE MOBILE VERSION */}
+        </div>
+
       </section>
 
+      <section title="FEATURED PROJECT" className="py-12">
+        <div className="">{/* <ChatProject/> */}</div>
+      </section>
 
       {/* ANNOUNCEMENT */}
       <HomeAnnouncement />
