@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
-import React from 'react'
-import { FiDownload } from 'react-icons/fi';
+import { Button } from "@/components/ui/button";
+import React from "react";
+import { FiDownload } from "react-icons/fi";
 
 const HomeDownloadCvBtn = () => {
   return (
@@ -22,4 +22,4 @@ const HomeDownloadCvBtn = () => {
   );
 };
 
-export default HomeDownloadCvBtn
+export default HomeDownloadCvBtn;

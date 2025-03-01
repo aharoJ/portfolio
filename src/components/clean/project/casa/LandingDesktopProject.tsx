@@ -1,4 +1,3 @@
-
 import React from "react";
 import portfolio from "../../../public/projects/portfolio.png";
 import DesktopFeaturedProject from "../DesktopFeaturedProject";

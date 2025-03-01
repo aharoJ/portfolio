@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const HomeAnnouncement = () => {
   return (
@@ -27,6 +27,6 @@ const HomeAnnouncement = () => {
       </p>
     </div>
   );
-}
+};
 
-export default HomeAnnouncement
+export default HomeAnnouncement;

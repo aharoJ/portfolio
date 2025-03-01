@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  // 𒌐  <--- Berserk ICON 
+  // 𒌐  <--- Berserk ICON
   title: "aharoJ",
   description: "My personal porfolio",
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-        <EndOfPageMessage/>
+        <EndOfPageMessage />
         {/* <ScrollToTopButton /> */}
       </body>
     </html>

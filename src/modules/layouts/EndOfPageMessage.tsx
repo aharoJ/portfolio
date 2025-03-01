@@ -10,7 +10,7 @@ const EndOfPageMessage = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => setIsEndOfPage(entries[0].isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (observerTarget.current) observer.observe(observerTarget.current);

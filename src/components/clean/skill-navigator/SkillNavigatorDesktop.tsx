@@ -80,7 +80,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { motion } from "framer-motion";
 
-
 // 1) Define a Type for a single skill icon
 interface SkillIcon {
   icon: ReactNode;

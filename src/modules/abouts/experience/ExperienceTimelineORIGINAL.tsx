@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import ScrollListAnimation from "./ScrollListAnimationDesktop";
 
-
 interface EducationInfoProps {
   school: string;
   degree: string;

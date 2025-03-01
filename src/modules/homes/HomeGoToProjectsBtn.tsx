@@ -1,7 +1,6 @@
-import { Button } from '@/components/ui/button';
-import React from 'react'
+import { Button } from "@/components/ui/button";
+import React from "react";
 import { GoProjectSymlink } from "react-icons/go";
-
 
 const HomeGoToProjectsBtn = () => {
   return (
@@ -20,6 +19,6 @@ const HomeGoToProjectsBtn = () => {
       </Button>
     </a>
   );
-}
+};
 
-export default HomeGoToProjectsBtn
+export default HomeGoToProjectsBtn;

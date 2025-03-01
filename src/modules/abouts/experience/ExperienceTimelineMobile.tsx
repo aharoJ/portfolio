@@ -138,7 +138,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "exploreCSR (Google)",
     location: "Carson, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -147,7 +147,7 @@ const experienceData: ExperienceInfoProps[] = [
     companyLink: "#LINK",
     location: "McLean, Virginia",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -155,7 +155,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "Computing Alliance of Hispanic Serving Institutions",
     location: "Union, New Jersey",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -164,7 +164,7 @@ const experienceData: ExperienceInfoProps[] = [
     companyLink: "https://csudh.edu",
     location: "Los Angeles Unified School District, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -172,7 +172,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "T-Mobile",
     location: "Whittier, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
   {
@@ -180,7 +180,7 @@ const experienceData: ExperienceInfoProps[] = [
     company: "M&M Restaurant",
     location: "Downey, California",
     bullets: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis condimentum massa, a sodales quam mollis ut. Donec urna sapien, consectetur a molestie eleifend, iaculis sed mi. Sed viverra velit ac justo laoreet venenatis. Donec blandit sit amet risus a eleifend. Morbi fringilla turpis eget elit volutpat convallis. Phasellus lacinia nunc nec est condimentum, id tincidunt purus porttitor. Sed dignissim dui nec lorem pellentesque, sit amet purus vel dignissim.",
     ],
   },
 ];

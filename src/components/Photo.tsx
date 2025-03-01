@@ -31,7 +31,7 @@ const Photo: React.FC = () => {
             fill
             alt="selfie image"
             className="object-cover rounded-full"
-            // LINE BELOW IS NEW MAYBE BRINGS ISSUES 
+            // LINE BELOW IS NEW MAYBE BRINGS ISSUES
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </motion.div>
@@ -48,7 +48,6 @@ const Photo: React.FC = () => {
             cy="253"
             r="250"
             stroke="#bfdbfe" // color of circle HERE
-
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

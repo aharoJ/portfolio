@@ -25,14 +25,13 @@ const config = {
     },
     extend: {
       colors: {
-        main: "#1c1c22", // BACKGROUND MAIN COLOR 
-
+        main: "#1c1c22", // BACKGROUND MAIN COLOR
 
         // primary: "#bfdbfe",
 
         primary: {
           DEFAULT: "#bfdbfe",
-          hover: "#a1c2fc",  // Define a hover color for primary
+          hover: "#a1c2fc", // Define a hover color for primary
         },
 
         secondary: "#FED7AA",
@@ -41,7 +40,6 @@ const config = {
           DEFAULT: "#00ff99",
           hover: "#00e187",
         },
-
       },
       keyframes: {
         "accordion-down": {

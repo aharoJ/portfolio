@@ -18,19 +18,18 @@ const About = () => {
           <EducationDesktop />
         </div>
         <div className="block lg:hidden">
-          <EducationMobile/>
+          <EducationMobile />
         </div>
       </section>
-      
+
       <section title="EXPERIENCE">
         <div className="hidden lg:block">
           <TimelineDesktop />
         </div>
         <div className="block lg:hidden">
-          <TimelineMobile/>
+          <TimelineMobile />
         </div>
       </section>
-
 
       {/* <h1 className="flex container justify-center text-9xl"> DIVIDER </h1> */}
     </>

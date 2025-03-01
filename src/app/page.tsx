@@ -87,7 +87,6 @@ const Home = () => {
         <div className="block lg:hidden">
           {/* HERE WE HAVE TO MAKE MOBILE VERSION */}
         </div>
-
       </section>
 
       <section title="FEATURED PROJECT" className="py-12">

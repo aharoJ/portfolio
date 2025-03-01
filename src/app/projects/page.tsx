@@ -7,7 +7,7 @@ const Projects: React.FC = () => {
     <>
       {/* <h1 className="h1 flex justify-center mb-24"> Featured Desktop </h1> */}
       {/* <StandardGridDesktop /> */}
-      
+
       <section title="Projects">
         <div className="hidden lg:block">
           {/* <Tim=elineDesktop /> */}
@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
         </div>
         <div className="block lg:hidden">
           {/* <StandardGridMobile /> */}
-          <ProjectMobile/>
+          <ProjectMobile />
         </div>
       </section>
 
