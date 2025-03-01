@@ -1,6 +1,6 @@
 import React from "react";
 import portfolio from "../../../public/projects/portfolio.png";
-import FeaturedCardMobile from "../clean/project/featured/FeaturedCardMobile";
+import FeaturedCardMobile from "../featured/FeaturedCardMobile";
 
 const LandingMobileProject: React.FC = () => {
   return (

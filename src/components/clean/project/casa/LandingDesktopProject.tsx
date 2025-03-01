@@ -1,7 +1,7 @@
 
 import React from "react";
 import portfolio from "../../../public/projects/portfolio.png";
-import DesktopFeaturedProject from "../clean/project/DesktopFeaturedProject";
+import DesktopFeaturedProject from "../DesktopFeaturedProject";
 
 const LandingDesktopProject: React.FC = () => {
   return (
