@@ -1,3 +1,4 @@
+// @/app/page.tsx
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";

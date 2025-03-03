@@ -1,3 +1,4 @@
+// @/components/Photo.tsx
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -24,7 +25,6 @@ const Photo: React.FC = () => {
           absolute "
         >
           <Image
-            // src="/profile/aharoJBackgroundRemoved.png"
             src="/profile/z.png"
             priority
             quality={100}
