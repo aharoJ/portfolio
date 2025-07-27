@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "aharoJ",
-    description: "My personal portfolio",
+    description: "Welcome to my portfolio!",
     // images: ["https://aharoJ.io/profile/aharoJBackgroundRemoved.png"],
     images: ["https://aharoJ.io/profile/aharoJ.png"],
   },
@@ -60,8 +60,8 @@ export default function RootLayout({
         />
         <meta property="og:url" content="https://aharoj.io" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="aharoJ - Software Engineer" />
-        <meta property="og:description" content="Angel Jair Haro's portfolio" />
+        <meta property="og:title" content="Software Engineer" />
+        <meta property="og:description" content="Welcome to my portfolio!" />
       </head>
       <body className={jetbrainsMono.variable}>
         <Header />

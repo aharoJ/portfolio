@@ -8,6 +8,7 @@ import HomeGoToProjectsBtn from "@/modules/homes/HomeGoToProjectsBtn";
 import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
 import LandingStatsMobile from "@/modules/homes/LandingStatsMobile";
 import SpecialFeatureProject from "@/components/clean/project/SpecialFeatureProject";
+import React from "react";
 
 const Home = () => {
   return (
@@ -22,11 +23,11 @@ const Home = () => {
             <div className="text-center xl:text-left order-2 xl:order-none">
               <span className="text-xl"> Software Engineer </span>
               <span className="text-base italic text-primary  xl:text-lg">
-                {" "}
-                / aharoJ{" "}
+                / aharoJ
               </span>
               <h1 className="h1">
-                Angel Jair Haro <br />
+                Angel Jair Haroooo
+                <br />
               </h1>
               <p className="max-w-[500px] my-2 lg:text-xl text-white/80">
                 You are a function of what the whole universe is doing in the
