@@ -4,7 +4,7 @@ const HomeAnnouncement = () => {
   return (
     <div className="container mx-auto h-full my-12">
       <h2 className="h2 justify-center flex "> NOTICE </h2>
-      <span className="text-green-300 text-3xl">Announcement: 02.28.2025</span>
+      <span className="text-green-300 text-3xl">Announcement: 07.01.2025</span>
 
       <p>
         • Currently <span className="text-red-400"> refactoring </span>
@@ -13,7 +13,7 @@ const HomeAnnouncement = () => {
         to <span className="text-blue-200 "> TypeScript </span>
         and updating to the newest Next framework available for LTS from
         <span className="text-white/80"> Next.js 12 </span>
-        to <span className="text-blue-200"> Next.js 14 </span>.
+        to <span className="text-blue-200"> Next.js 15 </span>.
       </p>
       <p className="text-white ">
         • You can view my original codebase on{" "}

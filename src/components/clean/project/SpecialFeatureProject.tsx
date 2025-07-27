@@ -81,8 +81,8 @@ const SpecialFeatureProject: React.FC = () => {
                 management, all wrapped up in a clean, intuitive interface.
               </p>
               <div className="text-sm text-gray-500 space-x-3 mb-4">
-                <span>⭐ 15</span>
-                <span>👁 19,000</span>
+                <span>⭐ 24</span>
+                <span>👁 37,000</span>
                 <span>🍴 3</span>
                 <span>🗃️ 49</span>
               </div>

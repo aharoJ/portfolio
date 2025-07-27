@@ -98,12 +98,22 @@ const ExperienceTimelineDesktop: React.FC = () => {
 
         <ul className="ml-4 flex w-full flex-col ">
           <ExperienceInfo
-            title="Software Engineer, Research & Development"
-            company="exploreCSR (Google)"
+            title="Software Engineer"
+            company="College of Veterinary Medicine (westernU)"
+            // date="Month 0000 - Month 0000"
+            location="Pomona, California"
+            bullets={[
+              "Created an in-house web app that helps vet students and faculty track hands-on training, saving the school major licensing costs.",
+            ]}
+          />
+
+          <ExperienceInfo
+            title="Software Engineering Researcher"
+            company="Google exploreCSR Program"
             // date="Month 0000 - Month 0000"
             location="Carson, California"
             bullets={[
-              "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
+              "Worked on Google-funded projects that made web apps snappier and explored new ways to model graphics data.",
             ]}
           />
 
@@ -114,7 +124,7 @@ const ExperienceTimelineDesktop: React.FC = () => {
             // date="Month 0000 - Month 0000"
             location="McLean, Virginia"
             bullets={[
-              "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
+              "Automated realistic self-driving-car simulations for U.S. transportation researchers to test road-safety ideas faster.",
             ]}
           />
 
@@ -125,7 +135,7 @@ const ExperienceTimelineDesktop: React.FC = () => {
             // date="Month 0000 - Month 0000"
             location="Union, New Jersey"
             bullets={[
-              "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
+              "Built smart test scripts that quickly spot hidden bugs, boosting reliability for student software projects.",
             ]}
           />
 
@@ -136,7 +146,7 @@ const ExperienceTimelineDesktop: React.FC = () => {
             // date="Month 0000 - Month 0000"
             location="Los Angeles Unified School District, California"
             bullets={[
-              "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
+              "Led coding workshops in under-resourced LA schools, guiding teachers and kids through hands-on Swift and robotics projects.",
             ]}
           />
 
@@ -146,7 +156,7 @@ const ExperienceTimelineDesktop: React.FC = () => {
             // date="Month 0000 - Month 0000"
             location="Whittier, California"
             bullets={[
-              "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
+              "Recognized as the most influential Mobile Expert & Shadow Trainer for the East Los Angeles Region.",
             ]}
           />
 
@@ -158,6 +168,20 @@ const ExperienceTimelineDesktop: React.FC = () => {
             bullets={[
               "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
             ]}
+          />
+          <ExperienceInfo
+            title="Cashier Clerk"
+            company="Dollar Zone"
+            // date="Month 0000 - Month 0000"
+            location="Pico Rivera, California"
+            bullets={["A very humbling job.", ]}
+          />
+          <ExperienceInfo
+            title="Dish Washer"
+            company="Zapien's Salsa Grill"
+            // date="Month 0000 - Month 0000"
+            location="Pico Rivera, California"
+            bullets={["The most humbling job I've had.", ]}
           />
         </ul>
       </div>
