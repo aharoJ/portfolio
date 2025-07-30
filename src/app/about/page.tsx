@@ -1,3 +1,5 @@
+// path: @app/about/page.tsx
+
 import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
 import TimelineDesktop from "@/modules/abouts/experience/ExperienceTimelineDesktop";
 
