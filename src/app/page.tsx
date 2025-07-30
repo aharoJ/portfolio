@@ -1,4 +1,4 @@
-// @/app/page.tsx
+// @(home)/page.tsx
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
@@ -26,7 +26,7 @@ const Home = () => {
                 / aharoJ
               </span>
               <h1 className="h1">
-                Angel Jair Haroooo
+                Angel Jair Haro
                 <br />
               </h1>
               <p className="max-w-[500px] my-2 lg:text-xl text-white/80">
