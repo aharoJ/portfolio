@@ -72,7 +72,7 @@ const LoadIcon: FC<LoadIconProps> = ({
 }) => {
   return (
     <div className="container flex flex-col items-end justify-center mx-auto">
-      <div className="flex flex-row items-center space-x-4 lg:space-x-0">
+      <div className="flex flex-row items-center space-x-0">
         {Icon && <Icon className={iconStyles} />}
         <AnimateNumbers value={value} numberStyles={numberStyles} />
       </div>
@@ -84,17 +84,17 @@ const LoadIcon: FC<LoadIconProps> = ({
 // Main LandingStatsDesktop component
 const LandingStatsDesktop: FC = () => {
   return (
-    <section className="contianer flex flex-wrap justify-center items-center mx-auto p-2 my-6 lg:my-12">
-      <div className=" grid grid-cols-2 lg:grid-cols-4">
+    <section className="contianer flex flex-wrap justify-center items-center mx-auto p-2 my-12">
+      <div className=" grid grid-cols-4">
         {statItems.map((item, index) => (
           <LoadIcon
             key={index}
             icon={item.icon}
             value={item.value}
             label={item.label}
-            iconStyles="lg:text-5xl lg:mx-4 text-7xl"
-            numberStyles="inline-block text-xl lg:text-6xl font-light"
-            labelStyles="text-base xl:text-2xl font-light capitalize tracking-wide text-dark/75 dark:text-light/75"
+            iconStyles=" mx-4 text-5xl"
+            numberStyles="inline-block text-4xl font-light"
+            labelStyles="text-2xl font-light capitalize tracking-wide text-dark/75 dark:text-light/75"
           />
         ))}
       </div>
