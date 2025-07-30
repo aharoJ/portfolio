@@ -7,8 +7,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
-import Head from "next/head";
-import ScrollToTopButton from "@/components/clean/ScrollToTopButton";
 import EndOfPageMessage from "@/modules/layouts/EndOfPageMessage";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -64,9 +62,10 @@ export default function RootLayout({
         <meta property="og:description" content="Welcome to my portfolio!" />
       </head>
       <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
+        {/* <Header /> */}
+        {/* <StairTransition /> */}
+        {children}
+        {/* <PageTransition>{children}</PageTransition> */}
         <EndOfPageMessage />
         {/* <ScrollToTopButton /> */}
       </body>
