@@ -1,80 +1,99 @@
 // @app/casa/page.tsx
-import Image from "next/image";
+import Photo from "@/components/Photo";
+import Social from "@/components/Social";
+import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
+import LandingStatsDesktop from "@/modules/homes/LandingStatsDesktop";
+import HomeAnnouncement from "@/components/temp/HomeAnnouncement";
+import HomeGoToProjectsBtn from "@/modules/homes/HomeGoToProjectsBtn";
+import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
+import LandingStatsMobile from "@/modules/homes/LandingStatsMobile";
+import SpecialFeatureProject from "@/components/clean/project/SpecialFeatureProject";
+import React from "react";
 
 export default function CasaPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col-reverse items-center justify-between min-h-[92vh] py-12 gap-12">
-          {/* Text Content */}
-          <div className="flex-1">
-            <div className="max-w-2xl">
-              <div className="mb-1 text-lg text-primary font-mono tracking-wide">
-                Software Engineer
-              </div>
-              <h1 className="text-4xl font-bold tracking-tight mb-4">
+    <>
+      <section className="h-full">
+        <div className="container mx-auto h-full">
+          <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+            {/* text */}
+            <div className="text-center xl:text-left order-2 xl:order-none">
+              <span className="text-xl"> Software Engineer </span>
+              <span className="text-base italic text-primary  xl:text-lg">
+                / aharoJ
+              </span>
+              <h1 className="h1">
                 Angel Jair Haro
+                <br />
               </h1>
-
-              <p className="text-xl text-white/80 mb-8 max-w-xl leading-relaxed">
-                Crafting performant solutions at the intersection of design and
-                technology. Minimalist at heart, focused on creating
-                frictionless experiences.
+              <p className="max-w-[500px] my-2 lg:text-xl text-white/80">
+                You are a function of what the whole universe is doing in the
+                same way that a wave is a function of what the whole ocean is
+                doing.
+                <br />
+                <span className="text-primary italic lg:text-xl tracking-tight">
+                  Alan Watts
+                </span>
               </p>
 
-              <div className="flex flex-col gap-4 mb-12">
-                {/* <a */}
-                {/*   href="/projects" */}
-                {/*   className="bg-primary hover:bg-primary/90 text-black font-medium py-3 px-6 rounded-lg transition-colors duration-200 text-center" */}
-                {/* > */}
-                {/*   View Projects */}
-                {/* </a> */}
-                {/* <a */}
-                {/*   href="/contact" */}
-                {/*   className="border border-white/30 hover:border-white/60 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 text-center" */}
-                {/* > */}
-                {/*   Get in Touch */}
-                {/* </a> */}
-              </div>
+              <div className=" flex flex-col gap-8 xl:flex-row items-center">
+                {/* Download CV Button
+             <HomeDownloadCvBtn/> */}
+                {/* Go to Projects Button */}
+                <HomeGoToProjectsBtn />
 
-              <div className="flex gap-6">
-                {[
-                  { name: "GitHub", url: "https://github.com/aharoj" },
-                  { name: "LinkedIn", url: "https://linkedin.com/in/aharoj" },
-                  { name: "Twitter", url: "https://twitter.com/aharoj" },
-                  { name: "Instagram", url: "https://instagram.com/aharoj" },
-                  { name: "Discord", url: "https://twitter.com/aharoj" },
-                ].map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/70 hover:text-white transition-colors duration-200 text-lg"
-                  >
-                    {social.name}
-                  </a>
-                ))}
+                {/* Socials Button */}
+                <div className="my-4 xl:my-4">
+                  <Social
+                    containerStyles="flex space-x-4 lg:space-x-8 "
+                    iconStyles="w-14 h-14 border border-primary rounded-full flex justify-center items-center text-xl
+                    text-primary text-base hover:bg-primary/70 hover:text-black hover:transition-all duration-500"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Selfie */}
-          <div className="flex-1 flex justify-center">
-            <div className="relative w-[280px] h-[280px]">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-transparent transform rotate-12"></div>
-              <Image
-                src="/profile/z.png"
-                alt="Angel Jair Haro"
-                width={360}
-                height={360}
-                priority
-                className="rounded-full object-cover w-full h-full relative z-10 border-4 border-white/5"
-              />
+            {/* photo */}
+            <div className="order-1 xl:order-none mb-8 xl:mb-0">
+              <Photo />
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section title="ANIMATED STATS">
+        <div className="hidden lg:block">
+          <LandingStatsDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <LandingStatsMobile />
+        </div>
+      </section>
+
+      <section title="SKILL NAVIGATOR">
+        <div className="hidden lg:block">
+          <SkillNavigatorDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <SkillNavigatorMobile />
+        </div>
+      </section>
+
+      <section title="FEATURED PROJECT">
+        <div className="hidden lg:block">
+          <SpecialFeatureProject />
+        </div>
+        <div className="block lg:hidden">
+          {/* HERE WE HAVE TO MAKE MOBILE VERSION */}
+        </div>
+      </section>
+
+      <section title="FEATURED PROJECT" className="py-12">
+        <div className="">{/* <ChatProject/> */}</div>
+      </section>
+
+      {/* ANNOUNCEMENT */}
+      <HomeAnnouncement />
+    </>
   );
 }
