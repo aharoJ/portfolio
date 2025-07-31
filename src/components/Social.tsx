@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// @components/Social.tsx
 import Link from "next/link";
 import React, { JSX } from "react";
 
