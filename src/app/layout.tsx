@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // @/app/layout.tsx
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
@@ -8,6 +9,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import EndOfPageMessage from "@/modules/layouts/EndOfPageMessage";
+import Navbar from "@/modules/navigation/Navbar";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -25,7 +27,6 @@ export const metadata: Metadata = {
     url: "https://aharoJ.io",
     images: [
       {
-        // url: "https://aharoJ.io/profile/aharoJBackgroundRemoved.png",
         url: "https://aharoJ.io/profile/aharoJ.png",
         width: 1200,
         height: 630,
@@ -37,7 +38,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "aharoJ",
     description: "Welcome to my portfolio!",
-    // images: ["https://aharoJ.io/profile/aharoJBackgroundRemoved.png"],
     images: ["https://aharoJ.io/profile/aharoJ.png"],
   },
 };
@@ -64,9 +64,13 @@ export default function RootLayout({
       <body className={jetbrainsMono.variable}>
         {/* <Header /> */}
         {/* <StairTransition /> */}
+
+        <Navbar />
         {children}
+
+
         {/* <PageTransition>{children}</PageTransition> */}
-        <EndOfPageMessage />
+        {/* <EndOfPageMessage /> */}
         {/* <ScrollToTopButton /> */}
       </body>
     </html>
