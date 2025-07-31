@@ -1,4 +1,4 @@
-// @/app/page.tsx
+// @app/casa/page.tsx
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
@@ -10,15 +10,12 @@ import LandingStatsMobile from "@/modules/homes/LandingStatsMobile";
 import SpecialFeatureProject from "@/components/clean/project/SpecialFeatureProject";
 import React from "react";
 
-const Home = () => {
+export default function CasaPage() {
   return (
     <>
       <section className="h-full">
         <div className="container mx-auto h-full">
-          <div
-            className="flex flex-col xl:flex-row items-center justify-between 
-        xl:pt-8 xl:pb-24"
-          >
+          <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             {/* text */}
             <div className="text-center xl:text-left order-2 xl:order-none">
               <span className="text-xl"> Software Engineer </span>
@@ -26,7 +23,7 @@ const Home = () => {
                 / aharoJ
               </span>
               <h1 className="h1">
-                Angel Jair Haroooo
+                Angel Jair Haro
                 <br />
               </h1>
               <p className="max-w-[500px] my-2 lg:text-xl text-white/80">
@@ -99,6 +96,4 @@ const Home = () => {
       <HomeAnnouncement />
     </>
   );
-};
-
-export default Home;
+}
