@@ -1,8 +1,8 @@
+// @/app/resume/page.tsx
 "use client";
+
 import React, { ReactNode } from "react";
-
 import { FaJava, FaHtml5, FaCss3 } from "react-icons/fa";
-
 import {
   SiSpring,
   SiPostman,
@@ -89,7 +89,7 @@ const education: EducationList = {
       institution: "California State University, Dominguez Hills",
       degree: "Bachelor of Science in Computer Science (CSUDH)",
       location: "Carson, California",
-      gpa: "3.4", // Add your GPA here
+      gpa: "3.4", 
       details: [
         "Google Scholarship: Awarded a scholarship under the mentorship of Dr. Tang as a Google Explorer.",
         "GMiS Conference: Achieved 2nd place out of 300+ contestants, competed in a hackathon and placed 5th place.",
@@ -398,7 +398,7 @@ const Resume = () => {
           </Tabs>
         </div>
       </motion.div>
-      <h1 className="text-5xl justify-center"> LALALA</h1>
+      {/* <h1 className="text-5xl justify-center"> LALALA</h1> */}
     </>
   );
 };

@@ -1,4 +1,5 @@
-// path: @app/about/page.tsx
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// path: @/app/about/page.tsx
 
 import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
 import TimelineDesktop from "@/modules/abouts/experience/ExperienceTimelineDesktop";
@@ -11,9 +12,9 @@ import TimelineMobile from "@/modules/abouts/experience/ExperienceTimelineMobile
 const About = () => {
   return (
     <>
-      {/* <div>
-        <SkillOverview />
-      </div> */}
+      {/* <div> */}
+      {/*   <SkillOverview /> */}
+      {/* </div> */}
 
       <section title="EDUCATION">
         <div className="hidden lg:block">
