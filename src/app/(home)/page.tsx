@@ -50,8 +50,8 @@ export default function Home() {
           <section className="flex-1 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <Image
-                src="/profile/r.png"
-                // src="/profile/aharoJ.png"
+                // src="/profile/aharoJ.jpg"
+                src="/profile/aharoJ.jpeg"
                 alt="Angel Jair Haro"
                 fill
                 priority
