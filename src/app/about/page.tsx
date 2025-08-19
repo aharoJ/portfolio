@@ -1,42 +1,46 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// path: @/app/about/page.tsx
+// path: @/app/test/page.tsx
+
+import SkillsDesktop from "@/modules/skills/SkillsDesktop";
+import React from "react";
 
 import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
 import TimelineDesktop from "@/modules/abouts/experience/ExperienceTimelineDesktop";
-
-import EducationDesktop from "@/modules/abouts/education/EducationDesktop";
-import React from "react";
+import EducationDesktop from "@/modules/education/EducationDesktop";
 import EducationMobile from "@/modules/abouts/education/EducationMobile";
 import TimelineMobile from "@/modules/abouts/experience/ExperienceTimelineMobile";
+import ExperienceTimelineDesktop from "@/modules/experience/ExperienceDesktop";
 
-const About = () => {
+const Test = () => {
   return (
     <>
-      {/* <div> */}
-      {/*   <SkillOverview /> */}
-      {/* </div> */}
-
+      {/* -------------------- Education Section -------------------- */}
       <section title="EDUCATION">
         <div className="hidden lg:block">
+          {/* <EducationDesktop /> */}
           <EducationDesktop />
         </div>
-        <div className="block lg:hidden">
-          <EducationMobile />
-        </div>
+        <div className="block lg:hidden">{/* <EducationMobile /> */}</div>
       </section>
 
+      {/* -------------------- Experience Section -------------------- */}
       <section title="EXPERIENCE">
         <div className="hidden lg:block">
-          <TimelineDesktop />
+          <ExperienceTimelineDesktop />
         </div>
-        <div className="block lg:hidden">
-          <TimelineMobile />
-        </div>
+        <div className="block lg:hidden">{/* <TimelineMobile /> */}</div>
       </section>
 
-      {/* <h1 className="flex container justify-center text-9xl"> DIVIDER </h1> */}
+      {/* -------------------- Skills Section -------------------- */}
+      <section title="ANIMATED STATS">
+        <div className="hidden lg:block">
+          <SkillsDesktop />
+        </div>
+        <div className="block lg:hidden">{/* <SkillsMobile /> */}</div>
+      </section>
+      {/* --- --- --- --- ... .... ... --- --- --- --- */}
     </>
   );
 };
 
-export default About;
+export default Test;
