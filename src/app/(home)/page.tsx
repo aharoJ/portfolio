@@ -14,11 +14,11 @@ export default function Home() {
           <section className="flex-1 order-2 md:order-none text-center md:text-left">
             <header className="mb-6">
               <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-                Angel&nbsp;Jair&nbsp;Haro
+                Angel Jair Haro
               </h1>
               <div className="mt-2 flex justify-center md:justify-start items-baseline gap-2">
                 <span className="text-lg md:text-xl">
-                  Software&nbsp;Engineer
+                  Software Engineer
                 </span>
                 <span className="italic text-primary/90 text-base md:text-lg">
                   / aharoJ
@@ -50,8 +50,8 @@ export default function Home() {
           <section className="flex-1 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <Image
-                src="/profile/r.png"
-                // src="/profile/aharoJ.png"
+                // src="/profile/aharoJ.jpg"
+                src="/profile/aharoJ.jpeg"
                 alt="Angel Jair Haro"
                 fill
                 priority

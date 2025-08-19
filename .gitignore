@@ -211,3 +211,4 @@ src/components/PageTransition.tsx
 components.json
 package-lock.json
 .vercel
+.dev

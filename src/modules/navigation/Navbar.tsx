@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 export default function Navbar() {
   const path = usePathname();
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Resume', href: '/resume' },
-    { label: 'Contact', href: '/contact' },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
+    // { label: "Resume", href: "/resume" }, -- I DONT USE IN PROD
+    // { label: "Contact", href: "/contact" }, -- dont think we shud use it no more
   ];
 
   return (
@@ -26,10 +26,10 @@ export default function Navbar() {
               key={href}
               href={href}
               className={clsx(
-                'text-sm transition-colors',
+                "text-sm transition-colors",
                 path === href
-                  ? 'font-semibold text-primary'
-                  : 'text-gray-300 hover:text-primary'
+                  ? "font-semibold text-primary"
+                  : "text-gray-300 hover:text-primary",
               )}
             >
               {label}

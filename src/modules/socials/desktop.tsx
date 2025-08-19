@@ -1,4 +1,4 @@
-// @/modules/socials/desktop.tsx
+// @modules/socials/desktop.tsx
 
 import SocialIcon from "./icon";
 import { socialItems } from "./items";
