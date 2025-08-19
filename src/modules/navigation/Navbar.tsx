@@ -11,7 +11,7 @@ export default function Navbar() {
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     // { label: "Resume", href: "/resume" }, -- I DONT USE IN PROD
-    { label: "Contact", href: "/contact" },
+    // { label: "Contact", href: "/contact" }, -- dont think we shud use it no more
   ];
 
   return (
