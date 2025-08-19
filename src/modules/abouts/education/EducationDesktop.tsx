@@ -39,12 +39,6 @@ const education: EducationList = {
         "Nominated and invited to join the Honors Society within the Universities club to receive external benefits",
       ],
       coursework: [
-        // "Intro to CS and Programming (I, II, III)",
-        // "Software Development, Assembly, Discrete Structures",
-        // "Applied Data Structures, Data Structures",
-        // "Computer Organization, Machine Learning",
-        // "Analysis of Algorithms, Relational Database, Senior Design",
-
         "Intro to CS and Programming (I, II, III)",
         "Software Development",
         "Assembly",
