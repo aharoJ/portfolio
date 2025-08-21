@@ -36,6 +36,9 @@ const config = {
         // -------------------- Neon colors --------------------
         neon: {
           green: "#00ff99",
+          default: "#1c1c22",
+          one: "#18181b",
+          two: "#232329",
         },
         // -------------------- Creamy colors --------------------
         creamy: {
