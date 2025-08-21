@@ -1,6 +1,6 @@
 // @(home)/page.tsx
 
-import AnimateStatsDesktop from "@/modules/homes/AnimateStatsDesktop";
+import AnimateStatsDesktop from "@/modules/tempToDELETE/homes/AnimateStatsDesktop";
 import SocialDesktop from "@/modules/socials/desktop";
 import SocialMobile from "@/modules/socials/mobile";
 import Image from "next/image";

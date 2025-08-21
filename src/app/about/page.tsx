@@ -1,17 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// path: @/app/test/page.tsx
+// path: @/app/about/page.tsx
 
-import SkillsDesktop from "@/modules/skills/SkillsDesktop";
+import SkillsDesktop from "@/modules/home/SkillsDesktop";
 import React from "react";
 
 import SkillOverview from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
-import TimelineDesktop from "@/modules/abouts/experience/ExperienceTimelineDesktop";
 import EducationDesktop from "@/modules/education/EducationDesktop";
-import EducationMobile from "@/modules/abouts/education/EducationMobile";
-import TimelineMobile from "@/modules/abouts/experience/ExperienceTimelineMobile";
-import ExperienceTimelineDesktop from "@/modules/experience/ExperienceDesktop";
+import ExperienceDesktop from "@/modules/experience/ExperienceDesktop";
 
-const Test = () => {
+const About = () => {
   return (
     <>
       {/* -------------------- Education Section -------------------- */}
@@ -26,7 +23,7 @@ const Test = () => {
       {/* -------------------- Experience Section -------------------- */}
       <section title="EXPERIENCE">
         <div className="hidden lg:block">
-          <ExperienceTimelineDesktop />
+          <ExperienceDesktop />
         </div>
         <div className="block lg:hidden">{/* <TimelineMobile /> */}</div>
       </section>
@@ -43,4 +40,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default About;

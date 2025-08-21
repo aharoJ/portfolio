@@ -2,11 +2,11 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import SkillNavigatorDesktop from "@/components/clean/skill-navigator/SkillNavigatorDesktop";
-import LandingStatsDesktop from "@/modules/homes/LandingStatsDesktop";
+import LandingStatsDesktop from "@/modules/tempToDELETE/homes/LandingStatsDesktop";
 import HomeAnnouncement from "@/components/temp/HomeAnnouncement";
-import HomeGoToProjectsBtn from "@/modules/homes/HomeGoToProjectsBtn";
+import HomeGoToProjectsBtn from "@/modules/tempToDELETE/homes/HomeGoToProjectsBtn";
 import SkillNavigatorMobile from "@/components/clean/skill-navigator/SkillNavigatorMobile";
-import LandingStatsMobile from "@/modules/homes/LandingStatsMobile";
+import LandingStatsMobile from "@/modules/tempToDELETE/homes/LandingStatsMobile";
 import SpecialFeatureProject from "@/components/clean/project/SpecialFeatureProject";
 import React from "react";
 
