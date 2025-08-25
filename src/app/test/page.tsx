@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // path: @/app/about/page.tsx
 import React from "react";
 
@@ -8,6 +9,7 @@ import ExperienceMobile from "@/modules/experience/ExperienceMobile";
 import SkillsMobile from "@/modules/skills/SkillsMobile";
 import SkillsTestingggDesktop from "@/modules/skills/SkillsTestingggDesktop";
 import SkillsDesktop from "@/modules/skills/SkillsDesktop";
+import SkillsTestingggMobile from "@/modules/skills/SkillsTestingggMobile";
 
 const Test = () => {
   return (
@@ -36,10 +38,11 @@ const Test = () => {
       <section title="ANIMATED STATS">
         <div className="hidden lg:block">
           <SkillsDesktop />
-          <SkillsTestingggDesktop />
+          {/* <SkillsTestingggDesktop /> */}
         </div>
         <div className="block lg:hidden">
           <SkillsMobile />
+          {/* <SkillsTestingggMobile /> */}
         </div>
       </section>
       {/* --- --- --- --- ... .... ... --- --- --- --- */}
