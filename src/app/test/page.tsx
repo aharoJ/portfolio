@@ -1,53 +1,22 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-// path: @/app/about/page.tsx
+// path: @/app/test/page.tsx
+
 import React from "react";
+import ProjectDesktop from "@/modules/projects/ProjectDesktop";
+import ProjectMobile from "@/modules/projects/ProjectMobile";
 
-import EducationDesktop from "@/modules/education/EducationDesktop";
-import ExperienceDesktop from "@/modules/experience/ExperienceDesktop";
-import EducationMobile from "@/modules/education/EducationMobile";
-import ExperienceMobile from "@/modules/experience/ExperienceMobile";
-import SkillsMobile from "@/modules/skills/SkillsMobile";
-import SkillsTestingggDesktop from "@/modules/skills/SkillsTestingggDesktop";
-import SkillsDesktop from "@/modules/skills/SkillsDesktop";
-import SkillsTestingggMobile from "@/modules/skills/SkillsTestingggMobile";
-
-const Test = () => {
+const TestingProjectsPage: React.FC = () => {
   return (
     <>
-      {/* -------------------- Education Section -------------------- */}
-      <section title="EDUCATION">
+      <section aria-label="Projects">
         <div className="hidden lg:block">
-          <EducationDesktop />
+          <ProjectDesktop/>
         </div>
         <div className="block lg:hidden">
-          <EducationMobile />
+          <ProjectMobile />
         </div>
       </section>
-
-      {/* -------------------- Experience Section -------------------- */}
-      <section title="EXPERIENCE">
-        <div className="hidden lg:block">
-          <ExperienceDesktop />
-        </div>
-        <div className="block lg:hidden">
-          <ExperienceMobile />
-        </div>
-      </section>
-
-      {/* -------------------- Skills Section -------------------- */}
-      <section title="ANIMATED STATS">
-        <div className="hidden lg:block">
-          <SkillsDesktop />
-          {/* <SkillsTestingggDesktop /> */}
-        </div>
-        <div className="block lg:hidden">
-          <SkillsMobile />
-          {/* <SkillsTestingggMobile /> */}
-        </div>
-      </section>
-      {/* --- --- --- --- ... .... ... --- --- --- --- */}
     </>
   );
 };
 
-export default Test;
+export default TestingProjectsPage;
