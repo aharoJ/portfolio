@@ -4,7 +4,8 @@
 import React, { memo, useMemo } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import GithubStandardIcon from "@/components/clean/project/GithubStandardIcon";
+
+import ProjectsGithubIcon from "./ProjectsGithubIcon";
 
 interface Props {
   hashtags?: ReadonlyArray<string>;
@@ -70,7 +71,7 @@ function Card({
               <h2 className="text-2xl font-semibold tracking-wide text-creamy-sage">
                 {title}
               </h2>
-              <GithubStandardIcon path={github} />
+              <ProjectsGithubIcon path={github} />
             </div>
 
             {/* tags */}
