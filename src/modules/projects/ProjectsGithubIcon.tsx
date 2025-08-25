@@ -1,4 +1,4 @@
-// @/components/clean/project/GithubStandardIcon.tsx
+// /Users/aharo/desk/repository/portfolio/src/components/clean/project/GithubStandardIcon.tsx
 
 import Link from "next/link";
 import React from "react";
@@ -8,7 +8,7 @@ interface SocialProps {
   path: string;
 }
 
-const GithubStandardIcon: React.FC<SocialProps> = ({ path }) => {
+const ProjectsGithubIcon: React.FC<SocialProps> = ({ path }) => {
   return (
     <div className="flex space-x-4 lg:space-x-8">
       <Link
@@ -22,4 +22,4 @@ const GithubStandardIcon: React.FC<SocialProps> = ({ path }) => {
     </div>
   );
 };
-export default GithubStandardIcon;
+export default ProjectsGithubIcon;

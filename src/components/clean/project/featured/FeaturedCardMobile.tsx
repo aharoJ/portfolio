@@ -4,7 +4,8 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import GithubFeaturedIcon from "../icon/GithubFeaturedIcon";
+
+import ProjectsGithubIcon from "@/modules/projects/ProjectsGithubIcon";
 
 // Use motion.create() to define motion-wrapped Image
 // OLD const FramerImage = motion(Image);
@@ -65,7 +66,7 @@ const FeaturedCardMobile: React.FC<BigProjectProps> = ({
 
             <div className="flex w-full justify-between space-x-2 items-center my-2">
               <h2 className="text-2xl text-primary">{title}</h2>
-              <GithubFeaturedIcon path={github} />
+              <ProjectsGithubIcon path={github} />
             </div>
 
             <p className="text-xs text-gray-400">{description}</p>

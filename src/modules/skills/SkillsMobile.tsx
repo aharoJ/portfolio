@@ -1,13 +1,7 @@
-//
-//
-//
-//
-/* eslint-disable react/display-name */
-// path: @/modules/skills/SkillsDesktop.tsx
+// @/modules/skills/SkillsMobile.tsx
 "use client";
 
-import React, { useState, ReactNode } from "react";
-
+import { useMemo, useState, ReactNode, memo } from "react";
 import {
   FaJava,
   FaHtml5,
@@ -58,20 +52,19 @@ import {
   SiLua,
 } from "react-icons/si";
 import { GiEgyptianBird, GiDwarfFace, GiLoveInjection } from "react-icons/gi";
-import { TbH2 } from "react-icons/tb"; // H2 DB
-import { BsFiletypeXml } from "react-icons/bs"; // XML
-import { BiBarChart } from "react-icons/bi"; // Data Viz libs
-import { GrRobot } from "react-icons/gr"; // .NET MAUI
+import { TbH2 } from "react-icons/tb";
+import { BsFiletypeXml } from "react-icons/bs";
+import { BiBarChart } from "react-icons/bi";
+import { GrRobot } from "react-icons/gr";
 
 // -----------------------------------------------------------------------------
-// Types
+// Types & Data
 // -----------------------------------------------------------------------------
 interface Skill {
   icon: ReactNode;
   name: string;
 }
 
-// Backend
 const backendSkills: Skill[] = [
   { icon: <FaJava />, name: "Java" },
   { icon: <SiSpringboot />, name: "Spring Boot" },
@@ -84,7 +77,6 @@ const backendSkills: Skill[] = [
   { icon: <BiBarChart />, name: "Matplotlib / Seaborn" },
 ];
 
-// Frontend
 const frontendSkills: Skill[] = [
   { icon: <SiTypescript />, name: "TypeScript" },
   { icon: <SiJavascript />, name: "JavaScript" },
@@ -98,51 +90,46 @@ const frontendSkills: Skill[] = [
   { icon: <FaCss3 />, name: "CSS3" },
 ];
 
-// Microsoft Stack
 const microsoftSkills: Skill[] = [
   { icon: <PiFileCSharpDuotone />, name: "C#" },
   { icon: <SiDotnet />, name: "ASP.NET Core" },
-  { icon: <GrRobot />, name: ".NET MAUI" },
+  { icon: <GrRobot />, name: ".NET MAUI" },
   { icon: <FaMicrosoft />, name: "Power Apps" },
   { icon: <FaMicrosoft />, name: "Power Automate" },
   { icon: <FaMicrosoft />, name: "SharePoint" },
-  { icon: <VscAzure />, name: "Azure Entra ID" },
-  { icon: <VscAzure />, name: "Microsoft Graph" },
-  { icon: <VscAzure />, name: "MSAL (OAuth2/OBO)" },
+  { icon: <VscAzure />, name: "Azure Entra ID" },
+  { icon: <VscAzure />, name: "Microsoft Graph" },
+  { icon: <VscAzure />, name: "MSAL (OAuth2/OBO)" },
 ];
 
-// Databases
 const databasesSkills: Skill[] = [
   { icon: <SiPostgresql />, name: "PostgreSQL" },
   { icon: <TbH2 />, name: "H2" },
   { icon: <SiMysql />, name: "MySQL" },
   { icon: <SiMariadb />, name: "MariaDB" },
   { icon: <SiApachecassandra />, name: "Cassandra" },
-  { icon: <BiBarChart />, name: "Data Modeling" },
+  { icon: <BiBarChart />, name: "Data Modeling" },
 ];
 
-// Cloud
 const cloudSkills: Skill[] = [
   { icon: <VscAzure />, name: "Azure" },
   { icon: <SiGooglecloud />, name: "GCP" },
 ];
 
-// Tooling & DevOps
 const toolingSkills: Skill[] = [
   { icon: <SiGit />, name: "Git" },
   { icon: <FaDocker />, name: "Docker" },
-  { icon: <FaDocker />, name: "Docker Compose" },
+  { icon: <FaDocker />, name: "Docker Compose" },
   { icon: <SiApachemaven />, name: "Maven" },
-  { icon: <SiApachetomcat />, name: "Apache Tomcat" },
+  { icon: <SiApachetomcat />, name: "Apache Tomcat" },
   { icon: <SiPostman />, name: "Postman" },
-  { icon: <FaDatabase />, name: "MySQL Workbench" },
+  { icon: <FaDatabase />, name: "MySQL Workbench" },
   { icon: <FaDatabase />, name: "pgAdmin4" },
   { icon: <SiHomebrew />, name: "Homebrew" },
   { icon: <SiVirtualbox />, name: "VirtualBox" },
   { icon: <SiNginx />, name: "Nginx" },
 ];
 
-// Configurations & Shells
 const configSkills: Skill[] = [
   { icon: <SiGnubash />, name: "Bash" },
   { icon: <SiFishshell />, name: "Fish" },
@@ -154,7 +141,6 @@ const configSkills: Skill[] = [
   { icon: <SiLua />, name: "Lua" },
 ];
 
-// Architecture & Patterns
 const patternSkills: Skill[] = [
   { icon: <FaProjectDiagram />, name: "Microservices" },
   { icon: <FaCubes />, name: "Monolithic" },
@@ -163,30 +149,59 @@ const patternSkills: Skill[] = [
   { icon: <GiLoveInjection />, name: "Dependency Injection" },
 ];
 
-/* --- --- --- --- Skills Content --- --- --- --- */
-const SkillsContent = React.memo(({ skills }: { skills: Skill[] }) => (
-  <div className="grid grid-cols-5 gap-6 px-12 py-8 bg-neon-one border-2 border-creamy-bone rounded-3xl">
-    {skills.map((sk, i) => (
-      <div
-        key={i}
-        title={sk.name}
-        className="flex flex-col items-center  py-4 bg-soft-moss rounded-xl hover:bg-soft-moss/70 transition group"
-      >
-        <div className="text-5xl mb-2 text-creamy-ivory group-hover:text-creamy-white">
-          {sk.icon}
-        </div>
-        <span className="text-sm text-creamy-ivory transition-colors group-hover:text-creamy-bone">
-          {sk.name}
-        </span>
-      </div>
-    ))}
-  </div>
-));
+// -----------------------------------------------------------------------------
+// Grid: exactly 3 visible rows. If >9 items -> scroll INSIDE card only.
+// Tiles are fixed height so nothing jiggles.
+// -----------------------------------------------------------------------------
+const TILE_H = 80; // px
+const GAP = 12; // px (gap-3)
+const GRID_H = TILE_H * 3 + GAP * 2; // 264px
 
-/* -----------------------------------------------------------------------------
-   Main Component
- -----------------------------------------------------------------------------*/
-export default function SkillsTestingggDesktop() {
+const SkillsGrid = memo(({ skills }: { skills: Skill[] }) => {
+  const hasOverflow = skills.length > 9;
+
+  return (
+    <div
+      className={[
+        // fixed 3-row viewport height
+        "px-4",
+        hasOverflow ? "overflow-y-auto" : "overflow-hidden",
+      ].join(" ")}
+      style={{ height: GRID_H }}
+    >
+      {/* hide scrollbar but keep scrollability when overflowing */}
+      <style jsx global>{`
+        div[style*="height: ${GRID_H}px"]::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      `}</style>
+
+      <div className="grid grid-cols-3 gap-3">
+        {skills.map((sk, i) => (
+          <div
+            key={i}
+            title={sk.name}
+            className="group flex h-[80px] flex-col items-center justify-center rounded-xl bg-soft-moss p-3 transition-colors hover:bg-soft-moss/70"
+          >
+            <div className="mb-1 text-2xl text-creamy-ivory group-hover:text-creamy-white">
+              {sk.icon}
+            </div>
+            <span className="text-center text-[11px] leading-tight text-creamy-ivory group-hover:text-creamy-bone line-clamp-2">
+              {sk.name}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+});
+SkillsGrid.displayName = "SkillsGrid";
+
+// -----------------------------------------------------------------------------
+// Main (mobile) — tight outer spacing so the section doesn't add extra scroll
+// -----------------------------------------------------------------------------
+export default function SkillsMobile() {
   const tabs = [
     "backend",
     "frontend",
@@ -194,67 +209,63 @@ export default function SkillsTestingggDesktop() {
     "cloud",
     "microsoft",
     "tooling",
-    "configurations",
+    "config",
     "patterns",
   ] as const;
   type Tab = (typeof tabs)[number];
+
   const [active, setActive] = useState<Tab>("backend");
 
-  const tabContents: Record<Tab, ReactNode> = {
-    backend: <SkillsContent skills={backendSkills} />,
-    frontend: <SkillsContent skills={frontendSkills} />,
-    databases: <SkillsContent skills={databasesSkills} />,
-    cloud: <SkillsContent skills={cloudSkills} />,
-    microsoft: <SkillsContent skills={microsoftSkills} />,
-    tooling: <SkillsContent skills={toolingSkills} />,
-    configurations: <SkillsContent skills={configSkills} />,
-    patterns: <SkillsContent skills={patternSkills} />,
-  };
+  const tabMap: Record<Tab, Skill[]> = useMemo(
+    () => ({
+      backend: backendSkills,
+      frontend: frontendSkills,
+      databases: databasesSkills,
+      cloud: cloudSkills,
+      microsoft: microsoftSkills,
+      tooling: toolingSkills,
+      config: configSkills,
+      patterns: patternSkills,
+    }),
+    [],
+  );
 
   return (
-    <section className="w-full mx-auto p-12 px-4 bg-neon-default">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-creamy-white mb-4">SKILLS</h2>
-          <div className="w-40 h-1 bg-soft-moss mx-auto"></div>
-        </div>
+    <section aria-label="Skills (mobile)" className="bg-neon-default">
+      <div className="mx-auto max-w-2xl px-5 pt-8 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+        {/* Heading */}
+        <header className="mb-5 text-center">
+          <h2 className="text-3xl font-semibold tracking-tight text-creamy-white">
+            SKILLS
+          </h2>
+          <div className="mx-auto mt-3 h-1 w-24 bg-soft-moss" />
+        </header>
 
-        {/* tabs */}
-        {/* <div className="flex space-x-8 mb-4 bg-neon-one scrollbar-hide"> */}
-        {/*   <div className="border-creamy-ivory border-2" /> */}
-        {/*   {tabs.map((t) => ( */}
-        {/*     <button */}
-        {/*       key={t} */}
-        {/*       onClick={() => setActive(t)} */}
-        {/*       className={`px-4 pb-2 text-xl font-medium whitespace-nowrap ${ */}
-        {/*         active === t */}
-        {/*           ? "border-b-4 border-soft-moss text-creamy-ivory" */}
-        {/*           : "text-creamy-bone/60 hover:text-soft-moss hover:border-b-2 hover:border-creamy-ivory/80" */}
-        {/*       }`} */}
-        {/*     > */}
-        {/*       {t.charAt(0).toUpperCase() + t.slice(1)} */}
-        {/*     </button> */}
-        {/*   ))} */}
-        {/* </div> */}
-
+        {/* Tabs — chips */}
         <nav
           aria-label="Skill categories"
-          className="mb-6 flex flex-wrap items-center justify-center gap-4"
+          className="-mx-5 mb-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 [scrollbar-width:none] [-ms-overflow-style:none]"
         >
+          <style jsx global>{`
+            nav[aria-label="Skill categories"]::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
+
           {tabs.map((t) => {
-            const isActive = t === active;
+            const on = t === active;
             const label = t.charAt(0).toUpperCase() + t.slice(1);
             return (
               <button
                 key={t}
                 onClick={() => setActive(t)}
-                className={`px-4 py-2 text-base font-medium rounded-full border transition-colors
-                  ${
-                    isActive
-                      ? "border-soft-moss bg-soft-moss text-creamy-white"
-                      : "border-soft-moss bg-creamy-bone text-soft-slate hover:text-soft-moss hover:bg-creamy-ivory"
-                  }`}
-                aria-pressed={isActive}
+                className={[
+                  "snap-start shrink-0 rounded-full border px-3 py-1.5 text-sm font-medium",
+                  on
+                    ? "border-soft-moss bg-soft-moss text-creamy-white"
+                    : "border-soft-moss bg-creamy-bone text-soft-slate hover:text-soft-moss hover:bg-creamy-ivory",
+                ].join(" ")}
+                aria-pressed={on}
               >
                 {label}
               </button>
@@ -262,17 +273,10 @@ export default function SkillsTestingggDesktop() {
           })}
         </nav>
 
-        {/* content */}
-        <div className="tab-contents">
-          {tabs.map((tab) => (
-            <div
-              key={tab}
-              className={`tab-content ${active === tab ? "block" : "hidden"}`}
-            >
-              {tabContents[tab]}
-            </div>
-          ))}
-        </div>
+        {/* Card — fixed height grid inside. No page scroll added below. */}
+        <article className="rounded-3xl border-2 border-creamy-bone bg-neon-one py-3">
+          <SkillsGrid skills={tabMap[active]} />
+        </article>
       </div>
     </section>
   );
