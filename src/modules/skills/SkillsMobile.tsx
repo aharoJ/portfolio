@@ -1,11 +1,7 @@
-// UP TO DATE HERE
-// UP TO DATE HERE
-// UP TO DATE HERE
-// UP TO DATE HERE
 // @/modules/skills/SkillsMobile.tsx
 "use client";
 
-import { useState, ReactNode, memo } from "react";
+import { useMemo, useState, ReactNode, memo } from "react";
 import {
   FaJava,
   FaHtml5,
@@ -62,7 +58,7 @@ import { BiBarChart } from "react-icons/bi";
 import { GrRobot } from "react-icons/gr";
 
 // -----------------------------------------------------------------------------
-// Types & Data (outside component for perf)
+// Types & Data
 // -----------------------------------------------------------------------------
 interface Skill {
   icon: ReactNode;
@@ -154,34 +150,56 @@ const patternSkills: Skill[] = [
 ];
 
 // -----------------------------------------------------------------------------
-// Compact grid — tiles match your desktop tile colors (soft‑moss → creamy text)
+// Grid: exactly 3 visible rows. If >9 items -> scroll INSIDE card only.
+// Tiles are fixed height so nothing jiggles.
 // -----------------------------------------------------------------------------
-const SkillsGrid = memo(({ skills }: { skills: Skill[] }) => (
-  <div className="grid grid-cols-3 gap-3 px-4">
-    {skills.map((sk, i) => (
-      <div
-        key={i}
-        title={sk.name}
-        className="
-          group flex flex-col items-center justify-center
-          rounded-xl bg-soft-moss p-3
-          transition-colors hover:bg-soft-moss/70
-        "
-      >
-        <div className="mb-1 text-2xl text-creamy-ivory group-hover:text-creamy-white">
-          {sk.icon}
-        </div>
-        <span className="text-[11px] leading-tight text-creamy-ivory group-hover:text-creamy-bone">
-          {sk.name}
-        </span>
+const TILE_H = 80; // px
+const GAP = 12; // px (gap-3)
+const GRID_H = TILE_H * 3 + GAP * 2; // 264px
+
+const SkillsGrid = memo(({ skills }: { skills: Skill[] }) => {
+  const hasOverflow = skills.length > 9;
+
+  return (
+    <div
+      className={[
+        // fixed 3-row viewport height
+        "px-4",
+        hasOverflow ? "overflow-y-auto" : "overflow-hidden",
+      ].join(" ")}
+      style={{ height: GRID_H }}
+    >
+      {/* hide scrollbar but keep scrollability when overflowing */}
+      <style jsx global>{`
+        div[style*="height: ${GRID_H}px"]::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      `}</style>
+
+      <div className="grid grid-cols-3 gap-3">
+        {skills.map((sk, i) => (
+          <div
+            key={i}
+            title={sk.name}
+            className="group flex h-[80px] flex-col items-center justify-center rounded-xl bg-soft-moss p-3 transition-colors hover:bg-soft-moss/70"
+          >
+            <div className="mb-1 text-2xl text-creamy-ivory group-hover:text-creamy-white">
+              {sk.icon}
+            </div>
+            <span className="text-center text-[11px] leading-tight text-creamy-ivory group-hover:text-creamy-bone line-clamp-2">
+              {sk.name}
+            </span>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-));
+    </div>
+  );
+});
 SkillsGrid.displayName = "SkillsGrid";
 
 // -----------------------------------------------------------------------------
-// Main (mobile) — exact palette match to your desktop variant
+// Main (mobile) — tight outer spacing so the section doesn't add extra scroll
 // -----------------------------------------------------------------------------
 export default function SkillsMobile() {
   const tabs = [
@@ -198,36 +216,35 @@ export default function SkillsMobile() {
 
   const [active, setActive] = useState<Tab>("backend");
 
-  const tabMap: Record<Tab, Skill[]> = {
-    backend: backendSkills,
-    frontend: frontendSkills,
-    databases: databasesSkills,
-    cloud: cloudSkills,
-    microsoft: microsoftSkills,
-    tooling: toolingSkills,
-    config: configSkills,
-    patterns: patternSkills,
-  };
+  const tabMap: Record<Tab, Skill[]> = useMemo(
+    () => ({
+      backend: backendSkills,
+      frontend: frontendSkills,
+      databases: databasesSkills,
+      cloud: cloudSkills,
+      microsoft: microsoftSkills,
+      tooling: toolingSkills,
+      config: configSkills,
+      patterns: patternSkills,
+    }),
+    [],
+  );
 
   return (
-    // section background matches desktop
-    <section aria-label="Skills (mobile)" className="relative bg-neon-default">
-      <div className="mx-auto max-w-2xl px-5 py-16">
-        {/* Heading — same type/color as desktop */}
-        <header className="mb-6 text-center">
+    <section aria-label="Skills (mobile)" className="bg-neon-default">
+      <div className="mx-auto max-w-2xl px-5 pt-8 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+        {/* Heading */}
+        <header className="mb-5 text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-creamy-white">
             SKILLS
           </h2>
           <div className="mx-auto mt-3 h-1 w-24 bg-soft-moss" />
         </header>
 
-        {/* Tabs — chip style, palette-aligned */}
+        {/* Tabs — chips */}
         <nav
           aria-label="Skill categories"
-          className={`
-            -mx-5 mb-5 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5
-            [scrollbar-width:none] [-ms-overflow-style:none]
-          `}
+          className="-mx-5 mb-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 [scrollbar-width:none] [-ms-overflow-style:none]"
         >
           <style jsx global>{`
             nav[aria-label="Skill categories"]::-webkit-scrollbar {
@@ -236,21 +253,19 @@ export default function SkillsMobile() {
           `}</style>
 
           {tabs.map((t) => {
-            const isActive = t === active;
+            const on = t === active;
             const label = t.charAt(0).toUpperCase() + t.slice(1);
             return (
               <button
                 key={t}
                 onClick={() => setActive(t)}
-                className={`
-                  snap-start shrink-0 rounded-full border px-3 py-1.5 text-sm font-medium
-                  ${
-                    isActive
-                      ? "border-soft-moss bg-soft-moss text-creamy-white"
-                      : "border-soft-moss bg-creamy-bone text-soft-slate hover:text-soft-moss hover:bg-creamy-ivory"
-                  }
-                `}
-                aria-pressed={isActive}
+                className={[
+                  "snap-start shrink-0 rounded-full border px-3 py-1.5 text-sm font-medium",
+                  on
+                    ? "border-soft-moss bg-soft-moss text-creamy-white"
+                    : "border-soft-moss bg-creamy-bone text-soft-slate hover:text-soft-moss hover:bg-creamy-ivory",
+                ].join(" ")}
+                aria-pressed={on}
               >
                 {label}
               </button>
@@ -258,14 +273,8 @@ export default function SkillsMobile() {
           })}
         </nav>
 
-        {/* Content card — same wrapper as desktop grid card */}
-                <article
-          className={`
-            skills-scroll rounded-3xl border-2 border-creamy-bone bg-neon-one
-            px-2 py-4
-            min-h-[16rem] max-h-[20rem] overflow-y-auto  /* <- stabilize height */
-          `}
-        >
+        {/* Card — fixed height grid inside. No page scroll added below. */}
+        <article className="rounded-3xl border-2 border-creamy-bone bg-neon-one py-3">
           <SkillsGrid skills={tabMap[active]} />
         </article>
       </div>

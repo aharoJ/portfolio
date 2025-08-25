@@ -1,3 +1,8 @@
+//
+//
+//
+//
+/* eslint-disable react/display-name */
 // path: @/modules/skills/SkillsDesktop.tsx
 "use client";
 
