@@ -2,6 +2,7 @@
 import React from "react";
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { delay, motion } from "framer-motion";
 
 interface ServiceList {
