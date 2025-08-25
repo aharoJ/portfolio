@@ -13,7 +13,7 @@ interface BigProjectProps {
   hashtags?: string[];
   title: string;
   description: string;
-  img: StaticImageData;
+  img?: StaticImageData;
   link: string;
   github: string;
 }
