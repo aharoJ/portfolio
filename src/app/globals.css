@@ -27,3 +27,14 @@
     -webkit-text-stroke: 1px #00ff99;
   }
 }
+
+/* LandingAnimatedStatsSwipeMobile */
+/* Hide horizontal scrollbar for the mobile stats rail */
+.stats-scroll::-webkit-scrollbar {
+  display: none;
+}
+.stats-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+/* --- --- --- --- ... .... ... --- --- --- ---  */
