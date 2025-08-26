@@ -1,5 +1,7 @@
 // @(home)/page.tsx
 
+import React from "react";
+
 import LandingAnimatedStatsDesktop from "@/modules/home/LandingAnimatedStatsDesktop";
 import LandingAnimatedStatsSwipeMobile from "@/modules/home/LandingAnimatedStatsSwipeMobile";
 import LandingDesktop from "@/modules/home/LandingDesktop";
