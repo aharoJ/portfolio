@@ -1,22 +1,37 @@
-// path: @/app/test/page.tsx
+// path: @/app/TESTING/page.tsx
 
 import React from "react";
-import ProjectDesktop from "@/modules/projects/ProjectDesktop";
-import ProjectMobile from "@/modules/projects/ProjectMobile";
 
-const TestingProjectsPage: React.FC = () => {
+import LandingAnimatedStatsDesktop from "@/modules/home/LandingAnimatedStatsDesktop";
+import LandingAnimatedStatsSwipeMobile from "@/modules/home/LandingAnimatedStatsSwipeMobile";
+import LandingDesktop from "@/modules/home/LandingDesktop";
+import LandingMobile from "@/modules/home/LandingMobile";
+
+export default function TestingHomePage() {
   return (
-    <>
-      <section aria-label="Projects">
+    <main>
+      {/* --- --- --- --- HERO PAGE --- --- --- --- */}
+      <section aria-label="SOCIAL ICONS">
         <div className="hidden lg:block">
-          <ProjectDesktop/>
+          <LandingDesktop />
         </div>
         <div className="block lg:hidden">
-          <ProjectMobile />
+          <LandingMobile />
         </div>
       </section>
-    </>
-  );
-};
+      {/* --- --- --- --- ... .... ... --- --- --- --- */}
 
-export default TestingProjectsPage;
+      {/* -------------------- animate stats -------------------- */}
+      <section aria-label="ANIMATED STATS">
+        <div className="hidden lg:block">
+          <LandingAnimatedStatsDesktop />
+        </div>
+        <div className="block lg:hidden">
+          {/* <LandingAnimatedStatsMobile /> */}
+          <LandingAnimatedStatsSwipeMobile />
+        </div>
+      </section>
+      {/* --- --- --- --- ... .... ... --- --- --- --- */}
+    </main>
+  );
+}

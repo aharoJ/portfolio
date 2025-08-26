@@ -25,7 +25,7 @@ export const socialItems: SocialItem[] = [
     href: "https://linkedin.com/in/aharoj",
     Icon: FaLinkedin,
   },
-  // { name: "Twitter", href: "https://twitter.com/aharoj", Icon: FaTwitter },
+  { name: "Twitter", href: "https://twitter.com/aharoj", Icon: FaTwitter },
   // { name: "TikTok", href: "https://tiktok.com/@aharoj", Icon: FaTiktok },
   // { name: "YouTube", href: "https://youtube.com/@aharoj", Icon: FaYoutube },
 ];

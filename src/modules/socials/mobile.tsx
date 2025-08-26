@@ -4,14 +4,30 @@ import SocialIcon from "./icon";
 import { socialItems } from "./items";
 
 export default function SocialMobile() {
-  const cls =
-    "w-10 h-10 border border-primary rounded-full flex justify-center items-center text-lg text-primary hover:bg-primary/70 hover:text-black transition-colors duration-300";
   return (
-    <div className="flex space-x-4">
+    <div className="inline-flex items-center gap-3">
       {socialItems.map(({ name, href, Icon }) => (
-        <SocialIcon key={name} name={name} href={href} Icon={Icon} className={cls} />
+        <SocialIcon
+          key={name}
+          name={name}
+          href={href}
+          Icon={Icon}
+          className="
+            inline-flex items-center justify-center
+            h-10 w-10 rounded-xl
+            ring-2 ring-creamy-sage/70
+            bg-neon-one text-creamy-sage
+            backdrop-blur
+            transition-[transform,box-shadow,ring,background,color] duration-150
+            hover:bg-neon-two hover:ring-creamy-sage hover:text-creamy-bone
+            hover:shadow-[0_8px_26px_-6px_rgba(0,0,0,0.45)]
+            active:scale-95
+            focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-moss
+            will-change-transform
+          "
+          iconClassName="text-[17px]"
+        />
       ))}
     </div>
   );
 }
-
