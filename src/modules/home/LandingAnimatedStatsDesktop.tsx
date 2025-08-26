@@ -1,17 +1,24 @@
 // path: @/modules/home/LandingAnimatedStatsDesktop.tsx
 "use client";
 
-import React, { useRef, useEffect, useState, useCallback } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  useCallback,
+  memo,
+  useMemo,
+} from "react";
 import { FaSchool } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
 import { FiGitCommit } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 
-// Animation Configuration
-const ANIMATION_DURATION = 1200; // 1.2 seconds for a snappy feel
-const EASING_FN = (t: number) => t * t * (3 - 2 * t); // Smootherstep for smooth easing
+/* ---------------- Animation ---------------- */
+const ANIMATION_DURATION = 1200; // 1.2s — snappy
+const EASING_FN = (t: number) => t * t * (3 - 2 * t); // smootherstep
 
-// Stat Data Definition
+/* ---------------- Data ---------------- */
 interface StatItemData {
   Icon: React.ComponentType<{ className?: string }>;
   value: number;
@@ -25,7 +32,7 @@ const STAT_ITEMS: StatItemData[] = [
   { Icon: SiLeetcode, value: 214, label: "LeetCode" },
 ];
 
-// Custom Hook for Multi-Stat Animation
+/* ---------------- Hook: multi-stat counter ---------------- */
 const useStatsAnimation = (targets: number[]) => {
   const [displayValues, setDisplayValues] = useState<number[]>(
     targets.map(() => 0),
@@ -35,28 +42,23 @@ const useStatsAnimation = (targets: number[]) => {
   const isAnimatingRef = useRef(false);
 
   const startAnimation = useCallback(() => {
-    if (isAnimatingRef.current) return; // Prevent restarting if already animating
+    if (isAnimatingRef.current) return;
     isAnimatingRef.current = true;
 
     startTimeRef.current = performance.now();
-    setDisplayValues(targets.map(() => 0)); // Reset to 0 before animating
+    setDisplayValues(targets.map(() => 0));
 
     const animate = (timestamp: number) => {
-      if (!startTimeRef.current) startTimeRef.current = timestamp;
-
       const elapsed = timestamp - startTimeRef.current;
       const progress = Math.min(elapsed / ANIMATION_DURATION, 1);
-      const easedProgress = EASING_FN(progress);
+      const eased = EASING_FN(progress);
 
-      const currentValues = targets.map((target) =>
-        Math.floor(target * easedProgress),
-      );
-      setDisplayValues(currentValues);
+      setDisplayValues(targets.map((t) => Math.floor(t * eased)));
 
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(animate);
       } else {
-        setDisplayValues(targets); // Ensure final values are exact
+        setDisplayValues(targets); // exact final state
         isAnimatingRef.current = false;
       }
     };
@@ -64,15 +66,12 @@ const useStatsAnimation = (targets: number[]) => {
     rafRef.current = requestAnimationFrame(animate);
   }, [targets]);
 
-  // Cleanup animation on unmount
-  useEffect(() => {
-    return () => cancelAnimationFrame(rafRef.current);
-  }, []);
+  useEffect(() => () => cancelAnimationFrame(rafRef.current), []);
 
   return { displayValues, startAnimation };
 };
 
-// Viewport Trigger Component
+/* ---------------- Viewport Trigger ---------------- */
 const ViewportTrigger = ({
   children,
   onVisible,
@@ -84,23 +83,34 @@ const ViewportTrigger = ({
   const [hasTriggered, setHasTriggered] = useState(false);
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
+    const el = ref.current;
+    if (!el) return;
 
-    const observer = new IntersectionObserver(
+    // Respect prefers-reduced-motion: skip animation and trigger once.
+    const prefersReduced = window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    const run = () => {
+      onVisible();
+      setHasTriggered(true);
+    };
+
+    if (prefersReduced && !hasTriggered) {
+      run();
+      return;
+    }
+
+    const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasTriggered) {
-          onVisible();
-          setHasTriggered(true); // Only animate once
-        }
+        if (entry.isIntersecting && !hasTriggered) run();
       },
-      { threshold: 0.05 }, // Trigger when 5% of the section is visible
+      { threshold: 0.05 },
     );
 
-    observer.observe(element);
-
-    return () => observer.unobserve(element);
-  }, [onVisible, hasTriggered]);
+    io.observe(el);
+    return () => io.disconnect();
+  }, [hasTriggered, onVisible]);
 
   return (
     <div ref={ref} className="w-full h-full">
@@ -109,45 +119,83 @@ const ViewportTrigger = ({
   );
 };
 
-// Individual Stat Item Component
-const StatItem = ({
-  Icon,
-  value,
-  label,
-}: {
+/* ---------------- Stat Card (palette-matched) ---------------- */
+interface StatProps {
   Icon: React.ComponentType<{ className?: string }>;
   value: number;
   label: string;
-}) => {
-  return (
-    <div className="flex flex-col items-center justify-center p-5 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors hover:bg-white/10">
-      <div className="flex items-center gap-3 mb-2">
-        <Icon className="text-3xl text-primary transition-transform group-hover:scale-110" />
-        <span className="text-4xl font-light bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
-          {value.toLocaleString()}
-        </span>
-      </div>
-      <h3 className="text-sm font-medium text-center tracking-wider text-white/75 group-hover:text-white transition-colors">
-        {label}
-      </h3>
-    </div>
-  );
-};
+}
 
-// Main Stats Component
+const StatCard = memo(function StatCard({ Icon, value, label }: StatProps) {
+  const valueText = useMemo(() => value.toLocaleString(), [value]);
+
+  return (
+    <article
+      className="
+        group relative overflow-hidden
+        rounded-2xl p-4
+        bg-neon-one/90 backdrop-blur
+        ring-1 ring-creamy-sage/40
+        transition-[transform,box-shadow,ring,background] duration-150
+        hover:bg-neon-two/90 hover:ring-creamy-sage
+        hover:shadow-[0_18px_50px_-12px_rgba(0,0,0,0.45)]
+        will-change-transform
+      "
+      aria-label={label}
+    >
+      {/* content */}
+      <div className="flex items-center gap-4">
+        {/* icon plate */}
+        <div
+          className="
+            grid place-items-center h-12 w-12 shrink-0
+            rounded-xl bg-neon-two text-creamy-sage
+            ring-1 ring-creamy-sage/60
+            transition-transform duration-150 group-hover:scale-105
+          "
+        >
+          <Icon className="text-[22px]" aria-hidden="true" />
+        </div>
+
+        {/* numbers */}
+        <div className="flex flex-col">
+          <div
+            className="
+              text-4xl font-semibold leading-none
+              text-creamy-bone
+            "
+          >
+            {valueText}
+          </div>
+          <div
+            className="
+              mt-2 text-[11px] tracking-[0.2em]
+              text-creamy-ivory/80
+              uppercase
+            "
+          >
+            {label}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+});
+
+/* ---------------- Main ---------------- */
 const LandingAnimatedStatsDesktop = () => {
-  const targets = STAT_ITEMS.map((item) => item.value);
+  const targets = STAT_ITEMS.map((s) => s.value);
   const { displayValues, startAnimation } = useStatsAnimation(targets);
 
   return (
-    <section className="container mx-auto px-4 py-12">
+    <section className="container mx-auto px-6 py-12">
       <ViewportTrigger onVisible={startAnimation}>
         <div className="grid grid-cols-4 gap-6">
-          {STAT_ITEMS.map((item, index) => (
-            <StatItem
-              key={index}
+          {STAT_ITEMS.map((item, i) => (
+            <StatCard
+              key={item.label}
               Icon={item.Icon}
-              value={displayValues[index]}
+              value={displayValues[i]}
               label={item.label}
             />
           ))}

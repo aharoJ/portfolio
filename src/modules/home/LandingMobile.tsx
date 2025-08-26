@@ -1,55 +1,59 @@
 // path: @/modules/home/LandingMobile.tsx
 
-import SocialMobile from "@/modules/socials/mobile";
 import Image from "next/image";
+import SocialMobile from "@/modules/socials/mobile";
+import LandingAboutBtn from "./LandingAboutBtn";
 
-const LandingMobile = () => {
+export default function LandingMobile() {
   return (
-    <section aria-label="Landing (mobile)" className="relative">
-      <div className="mx-auto max-w-2xl px-5 py-20">
-        <div className="flex flex-col items-center gap-8">
-          {/* Image first on mobile for instant identity */}
-          <div className="relative aspect-square w-44 sm:w-52">
+    <section aria-label="Landing (Mobile)" className="relative">
+      <div className="mx-auto w-full px-5 py-8">
+        {/* --- Portrait --- */}
+        <div className="mx-auto mb-5 grid place-items-center">
+          <div className="relative h-36 w-36">
             <Image
               src="/profile/aharoJ.jpeg"
               alt="Portrait of Angel Jair Haro"
               fill
               priority
-              sizes="(max-width: 1024px) 13rem, 22rem"
+              sizes="(max-width: 1023px) 9rem"
               className="rounded-full object-cover ring-1 ring-white/15 shadow-lg"
             />
           </div>
+        </div>
 
-          {/* Text */}
-          <header className="text-center">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight">
-              Angel Jair Haro
-            </h1>
-            <p className="mt-2 flex items-baseline justify-center gap-2">
-              <span className="text-lg">Software Engineer</span>
-              <span className="text-base italic text-primary/90">/ aharoJ</span>
-            </p>
-          </header>
+        {/* --- Headline --- */}
+        <header className="text-center">
+          <h1 className="text-[32px] leading-tight font-semibold tracking-tight text-creamy-ivory">
+            Angel Jair Haro
+          </h1>
+          <p className="mt-1 flex items-center justify-center gap-2">
+            <span className="text-[15px] text-creamy-ivory">
+              Software Engineer
+            </span>
+            <span className="text-[14px] italic text-creamy-sage">
+              / aharoJ
+            </span>
+          </p>
+        </header>
 
-          {/* Quote */}
-          <figure className="max-w-md text-center">
-            <blockquote className="border-l border-white/10 pl-4 text-left text-white/80 text-base leading-relaxed sm:text-center">
-              You are a function of what the whole universe is doing in the same
-              way that a wave is a function of what the whole ocean is doing.
-            </blockquote>
-            <figcaption className="mt-3 text-primary italic">
-              — Alan Watts
-            </figcaption>
-          </figure>
+        {/* --- Quote --- */}
+        <figure className="mx-auto mt-4 max-w-md">
+          <blockquote className="border-l border-white/10 pl-3 text-creamy-bone text-[15px] leading-relaxed">
+            You are a function of what the whole universe is doing in the same
+            way that a wave is a function of what the whole ocean is doing.
+          </blockquote>
+          <figcaption className="mt-2 text-creamy-sage italic text-[13px]">
+            — Alan Watts
+          </figcaption>
+        </figure>
 
-          {/* Socials */}
-          <div aria-label="Social links" className="mt-2">
-            <SocialMobile />
-          </div>
+        {/* --- CTA + Socials --- */}
+        <div className="mt-5 flex items-center justify-center gap-4">
+          <LandingAboutBtn />
+          <SocialMobile />
         </div>
       </div>
     </section>
   );
-};
-
-export default LandingMobile;
+}
