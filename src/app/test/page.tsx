@@ -1,37 +1,55 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // path: @/app/TESTING/page.tsx
 
 import React from "react";
 
-import LandingAnimatedStatsDesktop from "@/modules/home/LandingAnimatedStatsDesktop";
-import LandingAnimatedStatsSwipeMobile from "@/modules/home/LandingAnimatedStatsSwipeMobile";
-import LandingDesktop from "@/modules/home/LandingDesktop";
-import LandingMobile from "@/modules/home/LandingMobile";
+import EducationDesktop from "@/modules/education/EducationDesktop";
+import ExperienceDesktop from "@/modules/experience/ExperienceDesktop";
+import EducationMobile from "@/modules/education/EducationMobile";
+import ExperienceMobile from "@/modules/experience/ExperienceMobile";
+import SkillsMobile from "@/modules/skills/SkillsMobile";
+import SkillsDesktop from "@/modules/skills/SkillsDesktop";
+import TestingggExperienceDesktop from "@/modules/experience/TestingggExperienceDesktop";
+import TestingggEducationDesktop from "@/modules/education/TestingggEducationDesktop";
+import TestingggSkillsDesktop from "@/modules/skills/TestingggSkillsDesktop";
 
-export default function TestingHomePage() {
+export default function TestingAboutPage() {
   return (
-    <main>
-      {/* --- --- --- --- HERO PAGE --- --- --- --- */}
-      <section aria-label="SOCIAL ICONS">
+    <>
+      {/* -------------------- Education Section -------------------- */}
+      <section title="EDUCATION">
         <div className="hidden lg:block">
-          <LandingDesktop />
+          {/* <EducationDesktop /> */}
+          <TestingggEducationDesktop />
         </div>
         <div className="block lg:hidden">
-          <LandingMobile />
+          <EducationMobile />
         </div>
       </section>
-      {/* --- --- --- --- ... .... ... --- --- --- --- */}
 
-      {/* -------------------- animate stats -------------------- */}
-      <section aria-label="ANIMATED STATS">
+      {/* -------------------- Experience Section -------------------- */}
+      <section title="EXPERIENCE">
         <div className="hidden lg:block">
-          <LandingAnimatedStatsDesktop />
+          {/* <ExperienceDesktop /> */}
+          <TestingggExperienceDesktop />
         </div>
         <div className="block lg:hidden">
-          {/* <LandingAnimatedStatsMobile /> */}
-          <LandingAnimatedStatsSwipeMobile />
+          <ExperienceMobile />
+        </div>
+      </section>
+
+      {/* -------------------- Skills Section -------------------- */}
+      <section title="ANIMATED STATS">
+        <div className="hidden lg:block">
+          {/* <SkillsDesktop /> */}
+          <TestingggSkillsDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <SkillsMobile />
+          {/* <SkillsTestingggMobile /> */}
         </div>
       </section>
       {/* --- --- --- --- ... .... ... --- --- --- --- */}
-    </main>
+    </>
   );
 }

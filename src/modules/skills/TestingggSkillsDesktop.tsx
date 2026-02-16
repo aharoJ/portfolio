@@ -1,5 +1,13 @@
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* eslint-disable react/display-name */
-// path: @/modules/skills/SkillsDesktop.tsx
 "use client";
 
 import React, { useState, ReactNode } from "react";
@@ -182,7 +190,7 @@ const SkillsContent = React.memo(({ skills }: { skills: Skill[] }) => (
 /* -----------------------------------------------------------------------------
    Main Component
  -----------------------------------------------------------------------------*/
-export default function SkillsDesktop() {
+export default function TestingggSkillsDesktop() {
   const tabs = [
     "backend",
     "frontend",
