@@ -1,76 +1,72 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/modules/claude/component/education/EducationMobile.tsx
+// src/modules/claude/component/education/EducationMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
-// Same exact design you had. Same classes, same layout.
-// Only difference: data comes from education.ts instead of
-// being hardcoded in this file.
+// MOBILE EDUCATION SECTION.
+//
+// Same data as Desktop. Same monochrome style.
+// React Server Component. Zero client JS.
+//
+// Mobile adjustments:
+//   - py-16 instead of py-24 (tighter vertical rhythm)
+//   - px-5 for horizontal padding (matches other mobile sections)
+//   - text-xl section title instead of text-2xl
+//
 // ═══════════════════════════════════════════════════════════════
-import Image from "next/image";
+
 import { education } from "./education";
 
 export default function EducationMobile() {
   return (
-    <section aria-label="Education (mobile)" className="relative">
-      <div className="mx-auto max-w-2xl px-5 py-16">
-        {/* Section Heading */}
-        <header className="mb-8 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-creamyLight-pearl">
-            EDUCATION
-          </h2>
-          <div className="mx-auto mt-3 h-1 w-24 bg-soft-moss" />
-        </header>
+    <section aria-label="Education (mobile)" className="px-5 py-16">
+      <div className="mx-auto max-w-2xl">
+        {/* ── Section Title ── */}
+        <h2 className="text-xl font-semibold tracking-tight mb-12">
+          Education
+        </h2>
 
-        {/* Card */}
-        <article className="rounded-2xl border-4 border-soft-moss bg-creamy-bone p-5 transition-colors hover:bg-creamy-white">
-          <div className="flex items-center gap-4">
-            {/* Image */}
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl shadow">
-              <div className="h-full w-full rounded-xl border border-dashed bg-creamy-ivory" />
-              <div className="absolute inset-0 rounded-xl border-2 border-soft-moss">
-                <Image
-                  src={education.image}
-                  alt={education.imageAlt}
-                  fill
-                  sizes="64px"
-                  className="object-cover text-soft-slate"
-                  priority
-                />
-              </div>
-            </div>
+        {/* ── Date ── */}
+        <p className="text-sm font-mono text-muted mb-4">{education.date}</p>
 
-            {/* Title + School */}
-            <div className="min-w-0">
-              <h3 className="truncate text-lg font-bold text-soft-slate">
-                {education.degree}
-              </h3>
-              <p className="mt-1 text-sm text-soft-slate">
-                {education.school}
-              </p>
-              <p className="text-xs text-soft-slate/80">
-                {education.location} · GPA: {education.gpa}
-              </p>
-            </div>
-          </div>
+        {/* ── Degree ── */}
+        <h3 className="text-lg font-semibold tracking-tight mb-1">
+          {education.degree}
+        </h3>
 
-          {/* Badges */}
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {education.achievements.map((a) => (
-              <li
-                key={a.label}
-                className={`rounded-full ${a.bgColor} px-3 py-1 text-[11px] font-medium ${a.textColor}`}
+        {/* ── School + Location + GPA ── */}
+        <p className="text-sm text-muted mb-6">
+          {education.school} — {education.location} · GPA: {education.gpa}
+        </p>
+
+        {/* ── Achievements ── */}
+        <div className="pl-4 border-l-2 border-border mb-6">
+          <p className="text-sm text-muted mb-3">Achievements</p>
+          <div className="flex flex-wrap gap-2">
+            {education.achievements.map((achievement) => (
+              <span
+                key={achievement}
+                className="text-xs text-muted border border-border rounded-full px-3 py-1"
               >
-                {a.label}
-              </li>
+                {achievement}
+              </span>
             ))}
-          </ul>
+          </div>
+        </div>
 
-          {/* Coursework */}
-          <p className="mt-4 text-sm leading-relaxed text-soft-slate">
-            <span className="font-semibold">Key Coursework:</span>{" "}
-            {education.coursework.join(" • ")}
-          </p>
-        </article>
+        {/* ── Coursework ── */}
+        <div>
+          <p className="text-sm text-muted mb-3">Coursework</p>
+          <div className="flex flex-wrap gap-2">
+            {education.coursework.map((course) => (
+              <span
+                key={course}
+                className="text-xs text-muted border border-border rounded-full px-3 py-1"
+              >
+                {course}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
