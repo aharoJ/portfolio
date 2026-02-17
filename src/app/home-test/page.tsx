@@ -19,10 +19,17 @@
 // ═══════════════════════════════════════════════════════════════
 
 import Image from "next/image";
+
 import ExperienceDesktop from "@/modules/claude/component/experience/ExperienceDesktop";
 import ExperienceMobile from "@/modules/claude/component/experience/ExperienceMobile";
+
 import ProjectsDesktop from "@/modules/claude/component/projects/ProjectsDesktop";
 import ProjectsMobile from "@/modules/claude/component/projects/ProjectsMobile";
+
+import SkillsDesktop from "@/modules/claude/component/skills/SkillsDesktop";
+import SkillsMobile from "@/modules/claude/component/skills/SkillsMobile";
+import EducationDesktop from "@/modules/claude/component/education/EducationDesktop";
+import EducationMobile from "@/modules/claude/component/education/EducationMobile";
 
 // ─── Hero Data ─────────────────────────────────────────────────
 // Hardcoded for now. Extract to a data file when we need it
@@ -95,28 +102,25 @@ export default function HomeTest() {
           </nav>
         </div>
       </section>
+      {/* ═══════════════════════════════════════════════════════
+          EDUCATION SECTION
+          ═══════════════════════════════════════════════════════*/}
+      <div className="hidden lg:block">
+        <EducationDesktop />
+      </div>
+      <div className="block lg:hidden">
+        <EducationMobile />
+      </div>
 
       {/* ═══════════════════════════════════════════════════════
           EXPERIENCE SECTION
-          ═══════════════════════════════════════════════════════
-          Desktop/Mobile split — same data, different layouts.
-          hidden/block pattern swaps at the lg breakpoint (1024px).
-      */}
+          ═══════════════════════════════════════════════════════*/}
       <div className="hidden lg:block">
         <ExperienceDesktop />
       </div>
       <div className="block lg:hidden">
         <ExperienceMobile />
       </div>
-
-      {/* ═══════════════════════════════════════════════════════
-          FUTURE SECTIONS GO HERE
-          ═══════════════════════════════════════════════════════
-          Next up: Projects, then About.
-          Same pattern: data.ts + Desktop.tsx + Mobile.tsx
-          Import and drop in with hidden/block swap.
-      */}
-
       {/* ═══════════════════════════════════════════════════════
           PROJECT SECTION
           ═══════════════════════════════════════════════════════*/}
@@ -125,6 +129,16 @@ export default function HomeTest() {
       </div>
       <div className="block lg:hidden">
         <ProjectsMobile />
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════
+       SKILLS SECTION
+       ═══════════════════════════════════════════════════════ */}
+      <div className="hidden lg:block">
+        <SkillsDesktop />
+      </div>
+      <div className="block lg:hidden">
+        <SkillsMobile />
       </div>
     </main>
   );
