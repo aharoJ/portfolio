@@ -1,4 +1,4 @@
-# Portfolio Frontend Constitution — aharoj.io
+# Portfolio Frontend Tracker — aharoj.io
 
 > **Started:** February 17, 2026
 > **Project:** Next.js portfolio at `https://aharoj.io`
@@ -21,7 +21,7 @@
 
 ## Architecture Pattern
 
-```
+```tsx
 src/modules/claude/component/
 ├── education/
 │   ├── education.ts            ← data (single source of truth)
@@ -57,16 +57,19 @@ src/modules/claude/component/
 **What:** Refactored Education section to use shared data pattern.
 
 **Before (the problem):**
+
 - `EducationDesktop.tsx` had all content hardcoded inline
 - `EducationMobile.tsx` had the exact same content copy-pasted
 - Updating one required updating both — or forgetting and having them diverge
 
 **After (the fix):**
+
 - Created `education.ts` with typed data + single source of truth
 - Both Desktop and Mobile import from `education.ts`
 - Zero visual changes — site looks identical to the user
 
 **Files touched:**
+
 - `NEW` → `modules/claude/component/education/education.ts`
 - `NEW` → `modules/claude/component/education/EducationDesktop.tsx`
 - `NEW` → `modules/claude/component/education/EducationMobile.tsx`
@@ -84,13 +87,13 @@ src/modules/claude/component/
 
 ## Sections Status
 
-| Section | Data Extracted | Desktop Refactored | Mobile Refactored | Content Written | Status |
-|---------|:-:|:-:|:-:|:-:|--------|
-| Education | ✅ | ✅ | ✅ | ✅ | **DONE** |
-| Experience | ❌ | ❌ | ❌ | ❌ | Next up |
-| Skills | ❌ | ❌ | ❌ | ❌ | Queued |
-| Projects | ❌ | ❌ | ❌ | ❌ | Queued |
-| Hero/Landing | ❌ | ❌ | ❌ | ❌ | Queued |
+| Section      | Data Extracted | Desktop Refactored | Mobile Refactored | Content Written | Status   |
+| ------------ | :------------: | :----------------: | :---------------: | :-------------: | -------- |
+| Education    |       ✅       |         ✅         |        ✅         |       ✅        | **DONE** |
+| Experience   |       ❌       |         ❌         |        ❌         |       ❌        | Next up  |
+| Skills       |       ❌       |         ❌         |        ❌         |       ❌        | Queued   |
+| Projects     |       ❌       |         ❌         |        ❌         |       ❌        | Queued   |
+| Hero/Landing |       ❌       |         ❌         |        ❌         |       ❌        | Queued   |
 
 ---
 
@@ -108,6 +111,7 @@ Accent:         bg-soft-moss (green badges, dividers)
 ```
 
 ### Badge Colors (Achievement)
+
 ```
 Yellow:  bg-yellow-100 text-yellow-800
 Blue:    bg-blue-100 text-blue-800
@@ -120,15 +124,19 @@ Purple:  bg-purple-100 text-purple-800
 ## Gotchas & Lessons
 
 ### Tailwind Dynamic Classes
+
 Tailwind purges unused classes at build time. If you do this:
+
 ```tsx
 // ❌ BROKEN — Tailwind can't see these at build time
 const color = "red";
 <div className={`bg-${color}-100`}>
 ```
+
 Tailwind won't include `bg-red-100` in the build because it never sees the full class string.
 
 **Fix:** Always use complete class strings in your data:
+
 ```ts
 // ✅ WORKS — full strings, Tailwind can find them
 bgColor: "bg-yellow-100",
@@ -136,7 +144,9 @@ textColor: "text-yellow-800",
 ```
 
 ### Image Component Pattern
+
 Both Desktop and Mobile use a layered image approach:
+
 ```tsx
 <div className="relative w-32 h-32 overflow-hidden rounded-xl">
   <div className="bg-creamy-ivory border border-dashed rounded-xl w-full h-full" />
@@ -145,6 +155,7 @@ Both Desktop and Mobile use a layered image approach:
   </div>
 </div>
 ```
+
 The dashed border div acts as a placeholder/skeleton while the image loads. The absolute-positioned Image sits on top. Keep this pattern consistent across sections.
 
 ---
