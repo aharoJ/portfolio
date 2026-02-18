@@ -24,10 +24,10 @@ const HeroDesktop = () => {
           <Image
             src={hero.photo}
             alt={hero.name}
-            width={96}
-            height={96}
+            width={144}
+            height={144}
             priority
-            className="rounded-full"
+            className="rounded-2xl"
           />
         </div>
 
