@@ -13,20 +13,20 @@
 //
 // React Server Component. Zero client JS.
 //
-import HeroDesktop from "@/modules/claude/component/hero/HeroDesktop";
-import HeroMobile from "@/modules/claude/component/hero/HeroMobile";
+import HeroDesktop from "@/component/hero/HeroDesktop";
+import HeroMobile from "@/component/hero/HeroMobile";
 
-import EducationDesktop from "@/modules/claude/component/education/EducationDesktop";
-import EducationMobile from "@/modules/claude/component/education/EducationMobile";
+import EducationDesktop from "@/component/education/EducationDesktop";
+import EducationMobile from "@/component/education/EducationMobile";
 
-import ExperienceDesktop from "@/modules/claude/component/experience/ExperienceDesktop";
-import ExperienceMobile from "@/modules/claude/component/experience/ExperienceMobile";
+import ExperienceDesktop from "@/component/experience/ExperienceDesktop";
+import ExperienceMobile from "@/component/experience/ExperienceMobile";
 
-import ProjectsDesktop from "@/modules/claude/component/projects/ProjectsDesktop";
-import ProjectsMobile from "@/modules/claude/component/projects/ProjectsMobile";
+import ProjectsDesktop from "@/component/projects/ProjectsDesktop";
+import ProjectsMobile from "@/component/projects/ProjectsMobile";
 
-import SkillsDesktop from "@/modules/claude/component/skills/SkillsDesktop";
-import SkillsMobile from "@/modules/claude/component/skills/SkillsMobile";
+import SkillsDesktop from "@/component/skills/SkillsDesktop";
+import SkillsMobile from "@/component/skills/SkillsMobile";
 
 // ─── Page ──────────────────────────────────────────────────────
 
