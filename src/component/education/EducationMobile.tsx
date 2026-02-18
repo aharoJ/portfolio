@@ -4,12 +4,13 @@
 //
 // MOBILE EDUCATION SECTION.
 //
-// Same data as Desktop. Same monochrome style.
+// Same data as Desktop. Same stripped-down design.
+// Three levels: degree → school → achievement tags.
 // React Server Component. Zero client JS.
 //
 // Mobile adjustments:
-//   - py-16 instead of py-24 (tighter vertical rhythm)
-//   - px-5 for horizontal padding (matches other mobile sections)
+//   - px-5 horizontal padding (matches other mobile sections)
+//   - py-8 vertical padding (tighter than desktop py-16)
 //   - text-xl section title instead of text-2xl
 //
 // ═══════════════════════════════════════════════════════════════
@@ -25,47 +26,24 @@ export default function EducationMobile() {
           Education
         </h2>
 
-        {/* ── Date ── */}
-        <p className="text-sm font-mono text-muted mb-4">{education.date}</p>
-
         {/* ── Degree ── */}
         <h3 className="text-lg font-semibold tracking-tight mb-1">
           {education.degree}
         </h3>
 
-        {/* ── School + Location + GPA ── */}
-        <p className="text-sm text-muted mb-6">
-          {education.school} — {education.location} · GPA: {education.gpa}
-        </p>
+        {/* ── School ── */}
+        <p className="text-sm text-muted mb-6">{education.school}</p>
 
-        {/* ── Achievements ── */}
-        <div className="pl-4 border-l-2 border-border mb-6">
-          <p className="text-sm text-muted mb-3">Achievements</p>
-          <div className="flex flex-wrap gap-2">
-            {education.achievements.map((achievement) => (
-              <span
-                key={achievement}
-                className="text-xs text-muted border border-border rounded-full px-3 py-1"
-              >
-                {achievement}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* ── Coursework ── */}
-        <div>
-          <p className="text-sm text-muted mb-3">Coursework</p>
-          <div className="flex flex-wrap gap-2">
-            {education.coursework.map((course) => (
-              <span
-                key={course}
-                className="text-xs text-muted border border-border rounded-full px-3 py-1"
-              >
-                {course}
-              </span>
-            ))}
-          </div>
+        {/* ── Achievement Tags ── */}
+        <div className="flex flex-wrap gap-2">
+          {education.achievements.map((achievement) => (
+            <span
+              key={achievement}
+              className="text-xs border border-border rounded-full px-3 py-1"
+            >
+              {achievement}
+            </span>
+          ))}
         </div>
       </div>
     </section>

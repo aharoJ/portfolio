@@ -7,37 +7,50 @@
 // Monochrome, Geist, 8px grid. Same design system as Experience.
 // Data comes from education.ts. Zero hardcoded content.
 //
-// What changed from the old EducationDesktop:
-//   OLD → 128px university photo, green borders, creamy-bone bg,
-//         colored achievement badges (yellow/blue/green/purple),
-//         bold "EDUCATION" heading, decorative underline bar,
-//         coursework tags
-//   NEW → No image. No colors. No card. No decoration.
-//         No coursework. Same layout rhythm as Experience —
-//         date in mono, degree as title, school as subtitle,
-//         achievements as border-only monochrome tags.
+// What changed (Session N — Education redesign):
 //
-// Design decisions:
-//   - Matches Experience exactly: date → title → subtitle → content.
-//     A recruiter scanning the page shouldn't feel a context switch.
-//   - Achievements behind a left border accent — these are the
-//     highlights worth noticing. Same border-l-2 pattern as
-//     Experience highlights.
-//   - No coursework. "Data Structures, Algorithms" is implied by
-//     "B.S. in Computer Science." It's on the resume PDF if
-//     anyone cares. Don't waste vertical space on it here.
-//   - Single block, no card wrapper — Education is one entry,
-//     not a list, so it doesn't need the border-t separators
-//     that Experience uses between roles.
+//   REMOVED → Date line ("Aug 2019 — May 2024")
+//   REMOVED → Location + GPA subtitle ("Carson, CA · GPA: 3.4")
+//   REMOVED → border-l-2 accent bar
+//   REMOVED → "Achievements" label
+//   REMOVED → Coursework tags
+//
+//   ADDED → Nothing. That's the point.
+//
+// Design philosophy:
+//   The previous version had five visual elements competing
+//   for attention: date, degree, school+location+GPA, an
+//   "Achievements" label, and the achievement tags themselves.
+//   That's too many layers for a single credential.
+//
+//   The new version has three:
+//     1. Degree — the credential (semibold, primary color)
+//     2. School — the context (muted)
+//     3. Tags — the proof (primary color, not muted)
+//
+//   No labels needed. The degree IS the heading.
+//   The tags speak for themselves — "Google Scholar ($3K)"
+//   doesn't need an "Achievements" prefix to be understood.
+//
+//   This follows the Vercel/Linear pattern for credential-like
+//   content: title → context → evidence. Typography weight
+//   and spacing create all the hierarchy.
+//
+// Tag treatment:
+//   OLD → text-xs text-muted (achievements were nearly invisible)
+//   NEW → text-xs text-fg (primary text color)
+//
+//   The achievements are the reason this section exists.
+//   They should be the most readable element after the degree.
+//   Using text-fg (primary) instead of text-muted makes them
+//   feel intentional rather than decorative.
 //
 // Research context:
-//   Brittany Chiang (most cloned dev portfolio) — no education
-//   section. Lee Robinson (Cursor) — no education section.
-//   Most top portfolios skip it entirely. We keep it because
-//   aharoJ is early career and has genuine achievements (Google
-//   Scholar, GMiS competition win) that add signal beyond just
-//   the degree. Once the work history grows, this section can
-//   shrink or fold into the About section.
+//   Brittany Chiang (Apple, Klaviyo) — no education section.
+//   Lee Robinson (Vercel) — no education section.
+//   We keep it because aharoJ has genuine achievements that
+//   add signal. But we earn the space by being tight about it.
+//   Three lines of information. That's all it needs.
 //
 // React Server Component. Zero client JS.
 //
@@ -54,38 +67,32 @@ const EducationDesktop = () => {
           Education
         </h2>
 
-        {/* ── Date ── */}
-        <p className="text-sm font-mono text-muted mb-4">{education.date}</p>
-
         {/* ── Degree ── */}
         <h3 className="text-lg font-semibold tracking-tight mb-1">
           {education.degree}
         </h3>
 
-        {/* ── School + Location + GPA ── */}
-        <p className="text-sm text-muted mb-6">
-          {education.school} — {education.location} · GPA: {education.gpa}
-        </p>
+        {/* ── School ── */}
+        <p className="text-sm text-muted mb-6">{education.school}</p>
 
-        {/* ── Achievements ── */}
+        {/* ── Achievement Tags ── */}
         {/*
-          Left border accent — same border-l-2 pattern as
-          Experience highlights. These are the items a recruiter
-          should notice: Google Scholar, national competition
-          placement, research funding, program leadership.
+          No label. No border accent. Just the tags.
+          "Google Scholar ($3K)" doesn't need a prefix
+          to communicate what it is.
+
+          text-fg instead of text-muted — these are the
+          reason this section exists. They earn full contrast.
         */}
-        <div className="pl-4 border-l-2 border-border">
-          <p className="text-sm text-muted mb-3">Achievements</p>
-          <div className="flex flex-wrap gap-2">
-            {education.achievements.map((achievement) => (
-              <span
-                key={achievement}
-                className="text-xs text-muted border border-border rounded-full px-3 py-1"
-              >
-                {achievement}
-              </span>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-2">
+          {education.achievements.map((achievement) => (
+            <span
+              key={achievement}
+              className="text-xs border border-border rounded-full px-3 py-1"
+            >
+              {achievement}
+            </span>
+          ))}
         </div>
       </div>
     </section>
