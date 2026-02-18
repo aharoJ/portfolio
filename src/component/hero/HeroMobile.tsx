@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/hero/HeroMobile.tsx
+// path: src/component/hero/HeroMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE HERO SECTION.

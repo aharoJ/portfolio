@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/skills/skills.ts
+// path: src/component/skills/skills.ts
 // ═══════════════════════════════════════════════════════════════
 //
 // SINGLE SOURCE OF TRUTH.

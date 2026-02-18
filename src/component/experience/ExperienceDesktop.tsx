@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/experience/ExperienceDesktop.tsx
+// path: src/component/experience/ExperienceDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP EXPERIENCE SECTION.

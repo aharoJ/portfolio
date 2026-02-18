@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/hero/HeroDesktop.tsx
+// path: src/component/hero/HeroDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP HERO SECTION.

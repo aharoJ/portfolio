@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/hero/hero.ts
+// path: src/component/hero/hero.ts
 // ═══════════════════════════════════════════════════════════════
 //
 // SINGLE SOURCE OF TRUTH.

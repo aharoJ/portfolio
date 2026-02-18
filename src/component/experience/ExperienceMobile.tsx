@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/experience/ExperienceMobile.tsx
+// path: src/component/experience/ExperienceMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE EXPERIENCE SECTION.

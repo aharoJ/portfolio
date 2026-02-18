@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/education/EducationDesktop.tsx
+// path: src/component/education/EducationDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP EDUCATION SECTION.

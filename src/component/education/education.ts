@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/education/education.ts
+// path: src/component/education/education.ts
 // ═══════════════════════════════════════════════════════════════
 //
 // SINGLE SOURCE OF TRUTH.

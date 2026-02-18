@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/projects/ProjectsMobile.tsx
+// path: src/component/projects/ProjectsMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE PROJECTS SECTION.

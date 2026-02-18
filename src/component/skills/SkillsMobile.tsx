@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/skills/SkillsMobile.tsx
+// path: src/component/skills/SkillsMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE SKILLS SECTION — Option B: Compressed Two-Column.

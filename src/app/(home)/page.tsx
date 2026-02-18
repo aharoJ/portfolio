@@ -1,7 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// src/app/home-test/page.tsx
+// path: src/app/(home)/page.tsx
 // ═══════════════════════════════════════════════════════════════
-//
 // LANDING PAGE — single scroll.
 //
 // This file is purely compositional. Zero content, zero layout
@@ -12,7 +11,6 @@
 // block lg:hidden  → only shows on mobile (<1024px)
 //
 // React Server Component. Zero client JS.
-//
 import HeroDesktop from "@/component/hero/HeroDesktop";
 import HeroMobile from "@/component/hero/HeroMobile";
 

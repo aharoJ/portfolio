@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/skills/SkillsDesktop.tsx
+// path: src/component/skills/SkillsDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP SKILLS SECTION — Option B: Compressed Two-Column.

@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/experience/experience.ts
+// path: src/component/experience/experience.ts
 // ═══════════════════════════════════════════════════════════════
 //
 // SINGLE SOURCE OF TRUTH.

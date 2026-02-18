@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/projects/ProjectsDesktop.tsx
+// path: src/component/projects/ProjectsDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP PROJECTS SECTION.

@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/education/EducationMobile.tsx
+// path: src/component/education/EducationMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE EDUCATION SECTION.
