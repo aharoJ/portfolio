@@ -1,40 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ═══════════════════════════════════════════════════════════════
+   src/app/globals.css
+   ═══════════════════════════════════════════════════════════════
+
+   THIS FILE IS YOUR ENTIRE DESIGN SYSTEM.
+
+   In Tailwind v4, there is no tailwind.config.ts.
+   Everything lives here. One file. One source of truth.
+
+   @import "tailwindcss"  → loads the framework
+   @theme { }             → defines YOUR design tokens
+
+   Every token you define here becomes a Tailwind utility:
+     --color-bg       → bg-bg, text-bg
+     --color-fg       → bg-fg, text-fg
+     --font-sans      → font-sans
+
+   If it's not in @theme, it doesn't exist in your project.
+   That's the constraint that keeps everything consistent.
+   ═══════════════════════════════════════════════════════════════ */
+
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+/*
+   These are the ONLY colors, fonts, and spacing overrides
+   in the entire project. Period.
+
+   Color philosophy: monochrome + one accent.
+   - bg/fg for main background and text
+   - muted for secondary text (metadata, labels)
+   - border for structural lines
+   - accent for interactive elements (links, hover states)
+
+   This is what Vercel, Linear, and Apple do.
+   The prestige comes from restraint.
+*/
+
+@theme {
+  /* ── Colors ── */
+  --color-bg: #ffffff;
+  --color-fg: #0a0a0a;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #0a0a0a;
+
+  /* ── Fonts ── */
+  /* These map to the CSS variables set by next/font in layout.tsx.
+     Tailwind generates: font-sans, font-mono */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* ─── Base Styles ───────────────────────────────────────────── */
+/*
+   Minimal base layer. Only what EVERY page needs.
+   No .h1, .h2, .h3 utility classes — that's what Tailwind is for.
+   No custom scrollbar hacks — that's premature optimization.
+*/
 
 @layer base {
   body {
-    @apply font-primary bg-main text-white leading-loose;
-  }
-
-  .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-  }
-
-  .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-  }
-
-  .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-  }
-
-  .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
-  }
-
-  .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
-
-/* LandingAnimatedStatsSwipeMobile */
-/* Hide horizontal scrollbar for the mobile stats rail */
-.stats-scroll::-webkit-scrollbar {
-  display: none;
-}
-.stats-scroll {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-/* --- --- --- --- ... .... ... --- --- --- ---  */
