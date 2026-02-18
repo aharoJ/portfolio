@@ -28,7 +28,7 @@ export const hero: HeroData = {
   title: "Software Engineer",
   description:
     "Building high-performance systems and polished interfaces. I care about speed, reliability, and craft — from the database to the pixel.",
-  photo: "/profile/aharoJ.png",
+  photo: "/profile/aharoJ.jpeg",
   links: [
     { label: "GitHub", href: "https://github.com/aharoJ" },
     { label: "LinkedIn", href: "https://linkedin.com/in/aharoj" },
