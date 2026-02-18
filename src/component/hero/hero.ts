@@ -27,7 +27,7 @@ export const hero: HeroData = {
   name: "Angel J. Haro",
   title: "Software Engineer",
   description:
-    "Building high-performance systems and polished interfaces. I care about speed, reliability, and craft — from the database to the pixel.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in ullamcorper massa. Nullam in vulputate felis. Suspendisse pulvinar nibh mollis facilisis suscipit. In efficitur velit ac nisl condimentum, non volutpat nisi varius. Vestibulum suscipit congue risus, quis consequat mauris egestas ut. Quisque quis scelerisque velit, in pulvinar neque. Duis in tincidunt risus.",
   photo: "/profile/aharoJ.jpeg",
   links: [
     { label: "GitHub", href: "https://github.com/aharoJ" },

@@ -27,7 +27,7 @@ import { roles } from "./experience";
 
 const ExperienceDesktop = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
         {/*
@@ -35,7 +35,7 @@ const ExperienceDesktop = () => {
           mb-16 (64px) gives breathing room before the first role.
           No decorative underline bar — the content speaks.
         */}
-        <h2 className="text-2xl font-semibold tracking-tight mb-16">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8">
           Experience
         </h2>
 

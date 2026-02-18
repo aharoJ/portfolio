@@ -18,10 +18,10 @@ import { education } from "./education";
 
 export default function EducationMobile() {
   return (
-    <section aria-label="Education (mobile)" className="px-5 py-16">
+    <section aria-label="Education (mobile)" className="px-5 py-8">
       <div className="mx-auto max-w-2xl">
         {/* ── Section Title ── */}
-        <h2 className="text-xl font-semibold tracking-tight mb-12">
+        <h2 className="text-xl font-semibold tracking-tight mb-4">
           Education
         </h2>
 

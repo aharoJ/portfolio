@@ -18,7 +18,7 @@ import { hero } from "./hero";
 const HeroDesktop = () => {
   return (
     <section className="flex items-center justify-center px-6 min-h-screen">
-      <div className="max-w-2xl w-full py-24">
+      <div className="max-w-2xl w-full pt-16 pb-0">
         {/* ── Photo ── */}
         <div className="mb-8">
           <Image

@@ -23,10 +23,10 @@ import { skillCategories } from "./skills";
 
 export default function SkillsMobile() {
   return (
-    <section aria-label="Technologies (mobile)" className="px-5 py-16">
+    <section aria-label="Technologies (mobile)" className="px-5 py-8">
       <div className="mx-auto max-w-2xl">
         {/* ── Section Title ── */}
-        <h2 className="text-xl font-semibold tracking-tight mb-10">
+        <h2 className="text-xl font-semibold tracking-tight mb-4">
           Technologies
         </h2>
 

@@ -11,10 +11,10 @@ import { featured, categories } from "./projects";
 
 export default function ProjectsMobile() {
   return (
-    <section className="py-16 px-5">
+    <section className="py-8 px-5">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
-        <h2 className="text-xl font-semibold tracking-tight mb-12">
+        <h2 className="text-xl font-semibold tracking-tight mb-4">
           Projects
         </h2>
 

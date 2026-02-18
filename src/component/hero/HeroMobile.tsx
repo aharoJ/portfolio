@@ -20,16 +20,16 @@ import { hero } from "./hero";
 export default function HeroMobile() {
   return (
     <section className="flex items-center justify-center px-5 min-h-screen">
-      <div className="max-w-2xl w-full py-16">
+      <div className="max-w-2xl w-full pt-8 pb-0">
         {/* ── Photo ── */}
         <div className="mb-6">
           <Image
             src={hero.photo}
             alt={hero.name}
-            width={80}
-            height={80}
+            width={144}
+            height={144}
             priority
-            className="rounded-full"
+            className="rounded-2xl"
           />
         </div>
 

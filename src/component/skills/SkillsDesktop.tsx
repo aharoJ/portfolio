@@ -32,10 +32,10 @@ import { skillCategories } from "./skills";
 
 const SkillsDesktop = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
-        <h2 className="text-2xl font-semibold tracking-tight mb-12">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8">
           Technologies
         </h2>
 
