@@ -45,8 +45,8 @@ const ExperienceDesktop = () => {
             <div
               key={role.company}
               className={`${
-                index > 0 ? "border-t border-border pt-12" : ""
-              } ${index < roles.length - 1 ? "pb-12" : ""}`}
+                index > 0 ? "border-t border-border pt-8" : ""
+              } ${index < roles.length - 1 ? "pb-8" : ""}`}
             >
               {/* ── Date ── */}
               <p className="text-sm font-mono text-muted mb-4">{role.date}</p>

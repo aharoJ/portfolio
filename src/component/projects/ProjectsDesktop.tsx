@@ -29,8 +29,8 @@ const ProjectsDesktop = () => {
             <div
               key={project.title}
               className={`${
-                index > 0 ? "border-t border-border pt-12" : ""
-              } ${index < featured.length - 1 ? "pb-12" : ""}`}
+                index > 0 ? "border-t border-border pt-8" : ""
+              } ${index < featured.length - 1 ? "pb-8" : ""}`}
             >
               <h3 className="text-lg font-semibold tracking-tight mb-2">
                 <a
@@ -81,7 +81,7 @@ const ProjectsDesktop = () => {
         {categories.map((category, index) => (
           <div
             key={category.name}
-            className={`${index === 0 ? "mt-16" : "mt-8"} pt-12 border-t border-border`}
+            className={`${index === 0 ? "mt-8" : "mt-4"} pt-4 border-t border-border`}
           >
             <p className="text-sm text-muted mb-4">{category.name}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-2">

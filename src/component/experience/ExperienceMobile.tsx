@@ -32,8 +32,8 @@ export default function ExperienceMobile() {
             <div
               key={role.company}
               className={`${
-                index > 0 ? "border-t border-border pt-10" : ""
-              } ${index < roles.length - 1 ? "pb-10" : ""}`}
+                index > 0 ? "border-t border-border pt-4" : ""
+              } ${index < roles.length - 1 ? "pb-4" : ""}`}
             >
               {/* ── Date ── */}
               <p className="text-xs font-mono text-muted mb-3">{role.date}</p>
