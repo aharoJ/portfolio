@@ -27,8 +27,10 @@ export const hero: HeroData = {
   name: "Angel J. Haro",
   title: "Software Engineer",
   description:
-    "Maybe each human being lives in a unique world, a private world different from those inhabited and experienced by all other humans. If reality differs from person to person, can we speak of reality singular, or shouldn't we really be talking about plural realities? — Philip K. Dick",
-  photo: "/profile/aharoJ.jpeg",
+    "Maybe each human being lives in a unique world, a private world different from those inhabited and experienced by all other humans. If reality differs from person to person, can we speak of reality singular, or shouldn't we really be talking about plural realities? ~ Philip K. Dick",
+  // photo: "/profile/aharoJ.jpeg",
+  photo: "/profile/sample_one.JPG",
+  // photo: "/profile/sample_two.JPG",
   links: [
     { label: "GitHub", href: "https://github.com/aharoJ" },
     { label: "LinkedIn", href: "https://linkedin.com/in/aharoj" },
