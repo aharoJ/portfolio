@@ -8,12 +8,17 @@
 // 5 roles. Real content from resume. No lorem ipsum.
 // Ordered by recency (most recent first).
 //
+// `shortName` — used as tab label on desktop. Full company names
+// are too long for a sidebar tab list. These are the recognizable
+// short versions a reader can scan instantly.
+//
 // Update a bullet point, add a tech tag, fix a date — do it here.
 // ═══════════════════════════════════════════════════════════════
 
 export interface Role {
   title: string;
   company: string;
+  shortName: string;
   location: string;
   date: string;
   highlights: string[];
@@ -23,7 +28,8 @@ export interface Role {
 export const roles: Role[] = [
   {
     title: "Software Engineer",
-    company: "Western University — College of Veterinary Medicine",
+    company: "College of Veterinary Medicine",
+    shortName: "Western University",
     location: "Pomona, CA",
     date: "Dec 2024 — Present",
     highlights: [
@@ -47,6 +53,7 @@ export const roles: Role[] = [
     title: "Software Engineering Intern",
     company:
       "U.S. Department of Transportation — Turner Fairbank Highway Research Center",
+    shortName: "U.S. DOT",
     location: "McLean, VA",
     date: "May 2023 — Aug 2023",
     highlights: [
@@ -59,6 +66,7 @@ export const roles: Role[] = [
   {
     title: "Software Engineering Researcher",
     company: "Google exploreCSR — California State University, Dominguez Hills",
+    shortName: "Google CSR",
     location: "Carson, CA",
     date: "Oct 2023 — Jun 2024",
     highlights: [
@@ -71,6 +79,7 @@ export const roles: Role[] = [
   {
     title: "Software Development Engineer in Test",
     company: "CAHSI — Computing Alliance of Hispanic-Serving Institutions",
+    shortName: "CAHSI",
     location: "Union, NJ",
     date: "Jan 2023 — May 2023",
     highlights: [
@@ -82,6 +91,7 @@ export const roles: Role[] = [
   {
     title: "Software Engineer & Program Lead",
     company: "Center for Innovation in STEM Education — Apple",
+    shortName: "Apple CISE",
     location: "Los Angeles, CA",
     date: "May 2021 — Dec 2022",
     highlights: [

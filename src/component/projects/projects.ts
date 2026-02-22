@@ -58,8 +58,10 @@ export const categories: ProjectCategory[] = [
   {
     name: "Full Stack",
     links: [
-      { label: "Twitter Clone", href: "https://github.com/aharoJ/Twitter" },
       { label: "Employee Tracker", href: "https://github.com/aharoJ/EmployeeManagementSystemApp" },
+      { label: "Twitter", href: "https://github.com/aharoJ/Twitter" },
+      { label: "Apple", href: "https://github.com/aharoJ/Apple" },
+      { label: "3D Portfolio", href: "https://github.com/aharoJ/3D-Portfolio" },
     ],
   },
   {
@@ -72,11 +74,11 @@ export const categories: ProjectCategory[] = [
   {
     name: "Tooling & Configs",
     links: [
+      { label: "config", href: "https://github.com/aharoJ/config" },
       { label: "tmux", href: "https://github.com/aharoJ/tmux-config" },
       { label: "yabai + skhd", href: "https://github.com/aharoJ/yabai-skhd-config" },
       { label: "alacritty", href: "https://github.com/aharoJ/alacritty-config" },
       { label: "starship", href: "https://github.com/aharoJ/starship-config" },
-      { label: "lf", href: "https://github.com/aharoJ/lf-config" },
       { label: "vivaldi", href: "https://github.com/aharoJ/vivaldi-config" },
     ],
   },

@@ -5,20 +5,9 @@
 // SINGLE SOURCE OF TRUTH.
 // Both SkillsDesktop and SkillsMobile import from here.
 //
-// What changed from the old Skills section:
-//   OLD → 50+ react-icons imports, "use client", useState tabs,
-//         colored tile grids, 8 separate tab views
-//   NEW → Plain strings. No icons. No React. No interactivity.
-//         Everything visible at once — no hiding behind tabs.
-//
-// Design rationale:
-//   A recruiter scanning your page shouldn't click through 8 tabs
-//   to understand your stack. Show everything. Let the categories
-//   and the visual rhythm of the tags do the organizing.
-//
-//   The tech tags in Experience and Projects already established
-//   the visual language — border-only monochrome pills. Skills
-//   uses the exact same pattern, just more comprehensive.
+// These categories and skills mirror the resume EXACTLY.
+// If it's not on the resume, it doesn't belong here.
+// If you add something here, add it to the resume too.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -30,84 +19,51 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Backend",
-    skills: [
-      "Java 21",
-      "Spring Boot",
-      "Python",
-      "Django",
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "C#",
-      "ASP.NET Core",
-    ],
+    skills: ["Java", "Spring Boot", "Python", "Django"],
   },
   {
-    name: "Frontend",
+    name: "Auth & Security",
     skills: [
-      "TypeScript",
-      "JavaScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "HTML5",
-      "CSS3",
-    ],
-  },
-  {
-    name: "Databases",
-    skills: [
-      "PostgreSQL",
-      "MySQL",
-      "MariaDB",
-      "H2",
-      "Cassandra",
-    ],
-  },
-  {
-    name: "Cloud & Identity",
-    skills: [
-      "Azure",
       "Azure Entra ID",
-      "OAuth2 / OBO",
-      "GCP",
-      "Microsoft Graph",
+      "OAuth2",
       "MSAL",
-    ],
-  },
-  {
-    name: "DevOps & Tooling",
-    skills: [
-      "Docker",
-      "Docker Compose",
-      "Nginx",
-      "Git",
-      "Maven",
-      "Postman",
-      "Homebrew",
-    ],
-  },
-  {
-    name: "Architecture",
-    skills: [
-      "Microservices",
-      "Monolithic",
-      "MVC / MVVM",
-      "RESTful APIs",
-      "Dependency Injection",
+      "OBO Flow",
+      "JWT (RS256)",
+      "SSO",
       "RBAC",
     ],
   },
   {
-    name: "Shell & Config",
+    name: "Databases",
+    skills: ["MySQL", "MariaDB", "PostgreSQL", "Flyway Migrations"],
+  },
+  {
+    name: "Frontend",
+    skills: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+  },
+  {
+    name: "Infrastructure",
     skills: [
-      "Bash",
-      "Fish",
-      "Zsh",
-      "Neovim",
-      "Lua",
-      "YAML",
-      "TOML",
+      "Docker",
+      "CI/CD",
+      "Maven",
+      "Git",
+      "Postman",
+      "Power Automate",
+      "Graph API",
+    ],
+  },
+  {
+    name: "config",
+    skills: ["Fish", "Bash", "Zsh", "Neovim", "XML", "YAML", "TOML", "Lua"],
+  },
+  {
+    name: "patterns",
+    skills: [
+      "Monolithic",
+      "MVC / MVT / MVVM",
+      "RESTful APIs",
+      "Dependency Injection",
     ],
   },
 ];
