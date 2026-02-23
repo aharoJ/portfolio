@@ -2,39 +2,43 @@
    src/app/globals.css
    ═══════════════════════════════════════════════════════════════
 
-   THIS FILE IS YOUR ENTIRE DESIGN SYSTEM.
+   YOUR ENTIRE DESIGN SYSTEM. One file. One source of truth.
 
-   In Tailwind v4, there is no tailwind.config.ts.
-   Everything lives here. One file. One source of truth.
+   What changed from the old globals.css:
 
-   @import "tailwindcss"  → loads the framework
-   @theme { }             → defines YOUR design tokens
+     ADDED → html-level styles (smooth scroll, scroll-margin,
+       text-size-adjust). These are the invisible details that
+       make a site feel "right" without anyone knowing why.
 
-   Every token you define here becomes a Tailwind utility:
-     --color-bg       → bg-bg, text-bg
-     --color-fg       → bg-fg, text-fg
-     --font-sans      → font-sans
+     ADDED → ::selection styling. When a recruiter highlights
+       your text, they see intentional design instead of the
+       default blue blob. Subtle but signals craft.
 
-   If it's not in @theme, it doesn't exist in your project.
-   That's the constraint that keeps everything consistent.
+     ADDED → focus-visible ring. Keyboard navigation shows a
+       clean focus ring. Mouse clicks don't. This is the
+       accessibility pattern every modern design system uses.
+
+     ADDED → prefers-reduced-motion. Respects OS-level motion
+       preferences. Required by WCAG, and it's 2 lines of CSS.
+
+     ADDED → scroll-margin-top on headings. If you ever add
+       anchor links (#education, #experience), headings won't
+       hide behind fixed headers. Future-proofing.
+
+     MOVED → Font variables from <body> className to <html>
+       className in layout.tsx. This makes the CSS variables
+       available to the entire document, not just body
+       descendants. Cleaner inheritance.
+
+     KEPT → Monochrome 5-token color system.
+     KEPT → Geist font stack.
+     KEPT → @import "tailwindcss" + @theme pattern.
+
    ═══════════════════════════════════════════════════════════════ */
 
 @import "tailwindcss";
 
 /* ─── Design Tokens ─────────────────────────────────────────── */
-/*
-   These are the ONLY colors, fonts, and spacing overrides
-   in the entire project. Period.
-
-   Color philosophy: monochrome + one accent.
-   - bg/fg for main background and text
-   - muted for secondary text (metadata, labels)
-   - border for structural lines
-   - accent for interactive elements (links, hover states)
-
-   This is what Vercel, Linear, and Apple do.
-   The prestige comes from restraint.
-*/
 
 @theme {
   /* ── Colors ── */
@@ -45,25 +49,82 @@
   --color-accent: #0a0a0a;
 
   /* ── Fonts ── */
-  /* These map to the CSS variables set by next/font in layout.tsx.
-     Tailwind generates: font-sans, font-mono */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 /* ─── Base Styles ───────────────────────────────────────────── */
-/*
-   Minimal base layer. Only what EVERY page needs.
-   No .h1, .h2, .h3 utility classes — that's what Tailwind is for.
-   No custom scrollbar hacks — that's premature optimization.
-*/
 
 @layer base {
+  html {
+    /* Smooth anchor scrolling. Only activates on anchor clicks,
+       not on page load or programmatic scroll. */
+    scroll-behavior: smooth;
+
+    /* Prevents iOS text size inflation on orientation change. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    /* Kill any horizontal overflow from edge cases. */
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans);
+
+    /* Crisp text rendering on macOS/iOS. */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Prevent layout shift from scrollbar appearing/disappearing. */
+    overflow-x: hidden;
+  }
+
+  /* ── Selection ──
+     Custom selection color. When someone highlights your text,
+     they see design instead of default OS blue. */
+  ::selection {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  /* ── Focus ──
+     focus-visible = keyboard only. Mouse clicks won't show it.
+     This is the standard pattern: Vercel, Linear, Radix UI. */
+  *:focus-visible {
+    outline: 2px solid var(--color-fg);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* ── Scroll Margin ──
+     If you ever add anchor links (#section-name), headings
+     won't slam against the top of the viewport. They'll stop
+     with breathing room. Future-proofing for no cost. */
+  h1, h2, h3, h4 {
+    scroll-margin-top: 5rem;
+  }
+
+  /* ── Images ──
+     Sane defaults. block removes the phantom whitespace below
+     inline images. max-width prevents blowout. */
+  img, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* ── Reduced Motion ──
+     Respects OS-level "reduce motion" preference. Required by
+     WCAG 2.1. Kills all transitions and animations globally.
+     Your 150ms hover transitions? Gone for users who need it. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
