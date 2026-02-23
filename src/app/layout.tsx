@@ -4,7 +4,7 @@
 //
 // THE ROOT. Every page inherits from this.
 //
-// THEME TOGGLE — HARDENED:
+// THEME TOGGLE — HARDENED (v2):
 //
 //   BUG #1 → suppressHydrationWarning on <html>.
 //     The blocking script sets data-theme before React hydrates,
@@ -18,6 +18,15 @@
 //     with OS dark mode got light mode — wrong for ~50% of users.
 //     Now: localStorage → matchMedia fallback → light default.
 //
+//   FIX G → Removed inline style.colorScheme from blocking script.
+//     CSS handles color-scheme entirely through the
+//     [data-theme="dark"] { color-scheme: dark } rule in
+//     globals.css. The data-theme attribute triggers the CSS rule,
+//     which triggers color-scheme — no inline style needed.
+//     This eliminates a specificity conflict where the inline
+//     style could override CSS in edge cases (forced themes,
+//     stale bfcache restores).
+//
 // React Server Component (layout itself is RSC).
 // ThemeProvider is the only client boundary.
 //
@@ -26,11 +35,9 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 import ThemeProvider from "@/component/theme/ThemeProvider";
 
 // ─── Font Loading ──────────────────────────────────────────────
-
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
@@ -44,7 +51,6 @@ const geistMono = Geist_Mono({
 });
 
 // ─── Viewport ──────────────────────────────────────────────────
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -55,7 +61,6 @@ export const viewport: Viewport = {
 };
 
 // ─── Metadata ──────────────────────────────────────────────────
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://aharoj.io"),
   alternates: {
@@ -107,6 +112,14 @@ export const metadata: Metadata = {
 //   2. No stored choice → check prefers-color-scheme → use OS pref
 //   3. matchMedia unavailable → default to light
 //
+// FIX G: Removed document.documentElement.style.colorScheme = n.
+// CSS handles color-scheme through the [data-theme="dark"] selector
+// in globals.css. Setting it as an inline style created a specificity
+// conflict — inline styles always beat CSS rules, which could cause
+// stale values on bfcache restore or prevent CSS overrides on
+// forced-theme pages. data-theme is now the single source of truth;
+// CSS reacts to it for both custom properties AND color-scheme.
+//
 // Readable version:
 //
 //   (function() {
@@ -122,11 +135,9 @@ export const metadata: Metadata = {
 //   })();
 //
 // try/catch handles SSR, incognito mode, and disabled storage.
-
-const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;var n=(t==='dark'||t==='light')?t:(m?'dark':'light');document.documentElement.setAttribute('data-theme',n);document.documentElement.style.colorScheme=n}catch(e){}})();`;
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;var n=(t==='dark'||t==='light')?t:(m?'dark':'light');document.documentElement.setAttribute('data-theme',n)}catch(e){}})();`;
 
 // ─── Structured Data (JSON-LD) ─────────────────────────────────
-
 function PersonSchema() {
   const schema = {
     "@context": "https://schema.org",
@@ -150,7 +161,6 @@ function PersonSchema() {
 }
 
 // ─── Root Layout ───────────────────────────────────────────────
-
 export default function RootLayout({
   children,
 }: Readonly<{

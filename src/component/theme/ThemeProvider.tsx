@@ -2,7 +2,7 @@
 // path: src/component/theme/ThemeProvider.tsx
 // ═══════════════════════════════════════════════════════════════
 //
-// THEME PROVIDER — Hardened.
+// THEME PROVIDER — Hardened (v2).
 //
 // This is the ONE justified client component boundary.
 // Theme preference requires interactivity by definition.
@@ -30,9 +30,11 @@
 //
 //   FIX B  → bfcache pageshow resync. Modern browsers restore
 //            whole-page snapshots on back/forward navigation.
-//            Storage is preferred over stale DOM on restore —
-//            if theme changed in another tab while page was
-//            cached, storage has the correct value.
+//            HARDENED: now falls back to system preference instead
+//            of stale DOM. If localStorage was cleared in another
+//            tab while this page was cached, the DOM has stale
+//            data-theme — system preference is the correct source
+//            of truth, not a frozen DOM attribute.
 //
 //   FIX C  → aria-pressed on toggle button. Screen readers now
 //            announce "Toggle dark mode, pressed" vs "not pressed".
@@ -44,9 +46,10 @@
 //            elements with different transition durations change
 //            at different rates. Double requestAnimationFrame
 //            ensures browser has painted before re-enabling.
-//            NOTE: body has NO transition in globals.css — the
-//            swap is instant. withoutTransitions catches any
-//            component-level transitions that exist elsewhere.
+//            HARDENED: now uses ID-based style element to prevent
+//            spam-click from accumulating orphaned <style> tags.
+//            If toggle is clicked rapidly, the same element is
+//            reused instead of creating new ones.
 //
 //   FIX E  → Meta theme-color synced on toggle. Uses
 //            querySelectorAll to update ALL theme-color meta tags
@@ -58,6 +61,13 @@
 //            to catch impurities. DOM reads derive current theme
 //            from the blocking script's data-theme (always in
 //            sync), then setState is called once with the result.
+//
+//   FIX G  → Removed inline style.colorScheme writes. CSS handles
+//            color-scheme entirely through [data-theme="dark"]
+//            selector in globals.css. Inline styles had higher
+//            specificity and could override CSS in edge cases
+//            (forced-theme pages, stale bfcache restores).
+//            data-theme drives everything now — single source.
 //
 // ═══════════════════════════════════════════════════════════════
 "use client";
@@ -97,10 +107,18 @@ function writeStoredTheme(theme: Theme): void {
   }
 }
 
-/** Set data-theme attribute and color-scheme on <html>. */
+/**
+ * Set data-theme attribute on <html>.
+ *
+ * FIX G: No longer sets inline style.colorScheme. The CSS rule
+ * [data-theme="dark"] { color-scheme: dark } in globals.css
+ * handles this automatically when the attribute changes. Removing
+ * the inline style eliminates a specificity conflict — inline
+ * styles always beat CSS rules, which could cause stale values
+ * on bfcache restore or override forced-theme pages.
+ */
 function applyTheme(theme: Theme): void {
   document.documentElement.setAttribute("data-theme", theme);
-  document.documentElement.style.colorScheme = theme;
 }
 
 /**
@@ -120,18 +138,30 @@ function syncMetaThemeColor(theme: Theme): void {
  * Double requestAnimationFrame ensures the browser has painted the
  * new theme before transitions are re-enabled. Without this, elements
  * with different transition durations change at different rates.
+ *
+ * HARDENED: Uses an ID-based style element so rapid toggles reuse
+ * the same node instead of accumulating orphaned <style> tags.
+ * Previous version created a new element per call — spam-clicking
+ * the toggle could stack 10+ style tags that each independently
+ * scheduled removal via rAF. Now there's always at most one.
  */
 function withoutTransitions(fn: () => void): void {
-  const style = document.createElement("style");
-  style.textContent =
-    "*, *::before, *::after { transition: none !important; }";
-  document.head.appendChild(style);
+  const id = "__theme_no_transitions__";
+  let style = document.getElementById(id) as HTMLStyleElement | null;
+
+  if (!style) {
+    style = document.createElement("style");
+    style.id = id;
+    style.textContent =
+      "*, *::before, *::after { transition: none !important; }";
+    document.head.appendChild(style);
+  }
 
   fn();
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      style.remove();
+      style?.remove();
     });
   });
 }
@@ -146,18 +176,24 @@ export default function ThemeProvider({
   const [mounted, setMounted] = useState(false);
 
   // ── Mount + bfcache resync ──
-  // Reads localStorage first, then DOM (set by blocking script),
-  // then system preference. Storage is preferred over DOM because
-  // on bfcache restore the DOM is stale — if theme changed in
-  // another tab while this page was frozen, storage has the
-  // correct value but the DOM still holds the old one.
+  //
+  // HARDENED: Fallback chain is now localStorage → system preference.
+  // Previous version: localStorage → DOM → system preference.
+  //
+  // Why remove DOM from the fallback? On bfcache restore, the DOM
+  // holds whatever data-theme was set when the page was frozen. If
+  // the user cleared localStorage in another tab while this page
+  // was cached, the DOM is stale. System preference is the correct
+  // next source of truth — it reflects the user's current OS state,
+  // not a snapshot from an unknown time in the past.
+  //
+  // The blocking script still sets data-theme on fresh page loads,
+  // so on normal navigation the DOM IS correct. But for the resync
+  // path, we don't trust it.
   useEffect(() => {
     const sync = () => {
       const fromStorage = readStoredTheme();
-      const fromDomRaw = document.documentElement.getAttribute("data-theme");
-      const fromDom: Theme | null =
-        fromDomRaw === "dark" || fromDomRaw === "light" ? fromDomRaw : null;
-      const resolved = fromStorage || fromDom || getSystemTheme();
+      const resolved = fromStorage || getSystemTheme();
 
       applyTheme(resolved);
       syncMetaThemeColor(resolved);
@@ -184,7 +220,6 @@ export default function ThemeProvider({
   useEffect(() => {
     const handleStorage = (e: StorageEvent) => {
       if (e.key !== "theme") return;
-
       const next =
         e.newValue === "dark" || e.newValue === "light"
           ? (e.newValue as Theme)
@@ -208,7 +243,6 @@ export default function ThemeProvider({
     const handleSystemChange = (e: MediaQueryListEvent) => {
       // Only react if user hasn't made an explicit choice
       if (readStoredTheme()) return;
-
       const next: Theme = e.matches ? "dark" : "light";
       applyTheme(next);
       syncMetaThemeColor(next);
@@ -302,6 +336,7 @@ export default function ThemeProvider({
           )}
         </button>
       )}
+
       {children}
     </>
   );
