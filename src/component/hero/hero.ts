@@ -5,8 +5,21 @@
 // SINGLE SOURCE OF TRUTH.
 // Both HeroDesktop and HeroMobile import from here.
 //
-// Name, title, description, photo path, and navigation links.
-// Update content here — never inside a component file.
+// What changed:
+//
+//   REPLACED → Philip K. Dick quote with a one-liner about what
+//     you actually do. Elite portfolios (Brittany Chiang, Lee
+//     Robinson, Rauno Freiberg) all use this space for a single
+//     sentence about their craft. A philosophy quote reads as
+//     "college student's about page," not "working engineer."
+//
+//   FIXED → Twitter href was missing https:// protocol.
+//     Without it, the browser resolves "x.com/aharoJ" as a
+//     relative path → aharoj.io/x.com/aharoJ → 404.
+//
+//   UNCOMMENTED → Resume link. For a job-seeking engineer,
+//     this is the most important link in the hero. Recruiters
+//     want the PDF in one click.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -27,14 +40,13 @@ export const hero: HeroData = {
   name: "Angel J. Haro",
   title: "Software Engineer",
   description:
-    "Maybe each human being lives in a unique world, a private world different from those inhabited and experienced by all other humans. If reality differs from person to person, can we speak of reality singular, or shouldn't we really be talking about plural realities? ~ Philip K. Dick",
-  // photo: "/profile/aharoJ.jpeg",
-  photo: "/profile/sample_one.JPG",
-  // photo: "/profile/sample_two.JPG",
+    "I build reliable backend systems and think deeply about the details that make software feel right — from authentication flows to pixel-level UI.",
+  photo: "/profile/hero_img.jpg",
+  // photo: "/profile/mugshot.jpg",
   links: [
     { label: "GitHub", href: "https://github.com/aharoJ" },
     { label: "LinkedIn", href: "https://linkedin.com/in/aharoj" },
-    { label: "Twitter", href: "x.com/aharoJ" },
+    { label: "Twitter", href: "https://x.com/aharoJ" },
     // { label: "Resume", href: "/resume.pdf" },
   ],
 };

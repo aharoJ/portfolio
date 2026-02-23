@@ -4,14 +4,20 @@
 //
 // DESKTOP PROJECTS SECTION.
 //
-// Featured project gets full treatment.
-// Everything else is categorized rows of text links.
-// Clean, elegant, shows range without clutter.
+// What changed:
+//   ADDED → Image rendering for featured projects. If a project
+//   has an `image` field, it renders above the highlights.
+//   Rounded corners, subtle border, proper next/image optimization.
+//
+//   The image sits between description and highlights — this is
+//   the natural reading flow: what is it → what does it look like
+//   → what's impressive about it → what tech powers it.
 //
 // React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
 
+import Image from "next/image";
 import { featured, categories } from "./projects";
 
 const ProjectsDesktop = () => {
@@ -47,6 +53,20 @@ const ProjectsDesktop = () => {
                 {project.description}
               </p>
 
+              {/* ── Screenshot ── */}
+              {project.image && (
+                <div className="mb-6 rounded-lg overflow-hidden border border-border">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} — dashboard screenshot`}
+                    width={1200}
+                    height={675}
+                    sizes="(max-width: 768px) 100vw, 672px"
+                    className="w-full h-auto"
+                  />
+                </div>
+              )}
+
               <ul className="space-y-3 mb-6">
                 {project.highlights.map((highlight) => (
                   <li
@@ -73,11 +93,6 @@ const ProjectsDesktop = () => {
         </div>
 
         {/* ── Categorized Link Rows ── */}
-        {/*
-          Each category: label + row of text links.
-          Same visual rhythm repeated. Elegant and scannable.
-          mt-16 from featured, then each category separated by border.
-        */}
         {categories.map((category, index) => (
           <div
             key={category.name}

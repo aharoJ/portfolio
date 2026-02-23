@@ -5,9 +5,16 @@
 // SINGLE SOURCE OF TRUTH.
 // Both ProjectsDesktop and ProjectsMobile import from here.
 //
-// Structure:
-//   1. Featured — full description, highlights, tech tags
-//   2. Categories — labeled rows of links, grouped by domain
+// What changed:
+//   ADDED → `image` field on FeaturedProject. Optional string.
+//   The Barbershop screenshot shows the full-stack reality:
+//   backend package structure, frontend file tree, running UI,
+//   and Hibernate SQL logs. One image communicates "this is a
+//   real, working system" better than any bullet point.
+//
+//   Save the screenshot to: public/projects/barbershop-dashboard.png
+//   Optimize it first — aim for under 200KB (sharp, tinypng, or
+//   squoosh). The original is likely 1-3MB as a raw screenshot.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -18,6 +25,7 @@ export interface FeaturedProject {
   tech: string[];
   github: string;
   live?: string;
+  image?: string;
 }
 
 export interface ProjectLink {
@@ -50,6 +58,7 @@ export const featured: FeaturedProject[] = [
       "Zustand",
     ],
     github: "https://github.com/aharoJ",
+    image: "/project/barbershop.jpg",
     // live: "https://barbershop.aharoj.io",  // uncomment when deployed
   },
 ];

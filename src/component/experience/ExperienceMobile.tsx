@@ -4,14 +4,10 @@
 //
 // MOBILE EXPERIENCE SECTION.
 //
-// Same data, adapted for smaller viewports.
-// Functional and clean — not polished yet.
-// We'll refine this after desktop is locked in.
+// What changed:
+//   py-8 → py-10. Consistent with all other mobile sections.
 //
-// Key mobile differences:
-//   - Tighter padding (px-5 instead of px-6)
-//   - Smaller section spacing (py-16 instead of py-24)
-//   - Same content, same hierarchy, same monochrome system
+// Everything else unchanged.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -19,7 +15,7 @@ import { roles } from "./experience";
 
 export default function ExperienceMobile() {
   return (
-    <section className="py-8 px-5">
+    <section className="py-10 px-5">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
         <h2 className="text-xl font-semibold tracking-tight mb-4">

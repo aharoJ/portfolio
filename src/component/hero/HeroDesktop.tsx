@@ -4,10 +4,22 @@
 //
 // DESKTOP HERO SECTION.
 //
-// Centered on the viewport. Photo, name, title, links.
-// This is the first impression — clean and focused.
+// What changed:
 //
-// Data comes from hero.ts. Zero hardcoded content.
+//   REMOVED → min-h-screen. A full viewport of mostly whitespace
+//     before any substance is a luxury reserved for brands with
+//     name recognition. For a job-seeking engineer, the recruiter
+//     needs to see signal fast. Education should peek above the
+//     fold, not hide below a screen of nothing.
+//
+//   REPLACED → pt-32 pb-24 gives generous hero presence without
+//     burning an entire viewport. The hero still breathes, but
+//     the next section is visible on scroll hint.
+//
+//   REMOVED → flex items-center justify-center (vertical centering
+//     was only needed for min-h-screen). Content now flows from
+//     top with padding controlling the rhythm.
+//
 // React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
@@ -17,8 +29,8 @@ import { hero } from "./hero";
 
 const HeroDesktop = () => {
   return (
-    <section className="flex items-center justify-center px-6 min-h-screen">
-      <div className="max-w-2xl w-full pt-16 pb-0">
+    <section className="pt-32 pb-24 px-6">
+      <div className="max-w-2xl mx-auto">
         {/* ── Photo ── */}
         <div className="mb-8">
           <Image
@@ -40,7 +52,7 @@ const HeroDesktop = () => {
         </div>
 
         {/* ── Description ── */}
-        <p className="text-muted leading-relaxed max-w-lg mb-12">
+        <p className="text-muted leading-relaxed max-w-lg mb-6">
           {hero.description}
         </p>
 

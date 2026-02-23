@@ -4,14 +4,10 @@
 //
 // MOBILE EDUCATION SECTION.
 //
-// Same data as Desktop. Same stripped-down design.
-// Three levels: degree → school → achievement tags.
-// React Server Component. Zero client JS.
+// What changed:
+//   py-8 → py-10. All mobile sections now use py-10.
 //
-// Mobile adjustments:
-//   - px-5 horizontal padding (matches other mobile sections)
-//   - py-8 vertical padding (tighter than desktop py-16)
-//   - text-xl section title instead of text-2xl
+// React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -19,7 +15,7 @@ import { education } from "./education";
 
 export default function EducationMobile() {
   return (
-    <section aria-label="Education (mobile)" className="px-5 py-8">
+    <section aria-label="Education (mobile)" className="px-5 py-10">
       <div className="mx-auto max-w-2xl">
         {/* ── Section Title ── */}
         <h2 className="text-xl font-semibold tracking-tight mb-4">

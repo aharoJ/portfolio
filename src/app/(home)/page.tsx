@@ -10,6 +10,12 @@
 // hidden lg:block  → only shows on desktop (≥1024px)
 // block lg:hidden  → only shows on mobile (<1024px)
 //
+// What changed:
+//   ADDED → Footer. Even the most minimal portfolios have one.
+//   It signals "this is a complete, intentional product" rather
+//   than "the page just stops." Two elements: copyright year
+//   and a subtle source link. Visual endpoint.
+//
 // React Server Component. Zero client JS.
 import HeroDesktop from "@/component/hero/HeroDesktop";
 import HeroMobile from "@/component/hero/HeroMobile";
@@ -70,6 +76,15 @@ export default function HomeTest() {
       <div className="block lg:hidden">
         <SkillsMobile />
       </div>
+
+      {/* ── Footer ── */}
+      <footer className="py-16 px-6 lg:px-6">
+        <div className="max-w-2xl mx-auto border-t border-border pt-8">
+          <p className="text-xs text-muted">
+            © {new Date().getFullYear()} Angel J. Haro
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }

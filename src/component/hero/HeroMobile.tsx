@@ -4,13 +4,10 @@
 //
 // MOBILE HERO SECTION.
 //
-// Same data as Desktop. Same monochrome style.
-// React Server Component. Zero client JS.
+// Same changes as Desktop: removed min-h-screen, uses padding.
+// pt-20 pb-16 on mobile — tighter than desktop but still generous.
 //
-// Mobile adjustments:
-//   - px-5 horizontal padding (matches other mobile sections)
-//   - Slightly smaller photo (80px instead of 96px)
-//   - mb-10 on description instead of mb-12 (tighter rhythm)
+// React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -19,8 +16,8 @@ import { hero } from "./hero";
 
 export default function HeroMobile() {
   return (
-    <section className="flex items-center justify-center px-5 min-h-screen">
-      <div className="max-w-2xl w-full pt-8 pb-0">
+    <section className="pt-20 pb-16 px-5">
+      <div className="max-w-2xl mx-auto">
         {/* ── Photo ── */}
         <div className="mb-6">
           <Image

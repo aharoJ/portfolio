@@ -3,15 +3,19 @@
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE PROJECTS SECTION.
-// Same structure, adapted for smaller viewports.
+//
+// What changed:
+//   ADDED → Image rendering for featured projects (same as Desktop).
+//   py-8 → py-10 for consistent mobile vertical rhythm.
 //
 // ═══════════════════════════════════════════════════════════════
 
+import Image from "next/image";
 import { featured, categories } from "./projects";
 
 export default function ProjectsMobile() {
   return (
-    <section className="py-8 px-5">
+    <section className="py-10 px-5">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
         <h2 className="text-xl font-semibold tracking-tight mb-4">
@@ -41,6 +45,20 @@ export default function ProjectsMobile() {
               <p className="text-sm text-muted leading-relaxed mb-4">
                 {project.description}
               </p>
+
+              {/* ── Screenshot ── */}
+              {project.image && (
+                <div className="mb-4 rounded-lg overflow-hidden border border-border">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} — dashboard screenshot`}
+                    width={1200}
+                    height={675}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                  />
+                </div>
+              )}
 
               <ul className="space-y-3 mb-4">
                 {project.highlights.map((highlight) => (
