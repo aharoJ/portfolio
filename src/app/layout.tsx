@@ -4,99 +4,139 @@
 //
 // THE ROOT. Every page inherits from this.
 //
-// What this file does:
-//   1. Loads Geist Sans + Geist Mono (self-hosted, zero layout shift)
-//   2. Sets CSS variables so Tailwind can use them via @theme
-//   3. Defines metadata for SEO + social sharing
-//   4. Wraps children — nothing else
+// What changed from the old layout:
 //
-// What this file does NOT do:
-//   - No Navbar (we'll add it when we're ready, not before)
-//   - No Footer (same)
-//   - No page transitions (no JS animation libraries)
-//   - No wrappers, no providers, no context — just HTML
+//   ADDED → `viewport` export (separate from metadata).
+//     Since Next.js 14, viewport config is its own export.
+//     The old way (inside metadata) is deprecated.
+//     https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+//
+//   ADDED → Structured data (JSON-LD).
+//     A Person schema tells Google "this is a person's portfolio."
+//     This is manual because Next.js doesn't auto-generate it.
+//     Shows up as a rich result in search.
+//
+//   ADDED → `alternates.canonical` in metadata.
+//     Prevents duplicate content issues (www vs non-www, trailing
+//     slashes, etc). Lee Robinson's site does this.
+//
+//   ADDED → `robots` metadata.
+//     Explicitly tells crawlers to index and follow.
+//     Belt-and-suspenders with the canonical URL.
+//
+//   KEPT → Geist Sans + Mono (variable fonts, self-hosted).
+//     Still the right choice. Lee Robinson uses Inter,
+//     but Geist signals "I know the Vercel/Next.js ecosystem."
+//
+//   REMOVED → Nothing structural. The old layout was correct
+//     in what it did — it just wasn't doing enough.
+//
+// React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 // ─── Font Loading ──────────────────────────────────────────────
-//
-// next/font does three things for you:
-//   1. Self-hosts the font files (no external Google Fonts request)
-//   2. Generates a unique className that injects the @font-face
-//   3. Creates a CSS variable (--font-geist-sans) for Tailwind to consume
-//
-// `variable` is the key — it creates a CSS custom property on the element
-// you apply it to. In globals.css, @theme references these variables.
-//
-// We load Geist as a variable font (weight: 100-900) so we get
-// every weight from thin to black without loading separate files.
 
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
+  display: "swap",
 });
 
+// ─── Viewport (separate export since Next.js 14) ──────────────
+//
+// This generates the <meta name="viewport"> and theme-color tags.
+// Keeping it separate from metadata is the current best practice.
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
 // ─── Metadata ──────────────────────────────────────────────────
-//
-// Next.js generates <title>, <meta>, and OG tags from this object.
-// No need for manual <meta> tags in <head>.
-//
-// The `metadataBase` tells Next.js the canonical URL so relative
-// paths in openGraph.images resolve correctly.
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aharoj.io"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "Angel J. Haro — Software Engineer",
     template: "%s | aharoJ",
   },
-  description: "Software engineer building high-quality digital experiences.",
+  description:
+    "Software engineer building reliable backend systems and high-quality digital experiences.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Angel J. Haro — Software Engineer",
-    description: "Software engineer building high-quality digital experiences.",
+    description:
+      "Software engineer building reliable backend systems and high-quality digital experiences.",
     url: "https://aharoj.io",
     siteName: "aharoJ",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/profile/aharoJ.png",
+        url: "/profile/mugshot.jpg",
         width: 1200,
         height: 630,
-        alt: "aharoJ — Software Engineer",
+        alt: "Angel J. Haro — Software Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Angel J. Haro — Software Engineer",
-    description: "Software engineer building high-quality digital experiences.",
-    images: ["/profile/aharoJ.png"],
+    description:
+      "Software engineer building reliable backend systems and high-quality digital experiences.",
+    creator: "@aharoJ",
+    images: ["/profile/mugshot.jpg"],
   },
 };
 
+// ─── Structured Data (JSON-LD) ─────────────────────────────────
+//
+// This tells search engines "this is a person's portfolio."
+// Google uses this for rich results (knowledge panels, etc).
+// Next.js doesn't generate this — you have to do it manually.
+
+function PersonSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Angel J. Haro",
+    url: "https://aharoj.io",
+    jobTitle: "Software Engineer",
+    sameAs: [
+      "https://github.com/aharoJ",
+      "https://linkedin.com/in/aharoj",
+      "https://x.com/aharoJ",
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 // ─── Root Layout ───────────────────────────────────────────────
-//
-// This is a React Server Component. No "use client" needed.
-// The only job: set up <html> and <body> with fonts, then render children.
-//
-// The className on <body> does two things:
-//   1. Injects the @font-face declarations (geistSans.variable)
-//   2. Makes --font-geist-sans and --font-geist-mono available
-//      to every descendant element via CSS inheritance
-//
-// antialiased = -webkit-font-smoothing: antialiased
-//               -moz-osx-font-smoothing: grayscale
-// This makes text render crisper on macOS/iOS.
 
 export default function RootLayout({
   children,
@@ -104,10 +144,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <PersonSchema />
         {children}
       </body>
     </html>
