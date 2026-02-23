@@ -4,7 +4,7 @@
 //
 // THE ROOT. Every page inherits from this.
 //
-// THEME TOGGLE — HARDENED (v2):
+// THEME TOGGLE — HARDENED (v4):
 //
 //   BUG #1 → suppressHydrationWarning on <html>.
 //     The blocking script sets data-theme before React hydrates,
@@ -27,29 +27,38 @@
 //     style could override CSS in edge cases (forced themes,
 //     stale bfcache restores).
 //
+//   FIX I → (v4) Static <meta name="color-scheme" content="light dark">.
+//     The color-scheme meta tag's job is to declare what schemes
+//     the page SUPPORTS, not which one is ACTIVE. Setting it
+//     statically to "light dark" tells Chrome Auto Dark Mode
+//     "I handle both — don't force anything" and lets the CSS
+//     rule [data-theme="dark"] { color-scheme: dark } in
+//     globals.css drive the active scheme.
+//
+//     v3 dynamically flipped this meta between "light" and "dark"
+//     on every toggle, which required syncColorSchemeMeta() calls
+//     in ThemeProvider + a blocking script line. That's gone now.
+//     Fewer DOM writes, fewer sync points, more spec-correct.
+//
 // React Server Component (layout itself is RSC).
 // ThemeProvider is the only client boundary.
 //
 // ═══════════════════════════════════════════════════════════════
-
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/component/theme/ThemeProvider";
-
 // ─── Font Loading ──────────────────────────────────────────────
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
   display: "swap",
 });
-
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
   display: "swap",
 });
-
 // ─── Viewport ──────────────────────────────────────────────────
 export const viewport: Viewport = {
   width: "device-width",
@@ -59,7 +68,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
 };
-
 // ─── Metadata ──────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL("https://aharoj.io"),
@@ -102,7 +110,6 @@ export const metadata: Metadata = {
     images: ["/profile/mugshot.jpg"],
   },
 };
-
 // ─── Blocking Theme Script ─────────────────────────────────────
 //
 // Runs synchronously BEFORE React hydrates.
@@ -112,13 +119,9 @@ export const metadata: Metadata = {
 //   2. No stored choice → check prefers-color-scheme → use OS pref
 //   3. matchMedia unavailable → default to light
 //
-// FIX G: Removed document.documentElement.style.colorScheme = n.
-// CSS handles color-scheme through the [data-theme="dark"] selector
-// in globals.css. Setting it as an inline style created a specificity
-// conflict — inline styles always beat CSS rules, which could cause
-// stale values on bfcache restore or prevent CSS overrides on
-// forced-theme pages. data-theme is now the single source of truth;
-// CSS reacts to it for both custom properties AND color-scheme.
+// v4: Simplified — no longer flips color-scheme meta. The static
+// <meta name="color-scheme" content="light dark"> in <head>
+// declares support for both schemes. CSS drives the active one.
 //
 // Readable version:
 //
@@ -136,7 +139,6 @@ export const metadata: Metadata = {
 //
 // try/catch handles SSR, incognito mode, and disabled storage.
 const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;var n=(t==='dark'||t==='light')?t:(m?'dark':'light');document.documentElement.setAttribute('data-theme',n)}catch(e){}})();`;
-
 // ─── Structured Data (JSON-LD) ─────────────────────────────────
 function PersonSchema() {
   const schema = {
@@ -151,7 +153,6 @@ function PersonSchema() {
       "https://x.com/aharoJ",
     ],
   };
-
   return (
     <script
       type="application/ld+json"
@@ -159,7 +160,6 @@ function PersonSchema() {
     />
   );
 }
-
 // ─── Root Layout ───────────────────────────────────────────────
 export default function RootLayout({
   children,
@@ -173,6 +173,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
+        {/* FIX I (v4): Static color-scheme meta — declares support
+            for both schemes. Tells Chrome Auto Dark Mode "I handle
+            dark mode myself." CSS drives the active scheme via
+            [data-theme="dark"] { color-scheme: dark } */}
+        <meta name="color-scheme" content="light dark" />
         {/* Blocking script — sets data-theme before first paint */}
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
