@@ -4,40 +4,30 @@
 //
 // THE ROOT. Every page inherits from this.
 //
-// What changed from the old layout:
+// THEME TOGGLE — HARDENED:
 //
-//   ADDED → `viewport` export (separate from metadata).
-//     Since Next.js 14, viewport config is its own export.
-//     The old way (inside metadata) is deprecated.
-//     https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+//   BUG #1 → suppressHydrationWarning on <html>.
+//     The blocking script sets data-theme before React hydrates,
+//     which creates a server/client mismatch on that element.
+//     suppressHydrationWarning tells React this is intentional.
+//     It only applies one level deep — won't mask real bugs in
+//     child components. Every next-themes implementation does this.
 //
-//   ADDED → Structured data (JSON-LD).
-//     A Person schema tells Google "this is a person's portfolio."
-//     This is manual because Next.js doesn't auto-generate it.
-//     Shows up as a rich result in search.
+//   BUG #2 → Blocking script now checks system preference.
+//     Previous version only read localStorage. First-time visitors
+//     with OS dark mode got light mode — wrong for ~50% of users.
+//     Now: localStorage → matchMedia fallback → light default.
 //
-//   ADDED → `alternates.canonical` in metadata.
-//     Prevents duplicate content issues (www vs non-www, trailing
-//     slashes, etc). Lee Robinson's site does this.
-//
-//   ADDED → `robots` metadata.
-//     Explicitly tells crawlers to index and follow.
-//     Belt-and-suspenders with the canonical URL.
-//
-//   KEPT → Geist Sans + Mono (variable fonts, self-hosted).
-//     Still the right choice. Lee Robinson uses Inter,
-//     but Geist signals "I know the Vercel/Next.js ecosystem."
-//
-//   REMOVED → Nothing structural. The old layout was correct
-//     in what it did — it just wasn't doing enough.
-//
-// React Server Component. Zero client JS.
+// React Server Component (layout itself is RSC).
+// ThemeProvider is the only client boundary.
 //
 // ═══════════════════════════════════════════════════════════════
 
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+import ThemeProvider from "@/component/theme/ThemeProvider";
 
 // ─── Font Loading ──────────────────────────────────────────────
 
@@ -53,15 +43,15 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// ─── Viewport (separate export since Next.js 14) ──────────────
-//
-// This generates the <meta name="viewport"> and theme-color tags.
-// Keeping it separate from metadata is the current best practice.
+// ─── Viewport ──────────────────────────────────────────────────
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ffffff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 // ─── Metadata ──────────────────────────────────────────────────
@@ -108,11 +98,34 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── Structured Data (JSON-LD) ─────────────────────────────────
+// ─── Blocking Theme Script ─────────────────────────────────────
 //
-// This tells search engines "this is a person's portfolio."
-// Google uses this for rich results (knowledge panels, etc).
-// Next.js doesn't generate this — you have to do it manually.
+// Runs synchronously BEFORE React hydrates.
+//
+// Decision cascade:
+//   1. localStorage has explicit user choice → use it
+//   2. No stored choice → check prefers-color-scheme → use OS pref
+//   3. matchMedia unavailable → default to light
+//
+// Readable version:
+//
+//   (function() {
+//     try {
+//       var t = localStorage.getItem('theme');
+//       var m = window.matchMedia &&
+//               window.matchMedia('(prefers-color-scheme: dark)').matches;
+//       var n = (t === 'dark' || t === 'light')
+//             ? t
+//             : (m ? 'dark' : 'light');
+//       document.documentElement.setAttribute('data-theme', n);
+//     } catch (e) {}
+//   })();
+//
+// try/catch handles SSR, incognito mode, and disabled storage.
+
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;var n=(t==='dark'||t==='light')?t:(m?'dark':'light');document.documentElement.setAttribute('data-theme',n);document.documentElement.style.colorScheme=n}catch(e){}})();`;
+
+// ─── Structured Data (JSON-LD) ─────────────────────────────────
 
 function PersonSchema() {
   const schema = {
@@ -144,10 +157,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <head>
+        {/* Blocking script — sets data-theme before first paint */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body>
         <PersonSchema />
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
