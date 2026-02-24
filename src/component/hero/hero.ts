@@ -41,8 +41,9 @@ export const hero: HeroData = {
   title: "Software Engineer",
   description:
     "I build reliable backend systems and think deeply about the details that make software feel right — from authentication flows to pixel-level UI.",
-  photo: "/profile/hero_img.jpg",
-  // photo: "/profile/mugshot.jpg",
+  photo: "/profile/aharoj.webp",
+  // photo: "/profile/relaxed.webp",
+  // photo: "/profile/haro2.webp",
   links: [
     { label: "GitHub", href: "https://github.com/aharoJ" },
     { label: "LinkedIn", href: "https://linkedin.com/in/aharoj" },
