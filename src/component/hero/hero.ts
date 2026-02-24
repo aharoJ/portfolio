@@ -40,7 +40,7 @@ export const hero: HeroData = {
   name: "Angel J. Haro",
   title: "Software Engineer",
   description:
-    "I'm a software engineer in Southern California. Currently the only developer behind the veterinary medicine system at Western University. Before that I taught kids in underfunded districts how to code with Apple's money, trained neural networks with Google's money, and got government security clearance to crash self-driving cars in simulations and call it research. I lift weights, binge watch anime, play video games, and will spend hours perfecting my terminal instead of sleeping.",
+    "I'm a software engineer in Southern California. Currently the only developer behind the veterinary medicine system at Western University. Before that I taught kids in underfunded districts how to code with Apple's money, trained neural networks with Google's money, did mutation testing research at Kean University, and got government security clearance to crash self-driving cars in simulations and call it research. I lift weights, binge watch anime, play video games, and will spend hours perfecting my terminal instead of sleeping.",
   photo: "/profile/aharoj.webp",
   // photo: "/profile/relaxed.webp",
   // photo: "/profile/haro2.webp",
