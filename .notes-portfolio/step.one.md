@@ -43,10 +43,13 @@ npm install geist
 ```
 
 Then change the imports in layout.tsx from:
+
 ```ts
 import { Geist, Geist_Mono } from "next/font/google";
 ```
+
 to:
+
 ```ts
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
@@ -82,12 +85,12 @@ That's the foundation.
 
 ## What changed and why
 
-| Before (v3)                  | After (v4)                    | Why                          |
-|------------------------------|-------------------------------|------------------------------|
-| tailwind.config.ts           | deleted                       | @theme in CSS replaces it    |
-| @tailwind base/comp/util     | @import "tailwindcss"         | v4 syntax, one line          |
-| JetBrains Mono (all weights) | Geist Sans + Mono (variable)  | Modern, variable, lighter    |
-| Custom .h1/.h2/.h3 classes   | deleted                       | Use Tailwind directly        |
-| bg-main, text-white          | bg-bg, text-fg                | Semantic token names         |
-| Navbar in layout             | removed                       | Build when ready, not before |
-| Manual <meta> tags in <head> | Metadata API only             | Next.js handles generation   |
+| Before (v3)                  | After (v4)                   | Why                          |
+| ---------------------------- | ---------------------------- | ---------------------------- |
+| tailwind.config.ts           | deleted                      | @theme in CSS replaces it    |
+| @tailwind base/comp/util     | @import "tailwindcss"        | v4 syntax, one line          |
+| JetBrains Mono (all weights) | Geist Sans + Mono (variable) | Modern, variable, lighter    |
+| Custom .h1/.h2/.h3 classes   | deleted                      | Use Tailwind directly        |
+| bg-main, text-white          | bg-bg, text-fg               | Semantic token names         |
+| Navbar in layout             | removed                      | Build when ready, not before |
+| Manual <meta> tags in <head> | Metadata API only            | Next.js handles generation   |
