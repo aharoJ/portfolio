@@ -4,8 +4,10 @@
 //
 // MOBILE HERO SECTION.
 //
-// Same changes as Desktop: removed min-h-screen, uses padding.
-// pt-20 pb-16 on mobile — tighter than desktop but still generous.
+// What changed (Hyperlink Pass):
+//
+//   UPDATED → Same fragment rendering as Desktop. Inline links
+//     within the description paragraph.
 //
 // React Server Component. Zero client JS.
 //
@@ -40,7 +42,19 @@ export default function HeroMobile() {
 
         {/* ── Description ── */}
         <p className="text-sm text-muted leading-relaxed max-w-lg mb-10">
-          {hero.description}
+          {hero.description.map((fragment, i) =>
+            fragment.href ? (
+              <a
+                key={i}
+                href={fragment.href}
+                className="text-fg underline underline-offset-4 transition-colors duration-150"
+              >
+                {fragment.text}
+              </a>
+            ) : (
+              <span key={i}>{fragment.text}</span>
+            )
+          )}
         </p>
 
         {/* ── Links ── */}

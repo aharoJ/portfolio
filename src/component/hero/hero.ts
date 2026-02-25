@@ -5,21 +5,13 @@
 // SINGLE SOURCE OF TRUTH.
 // Both HeroDesktop and HeroMobile import from here.
 //
-// What changed:
+// What changed (Hyperlink Pass — Apple Only):
 //
-//   REPLACED → Philip K. Dick quote with a one-liner about what
-//     you actually do. Elite portfolios (Brittany Chiang, Lee
-//     Robinson, Rauno Freiberg) all use this space for a single
-//     sentence about their craft. A philosophy quote reads as
-//     "college student's about page," not "working engineer."
+//   ONE link: "Apple's money" → /apple
+//   Everything else is plain text. No href, no underline.
 //
-//   FIXED → Twitter href was missing https:// protocol.
-//     Without it, the browser resolves "x.com/aharoJ" as a
-//     relative path → aharoj.io/x.com/aharoJ → 404.
-//
-//   UNCOMMENTED → Resume link. For a job-seeking engineer,
-//     this is the most important link in the hero. Recruiters
-//     want the PDF in one click.
+//   When the next story page is ready, add href to that
+//   fragment. One at a time. No rush.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -28,10 +20,15 @@ export interface HeroLink {
   href: string;
 }
 
+export interface DescriptionFragment {
+  text: string;
+  href?: string;
+}
+
 export interface HeroData {
   name: string;
   title: string;
-  description: string;
+  description: DescriptionFragment[];
   photo: string;
   links: HeroLink[];
 }
@@ -39,8 +36,18 @@ export interface HeroData {
 export const hero: HeroData = {
   name: "Angel J. Haro",
   title: "Software Engineer",
-  description:
-    "I'm a software engineer in Southern California. Currently the only developer behind the veterinary medicine system at Western University. Before that I taught kids in underfunded districts how to code with Apple's money, trained neural networks with Google's money, did mutation testing research at Kean University, and got government security clearance to crash self-driving cars in simulations and call it research. I lift weights, binge watch anime, play video games, and will spend hours perfecting my terminal instead of sleeping.",
+  description: [
+    {
+      text: "I'm a software engineer in Southern California. Currently the only developer behind the veterinary medicine system at Western University. Before that I taught kids in underfunded districts how to code with ",
+    },
+    {
+      text: "Apple's ",
+      href: "/apple",
+    },
+    {
+      text: "money, trained neural networks with Google's money, did mutation testing research at Kean University, and got government security clearance to crash self-driving cars in simulations and call it research. I lift weights, binge watch anime, play video games, and will spend hours perfecting my terminal instead of sleeping.",
+    },
+  ],
   photo: "/profile/aharoj.webp",
   // photo: "/profile/relaxed.webp",
   // photo: "/profile/haro2.webp",

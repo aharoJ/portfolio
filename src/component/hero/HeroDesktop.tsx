@@ -4,21 +4,18 @@
 //
 // DESKTOP HERO SECTION.
 //
-// What changed:
+// What changed (Hyperlink Pass):
 //
-//   REMOVED → min-h-screen. A full viewport of mostly whitespace
-//     before any substance is a luxury reserved for brands with
-//     name recognition. For a job-seeking engineer, the recruiter
-//     needs to see signal fast. Education should peek above the
-//     fold, not hide below a screen of nothing.
+//   UPDATED → Description now renders from fragments instead of
+//     a plain string. Each fragment is either a <span> (text)
+//     or an <a> (link). The paragraph reads identically — the
+//     only visual difference is "Apple's money" has an underline
+//     and is clickable. Lee Robinson energy.
 //
-//   REPLACED → pt-32 pb-24 gives generous hero presence without
-//     burning an entire viewport. The hero still breathes, but
-//     the next section is visible on scroll hint.
-//
-//   REMOVED → flex items-center justify-center (vertical centering
-//     was only needed for min-h-screen). Content now flows from
-//     top with padding controlling the rhythm.
+//   Link styling: underline by default (not hover-only) so users
+//     know it's interactive. Same underline-offset-4 as nav links
+//     for visual consistency. text-fg so it doesn't break the
+//     monochrome palette with a colored link.
 //
 // React Server Component. Zero client JS.
 //
@@ -53,7 +50,19 @@ const HeroDesktop = () => {
 
         {/* ── Description ── */}
         <p className="text-muted leading-relaxed max-w-lg mb-6">
-          {hero.description}
+          {hero.description.map((fragment, i) =>
+            fragment.href ? (
+              <a
+                key={i}
+                href={fragment.href}
+                className="text-muted/70 underline underline-offset-4 decoration-muted/20 transition-colors duration-150"
+              >
+                {fragment.text}
+              </a>
+            ) : (
+              <span key={i}>{fragment.text}</span>
+            )
+          )}
         </p>
 
         {/* ── Links ── */}
