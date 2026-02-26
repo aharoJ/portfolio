@@ -48,6 +48,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/component/theme/ThemeProvider";
+import { headers } from "next/headers";
+
 // ─── Font Loading ──────────────────────────────────────────────
 const geistSans = Geist({
   subsets: ["latin"],
@@ -59,6 +61,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   display: "swap",
 });
+
 // ─── Viewport ──────────────────────────────────────────────────
 export const viewport: Viewport = {
   width: "device-width",
@@ -68,6 +71,7 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
 };
+
 // ─── Metadata ──────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL("https://aharoj.io"),
@@ -110,6 +114,7 @@ export const metadata: Metadata = {
     images: ["/profile/mugshot.jpg"],
   },
 };
+
 // ─── Blocking Theme Script ─────────────────────────────────────
 //
 // Runs synchronously BEFORE React hydrates.
@@ -160,12 +165,15 @@ function PersonSchema() {
     />
   );
 }
+
 // ─── Root Layout ───────────────────────────────────────────────
-export default function RootLayout({
+// export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get("x-nonce") ?? "";
   return (
     <html
       lang="en"
@@ -179,13 +187,11 @@ export default function RootLayout({
             [data-theme="dark"] { color-scheme: dark } */}
         <meta name="color-scheme" content="light dark" />
         {/* Blocking script — sets data-theme before first paint */}
-        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
       <body>
         <PersonSchema />
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
