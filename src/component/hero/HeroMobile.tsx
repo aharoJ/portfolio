@@ -1,16 +1,15 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/hero/HeroMobile.tsx
+// path: src/component/hero/HeroMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE HERO SECTION.
 //
-// Same data as Desktop. Same monochrome style.
-// React Server Component. Zero client JS.
+// What changed (Hyperlink Pass):
 //
-// Mobile adjustments:
-//   - px-5 horizontal padding (matches other mobile sections)
-//   - Slightly smaller photo (80px instead of 96px)
-//   - mb-10 on description instead of mb-12 (tighter rhythm)
+//   UPDATED → Same fragment rendering as Desktop. Inline links
+//     within the description paragraph.
+//
+// React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -19,17 +18,17 @@ import { hero } from "./hero";
 
 export default function HeroMobile() {
   return (
-    <section className="flex items-center justify-center px-5 min-h-screen">
-      <div className="max-w-2xl w-full py-16">
+    <section className="pt-20 pb-16 px-5">
+      <div className="max-w-2xl mx-auto">
         {/* ── Photo ── */}
         <div className="mb-6">
           <Image
             src={hero.photo}
             alt={hero.name}
-            width={80}
-            height={80}
+            width={144}
+            height={144}
             priority
-            className="rounded-full"
+            className="rounded-2xl"
           />
         </div>
 
@@ -43,7 +42,19 @@ export default function HeroMobile() {
 
         {/* ── Description ── */}
         <p className="text-sm text-muted leading-relaxed max-w-lg mb-10">
-          {hero.description}
+          {hero.description.map((fragment, i) =>
+            fragment.href ? (
+              <a
+                key={i}
+                href={fragment.href}
+                className="text-fg underline underline-offset-4 transition-colors duration-150"
+              >
+                {fragment.text}
+              </a>
+            ) : (
+              <span key={i}>{fragment.text}</span>
+            )
+          )}
         </p>
 
         {/* ── Links ── */}

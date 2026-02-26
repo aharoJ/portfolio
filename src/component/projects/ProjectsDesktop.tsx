@@ -1,25 +1,31 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/projects/ProjectsDesktop.tsx
+// path: src/component/projects/ProjectsDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP PROJECTS SECTION.
 //
-// Featured project gets full treatment.
-// Everything else is categorized rows of text links.
-// Clean, elegant, shows range without clutter.
+// What changed:
+//   ADDED → Image rendering for featured projects. If a project
+//   has an `image` field, it renders above the highlights.
+//   Rounded corners, subtle border, proper next/image optimization.
+//
+//   The image sits between description and highlights — this is
+//   the natural reading flow: what is it → what does it look like
+//   → what's impressive about it → what tech powers it.
 //
 // React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
 
+import Image from "next/image";
 import { featured, categories } from "./projects";
 
 const ProjectsDesktop = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
-        <h2 className="text-2xl font-semibold tracking-tight mb-16">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8">
           Projects
         </h2>
 
@@ -29,8 +35,8 @@ const ProjectsDesktop = () => {
             <div
               key={project.title}
               className={`${
-                index > 0 ? "border-t border-border pt-12" : ""
-              } ${index < featured.length - 1 ? "pb-12" : ""}`}
+                index > 0 ? "border-t border-border pt-8" : ""
+              } ${index < featured.length - 1 ? "pb-8" : ""}`}
             >
               <h3 className="text-lg font-semibold tracking-tight mb-2">
                 <a
@@ -46,6 +52,20 @@ const ProjectsDesktop = () => {
               <p className="text-sm text-muted leading-relaxed mb-6">
                 {project.description}
               </p>
+
+              {/* ── Screenshot ── */}
+              {project.image && (
+                <div className="mb-6 rounded-lg overflow-hidden border border-border">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} — dashboard screenshot`}
+                    width={1200}
+                    height={675}
+                    sizes="(max-width: 768px) 100vw, 672px"
+                    className="w-full h-auto"
+                  />
+                </div>
+              )}
 
               <ul className="space-y-3 mb-6">
                 {project.highlights.map((highlight) => (
@@ -73,15 +93,10 @@ const ProjectsDesktop = () => {
         </div>
 
         {/* ── Categorized Link Rows ── */}
-        {/*
-          Each category: label + row of text links.
-          Same visual rhythm repeated. Elegant and scannable.
-          mt-16 from featured, then each category separated by border.
-        */}
         {categories.map((category, index) => (
           <div
             key={category.name}
-            className={`${index === 0 ? "mt-16" : "mt-8"} pt-12 border-t border-border`}
+            className={`${index === 0 ? "mt-8" : "mt-4"} pt-4 border-t border-border`}
           >
             <p className="text-sm text-muted mb-4">{category.name}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-2">

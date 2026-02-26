@@ -1,13 +1,20 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/projects/projects.ts
+// path: src/component/projects/projects.ts
 // ═══════════════════════════════════════════════════════════════
 //
 // SINGLE SOURCE OF TRUTH.
 // Both ProjectsDesktop and ProjectsMobile import from here.
 //
-// Structure:
-//   1. Featured — full description, highlights, tech tags
-//   2. Categories — labeled rows of links, grouped by domain
+// What changed:
+//   ADDED → `image` field on FeaturedProject. Optional string.
+//   The Barbershop screenshot shows the full-stack reality:
+//   backend package structure, frontend file tree, running UI,
+//   and Hibernate SQL logs. One image communicates "this is a
+//   real, working system" better than any bullet point.
+//
+//   Save the screenshot to: public/projects/barbershop-dashboard.png
+//   Optimize it first — aim for under 200KB (sharp, tinypng, or
+//   squoosh). The original is likely 1-3MB as a raw screenshot.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -18,6 +25,7 @@ export interface FeaturedProject {
   tech: string[];
   github: string;
   live?: string;
+  image?: string;
 }
 
 export interface ProjectLink {
@@ -50,6 +58,7 @@ export const featured: FeaturedProject[] = [
       "Zustand",
     ],
     github: "https://github.com/aharoJ",
+    image: "/project/barbershop.jpg",
     // live: "https://barbershop.aharoj.io",  // uncomment when deployed
   },
 ];
@@ -58,8 +67,10 @@ export const categories: ProjectCategory[] = [
   {
     name: "Full Stack",
     links: [
-      { label: "Twitter Clone", href: "https://github.com/aharoJ/Twitter" },
       { label: "Employee Tracker", href: "https://github.com/aharoJ/EmployeeManagementSystemApp" },
+      { label: "Twitter", href: "https://github.com/aharoJ/Twitter" },
+      { label: "Apple", href: "https://github.com/aharoJ/Apple" },
+      { label: "3D Portfolio", href: "https://github.com/aharoJ/3D-Portfolio" },
     ],
   },
   {
@@ -72,11 +83,11 @@ export const categories: ProjectCategory[] = [
   {
     name: "Tooling & Configs",
     links: [
+      { label: "config", href: "https://github.com/aharoJ/config" },
       { label: "tmux", href: "https://github.com/aharoJ/tmux-config" },
       { label: "yabai + skhd", href: "https://github.com/aharoJ/yabai-skhd-config" },
       { label: "alacritty", href: "https://github.com/aharoJ/alacritty-config" },
       { label: "starship", href: "https://github.com/aharoJ/starship-config" },
-      { label: "lf", href: "https://github.com/aharoJ/lf-config" },
       { label: "vivaldi", href: "https://github.com/aharoJ/vivaldi-config" },
     ],
   },

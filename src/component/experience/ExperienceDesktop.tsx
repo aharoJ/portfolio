@@ -1,101 +1,106 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/experience/ExperienceDesktop.tsx
+// path: src/component/experience/ExperienceDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
-// DESKTOP EXPERIENCE SECTION.
+// DESKTOP EXPERIENCE SECTION — Tabbed Layout.
 //
-// New design system — monochrome, Geist, 8px grid.
-// Data comes from experience.ts. Zero hardcoded content.
+// What changed:
+//   pb-16 pt-6 → py-16. Consistent vertical rhythm with all
+//   other desktop sections.
 //
-// What changed from the old ExperienceDesktop:
-//   OLD → 256px company photos, green borders, alternating
-//         left/right layout, numbered circles, colored badges,
-//         lorem ipsum descriptions
-//   NEW → No images. No colors. No decoration. Just typography,
-//         whitespace, and real content with real metrics.
-//
-// Design decisions:
-//   - Date in monospace: metadata looks like metadata
-//   - Title in semibold: what recruiters scan for
-//   - Highlights with left border accent: clean timeline feel
-//   - Tech tags: monochrome, border-only, no background color
-//   - 1px separator between roles, not heavy cards
+// Everything else unchanged — tabbed layout, useState, a11y.
 //
 // ═══════════════════════════════════════════════════════════════
 
+"use client";
+
+import { useState } from "react";
 import { roles } from "./experience";
 
 const ExperienceDesktop = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeRole = roles[activeIndex];
+
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
-        {/*
-          text-2xl, not text-5xl. This is a section label, not a hero.
-          mb-16 (64px) gives breathing room before the first role.
-          No decorative underline bar — the content speaks.
-        */}
-        <h2 className="text-2xl font-semibold tracking-tight mb-16">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8">
           Experience
         </h2>
 
-        {/* ── Roles ── */}
-        <div>
-          {roles.map((role, index) => (
-            <div
-              key={role.company}
-              className={`${
-                index > 0 ? "border-t border-border pt-12" : ""
-              } ${index < roles.length - 1 ? "pb-12" : ""}`}
-            >
-              {/* ── Date ── */}
-              <p className="text-sm font-mono text-muted mb-4">{role.date}</p>
+        {/* ── Two-Column: Tabs + Content ── */}
+        <div className="flex gap-12">
+          {/* ── Tab List (Left Column) ── */}
+          <div
+            className="flex flex-col shrink-0"
+            role="tablist"
+            aria-label="Experience tabs"
+          >
+            {roles.map((role, index) => (
+              <button
+                key={role.shortName}
+                role="tab"
+                aria-selected={index === activeIndex}
+                aria-controls={`experience-panel-${index}`}
+                onClick={() => setActiveIndex(index)}
+                className={`text-left text-sm py-2.5 pl-4 pr-6 border-l-2 transition-colors duration-150 cursor-pointer whitespace-nowrap ${
+                  index === activeIndex
+                    ? "border-fg text-fg font-medium"
+                    : "border-transparent text-muted hover:text-fg"
+                }`}
+              >
+                {role.shortName}
+              </button>
+            ))}
+          </div>
 
-              {/* ── Title ── */}
-              <h3 className="text-lg font-semibold tracking-tight mb-1">
-                {role.title}
-              </h3>
+          {/* ── Content Panel (Right Column) ── */}
+          <div
+            id={`experience-panel-${activeIndex}`}
+            role="tabpanel"
+            aria-labelledby={activeRole.shortName}
+            className="min-h-[280px]"
+          >
+            {/* ── Title ── */}
+            <h3 className="text-lg font-semibold tracking-tight mb-1">
+              {activeRole.title}
+            </h3>
 
-              {/* ── Company + Location ── */}
-              <p className="text-sm text-muted mb-6">
-                {role.company} — {role.location}
-              </p>
+            {/* ── Company + Location ── */}
+            <p className="text-sm text-muted mb-1">
+              {activeRole.company}
+            </p>
 
-              {/* ── Highlights ── */}
-              {/*
-                Left border accent instead of bullet points.
-                Creates a subtle timeline/accent effect.
-                space-y-3 (12px) between items.
-              */}
-              <ul className="space-y-3 mb-6">
-                {role.highlights.map((highlight) => (
-                  <li
-                    key={highlight}
-                    className="text-sm text-muted leading-relaxed pl-4 border-l-2 border-border"
-                  >
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
+            {/* ── Date ── */}
+            <p className="text-sm font-mono text-muted mb-6">
+              {activeRole.date}
+            </p>
 
-              {/* ── Tech Tags ── */}
-              {/*
-                Monochrome. Border-only. No background color.
-                text-xs — supplementary info, not the main event.
-                gap-2 (8px) between tags.
-              */}
-              <div className="flex flex-wrap gap-2">
-                {role.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs text-muted border border-border rounded-full px-3 py-1"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
+            {/* ── Highlights ── */}
+            <ul className="space-y-3 mb-6">
+              {activeRole.highlights.map((highlight) => (
+                <li
+                  key={highlight}
+                  className="text-sm text-muted leading-relaxed pl-4 border-l-2 border-border"
+                >
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+
+            {/* ── Tech Tags ── */}
+            <div className="flex flex-wrap gap-2">
+              {activeRole.tech.map((t) => (
+                <span
+                  key={t}
+                  className="text-xs text-muted border border-border rounded-full px-3 py-1"
+                >
+                  {t}
+                </span>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

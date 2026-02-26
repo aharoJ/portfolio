@@ -1,13 +1,22 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/hero/HeroDesktop.tsx
+// path: src/component/hero/HeroDesktop.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // DESKTOP HERO SECTION.
 //
-// Centered on the viewport. Photo, name, title, links.
-// This is the first impression — clean and focused.
+// What changed (Hyperlink Pass):
 //
-// Data comes from hero.ts. Zero hardcoded content.
+//   UPDATED → Description now renders from fragments instead of
+//     a plain string. Each fragment is either a <span> (text)
+//     or an <a> (link). The paragraph reads identically — the
+//     only visual difference is "Apple's money" has an underline
+//     and is clickable. Lee Robinson energy.
+//
+//   Link styling: underline by default (not hover-only) so users
+//     know it's interactive. Same underline-offset-4 as nav links
+//     for visual consistency. text-fg so it doesn't break the
+//     monochrome palette with a colored link.
+//
 // React Server Component. Zero client JS.
 //
 // ═══════════════════════════════════════════════════════════════
@@ -17,17 +26,17 @@ import { hero } from "./hero";
 
 const HeroDesktop = () => {
   return (
-    <section className="flex items-center justify-center px-6 min-h-screen">
-      <div className="max-w-2xl w-full py-24">
+    <section className="pt-32 pb-24 px-6">
+      <div className="max-w-2xl mx-auto">
         {/* ── Photo ── */}
         <div className="mb-8">
           <Image
             src={hero.photo}
             alt={hero.name}
-            width={96}
-            height={96}
+            width={144}
+            height={144}
             priority
-            className="rounded-full"
+            className="rounded-2xl"
           />
         </div>
 
@@ -40,8 +49,20 @@ const HeroDesktop = () => {
         </div>
 
         {/* ── Description ── */}
-        <p className="text-muted leading-relaxed max-w-lg mb-12">
-          {hero.description}
+        <p className="text-muted leading-relaxed max-w-lg mb-6">
+          {hero.description.map((fragment, i) =>
+            fragment.href ? (
+              <a
+                key={i}
+                href={fragment.href}
+                className="text-muted/70 underline underline-offset-4 decoration-muted/20 transition-colors duration-150"
+              >
+                {fragment.text}
+              </a>
+            ) : (
+              <span key={i}>{fragment.text}</span>
+            )
+          )}
         </p>
 
         {/* ── Links ── */}

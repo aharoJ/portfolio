@@ -1,17 +1,13 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/experience/ExperienceMobile.tsx
+// path: src/component/experience/ExperienceMobile.tsx
 // ═══════════════════════════════════════════════════════════════
 //
 // MOBILE EXPERIENCE SECTION.
 //
-// Same data, adapted for smaller viewports.
-// Functional and clean — not polished yet.
-// We'll refine this after desktop is locked in.
+// What changed:
+//   py-8 → py-10. Consistent with all other mobile sections.
 //
-// Key mobile differences:
-//   - Tighter padding (px-5 instead of px-6)
-//   - Smaller section spacing (py-16 instead of py-24)
-//   - Same content, same hierarchy, same monochrome system
+// Everything else unchanged.
 //
 // ═══════════════════════════════════════════════════════════════
 
@@ -19,10 +15,10 @@ import { roles } from "./experience";
 
 export default function ExperienceMobile() {
   return (
-    <section className="py-16 px-5">
+    <section className="py-10 px-5">
       <div className="max-w-2xl mx-auto">
         {/* ── Section Title ── */}
-        <h2 className="text-xl font-semibold tracking-tight mb-12">
+        <h2 className="text-xl font-semibold tracking-tight mb-4">
           Experience
         </h2>
 
@@ -32,8 +28,8 @@ export default function ExperienceMobile() {
             <div
               key={role.company}
               className={`${
-                index > 0 ? "border-t border-border pt-10" : ""
-              } ${index < roles.length - 1 ? "pb-10" : ""}`}
+                index > 0 ? "border-t border-border pt-4" : ""
+              } ${index < roles.length - 1 ? "pb-4" : ""}`}
             >
               {/* ── Date ── */}
               <p className="text-xs font-mono text-muted mb-3">{role.date}</p>

@@ -2,39 +2,27 @@
    src/app/globals.css
    ═══════════════════════════════════════════════════════════════
 
-   THIS FILE IS YOUR ENTIRE DESIGN SYSTEM.
+   YOUR ENTIRE DESIGN SYSTEM. One file. One source of truth.
 
-   In Tailwind v4, there is no tailwind.config.ts.
-   Everything lives here. One file. One source of truth.
+   THEME TOGGLE UPDATE:
+     Added [data-theme="dark"] block that overrides the 5 color
+     tokens. This is the same technique that made /dark work —
+     CSS custom property inheritance — but now driven by a
+     data attribute on <html> instead of a wrapper div.
 
-   @import "tailwindcss"  → loads the framework
-   @theme { }             → defines YOUR design tokens
+     The @theme block defines light as the default.
+     The [data-theme="dark"] selector overrides with dark values.
+     CSS specificity handles the rest. Every component that uses
+     text-fg, text-muted, border-border, bg-bg automatically
+     resolves to the correct palette.
 
-   Every token you define here becomes a Tailwind utility:
-     --color-bg       → bg-bg, text-bg
-     --color-fg       → bg-fg, text-fg
-     --font-sans      → font-sans
+   Everything else unchanged from Polish Pass.
 
-   If it's not in @theme, it doesn't exist in your project.
-   That's the constraint that keeps everything consistent.
    ═══════════════════════════════════════════════════════════════ */
 
 @import "tailwindcss";
 
-/* ─── Design Tokens ─────────────────────────────────────────── */
-/*
-   These are the ONLY colors, fonts, and spacing overrides
-   in the entire project. Period.
-
-   Color philosophy: monochrome + one accent.
-   - bg/fg for main background and text
-   - muted for secondary text (metadata, labels)
-   - border for structural lines
-   - accent for interactive elements (links, hover states)
-
-   This is what Vercel, Linear, and Apple do.
-   The prestige comes from restraint.
-*/
+/* ─── Design Tokens (Light = Default) ───────────────────────── */
 
 @theme {
   /* ── Colors ── */
@@ -45,25 +33,123 @@
   --color-accent: #0a0a0a;
 
   /* ── Fonts ── */
-  /* These map to the CSS variables set by next/font in layout.tsx.
-     Tailwind generates: font-sans, font-mono */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* ── FIX #4: Tighter tracking for hero headlines ── */
+  --tracking-tighter: -0.04em;
+}
+
+/* ─── Dark Token Overrides ──────────────────────────────────── */
+
+/*  This is the entire dark mode implementation.
+    The blocking script in layout.tsx sets data-theme="dark"
+    on <html> BEFORE React hydrates, so there's zero flash.
+
+    Color rationale:
+      bg:     #0a0a0a  — near-black (matches Vercel's dark bg)
+      fg:     #fafafa  — near-white (not pure white — easier on eyes)
+      muted:  #a1a1aa  — zinc-400 (readable on dark, not washed out)
+      border: #27272a  — zinc-800 (visible but subtle on dark bg)
+      accent: #fafafa  — same as fg (monochrome stays monochrome)  */
+
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-fg: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-border: #27272a;
+  --color-accent: #fafafa;
+  color-scheme: dark;
 }
 
 /* ─── Base Styles ───────────────────────────────────────────── */
-/*
-   Minimal base layer. Only what EVERY page needs.
-   No .h1, .h2, .h3 utility classes — that's what Tailwind is for.
-   No custom scrollbar hacks — that's premature optimization.
-*/
 
 @layer base {
+  /* ── FIX #14: Explicit light color scheme ──
+     Now conditional — light by default, overridden to dark
+     by the [data-theme="dark"] block above. */
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* ── FIX #6: Disable iOS tap highlight ── */
+  a, button, [role="tab"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ── FIX #1: Text wrap ── */
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  p, li {
+    text-wrap: pretty;
+  }
+
+  /* ── FIX #2: Optical vertical text trimming ── */
+  h1, h2, h3, h4 {
+    text-box: trim-both cap alphabetic;
+  }
+
+  /* ── FIX #3: Tabular figures on mono text ── */
+  .font-mono, code, [class*="font-mono"] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Selection ──
+     Uses token values so it automatically inverts with theme.
+     Light: black highlight on white text.
+     Dark:  white highlight on black text. */
+  ::selection {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  /* ── Focus ── */
+  *:focus-visible {
+    outline: 2px solid var(--color-fg);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* ── Scroll Margin ── */
+  h1, h2, h3, h4 {
+    scroll-margin-top: 5rem;
+  }
+
+  /* ── Images ── */
+  img, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* ── FIX #11: Content visibility ── */
+  section:not(:first-of-type) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
+
+  /* ── Reduced Motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

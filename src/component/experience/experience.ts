@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// src/modules/claude/component/experience/experience.ts
+// path: src/component/experience/experience.ts
 // ═══════════════════════════════════════════════════════════════
 //
 // SINGLE SOURCE OF TRUTH.
@@ -8,12 +8,22 @@
 // 5 roles. Real content from resume. No lorem ipsum.
 // Ordered by recency (most recent first).
 //
+// `shortName` — used as tab label on desktop. Full company names
+// are too long for a sidebar tab list. These are the recognizable
+// short versions a reader can scan instantly.
+//
+// RULE: Exactly 2 highlights per role. No more, no less.
+// Each highlight is the strongest signal for that position —
+// measurable impact, unique differentiator, or technical depth.
+// If it doesn't make the reader pause, it doesn't belong.
+//
 // Update a bullet point, add a tech tag, fix a date — do it here.
 // ═══════════════════════════════════════════════════════════════
 
 export interface Role {
   title: string;
   company: string;
+  shortName: string;
   location: string;
   date: string;
   highlights: string[];
@@ -23,15 +33,13 @@ export interface Role {
 export const roles: Role[] = [
   {
     title: "Software Engineer",
-    company: "Western University — College of Veterinary Medicine",
+    company: "College of Veterinary Medicine",
+    shortName: "Western University",
     location: "Pomona, CA",
     date: "Dec 2024 — Present",
     highlights: [
       "Sole engineer and primary owner of CVMApp (Spring Boot, React, MySQL) serving 580+ users across 4 student cohorts plus staff and faculty.",
       "Replaced third-party vendor with in-house Spring Boot REST API, saving $50,000/year (90% cost reduction) and enabling faster feature delivery.",
-      "Implemented Azure Entra ID SSO with OAuth2/OBO flow and RS256 JWT; standardized RBAC across internal applications.",
-      "Restored 2-month data ingestion outage; hardened service and cleared 19,140-row backlog through idempotent batch processing.",
-      "Automated OAuth2 token flows in Postman, reducing API test cycles from 90 minutes to 5 minutes (95% reduction).",
     ],
     tech: [
       "Java 21",
@@ -47,11 +55,11 @@ export const roles: Role[] = [
     title: "Software Engineering Intern",
     company:
       "U.S. Department of Transportation — Turner Fairbank Highway Research Center",
+    shortName: "U.S. DOT",
     location: "McLean, VA",
     date: "May 2023 — Aug 2023",
     highlights: [
       "Automated CARLA/OpenPilot/Unreal/NVIDIA environment setup with Docker, reducing configuration time from 4 hours to 45 minutes.",
-      "Executed 200+ autonomous driving simulations; standardized configurations to federal documentation standards.",
       "Granted security clearance for federal research systems.",
     ],
     tech: ["Docker", "CARLA", "OpenPilot", "Unreal Engine", "Python"],
@@ -59,18 +67,19 @@ export const roles: Role[] = [
   {
     title: "Software Engineering Researcher",
     company: "Google exploreCSR — California State University, Dominguez Hills",
+    shortName: "Google CSR",
     location: "Carson, CA",
     date: "Oct 2023 — Jun 2024",
     highlights: [
       "Trained neural network from scratch (Python/NumPy) on MERL BRDF dataset (100K+ samples) to predict material reflectance.",
-      "Built full-stack research application with modular architecture under Dr. Bin Tan mentorship.",
       "Awarded $3,000 Google Scholarship for research excellence.",
     ],
-    tech: ["Python", "NumPy", "Neural Networks", "Full-Stack"],
+    tech: ["Python", "NumPy", "Neural Networks", "Javascript", "React"],
   },
   {
     title: "Software Development Engineer in Test",
     company: "CAHSI — Computing Alliance of Hispanic-Serving Institutions",
+    shortName: "CAHSI",
     location: "Union, NJ",
     date: "Jan 2023 — May 2023",
     highlights: [
@@ -80,8 +89,9 @@ export const roles: Role[] = [
     tech: ["Java", "LittleDarwin", "PiTest", "Mutation Testing"],
   },
   {
-    title: "Software Engineer & Program Lead",
+    title: "Apple Lead Teacher",
     company: "Center for Innovation in STEM Education — Apple",
+    shortName: "Apple CISE",
     location: "Los Angeles, CA",
     date: "May 2021 — Dec 2022",
     highlights: [
