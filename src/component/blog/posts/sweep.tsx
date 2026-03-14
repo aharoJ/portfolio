@@ -10,7 +10,7 @@ export default function SweepPost() {
         </h2>
         <p className="text-muted leading-relaxed mb-4">
           I spent 30+ iterations on an auth module. Claude, GPT, Grok, Gemini,
-          Kimi &mdash; paid tiers, long sessions, hours of back-and-forth. Every
+          Kimi. Paid tiers, long sessions, hours of back-and-forth. Every
           model agreed the code was clean.
         </p>
         <p className="text-muted leading-relaxed mb-4">
@@ -32,8 +32,8 @@ export default function SweepPost() {
           Why individual models miss things
         </h2>
         <p className="text-muted leading-relaxed mb-4">
-          When you iterate with a model &mdash; even across separate
-          conversations &mdash; you&apos;re inside what I call{" "}
+          When you iterate with a model, even across separate
+          conversations, you&apos;re inside what I call{" "}
           <em>convergence anchoring</em>. The model sees code it or its peers
           helped shape. It pattern-matches against the solution structure it
           already endorsed. It verifies rather than discovers.
@@ -51,12 +51,12 @@ export default function SweepPost() {
         </h2>
         <p className="text-muted leading-relaxed mb-4">
           Sweep sends your code to multiple LLM reviewers in parallel. Each one
-          sees the codebase cold &mdash; no prior reviews, no conversation
+          sees the codebase cold. No prior reviews, no conversation
           history, no awareness of who else is reviewing.
         </p>
         <p className="text-muted leading-relaxed mb-4">
           A lead model triages the combined findings: adopt, dismiss, or flag as
-          duplicate. Iterative passes run until convergence &mdash; when new
+          duplicate. Iterative passes run until convergence; when new
           passes stop surfacing new findings.
         </p>
         <p className="text-muted leading-relaxed">
@@ -72,7 +72,7 @@ export default function SweepPost() {
 
         {/* Run 1 */}
         <h3 className="text-base font-semibold tracking-tight mb-1">
-          Run 1 &mdash; Next.js frontend (6,200 lines)
+          Run 1: Next.js frontend (6,200 lines)
         </h3>
         <p className="text-sm text-muted mb-4">
           Auth module, CSP headers, accessibility, error handling.
@@ -105,11 +105,11 @@ export default function SweepPost() {
 
         {/* Run 2 */}
         <h3 className="text-base font-semibold tracking-tight mb-1">
-          Run 2 &mdash; Fish shell system (custom CLI)
+          Run 2: Fish shell system (custom CLI)
         </h3>
         <p className="text-sm text-muted mb-4">
           A codebase that had defeated every frontier model individually.
-          Claude, GPT, Grok, Gemini, Kimi &mdash; each tried in isolation, none
+          Claude, GPT, Grok, Gemini, Kimi, each tried in isolation. None
           could fully resolve the issues.
         </p>
 
@@ -154,7 +154,7 @@ export default function SweepPost() {
         <p className="text-muted leading-relaxed mb-4">
           An external reviewer validated Run 1. Verdict: 0/5 P1s were actual
           bugs. The tool&apos;s biggest weakness was misreading existing code
-          &mdash; claiming a fix was missing when it was already there.
+          by claiming a fix was missing when it was already there.
         </p>
         <p className="text-muted leading-relaxed">
           47 findings. Five P1s. Zero real.
@@ -167,7 +167,7 @@ export default function SweepPost() {
           What broke and what I fixed
         </h2>
         <p className="text-muted leading-relaxed mb-4">
-          I ran a meta-review &mdash; six models independently evaluating
+          I ran a meta-review: six models independently evaluating
           Sweep&apos;s failure modes, none seeing each other&apos;s output. 6/6
           agreed the P1 precision was trust-destroying. 5/6 independently
           proposed the same fix: a post-triage verification gate.
@@ -175,7 +175,7 @@ export default function SweepPost() {
         <p className="text-muted leading-relaxed mb-4">
           The core problem: the triage lead assigned severity based on reviewer
           claims, not code verification. &ldquo;Real bug&rdquo; isn&apos;t a
-          property of the finding &mdash; it&apos;s a property of consequences
+          property of the finding; it&apos;s a property of consequences
           in production, which the system couldn&apos;t observe.
         </p>
         <p className="text-muted leading-relaxed">
@@ -184,10 +184,19 @@ export default function SweepPost() {
         </p>
       </section>
 
-      {/* ── Run 3 — the redemption ── */}
+      {/* ── Run 3: the redemption ── */}
       <section className="border-t border-border pt-8">
         <h3 className="text-base font-semibold tracking-tight mb-1">
-          Run 3 &mdash; Security platform (32,000 lines)
+          Run 3:{" "}
+          <a
+            href="https://github.com/screenlite/screenlite"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 decoration-muted hover:decoration-fg transition-colors"
+          >
+            Security platform
+          </a>{" "}
+          (32,000 lines)
         </h3>
         <p className="text-sm text-muted mb-4">
           Auth, 2FA, token management, role-based access control.
@@ -294,7 +303,7 @@ export default function SweepPost() {
         <p className="text-muted leading-relaxed">
           Sweep calls the API directly. No agentic middleware, no tool-call
           overhead, no quota burn. Models are stateless disposable functions
-          &mdash; all memory lives on the filesystem. Persist the state, not the
+          and all memory lives on the filesystem. Persist the state, not the
           conversation.
         </p>
       </section>
