@@ -22,7 +22,7 @@ export const posts: BlogPost[] = [
     subtitle:
       "What happens when you stop asking one model to review its own work.",
     date: "2026-03-13",
-    readingTime: "4 min",
+    readingTime: "9 min",
   },
 ];
 
