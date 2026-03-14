@@ -2,46 +2,8 @@
 // src/app/layout.tsx
 // ═══════════════════════════════════════════════════════════════
 //
-// THE ROOT. Every page inherits from this.
-//
-// THEME TOGGLE — HARDENED (v4):
-//
-//   BUG #1 → suppressHydrationWarning on <html>.
-//     The blocking script sets data-theme before React hydrates,
-//     which creates a server/client mismatch on that element.
-//     suppressHydrationWarning tells React this is intentional.
-//     It only applies one level deep — won't mask real bugs in
-//     child components. Every next-themes implementation does this.
-//
-//   BUG #2 → Blocking script now checks system preference.
-//     Previous version only read localStorage. First-time visitors
-//     with OS dark mode got light mode — wrong for ~50% of users.
-//     Now: localStorage → matchMedia fallback → light default.
-//
-//   FIX G → Removed inline style.colorScheme from blocking script.
-//     CSS handles color-scheme entirely through the
-//     [data-theme="dark"] { color-scheme: dark } rule in
-//     globals.css. The data-theme attribute triggers the CSS rule,
-//     which triggers color-scheme — no inline style needed.
-//     This eliminates a specificity conflict where the inline
-//     style could override CSS in edge cases (forced themes,
-//     stale bfcache restores).
-//
-//   FIX I → (v4) Static <meta name="color-scheme" content="light dark">.
-//     The color-scheme meta tag's job is to declare what schemes
-//     the page SUPPORTS, not which one is ACTIVE. Setting it
-//     statically to "light dark" tells Chrome Auto Dark Mode
-//     "I handle both — don't force anything" and lets the CSS
-//     rule [data-theme="dark"] { color-scheme: dark } in
-//     globals.css drive the active scheme.
-//
-//     v3 dynamically flipped this meta between "light" and "dark"
-//     on every toggle, which required syncColorSchemeMeta() calls
-//     in ThemeProvider + a blocking script line. That's gone now.
-//     Fewer DOM writes, fewer sync points, more spec-correct.
-//
-// React Server Component (layout itself is RSC).
-// ThemeProvider is the only client boundary.
+// Root layout. Fonts, metadata, blocking theme script, CSP nonce.
+// React Server Component. ThemeProvider is the only client boundary.
 //
 // ═══════════════════════════════════════════════════════════════
 import type { Metadata, Viewport } from "next";
@@ -116,33 +78,7 @@ export const metadata: Metadata = {
 };
 
 // ─── Blocking Theme Script ─────────────────────────────────────
-//
-// Runs synchronously BEFORE React hydrates.
-//
-// Decision cascade:
-//   1. localStorage has explicit user choice → use it
-//   2. No stored choice → check prefers-color-scheme → use OS pref
-//   3. matchMedia unavailable → default to light
-//
-// v4: Simplified — no longer flips color-scheme meta. The static
-// <meta name="color-scheme" content="light dark"> in <head>
-// declares support for both schemes. CSS drives the active one.
-//
-// Readable version:
-//
-//   (function() {
-//     try {
-//       var t = localStorage.getItem('theme');
-//       var m = window.matchMedia &&
-//               window.matchMedia('(prefers-color-scheme: dark)').matches;
-//       var n = (t === 'dark' || t === 'light')
-//             ? t
-//             : (m ? 'dark' : 'light');
-//       document.documentElement.setAttribute('data-theme', n);
-//     } catch (e) {}
-//   })();
-//
-// try/catch handles SSR, incognito mode, and disabled storage.
+// Runs before React hydrates. localStorage → matchMedia → light.
 const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;var n=(t==='dark'||t==='light')?t:(m?'dark':'light');document.documentElement.setAttribute('data-theme',n)}catch(e){}})();`;
 // ─── Structured Data (JSON-LD) ─────────────────────────────────
 function PersonSchema() {
@@ -167,7 +103,6 @@ function PersonSchema() {
 }
 
 // ─── Root Layout ───────────────────────────────────────────────
-// export default function RootLayout({
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -181,13 +116,9 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
-        {/* FIX I (v4): Static color-scheme meta — declares support
-            for both schemes. Tells Chrome Auto Dark Mode "I handle
-            dark mode myself." CSS drives the active scheme via
-            [data-theme="dark"] { color-scheme: dark } */}
         <meta name="color-scheme" content="light dark" />
         {/* Blocking script — sets data-theme before first paint */}
-        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script nonce={nonce} suppressHydrationWarning dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
       <body>
         <PersonSchema />

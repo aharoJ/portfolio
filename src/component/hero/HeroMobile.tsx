@@ -1,16 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/hero/HeroMobile.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// MOBILE HERO SECTION.
-//
-// What changed (Hyperlink Pass):
-//
-//   UPDATED → Same fragment rendering as Desktop. Inline links
-//     within the description paragraph.
-//
+// src/component/hero/HeroMobile.tsx — Mobile hero section.
 // React Server Component. Zero client JS.
-//
 // ═══════════════════════════════════════════════════════════════
 
 import Image from "next/image";

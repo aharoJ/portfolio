@@ -1,24 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/hero/HeroDesktop.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// DESKTOP HERO SECTION.
-//
-// What changed (Hyperlink Pass):
-//
-//   UPDATED → Description now renders from fragments instead of
-//     a plain string. Each fragment is either a <span> (text)
-//     or an <a> (link). The paragraph reads identically — the
-//     only visual difference is "Apple's money" has an underline
-//     and is clickable. Lee Robinson energy.
-//
-//   Link styling: underline by default (not hover-only) so users
-//     know it's interactive. Same underline-offset-4 as nav links
-//     for visual consistency. text-fg so it doesn't break the
-//     monochrome palette with a colored link.
-//
+// src/component/hero/HeroDesktop.tsx — Desktop hero section.
 // React Server Component. Zero client JS.
-//
 // ═══════════════════════════════════════════════════════════════
 
 import Image from "next/image";

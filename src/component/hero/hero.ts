@@ -1,25 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/hero/hero.ts
-// ═══════════════════════════════════════════════════════════════
-//
-// SINGLE SOURCE OF TRUTH.
-// Both HeroDesktop and HeroMobile import from here.
-//
-// What changed (All Links Live):
-//
-//   All five experiences now have hrefs. Routes don't exist
-//   yet — that's fine. Build each story page when the content
-//   (photos, context, narrative) is ready. The hooks are live.
-//
-//   Every link sits at a clause boundary (before a comma or
-//   period). Research-backed placement. See previous session
-//   notes for the full rationale (Rayner 2000, Pirolli & Card
-//   1999, Zhu cognitive load studies).
-//
-//   Fragment splitting is careful about whitespace. Each text
-//   chunk includes leading/trailing spaces so the rendered
-//   paragraph reads as one continuous sentence.
-//
+// src/component/hero/hero.ts — Hero data.
+// Single source of truth for HeroDesktop and HeroMobile.
 // ═══════════════════════════════════════════════════════════════
 
 export interface HeroLink {

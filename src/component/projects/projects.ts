@@ -1,21 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/projects/projects.ts
-// ═══════════════════════════════════════════════════════════════
-//
-// SINGLE SOURCE OF TRUTH.
-// Both ProjectsDesktop and ProjectsMobile import from here.
-//
-// What changed:
-//   ADDED → `image` field on FeaturedProject. Optional string.
-//   The Barbershop screenshot shows the full-stack reality:
-//   backend package structure, frontend file tree, running UI,
-//   and Hibernate SQL logs. One image communicates "this is a
-//   real, working system" better than any bullet point.
-//
-//   Save the screenshot to: public/projects/barbershop-dashboard.png
-//   Optimize it first — aim for under 200KB (sharp, tinypng, or
-//   squoosh). The original is likely 1-3MB as a raw screenshot.
-//
+// src/component/projects/projects.ts — Projects data.
+// Single source of truth for ProjectsDesktop and ProjectsMobile.
 // ═══════════════════════════════════════════════════════════════
 
 export interface FeaturedProject {

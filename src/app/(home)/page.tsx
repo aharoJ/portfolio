@@ -1,22 +1,11 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/app/(home)/page.tsx
+// src/app/(home)/page.tsx
 // ═══════════════════════════════════════════════════════════════
-// LANDING PAGE — single scroll.
 //
-// This file is purely compositional. Zero content, zero layout
-// logic. Every section is a Desktop/Mobile pair that imports
-// from its own data file.
-//
-// hidden lg:block  → only shows on desktop (≥1024px)
-// block lg:hidden  → only shows on mobile (<1024px)
-//
-// What changed:
-//   ADDED → Footer. Even the most minimal portfolios have one.
-//   It signals "this is a complete, intentional product" rather
-//   than "the page just stops." Two elements: copyright year
-//   and a subtle source link. Visual endpoint.
-//
+// Landing page. Purely compositional — Desktop/Mobile pairs.
 // React Server Component. Zero client JS.
+//
+// ═══════════════════════════════════════════════════════════════
 import HeroDesktop from "@/component/hero/HeroDesktop";
 import HeroMobile from "@/component/hero/HeroMobile";
 

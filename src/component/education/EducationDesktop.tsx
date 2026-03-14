@@ -1,16 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/education/EducationDesktop.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// DESKTOP EDUCATION SECTION.
-//
-// What changed:
-//   py-6 → py-16. All desktop sections now use py-16 for
-//   consistent vertical rhythm. The old py-6 made Education
-//   feel cramped compared to Projects/Skills.
-//
+// src/component/education/EducationDesktop.tsx — Desktop education section.
 // React Server Component. Zero client JS.
-//
 // ═══════════════════════════════════════════════════════════════
 
 import { education } from "./education";

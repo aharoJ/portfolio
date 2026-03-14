@@ -1,20 +1,6 @@
-// path: src/middleware.ts
-//
-// CSP NONCE MIDDLEWARE.
-//
-// Generates a unique nonce per request and sets it in:
-//   1. x-nonce request header → layout.tsx reads this
-//   2. Content-Security-Policy response header → browser enforces
-//
-// Why not keep CSP in nginx?
-//   Inline scripts (our theme script + Next.js hydration) need
-//   nonces. Nonces must be unique per request. Nginx can't
-//   generate them. Next.js middleware can.
-//
-// 'strict-dynamic' means any script loaded BY a nonced script
-// is automatically trusted — so Next.js chunk loading works
-// without listing every chunk URL.
-//
+// ═══════════════════════════════════════════════════════════════
+// src/middleware.ts — CSP nonce generation.
+// Per-request nonce in x-nonce header + Content-Security-Policy.
 // ═══════════════════════════════════════════════════════════════
 
 import { NextResponse } from "next/server";

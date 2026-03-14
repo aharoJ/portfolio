@@ -1,14 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/education/EducationMobile.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// MOBILE EDUCATION SECTION.
-//
-// What changed:
-//   py-8 → py-10. All mobile sections now use py-10.
-//
+// src/component/education/EducationMobile.tsx — Mobile education section.
 // React Server Component. Zero client JS.
-//
 // ═══════════════════════════════════════════════════════════════
 
 import { education } from "./education";

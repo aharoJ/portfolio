@@ -1,13 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/projects/ProjectsMobile.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// MOBILE PROJECTS SECTION.
-//
-// What changed:
-//   ADDED → Image rendering for featured projects (same as Desktop).
-//   py-8 → py-10 for consistent mobile vertical rhythm.
-//
+// src/component/projects/ProjectsMobile.tsx — Mobile projects section.
 // ═══════════════════════════════════════════════════════════════
 
 import Image from "next/image";

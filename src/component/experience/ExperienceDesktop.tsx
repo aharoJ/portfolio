@@ -1,15 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/experience/ExperienceDesktop.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// DESKTOP EXPERIENCE SECTION — Tabbed Layout.
-//
-// What changed:
-//   pb-16 pt-6 → py-16. Consistent vertical rhythm with all
-//   other desktop sections.
-//
-// Everything else unchanged — tabbed layout, useState, a11y.
-//
+// src/component/experience/ExperienceDesktop.tsx — Desktop experience section.
+// Tabbed layout with a11y.
 // ═══════════════════════════════════════════════════════════════
 
 "use client";

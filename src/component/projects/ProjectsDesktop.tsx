@@ -1,20 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/projects/ProjectsDesktop.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// DESKTOP PROJECTS SECTION.
-//
-// What changed:
-//   ADDED → Image rendering for featured projects. If a project
-//   has an `image` field, it renders above the highlights.
-//   Rounded corners, subtle border, proper next/image optimization.
-//
-//   The image sits between description and highlights — this is
-//   the natural reading flow: what is it → what does it look like
-//   → what's impressive about it → what tech powers it.
-//
+// src/component/projects/ProjectsDesktop.tsx — Desktop projects section.
 // React Server Component. Zero client JS.
-//
 // ═══════════════════════════════════════════════════════════════
 
 import Image from "next/image";

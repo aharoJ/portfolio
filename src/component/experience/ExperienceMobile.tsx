@@ -1,14 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// path: src/component/experience/ExperienceMobile.tsx
-// ═══════════════════════════════════════════════════════════════
-//
-// MOBILE EXPERIENCE SECTION.
-//
-// What changed:
-//   py-8 → py-10. Consistent with all other mobile sections.
-//
-// Everything else unchanged.
-//
+// src/component/experience/ExperienceMobile.tsx — Mobile experience section.
 // ═══════════════════════════════════════════════════════════════
 
 import { roles } from "./experience";

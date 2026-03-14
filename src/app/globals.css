@@ -1,23 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   src/app/globals.css
-   ═══════════════════════════════════════════════════════════════
-
-   YOUR ENTIRE DESIGN SYSTEM. One file. One source of truth.
-
-   THEME TOGGLE UPDATE:
-     Added [data-theme="dark"] block that overrides the 5 color
-     tokens. This is the same technique that made /dark work —
-     CSS custom property inheritance — but now driven by a
-     data attribute on <html> instead of a wrapper div.
-
-     The @theme block defines light as the default.
-     The [data-theme="dark"] selector overrides with dark values.
-     CSS specificity handles the rest. Every component that uses
-     text-fg, text-muted, border-border, bg-bg automatically
-     resolves to the correct palette.
-
-   Everything else unchanged from Polish Pass.
-
+   src/app/globals.css — Design system. One file. One source of truth.
+   Light tokens in @theme, dark overrides via [data-theme="dark"].
    ═══════════════════════════════════════════════════════════════ */
 
 @import "tailwindcss";
@@ -36,22 +19,11 @@
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  /* ── FIX #4: Tighter tracking for hero headlines ── */
+  /* ── Tracking ── */
   --tracking-tighter: -0.04em;
 }
 
 /* ─── Dark Token Overrides ──────────────────────────────────── */
-
-/*  This is the entire dark mode implementation.
-    The blocking script in layout.tsx sets data-theme="dark"
-    on <html> BEFORE React hydrates, so there's zero flash.
-
-    Color rationale:
-      bg:     #0a0a0a  — near-black (matches Vercel's dark bg)
-      fg:     #fafafa  — near-white (not pure white — easier on eyes)
-      muted:  #a1a1aa  — zinc-400 (readable on dark, not washed out)
-      border: #27272a  — zinc-800 (visible but subtle on dark bg)
-      accent: #fafafa  — same as fg (monochrome stays monochrome)  */
 
 [data-theme="dark"] {
   --color-bg: #0a0a0a;
@@ -65,9 +37,6 @@
 /* ─── Base Styles ───────────────────────────────────────────── */
 
 @layer base {
-  /* ── FIX #14: Explicit light color scheme ──
-     Now conditional — light by default, overridden to dark
-     by the [data-theme="dark"] block above. */
   html {
     color-scheme: light;
     scroll-behavior: smooth;
@@ -86,12 +55,11 @@
     overflow-x: hidden;
   }
 
-  /* ── FIX #6: Disable iOS tap highlight ── */
   a, button, [role="tab"] {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* ── FIX #1: Text wrap ── */
+  /* ── Text Wrap ── */
   h1, h2, h3, h4 {
     text-wrap: balance;
   }
@@ -100,20 +68,17 @@
     text-wrap: pretty;
   }
 
-  /* ── FIX #2: Optical vertical text trimming ── */
+  /* ── Optical Trimming ── */
   h1, h2, h3, h4 {
     text-box: trim-both cap alphabetic;
   }
 
-  /* ── FIX #3: Tabular figures on mono text ── */
+  /* ── Tabular Figures ── */
   .font-mono, code, [class*="font-mono"] {
     font-variant-numeric: tabular-nums;
   }
 
-  /* ── Selection ──
-     Uses token values so it automatically inverts with theme.
-     Light: black highlight on white text.
-     Dark:  white highlight on black text. */
+  /* ── Selection ── */
   ::selection {
     background-color: var(--color-fg);
     color: var(--color-bg);
@@ -137,7 +102,7 @@
     max-width: 100%;
   }
 
-  /* ── FIX #11: Content visibility ── */
+  /* ── Content Visibility ── */
   section:not(:first-of-type) {
     content-visibility: auto;
     contain-intrinsic-size: auto 500px;
