@@ -17,9 +17,13 @@ import BlogPostMobile from "@/component/blog/BlogPostMobile";
 // ─── Post Content Registry ──────────────────────────────────
 // Maps slugs to their content components. Add new posts here.
 import SweepPost from "@/component/blog/posts/sweep";
+import SweepArchitecturePost from "@/component/blog/posts/sweep-architecture";
+import SweepTheoryPost from "@/component/blog/posts/sweep-theory";
 import type { ComponentType } from "react";
 
 const postContent: Record<string, ComponentType> = {
+  "sweep-theory": SweepTheoryPost,
+  "sweep-architecture": SweepArchitecturePost,
   sweep: SweepPost,
 };
 
