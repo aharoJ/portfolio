@@ -19,9 +19,11 @@ import BlogPostMobile from "@/component/blog/BlogPostMobile";
 import SweepPost from "@/component/blog/posts/sweep";
 import SweepArchitecturePost from "@/component/blog/posts/sweep-architecture";
 import SweepTheoryPost from "@/component/blog/posts/sweep-theory";
+import SweepShippedPost from "@/component/blog/posts/sweep-shipped";
 import type { ComponentType } from "react";
 
 const postContent: Record<string, ComponentType> = {
+  "sweep-shipped": SweepShippedPost,
   "sweep-theory": SweepTheoryPost,
   "sweep-architecture": SweepArchitecturePost,
   sweep: SweepPost,

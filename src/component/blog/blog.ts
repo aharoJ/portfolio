@@ -17,6 +17,14 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "sweep-shipped",
+    title: "We Shipped All 9.",
+    subtitle:
+      "From research paper to production code — a multi-model review pipeline retrospective.",
+    date: "2026-03-18",
+    readingTime: "12 min",
+  },
+  {
     slug: "sweep-theory",
     title: "48 Research Sessions. 12 Modules. 3 Wrong Labels.",
     subtitle:
