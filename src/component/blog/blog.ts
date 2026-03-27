@@ -17,6 +17,30 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "sweep-frontier",
+    title: "2/5. Four Versions. Same Ceiling.",
+    subtitle:
+      "A controlled cross-version experiment reveals what pipeline improvements actually fix — and what they can't.",
+    date: "2026-03-25",
+    readingTime: "13 min",
+  },
+  {
+    slug: "sweep-reaudit",
+    title: "Same Code. Same Models. 15 Versions Later.",
+    subtitle:
+      "A controlled re-run of our blind audit reveals what pipeline improvements actually matter.",
+    date: "2026-03-24",
+    readingTime: "11 min",
+  },
+  {
+    slug: "sweep-audit",
+    title: "278 Bugs. 15 Modules. One Thesis.",
+    subtitle:
+      "What happens when you turn your own multi-model review pipeline against itself.",
+    date: "2026-03-21",
+    readingTime: "10 min",
+  },
+  {
     slug: "sweep-shipped",
     title: "We Shipped All 9.",
     subtitle:

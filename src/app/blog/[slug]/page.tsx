@@ -20,9 +20,15 @@ import SweepPost from "@/component/blog/posts/sweep";
 import SweepArchitecturePost from "@/component/blog/posts/sweep-architecture";
 import SweepTheoryPost from "@/component/blog/posts/sweep-theory";
 import SweepShippedPost from "@/component/blog/posts/sweep-shipped";
+import SweepAuditPost from "@/component/blog/posts/sweep-audit";
+import SweepReauditPost from "@/component/blog/posts/sweep-reaudit";
+import SweepFrontierPost from "@/component/blog/posts/sweep-frontier";
 import type { ComponentType } from "react";
 
 const postContent: Record<string, ComponentType> = {
+  "sweep-frontier": SweepFrontierPost,
+  "sweep-reaudit": SweepReauditPost,
+  "sweep-audit": SweepAuditPost,
   "sweep-shipped": SweepShippedPost,
   "sweep-theory": SweepTheoryPost,
   "sweep-architecture": SweepArchitecturePost,
