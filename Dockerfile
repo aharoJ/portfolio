@@ -1,7 +1,7 @@
 # ============================================
 # Stage 1: Install dependencies
 # ============================================
-FROM node:22-alpine AS deps
+FROM node:25-alpine AS deps
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 WORKDIR /app
 
@@ -15,7 +15,7 @@ RUN pnpm install --frozen-lockfile
 # ============================================
 # Stage 2: Build the application
 # ============================================
-FROM node:22-alpine AS builder
+FROM node:25-alpine AS builder
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 WORKDIR /app
 
@@ -29,7 +29,7 @@ RUN test -f .next/standalone/server.js || exit 1
 # ============================================
 # Stage 3: Production runner
 # ============================================
-FROM node:22-alpine AS runner
+FROM node:25-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
