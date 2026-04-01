@@ -1,22 +1,21 @@
 # ============================================
 # Stage 1: Install dependencies
 # ============================================
-FROM node:21-alpine AS deps
+FROM node:22-alpine AS deps
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 WORKDIR /app
 
 # Copy package files
 COPY package.json ./
-# Copy lockfile if it exists (|| true so it doesn't fail if missing)
-COPY pnpm-lock.yaml* ./
+COPY pnpm-lock.yaml ./
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile 2>/dev/null || pnpm install
+RUN pnpm install --frozen-lockfile
 
 # ============================================
 # Stage 2: Build the application
 # ============================================
-FROM node:21-alpine AS builder
+FROM node:22-alpine AS builder
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 WORKDIR /app
 
@@ -25,11 +24,12 @@ COPY . .
 
 # Build Next.js (output: 'standalone' must be set in next.config.mjs)
 RUN pnpm build
+RUN test -f .next/standalone/server.js || exit 1
 
 # ============================================
 # Stage 3: Production runner
 # ============================================
-FROM node:21-alpine AS runner
+FROM node:22-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -40,11 +40,9 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # Copy standalone build output
-COPY --from=builder /app/.next/standalone ./
-# Copy static assets (CSS, JS bundles)
-COPY --from=builder /app/.next/static ./.next/static
-# Copy public assets (images, fonts, etc.)
-COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
 USER nextjs
 
