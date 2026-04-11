@@ -23,9 +23,11 @@ import SweepShippedPost from "@/component/blog/posts/sweep-shipped";
 import SweepAuditPost from "@/component/blog/posts/sweep-audit";
 import SweepReauditPost from "@/component/blog/posts/sweep-reaudit";
 import SweepFrontierPost from "@/component/blog/posts/sweep-frontier";
+import ReviewPost from "@/component/blog/posts/review";
 import type { ComponentType } from "react";
 
 const postContent: Record<string, ComponentType> = {
+  review: ReviewPost,
   "sweep-frontier": SweepFrontierPost,
   "sweep-reaudit": SweepReauditPost,
   "sweep-audit": SweepAuditPost,

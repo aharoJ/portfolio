@@ -119,6 +119,16 @@ export default async function RootLayout({
         <meta name="color-scheme" content="light dark" />
         {/* Blocking script — sets data-theme before first paint */}
         <script nonce={nonce} suppressHydrationWarning dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        {/* Umami analytics — same-origin proxy via /umami */}
+        <script
+          async
+          defer
+          nonce={nonce}
+          src="/umami/script.js"
+          data-website-id="f97085e2-b289-4d3d-bde2-57fd7d1975ac"
+          data-exclude-search="true"
+          data-exclude-hash="true"
+        />
       </head>
       <body>
         <PersonSchema />

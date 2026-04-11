@@ -17,6 +17,14 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "review",
+    title: "13 Phases. 63 Decisions. 138 Bugs in the Spec.",
+    subtitle:
+      "An adversarial code review protocol — designed by one model, scrutinized by every model that didn't build it.",
+    date: "2026-04-04",
+    readingTime: "11 min",
+  },
+  {
     slug: "sweep-frontier",
     title: "2/5. Four Versions. Same Ceiling.",
     subtitle:
