@@ -1,0 +1,466 @@
+#!/usr/bin/env bash
+# -------------------------------------------------------------------
+# pre-commit hook: blocks commits containing sensitive patterns
+# install: cp .pre-commit-hook "$(git rev-parse --git-path hooks/pre-commit)" && chmod +x "$(git rev-parse --git-path hooks/pre-commit)"
+# -------------------------------------------------------------------
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+
+# ── Allowlist ─────────────────────────────────────────────────────
+# Files listed in .hook-allowlist skip CONTENT scanning only.
+# Path-based blocks (secret/, credentials/) are NEVER skippable.
+ALLOWLIST_FILE="$REPO_ROOT/.hook-allowlist"
+
+is_allowlisted() {
+  local file="$1"
+  [ -f "$ALLOWLIST_FILE" ] || return 1
+  grep -qxF "$file" "$ALLOWLIST_FILE" 2>/dev/null
+}
+
+is_secret_path() {
+  case "$1" in
+    [Ss][Ee][Cc][Rr][Ee][Tt]/*|*/[Ss][Ee][Cc][Rr][Ee][Tt]/*)
+      return 0
+      ;;
+  esac
+  return 1
+}
+
+is_safe_placeholder_match() {
+  local line="${1#+}"
+  while [ "${line#+}" != "$line" ]; do
+    line="${line#+}"
+  done
+  local safe_jdbc_base='jdbc:(postgresql|mariadb)://(localhost|127\.0\.0\.1|db):[0-9]+/[A-Za-z0-9_-]+'
+  local safe_jdbc_query='([?]sessionVariables=character_set_client=utf8mb4,character_set_connection=utf8mb4,character_set_results=utf8mb4,collation_connection=utf8mb4_unicode_ci&connectionCollation=utf8mb4_unicode_ci)?'
+  local safe_jdbc_terminator="([[:space:]]|$|\`|[]}'\".,;!)])"
+  local safe_jdbc="${safe_jdbc_base}${safe_jdbc_query}${safe_jdbc_terminator}"
+  local safe_env_placeholder='\$\{[A-Z][A-Z0-9_]*(:(-|\?)?(placeholder|devpassword|localdev|minioadmin|test|missing [A-Z0-9_]+|'"${safe_jdbc_base}${safe_jdbc_query}"')?)?\}'
+  local opt_quote="[\"'\`]?"
+  local secret_word='([Pp][Aa][Ss][Ss][Ww][Oo][Rr][Dd]|[Pp][Aa][Ss][Ss][Ww][Dd]|[Pp][Ww][Dd]|[Ss][Ee][Cc][Rr][Ee][Tt]|[Tt][Oo][Kk][Ee][Nn])'
+  local secret_key="([A-Za-z0-9_.-]*${secret_word}[A-Za-z0-9_.-]*|[Aa][Pp][Ii][-_]?[Kk][Ee][Yy]|[Aa][Pp][Ii][-_]?[Ss][Ee][Cc][Rr][Ee][Tt]|[Aa][Cc][Cc][Ee][Ss][Ss][-_]?[Tt][Oo][Kk][Ee][Nn]|[Aa][Uu][Tt][Hh][-_]?[Tt][Oo][Kk][Ee][Nn]|[Cc][Ll][Ii][Ee][Nn][Tt][-_]?[Ss][Ee][Cc][Rr][Ee][Tt])"
+  local tenant_key="[A-Za-z0-9_.-]*[Tt][Ee][Nn][Aa][Nn][Tt][-_][Ii][Dd][A-Za-z0-9_.-]*"
+  local provider_key="([Aa][Zz][Uu][Rr][Ee]_[A-Za-z0-9_.-]*|[Mm][Ss][Aa][Ll]_[A-Za-z0-9_.-]*)"
+  local placeholder_key="(${secret_key}|${tenant_key}|${provider_key})"
+  local oauth_identifier='([A-Z][A-Z0-9_]*(SECRET|TOKEN)[A-Z0-9_]*|client[_-]secret|access[_-]token|auth[_-]token)'
+  local assigned_secret="(^|[^A-Za-z0-9_.-])${opt_quote}${secret_key}${opt_quote}[[:space:]]*[:=][[:space:]]*${opt_quote}[^[:space:]]+"
+  local safe_placeholder_tail="${opt_quote}${placeholder_key}${opt_quote}[[:space:]]*[:=][[:space:]]*${opt_quote}${safe_env_placeholder}${opt_quote}[[:space:]]*[,}]?[[:space:]]*"
+  local safe_placeholder_core="^[[:space:]]*(-[[:space:]]+)?${safe_placeholder_tail}"
+  local structural_safe_placeholder_core="[]()[{}:=,-][[:space:]]*${safe_placeholder_tail}"
+  local safe_placeholder_assignment="(${safe_placeholder_core}|${structural_safe_placeholder_core})([#].*)?$"
+  local safe_spring_url="(^|[^A-Za-z0-9_.-])spring\\.datasource\\.url=${safe_jdbc}"
+  local safe_spring_driver="(^|[^A-Za-z0-9_.-])spring\\.datasource\\.driver-class-name=org\\.mariadb\\.jdbc\\.Driver${safe_jdbc_terminator}"
+  local hard_deny='AKIA[0-9A-Z]{16}|ghp_[a-zA-Z0-9]{36}|sk-[a-zA-Z0-9]{48}|xox[bpoas]-[0-9a-zA-Z]+|PRIVATE KEY|BEGIN RSA|BEGIN EC|BEGIN DSA|BEGIN OPENSSH'
+  local denylisted_names='AWS_ACCESS_KEY|AWS_SECRET'
+  local safe_hostname_port='[A-Za-z0-9.-]*(password|passwd|pwd|secret|token)[A-Za-z0-9.-]*[.][A-Za-z0-9.-]+:[0-9]+'
+  local safe_hostname_port_assignment="^[[:space:]]*(-[[:space:]]+)?((host|server|backend|endpoint|url|uri|origin|address|addr)[[:space:]]*[:=][[:space:]]*)?${safe_hostname_port}[[:space:]]*([#].*)?$"
+  local oauth_assignment_with_gap="(^|[^A-Za-z0-9_])${oauth_identifier}[^#:=]*[:=][[:space:]]*${opt_quote}[^[:space:]]+"
+  local provider_assignment="(^|[^A-Za-z0-9_.-])(AZURE_|MSAL_)[A-Za-z0-9_.-]*${opt_quote}[[:space:]]*[:=][[:space:]]*${opt_quote}[^[:space:]]+"
+  local compound_secret_assignment="$COMPOUND_SECRET_ASSIGNMENT"
+  local tenant_assignment="${opt_quote}${tenant_key}${opt_quote}[[:space:]]*[:=][[:space:]]*[^[:space:]]+"
+  # The bare KEY[:=] residual patterns carry ${opt_quote} before the delimiter
+  # so the JSON shape "key":"value" (a closing quote between key and ':') is
+  # caught, parallel to tenant_assignment. opt_quote is optional, so this only
+  # ADDS the quoted variant; it never relaxes the unquoted match. This is the
+  # second-stage residual scan only (not the first-stage COMBINED gate), so
+  # natural-language prose like the "password": it was hidden is unaffected.
+  local residual_deny="${hard_deny}|${denylisted_names}|spring\\.datasource\\.|${compound_secret_assignment}|password${opt_quote}[[:space:]]*[:=]|passwd${opt_quote}[[:space:]]*[:=]|pwd${opt_quote}[[:space:]]*[:=]|secret${opt_quote}[[:space:]]*[:=]|token${opt_quote}[[:space:]]*[:=]|api[-_]?key${opt_quote}[[:space:]]*[:=]|api[-_]?secret|access_token${opt_quote}[[:space:]]*[:=]|auth_token${opt_quote}[[:space:]]*[:=]|client[_-]secret${opt_quote}[[:space:]]*[:=]|${tenant_assignment}|${provider_assignment}|mongodb(\\+srv)?://[^[:space:]]+|postgres(ql)?://[^[:space:]]+|mysql://[^[:space:]]+|jdbc:[^[:space:]]+"
+  local residual_line
+
+  # Still block real token shapes and private-key markers even when the line
+  # also contains an otherwise safe placeholder.
+  if printf '%s\n' "$line" | grep -Eiq "$hard_deny|$denylisted_names"; then
+    return 1
+  fi
+
+  # Hostname:port values can contain words like "secret" in DNS labels; allow
+  # only the standalone host fixture shape so later same-line secrets still block.
+  if printf '%s\n' "$line" | grep -Eiq "$safe_hostname_port_assignment"; then
+    # This carve-out runs before the residual scan, so a trailing comment must
+    # not smuggle a real secret past it. Strip the host token and re-scan the
+    # remainder with the same residual denylist every other carve-out uses.
+    if printf '%s\n' "$line" | sed -E "s~${safe_hostname_port}~ ~g" \
+         | grep -Eiq "$residual_deny"; then
+      return 1
+    fi
+    return 0
+  fi
+
+  # Do not let broader prose carve-outs hide actual assigned secret values.
+  # A whole-line assignment to an approved ${VAR} placeholder may continue to
+  # the placeholder allow rule; mixed literal assignments still block.
+  if printf '%s\n' "$line" | grep -Eq "$assigned_secret"; then
+    if ! printf '%s\n' "$line" | grep -Eq "$safe_placeholder_assignment"; then
+      return 1
+    fi
+  fi
+  if printf '%s\n' "$line" | grep -Eiq "$oauth_assignment_with_gap"; then
+    if ! printf '%s\n' "$line" | grep -Eq "$safe_placeholder_assignment"; then
+      return 1
+    fi
+  fi
+
+  # Positive prose carve-outs must not mask other sensitive tokens on the same
+  # line. Remove the exact approved shapes, then re-scan for the remaining
+  # sensitive classes that are not themselves identifier-only OAuth2 prose.
+  residual_line=$(printf '%s\n' "$line" \
+    | sed -E "s~$safe_placeholder_core~ ~g" \
+    | sed -E "s~$structural_safe_placeholder_core~ ~g" \
+    | sed -E "s~$safe_spring_url~ ~g" \
+    | sed -E "s~$safe_spring_driver~ ~g" \
+    | sed -E "s~$safe_env_placeholder~ ~g" \
+    | sed -E "s~$safe_jdbc~ ~g")
+  if printf '%s\n' "$residual_line" | grep -Eiq "$residual_deny"; then
+    return 1
+  fi
+
+  # For Spring datasource prose, only the known-safe URL and MariaDB driver
+  # fixtures are allowlisted. Other datasource properties remain blocked even
+  # when they contain a safe-looking JDBC value.
+  if printf '%s\n' "$line" | grep -Eiq '(^|[^A-Za-z0-9_.-])spring\.datasource\.'; then
+    if printf '%s\n' "$line" | grep -Eq "$safe_spring_url"; then
+      return 0
+    fi
+    if printf '%s\n' "$line" | grep -Eq "$safe_spring_driver"; then
+      return 0
+    fi
+    return 1
+  fi
+
+  # Generated review intakes commonly archive config examples that reference
+  # environment variable names. Allow only empty values, known dev defaults,
+  # and localhost/container JDBC defaults.
+  if printf '%s\n' "$line" | grep -Eq "$safe_env_placeholder"; then
+    return 0
+  fi
+
+  if printf '%s\n' "$line" | grep -Eq "$safe_jdbc"; then
+    return 0
+  fi
+
+  # Audit prose often names OAuth2 secret/token identifiers without values.
+  if printf '%s\n' "$line" | grep -Eiq "(^|[^A-Za-z0-9_])${oauth_identifier}([^A-Za-z0-9_]|$)"; then
+    return 0
+  fi
+
+  # Documentation comments often list required env var names without values.
+  if printf '%s\n' "$line" | grep -Eq '^[[:space:]]*#?[[:space:]]*([A-Z][A-Z0-9_]*[[:space:]]*,[[:space:]]*)+[A-Z][A-Z0-9_]*[[:space:]]*,?[[:space:]]*$'; then
+    return 0
+  fi
+
+  return 1
+}
+
+# ── 1) Block staged files inside any secret/ path segment ────────
+while IFS= read -r -d '' file; do
+  if is_secret_path "$file"; then
+    echo -e "${RED}BLOCKED: You are about to commit files from a secret/ path${NC}"
+    echo "These files must NEVER enter git history."
+    echo "Run: git reset HEAD <file>"
+    exit 1
+  fi
+done < <(git diff --cached --name-only -z)
+
+# ── 2) Block sensitive paths (credentials, FERPA, env backups) ───
+BLOCKED_PATHS='(credentials|FERPA|env\.bak)'
+BLOCKED_FILES=()
+while IFS= read -r -d '' file; do
+  if printf '%s\n' "$file" | grep -qiE "$BLOCKED_PATHS"; then
+    BLOCKED_FILES+=("$file")
+  fi
+done < <(git diff --cached --name-only -z)
+if [ "${#BLOCKED_FILES[@]}" -ne 0 ]; then
+  echo -e "${RED}BLOCKED: Staged files match sensitive path patterns${NC}"
+  echo -e "${YELLOW}Files:${NC}"
+  printf '%s\n' "${BLOCKED_FILES[@]}" | while IFS= read -r f; do
+    echo -e "  ${CYAN}$f${NC}"
+  done
+  echo ""
+  echo "Run: git reset HEAD <file>"
+  exit 1
+fi
+
+# ── 3) Scan staged content for sensitive patterns ────────────────
+COMPOUND_SECRET_KEY='[A-Za-z0-9_.-]*(password|passwd|pwd|secret|token)[A-Za-z0-9_.-]*'
+COMPOUND_SECRET_COLON_PREFIX='(^[[:space:]]*|[]()[{}:=,-][[:space:]]*)'
+COMPOUND_SECRET_ASSIGNMENT="(${COMPOUND_SECRET_COLON_PREFIX}[\"'\`]?${COMPOUND_SECRET_KEY}[\"'\`]?[[:space:]]*:|${COMPOUND_SECRET_KEY}[\"'\`]?[[:space:]]*=)"
+
+PATTERNS=(
+  'PRIVATE KEY'
+  'BEGIN RSA'
+  'BEGIN EC'
+  'BEGIN DSA'
+  'BEGIN OPENSSH'
+  'password[[:space:]]*[:=]'
+  'passwd[[:space:]]*[:=]'
+  'pwd[[:space:]]*[:=]'
+  "$COMPOUND_SECRET_ASSIGNMENT"
+  'secret[[:space:]]*[:=]'
+  'token[[:space:]]*[:=]'
+  'api[-_]?key[[:space:]]*[:=]'
+  'api_key[[:space:]]*[:=]'
+  'api[-_]?secret'
+  'access_token'
+  'auth_token'
+  'client[_-]secret'
+  'tenant[_-]id'
+  'AWS_ACCESS_KEY'
+  'AWS_SECRET'
+  'AKIA[0-9A-Z]{16}'
+  'ghp_[a-zA-Z0-9]{36}'
+  'sk-[a-zA-Z0-9]{48}'
+  'xox[bpoas]-[0-9a-zA-Z]+'
+  'mongodb(\+srv)?://[^[:space:]]+'
+  'postgres(ql)?://[^[:space:]]+'
+  'mysql://[^[:space:]]+'
+  'jdbc:[^[:space:]]+'
+  'spring\.datasource\.'
+  'AZURE_'
+  'MSAL_'
+)
+
+COMBINED=$(IFS='|'; echo "${PATTERNS[*]}")
+
+line_would_block() {
+  local line="$1"
+  # Strip ALL leading '+' so a staged diff line whose file content itself
+  # begins with '+' (rendered as '++...' by git diff) is normalized the same
+  # way is_safe_placeholder_match does. Stripping a single '+' left a '+'
+  # prefix that defeated COMPOUND_SECRET_COLON_PREFIX's line-start anchor.
+  local content_line="${line#+}"
+  while [ "${content_line#+}" != "$content_line" ]; do
+    content_line="${content_line#+}"
+  done
+  printf '%s\n' "$content_line" | grep -iqE "$COMBINED" || return 1
+  ! is_safe_placeholder_match "$line"
+}
+
+run_self_test() {
+  local failures=0
+  local spring_prefix='spring.data''source'
+  local oauth_name='client_''secret'
+  local aad_name='AZ''URE_AD_CLIENT_''SECRET'
+  local azure_client_id='AZ''URE_CLIENT_ID'
+  local pat_value='ghp_abcdefghijklmnopqrstuvwxyz''1234567890'
+  local rsa_key_type='RSA'
+  local safe_session_query='sessionVariables=character_set_client=utf8mb4,character_set_connection=utf8mb4,character_set_results=utf8mb4,collation_connection=utf8mb4_unicode_ci&connectionCollation=utf8mb4_unicode_ci'
+
+  assert_allowed() {
+    local line="$1"
+    if line_would_block "$line"; then
+      echo "SELFTEST FAIL allow: $line" >&2
+      failures=$((failures + 1))
+    fi
+  }
+
+  assert_blocked() {
+    local line="$1"
+    if ! line_would_block "$line"; then
+      echo "SELFTEST FAIL block: $line" >&2
+      failures=$((failures + 1))
+    fi
+  }
+
+  assert_secret_path() {
+    local path="$1"
+    if ! is_secret_path "$path"; then
+      echo "SELFTEST FAIL secret path block: $path" >&2
+      failures=$((failures + 1))
+    fi
+  }
+
+  assert_not_secret_path() {
+    local path="$1"
+    if is_secret_path "$path"; then
+      echo "SELFTEST FAIL secret path allow: $path" >&2
+      failures=$((failures + 1))
+    fi
+  }
+
+  assert_secret_path "secret/readme.txt"
+  assert_secret_path "Secret/readme.txt"
+  assert_secret_path "foo/SECRET/readme.txt"
+  assert_not_secret_path "notsecret/readme.txt"
+  assert_not_secret_path "foo/secretkeeper/readme.txt"
+
+  assert_allowed "${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb"
+  assert_allowed "${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb?${safe_session_query}"
+  assert_allowed "${spring_prefix}.driver-class-name=org.mariadb.jdbc.Driver"
+  assert_allowed '`client_secret` is rotated quarterly'
+  assert_allowed 'the `AZURE_AD_CLIENT_SECRET` env-var is loaded by env.properties'
+  assert_allowed 'jdbc:mariadb://db:3306/cvmappdb'
+  assert_allowed '`jdbc:mariadb://db:3306/cvmappdb`'
+  assert_allowed '"jdbc:mariadb://db:3306/cvmappdb"'
+  assert_allowed "'jdbc:mariadb://db:3306/cvmappdb'"
+  assert_allowed '[jdbc:mariadb://db:3306/cvmappdb]'
+  assert_allowed '{jdbc:mariadb://db:3306/cvmappdb}'
+  assert_allowed '(jdbc:mariadb://db:3306/cvmappdb)'
+  assert_allowed 'The fixture uses jdbc:mariadb://db:3306/cvmappdb.'
+  assert_allowed 'Use jdbc:mariadb://db:3306/cvmappdb!'
+  assert_allowed "${oauth_name}=\${CLIENT_SECRET:placeholder}"
+  assert_allowed "+${oauth_name}=\${CLIENT_SECRET:placeholder}"
+  assert_allowed "++${oauth_name}=\${CLIENT_SECRET:placeholder}"
+  assert_allowed "${aad_name}=\${${aad_name}:placeholder}"
+  assert_allowed "MY_SECRET=\${MY_SECRET:-placeholder}"
+  assert_allowed "MY_SECRET_KEY=\${MY_SECRET_KEY:placeholder}"
+  assert_allowed "MY-SECRET-KEY: \${MY_SECRET_KEY:placeholder}"
+  assert_allowed "- MY_SECRET_KEY: \${MY_SECRET_KEY:placeholder}"
+  assert_allowed "- MY_SECRET_KEY=\${MY_SECRET_KEY:placeholder}"
+  assert_allowed "  - client_secret: \${CLIENT_SECRET:placeholder}"
+  assert_allowed "- tenant-id: \${TENANT_ID:placeholder}"
+  assert_allowed "azure.ad.tenant-id=\${AZURE_AD_TENANT_ID}"
+  assert_allowed "tenant-id: \${TENANT_ID:placeholder}"
+  assert_allowed 'tenant-id: ${TENANT_ID:placeholder} # review comment'
+  assert_allowed 'azure.ad.tenant-id=${AZURE_AD_TENANT_ID} # comment'
+  assert_allowed 'AZURE_FOO=${AZURE_FOO:placeholder} # comment'
+  assert_allowed 'MSAL_BAR=${MSAL_BAR:placeholder} # comment'
+  assert_allowed 'outer: MY-SECRET-KEY: ${MY_SECRET_KEY:placeholder}'
+  assert_allowed 'config: {token: ${APP_TOKEN:placeholder}}'
+  assert_allowed 'host=api.mysecret.io:8080'
+  assert_allowed 'server: api.mysecret.io:8080'
+  assert_allowed 'backend=mypassword.example.com:443'
+  assert_allowed 'api.mysecret.io:8080'
+  assert_allowed '- api.mysecret.io:8080'
+  assert_allowed 'host=api.mysecret.io:8080 # production endpoint'
+  assert_allowed 'API-KEY=${API_KEY:placeholder}'
+  assert_allowed "MY_SECRET=\${MY_SECRET:-jdbc:mariadb://localhost:3307/cvmappdb?${safe_session_query}}"
+  assert_allowed "## secret-scan-audit-intake-false-positive: Hotfix"
+
+  assert_blocked "${spring_prefix}.password=hunter2"
+  assert_blocked "${spring_prefix}.password=hunter2 # \${BACKUP_PASSWORD}"
+  assert_blocked "${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb?password=hunter2"
+  assert_blocked "${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb?pwd=hunter2"
+  assert_blocked "${spring_prefix}.username=jdbc:mariadb://localhost:3307/cvmappdb"
+  assert_blocked "${oauth_name}=${pat_value}"
+  assert_blocked "${oauth_name}=hunter2 # \${CLIENT_SECRET:placeholder}"
+  assert_blocked "\"${oauth_name}\": \"hunter2\""
+  assert_blocked "${aad_name}=hunter2"
+  assert_blocked "MY_TOKEN=hunter2"
+  assert_blocked "SECRET_KEY=hunter2"
+  assert_blocked "MY_SECRET_KEY=hunter2"
+  assert_blocked "\"MY_SECRET_KEY\": \"hunter2\""
+  assert_blocked "const cfg = {\"MY_SECRET_KEY\": \"hunter2\"}"
+  assert_blocked "{\"public_key\":\"x\", \"MY_SECRET_KEY\": \"hunter2\"}"
+  assert_blocked '{"MY.SECRET-KEY":12345}'
+  assert_blocked "MY-SECRET-KEY: hunter2"
+  assert_blocked "foo: MY-SECRET-KEY: hunter2"
+  assert_blocked "MY.SECRET-KEY: hunter2"
+  assert_blocked "MY.SECRET-KEY:12345"
+  assert_blocked "+MY.SECRET-KEY:12345"
+  assert_blocked "++MY.SECRET-KEY:12345"
+  assert_blocked "- MY_SECRET_KEY: hunter2"
+  assert_blocked "  - MY_SECRET_KEY: hunter2"
+  assert_blocked "[\"MY_SECRET_KEY\": \"hunter2\"]"
+  assert_blocked "(MY_SECRET_KEY: hunter2)"
+  assert_blocked "- MY_SECRET_KEY: realvalue"
+  assert_blocked "PASSWORD_HASH=hunter2"
+  assert_blocked "azure.ad.tenant-id=real-uuid-value"
+  assert_blocked 'password=${PASSWORD:hunter2}'
+  assert_blocked 'MY_SECRET=${MY_SECRET:hunter2}'
+  assert_blocked 'API_KEY=${API_KEY:-hunter2}'
+  assert_blocked 'foo=${FOO:placeholder} "tenant-id": "real-uuid-value"'
+  assert_blocked 'foo=${FOO:placeholder} "MSAL_BAR": "real"'
+  assert_blocked 'foo=${FOO:placeholder} "AZURE_FOO": "real"'
+  assert_blocked 'config: {token: ${APP_TOKEN:default}}'
+  assert_blocked 'server: api.mysecret.io:8080 SECRET_KEY=hunter2'
+  assert_blocked 'host=api.mysecret.io:8080 # password=hunter2'
+  assert_blocked 'server: api.mysecret.io:8080 # token=hunter2'
+  assert_blocked 'host=api.mysecret.io:8080 # "password":"hunter2"'
+  assert_blocked 'server: api.mysecret.io:8080 # "token":"hunter2"'
+  assert_blocked 'api-key=hunter2'
+  assert_blocked 'api-key: hunter2'
+  assert_blocked "MY_SECRET=\${MY_SECRET:placeholder} SECRET_KEY=hunter2"
+  assert_blocked "AWS_SECRET"
+  assert_blocked "AWS_SECRET=\${AWS_SECRET:placeholder}"
+  assert_blocked "AWS_SECRET ${oauth_name}"
+  assert_blocked "AWS_ACCESS_KEY \${MY_DEV_VAR:placeholder}"
+  assert_blocked "${oauth_name}=\${CLIENT_SECRET:placeholder} # AWS_SECRET"
+  assert_blocked "${oauth_name}=\${CLIENT_SECRET:placeholder} # mongodb://admin:pass@host:27017/db"
+  assert_blocked "${oauth_name}=\${CLIENT_SECRET:placeholder} # password=hunter2"
+  assert_blocked "${azure_client_id}=hunter2 ${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb"
+  assert_blocked "${spring_prefix}.username=admin ${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb"
+  assert_blocked "/* ${oauth_name} */ = \"hunter2\""
+  assert_blocked "${spring_prefix}.url=jdbc:mariadb://localhost:3307/cvmappdb mongodb://admin:pass@host:27017/db"
+  assert_blocked "jdbc:mariadb://localhost:3307/cvmappdb?AWS_ACCESS_KEY"
+  assert_blocked "${pat_value}"
+  assert_blocked "BEGIN ${rsa_key_type} PRIVATE KEY"
+  assert_blocked "jdbc:mariadb://db:3306/cvmappdb BEGIN ${rsa_key_type} PRIVATE KEY"
+
+  if [ "$failures" -ne 0 ]; then
+    return 1
+  fi
+
+  echo -e "${GREEN}Pre-commit self-test passed.${NC}"
+  return 0
+}
+
+if [ "${CVMAPP_PRECOMMIT_SELFTEST:-}" = "1" ]; then
+  run_self_test
+  exit $?
+fi
+
+STAGED_COUNT=0
+
+FOUND_ISSUES=false
+
+while IFS= read -r -d '' file; do
+  STAGED_COUNT=$((STAGED_COUNT + 1))
+
+  # Skip allowlisted files (documentation that references patterns)
+  if is_allowlisted "$file"; then
+    continue
+  fi
+
+  MATCHES=$(git diff --cached -U0 -- "$file" \
+    | while IFS= read -r line; do
+        if [ "${line#@@ }" != "$line" ]; then
+          in_hunk=true
+          continue
+        fi
+        if [ "${line#diff --git }" != "$line" ]; then
+          in_hunk=false
+          continue
+        fi
+        [ "${in_hunk:-false}" = true ] || continue
+        [ "${line#+}" != "$line" ] || continue
+        if ! line_would_block "$line"; then
+          continue
+        fi
+        printf '%s\n' "$line"
+      done \
+    || true)
+
+  if [ -n "$MATCHES" ]; then
+    if [ "$FOUND_ISSUES" = false ]; then
+      echo -e "${RED}BLOCKED: Potential sensitive data detected in staged changes${NC}"
+      echo ""
+      FOUND_ISSUES=true
+    fi
+
+    echo -e "  ${CYAN}$file${NC}"
+    printf '%s\n' "$MATCHES" | head -5 | while IFS= read -r line; do
+      echo -e "    ${YELLOW}$line${NC}"
+    done
+    echo ""
+  fi
+done < <(git diff --cached --name-only -z --diff-filter=ACMR)
+
+if [ "$STAGED_COUNT" -eq 0 ]; then
+  echo -e "${GREEN}Pre-commit check passed.${NC}"
+  exit 0
+fi
+
+if [ "$FOUND_ISSUES" = true ]; then
+  echo "If this is a false positive, commit with: git commit --no-verify"
+  echo "But think twice. Think three times."
+  exit 1
+fi
+
+echo -e "${GREEN}Pre-commit check passed.${NC}"
+exit 0
