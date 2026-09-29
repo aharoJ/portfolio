@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "topic": "monorepo-structure",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "retain_root_frontend_backend": 3,
+      "use_apps_web_api_now": 1,
+      "locked": "ADOPT status quo with a trigger-based future move to apps/"
+    },
+    "Q2": {
+      "conditional_workspace_policy": 4,
+      "locked": "ADOPT decision gates; do not select pnpm, catalogs, or Turborepo from the empty repository alone"
+    },
+    "Q3": {
+      "semantic_ownership_now": 4,
+      "locked": "ADOPT API-owned database semantics, transport-only contracts, and repository-level operations; defer tool-specific layout"
+    },
+    "Q4": {
+      "minimal_project_local_evidence_record": 4,
+      "locked": "ADOPT evidence links and applicable-boundary accounting without copying canonical $review"
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": true,
+    "open_follow_up_questions": false,
+    "research_cap_reached": false,
+    "robust_majority_after_any_single_removal": true
+  },
+  "selected_branch": "converged",
+  "action": "close",
+  "cap": 4,
+  "hard_cap_override_state": "absent",
+  "panel": {
+    "dispatched": [
+      "panel_architecture",
+      "panel_toolchain",
+      "panel_operations",
+      "panel_adversarial"
+    ],
+    "responded": [
+      "panel_architecture",
+      "panel_toolchain",
+      "panel_operations",
+      "panel_adversarial"
+    ],
+    "distinct_sources": 4,
+    "pastes_received": 0,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Four isolated, bounded Codex panel sessions were used instead of the normal manual web-LLM paste workflow; this is disclosed as a provenance limitation, not presented as vendor-diverse external evidence.",
+    "All four dispatched panels responded in R1.",
+    "Panel source claims were evaluated as cited by each panel; no panel response was persisted as a project file."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-09-29T13:20:04-07:00",
+  "decisions_locked": 4,
+  "investigate": 0,
+  "decision_summary": {
+    "Q1": "The input report's apps/ hierarchy is dismissed as an immediate requirement. Retain frontend/ and backend/ while each remains an unambiguous runtime/deployment unit; reconsider only for a third deployable or demonstrated grouping ambiguity.",
+    "Q2": "The empty repository does not establish a JavaScript API or package graph. If two real pnpm-managed projects emerge, use one root workspace and lockfile; create workspace edges, catalogs, and Turborepo only when their corresponding evidence gates are met.",
+    "Q3": "One API owner owns database semantics and migrations; infra owns environment operations and invokes an API migration interface. Exact paths, migration tool, and contract-authority/package form remain deliberately unselected.",
+    "Q4": "Future review topics record only applicable release-slice evidence, with explicit required/not-applicable/pending status and durable links; they must not reproduce or mutate canonical $review state."
+  }
+}
