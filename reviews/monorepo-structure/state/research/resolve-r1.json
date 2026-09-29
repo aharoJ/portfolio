@@ -5,65 +5,101 @@
   "round": 1,
   "verdicts": {
     "Q1": {
-      "retain_root_frontend_backend": 3,
-      "use_apps_web_api_now": 1,
-      "locked": "ADOPT status quo with a trigger-based future move to apps/"
+      "ADOPT": 6,
+      "DISMISS": 1,
+      "INVESTIGATE": 1,
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": "ADOPT apps/web and apps/api as the deployable roots. Do not create an empty packages/ directory; add packages only for demonstrated reusable boundaries.",
+      "prior_codex_only_disposition": "OVERTURN the prior root frontend/backend decision."
     },
     "Q2": {
-      "conditional_workspace_policy": 4,
-      "locked": "ADOPT decision gates; do not select pnpm, catalogs, or Turborepo from the empty repository alone"
+      "ADOPT": 8,
+      "DISMISS": 0,
+      "INVESTIGATE": 0,
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": "ADOPT a root pnpm workspace and one lockfile for pnpm-managed packages now; use workspace: only for real internal edges, catalogs only for demonstrated shared versions, and Turborepo only for a real task graph. Do not imply that a non-pnpm API must join the workspace.",
+      "prior_codex_only_disposition": "OVERTURN the prior deferral of selecting pnpm at rebuild start."
     },
     "Q3": {
-      "semantic_ownership_now": 4,
-      "locked": "ADOPT API-owned database semantics, transport-only contracts, and repository-level operations; defer tool-specific layout"
+      "ADOPT": 8,
+      "DISMISS": 0,
+      "INVESTIGATE": 0,
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": "ADOPT API ownership of the initial database lifecycle, transport-only public contract material, and repository-level infrastructure ownership when deployment material exists; defer framework-, ORM-, contract-authority-, and provider-specific form.",
+      "prior_codex_only_disposition": "KEEP the ownership-first decision, clarified to defer physical form rather than semantic direction."
     },
     "Q4": {
-      "minimal_project_local_evidence_record": 4,
-      "locked": "ADOPT evidence links and applicable-boundary accounting without copying canonical $review"
+      "ADOPT": 7,
+      "DISMISS": 0,
+      "INVESTIGATE": 1,
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": "ADOPT a concise future release-slice evidence record for applicable contract, migration, CI/task, deployment, and test evidence. It links durable evidence and never copies or modifies $review; instantiate it at the first real feature or release slice.",
+      "prior_codex_only_disposition": "KEEP the project-local evidence convention, with its exact schema deliberately lightweight and deferred."
     }
   },
   "predicates": {
     "all_decisions_locked": true,
     "open_follow_up_questions": false,
     "research_cap_reached": false,
-    "robust_majority_after_any_single_removal": true
+    "robust_majority_after_any_single_removal": true,
+    "c71_non_response_waived": true
   },
   "selected_branch": "converged",
   "action": "close",
   "cap": 4,
-  "hard_cap_override_state": "absent",
+  "hard_cap_override_state": "not_applicable",
   "panel": {
     "dispatched": [
-      "panel_architecture",
-      "panel_toolchain",
-      "panel_operations",
-      "panel_adversarial"
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
     ],
     "responded": [
-      "panel_architecture",
-      "panel_toolchain",
-      "panel_operations",
-      "panel_adversarial"
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
     ],
-    "distinct_sources": 4,
-    "pastes_received": 0,
-    "non_response": []
+    "distinct_sources": 8,
+    "pastes_received": 8,
+    "non_response": [
+      "MEMO"
+    ]
   },
   "panel_set_notes": [
-    "Four isolated, bounded Codex panel sessions were used instead of the normal manual web-LLM paste workflow; this is disclosed as a provenance limitation, not presented as vendor-diverse external evidence.",
-    "All four dispatched panels responded in R1.",
-    "Panel source claims were evaluated as cited by each panel; no panel response was persisted as a project file."
+    "The supplied real-panel response file was segmented only at the exact dispatched model headings; embedded Markdown headings and code comments remained within their model response.",
+    "Spot-check waiver: model=MEMO; reason=non-response; round=R1; evidence=provider-busy error returned; still-applies=no;",
+    "The prior decision values supplied no votes to this tally; all eight substantive responses were counted against the four intake questions before keep-or-overturn comparison.",
+    "No C51 tiered subagent dispatch was used for this re-resolution; it consumed the operator-supplied real-panel response file.",
+    "Raw panel response text remains outside the repository."
   ],
   "cited_constraints": [],
   "planned_constraint_appends": [],
   "findings": [],
-  "timestamp": "2026-09-29T13:20:04-07:00",
+  "timestamp": "2026-09-29T16:10:28-07:00",
   "decisions_locked": 4,
   "investigate": 0,
-  "decision_summary": {
-    "Q1": "The input report's apps/ hierarchy is dismissed as an immediate requirement. Retain frontend/ and backend/ while each remains an unambiguous runtime/deployment unit; reconsider only for a third deployable or demonstrated grouping ambiguity.",
-    "Q2": "The empty repository does not establish a JavaScript API or package graph. If two real pnpm-managed projects emerge, use one root workspace and lockfile; create workspace edges, catalogs, and Turborepo only when their corresponding evidence gates are met.",
-    "Q3": "One API owner owns database semantics and migrations; infra owns environment operations and invokes an API migration interface. Exact paths, migration tool, and contract-authority/package form remain deliberately unselected.",
-    "Q4": "Future review topics record only applicable release-slice evidence, with explicit required/not-applicable/pending status and durable links; they must not reproduce or mutate canonical $review state."
+  "provenance_supersession": {
+    "supersedes_commit": "1ae58ceff8842dd8870bd5c86ae68aef4655b749",
+    "supersedes_path": "reviews/monorepo-structure/state/research/resolve-r1.json",
+    "supersedes_sha256": "e9b336b97f8813d910ce283e8138e8590fc475ac4824bead056bc2428af8324b",
+    "prior_basis": "four Codex-only panel sessions",
+    "replacement_basis": "nine dispatched named web panelists, eight substantive responses, and one C71-waived non-response",
+    "historical_bytes_retained_in_git": true,
+    "reason": "The prior ledger did not provide the requested real-web-panel provenance."
   }
 }
