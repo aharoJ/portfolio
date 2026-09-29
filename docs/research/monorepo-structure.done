@@ -1,0 +1,9 @@
+# Research delivery marker
+
+Status: complete
+
+Report: docs/research/monorepo-structure.md
+
+Scope: research and recommendation only; no repository scaffold, application code, infrastructure, database, or $review protocol was modified.
+
+This file is a documentation delivery marker only. It is not $review lifecycle state, a routing input, or a phase authority.

@@ -1,0 +1,9 @@
+# Research delivery marker
+
+Status: complete
+
+Report: docs/research/review-harness-audit.md
+
+Scope: local-evidence audit and recommendations only; the $review protocol, skill, archive, constraints, decisions, and tooling were not modified.
+
+This file is a documentation delivery marker only. It is not $review lifecycle state, a routing input, or a phase authority.
