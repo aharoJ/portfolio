@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "topic": "stack-selection",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "option_votes": {"Astro static-first/islands": 3, "Vite + React": 2, "Status Quo / Null": 2, "static HTML/CSS/JavaScript": 1},
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": false,
+      "locked": false
+    },
+    "Q2": {
+      "option_votes": {"Hono on Node": 3, "Fastify on Node": 2, "Status Quo / Null": 2, "minimal Node http": 1},
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": false,
+      "locked": false
+    },
+    "Q3": {
+      "option_votes": {"SQLite explicit SQL + small migration runner": 2, "SQLite + Drizzle": 1, "Status Quo / Null": 2, "INVESTIGATE persistence need": 2},
+      "active_panel": 7,
+      "excluded_response": "Z.AI Q3 operator-condensed degraded output retained as a non-voting observation",
+      "robust_majority_after_any_single_removal": false,
+      "locked": false
+    },
+    "Q4": {
+      "option_votes": {"API-owned OpenAPI + generated web types": 2, "API-owned runtime transport schemas": 2, "Status Quo / Null": 2, "INVESTIGATE authority timing": 1},
+      "active_panel": 7,
+      "excluded_response": "Z.AI Q4 operator-condensed truncated output retained as a non-voting observation",
+      "robust_majority_after_any_single_removal": false,
+      "locked": false
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": false,
+    "robust_majority_after_any_single_removal": false,
+    "intake_citation_defect": true
+  },
+  "selected_branch": "nonconverged",
+  "action": "roll",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": ["Gemini", "DeepSeek", "Mistral", "Grok", "MEMO", "Z.AI", "Claude.ai", "Kimi", "GPT"],
+    "responded": ["Gemini", "DeepSeek", "Mistral", "Grok", "MEMO", "Z.AI", "Claude.ai", "GPT"],
+    "distinct_sources": 8,
+    "pastes_received": 8,
+    "non_response": ["Kimi"]
+  },
+  "panel_set_notes": [
+    "The supplied real-panel response file was segmented only at the exact dispatched model headings; embedded Markdown headings remained within each response.",
+    "Spot-check waiver: model=Kimi; reason=non-response; round=R1; evidence=provider overloaded; still-applies=no;",
+    "Z.AI Q1/Q2 were normal votes. Its Q3/Q4 source was operator-condensed after degeneration/truncation, so those recommendations are recorded as non-voting observations; they are not independently auditable full responses.",
+    "The Microsoft Learn intake citation was scoped to aspnetcore-6.0 and sign-in-gated, so it does not ground the stated current-supported-release comparator; R2 must replace it with a current, accessible primary source.",
+    "Raw panel response text remains outside the repository."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-09-29T18:18:01-07:00",
+  "decisions_locked": 0,
+  "investigate": 4,
+  "response_accounting": {
+    "normal_votes": {"Q1": 8, "Q2": 8, "Q3": 7, "Q4": 7},
+    "non_voting_observations": {"Q3": ["Z.AI"], "Q4": ["Z.AI"]}
+  }
+}
