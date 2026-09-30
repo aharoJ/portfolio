@@ -82,7 +82,7 @@ Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its 
 
 ## monorepo-structure-topology-reopen: v0.2 topology reopen
 
-Status: RESEARCH COMPLETE — v0.2 `$review implement` routing UNBLOCKED; product scaffold BLOCKED by the Q1/Q2 Null gates pending a narrow topology reopen (2026-09-29)
+Status: R1 RESEARCH COMPLETE; R2 SCOPED — awaiting explicit affirmation before bundle. Product scaffold remains blocked by the R1 Q1/Q2 Null locks pending the R2 research result (2026-09-30)
 
 Type: research + implementation
 
@@ -112,6 +112,16 @@ Upstream filing state: not applicable
 | Prevented waste? | Y |
 | Caused waste? | N |
 | Notes | The panel rejected carrying forward the two-deployable path and workspace premise without a current one-application operational differentiator or pnpm benefit. |
+
+### R2 scope — topology tie-break and package-manager authority (2026-09-30)
+
+Status: SCOPED — awaiting explicit affirmation before bundle.
+
+Goal: Reconsider only Q1's decision mechanism when a measured one-app static slice is operationally equivalent across `frontend/`, `apps/web/`, and the repository root; first select a neutral tie-break rule and then apply it. Reconsider only Q2's package-manager authority in light of the observed npm-command installation and package-local lockfile, without selecting a root workspace or root lockfile.
+
+Evidence record: `docs/research/monorepo-structure-topology-spike.md`.
+
+Form: R2 under the existing `monorepo-structure-topology-reopen` slug. The protocol defines the slug as the topic identity and uses round-numbered files beneath that one topic directory; existing research therefore continues as a new round rather than a new slug.
 
 ## monorepo-structure: Monorepo foundation decision
 

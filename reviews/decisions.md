@@ -106,3 +106,11 @@
 Q2 directly blocks the root pnpm workspace/root-lockfile shape; it does not syntactically ban every package-local lockfile. That narrower pathname observation does not authorize an Astro installer to choose npm, yarn, pnpm, or another manager: the Q2 lock forbids a substitute-manager escape, Q1 has no gate-passing layout, and E5 selects no manager. A package-local install artifact remains unauthorized as part of an unapproved application scaffold.
 
 **Remedy:** a clarification may correct "unblocked" to mean process routing only, but it cannot lift these locks. Any authority to create the Astro application, choose `frontend/` as its location, or choose a package manager requires a narrow `$review scope monorepo-structure-topology-reopen` reopen with the protocol's strong-contradiction acknowledgment, scope affirmation, and fresh evidence. Until then, only non-topology evidence work is permitted.
+
+## monorepo-structure-topology-reopen — topology-spike evidence filing exception (2026-09-30)
+
+**Operator approval:** On 2026-09-30, the operator approved `docs/research/monorepo-structure-topology-spike.md` as the filing location for the out-of-tree topology evidence spike. The approval is an explicit exception to the earlier requirement that the project-local release-evidence record live inside `reviews/<topic>/`.
+
+**Record:** `docs/research/monorepo-structure-topology-spike.md` records the tested revision, commands and exit codes, app/config/test payload, lockfile locations, output locations, static-output checksums, browser-test results, warnings, and unmeasured surfaces.
+
+**Scope of this approval:** The filing exception creates no new `reviews/<topic>/` artifact slot and records no Q1 or Q2 decision result.
