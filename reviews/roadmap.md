@@ -2,11 +2,42 @@
 
 ## stack-selection: v0.2 full-stack selection
 
-Status: SCOPED — awaiting approval (2026-09-29)
+Status: RESEARCH COMPLETE — implementation pending (2026-09-29)
+
+Type: research + implementation
 
 Goal: Select the smallest reviewable, self-verifiable stack for `apps/web`, `apps/api`, the API-owned database/ORM, and—if the first real web/API boundary warrants it—one transport-contract authority, while preserving the locked monorepo structure.
 
-Staged plan: v0.2 builds only what its stated product facts justify. The later paid review/QA service (login, submissions, payments) is a v0.3 trigger, not v0.2 sizing input; when it becomes a real requirement, open a separate research topic for API, authentication, and persistence. If stack-selection Q2 locks the null API outcome, reopen monorepo-structure's two-deployable premise before treating `apps/api` as an implementation target.
+Result: R1 left all four choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for `apps/web` (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists all evaluated each binary gate at condition level; no echo-only vote was counted. The locks establish how to apply the supplied facts, not independent verification of those facts. Research is complete; implementation remains pending and must start through `$review implement stack-selection`.
+
+Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substantive responses; 1 waived non-response; 4 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
+
+| Key decision | Consensus | Round |
+|---|---:|---:|
+| Use Astro static-first/islands for static article delivery in `apps/web` | 7/8, robust after any one removal | R2 |
+| Select no v0.2 API runtime | 8/8, robust after any one removal | R2 |
+| Select no v0.2 persistence or migration layer | 8/8, robust after any one removal | R2 |
+| Select no v0.2 browser-to-API contract authority | 8/8, robust after any one removal | R2 |
+
+Runbook: `reviews/runbook/stack-selection.md`
+
+Upstream filing state: not applicable
+
+### Monorepo premise record
+
+The Q2-null condition meets the existing monorepo-structure two-deployable reopen trigger. It is recorded here only. Before `apps/api` is treated as an implementation target, reopen that premise under the existing protocol; do not create a monorepo topic, alter the locked monorepo decision, or scaffold an API as part of this cycle.
+
+### Premise Challenge Record
+
+| Field | Value |
+|---|---|
+| Premise challenged? | Y |
+| Challenge source | Panel (research) |
+| Signal strength | Strong |
+| Outcome | Modified |
+| Prevented waste? | Y |
+| Caused waste? | N |
+| Notes | R2 rejected the unearned full-stack premise for API, persistence, and contract work while retaining a separately justified static web slice. |
 
 ## monorepo-structure: R1 real-panel provenance supersession
 

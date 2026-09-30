@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "topic": "stack-selection",
+  "cycle_type": "research",
+  "round": 2,
+  "verdicts": {
+    "Q1": {
+      "gate": "PASS",
+      "option_votes": {
+        "Astro static-first/islands": 7,
+        "Eleventy": 1
+      },
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT — Astro static-first/islands",
+      "gate_evaluation": {
+        "evaluated_votes": 8,
+        "echo_only_votes": [],
+        "countable": true,
+        "evidence_boundary": "Each respondent mapped the four gate conditions to supplied facts 1–4 and checked for contradiction; this applies the supplied acceptance record and does not independently verify operator facts."
+      }
+    },
+    "Q2": {
+      "gate": "FAIL",
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT — Status Quo / Null Option",
+      "gate_evaluation": {
+        "evaluated_votes": 8,
+        "echo_only_votes": [],
+        "countable": true,
+        "evidence_boundary": "Each respondent tested the six enumerated server-owned behaviors against supplied facts, excluded the later paid-service direction, and found no conflicting v0.2 record; this is not independent verification of operator facts."
+      }
+    },
+    "Q3": {
+      "gate": "FAIL",
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT — Status Quo / Null Option",
+      "gate_evaluation": {
+        "evaluated_votes": 8,
+        "echo_only_votes": [],
+        "countable": true,
+        "evidence_boundary": "Each respondent tested restart-surviving mutable data, named retained data, and a migration/recovery test against supplied facts; this is not independent verification of operator facts."
+      }
+    },
+    "Q4": {
+      "gate": "FAIL",
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT — Status Quo / Null Option",
+      "gate_evaluation": {
+        "evaluated_votes": 8,
+        "echo_only_votes": [],
+        "countable": true,
+        "evidence_boundary": "Each respondent tested Q2's prerequisite and the absent browser-to-API transport artifacts against supplied facts; this is not independent verification of operator facts."
+      }
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": true,
+    "open_follow_up_questions": false,
+    "research_cap_reached": false,
+    "robust_majority_after_any_single_removal": true,
+    "all_gates_evaluated": true,
+    "echo_only_votes_present": false,
+    "q2_null_monorepo_reopen_trigger_recorded": true
+  },
+  "selected_branch": "converged",
+  "action": "close",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": ["Gemini", "DeepSeek", "Mistral", "Grok", "MEMO", "Z.AI", "Claude.ai", "Kimi", "GPT"],
+    "responded": ["Gemini", "DeepSeek", "Mistral", "Grok", "MEMO", "Z.AI", "Claude.ai", "GPT"],
+    "distinct_sources": 8,
+    "pastes_received": 8,
+    "non_response": ["Kimi"]
+  },
+  "panel_set_notes": [
+    "Panel sections were segmented only at the nine exact dispatched # <Model> headings; raw panel text remains external to the repository.",
+    "Spot-check waiver: model=Kimi; reason=non-response; round=R2; evidence=operator-designated unavailable in external panel batch; still-applies=no;",
+    "All eight respondents evaluated every binary gate by mapping conditions to supplied product facts or their absence; no vote merely repeated an intake verdict without a condition-level rationale.",
+    "Votes count as applications of the supplied acceptance record, not as independent verification of the operator-stated product facts.",
+    "Q2's null outcome meets the monorepo-structure two-deployable reopen trigger; the trigger is recorded in this topic only and no monorepo action occurs in this cycle."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-09-29T19:11:40-07:00",
+  "decisions_locked": 4,
+  "investigate": 0,
+  "response_accounting": {
+    "normal_votes": {
+      "Q1": 8,
+      "Q2": 8,
+      "Q3": 8,
+      "Q4": 8
+    },
+    "echo_only_votes": {
+      "Q1": [],
+      "Q2": [],
+      "Q3": [],
+      "Q4": []
+    },
+    "non_voting_observations": {}
+  },
+  "reopen_trigger": {
+    "topic": "monorepo-structure",
+    "condition": "stack-selection Q2 locks the null API outcome",
+    "status": "met-recorded-no-action",
+    "required_before": "treating apps/api as an implementation target"
+  },
+  "raw_panel_text": "external; not committed"
+}

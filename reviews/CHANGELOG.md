@@ -1,5 +1,38 @@
 # Changelog -- portfolio reviews
 
+## 2026-09-29 — stack-selection research convergence
+
+**Type:** research + implementation
+
+**Constraint economy:** active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+Two-round adversarial research review of the smallest v0.2 portfolio stack. R1 left every question open. R2 applied the supplied operator acceptance record through binary gates and locked four decisions: Astro for the static web slice, and null outcomes for API, persistence, and contract authority. No product, infrastructure, database, or protocol code changed; raw panel text was not committed.
+
+### Decisions
+
+- **Q1**: browser stack — ADOPT Astro static-first/islands (7/8, robust after any one removal).
+- **Q2**: API runtime — ADOPT Status Quo / Null Option (8/8, robust).
+- **Q3**: persistence and migration — ADOPT Status Quo / Null Option (8/8, robust).
+- **Q4**: contract authority — ADOPT Status Quo / Null Option (8/8, robust).
+
+### Gate-evaluation accounting
+
+Every responding panelist mapped each gate's conditions to supplied product facts or their absence. No echo-only vote was counted: Q1–Q4 each have 8 condition-level evaluations and 0 echo-only votes. This establishes consensus on application of the supplied acceptance record, not independent verification of the operator-stated facts.
+
+### Modified review artifacts
+
+- `reviews/stack-selection/state/research/resolve-r2.json` — validated closing R2 ledger, blind tally, C71 non-response waiver, echo-vote audit, and reopen record.
+- `reviews/decisions.md` — four R2 locks and evidence-boundary accounting.
+- `reviews/runbook/stack-selection.md` — implementation gates and deferred monorepo premise record.
+- `reviews/roadmap.md` — research-complete, implementation-pending roadmap entry.
+- `reviews/CHANGELOG.md` — this convergence entry.
+
+**Review statistics:** 2 research rounds; R2 dispatched 9 named panelists; 8 substantive responses; 1 waived non-response; 4 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
+
+**Panel provenance:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, and GPT supplied substantive R2 responses. Kimi is recorded as `Spot-check waiver: model=Kimi; reason=non-response; round=R2; evidence=operator-designated unavailable in external panel batch; still-applies=no;`. Panel splitting used only exact dispatched-model headings.
+
+**Reopen record:** Q2's null outcome meets monorepo-structure's two-deployable premise trigger. The condition is recorded; no monorepo research, topology change, or `apps/api` scaffold is created in this cycle.
+
 ## 2026-09-29 — monorepo-structure real-panel provenance supersession
 
 **Type:** research-only

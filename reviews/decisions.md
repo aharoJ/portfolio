@@ -1,5 +1,29 @@
 # Decisions -- portfolio
 
+## stack-selection — R2 product-evidence resolution (2026-09-29)
+
+**Status:** locked by the R2 real-panel gate resolution; action: close (research + implementation).
+
+**Evidence boundary:** The four operator-stated product facts are the supplied acceptance record for this round. They remain operator evidence, not independently verified product facts. The panel evaluated the gates by condition-to-fact or condition-to-absence mapping; no respondent was counted merely for echoing an intake verdict.
+
+**Panel accounting:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, and GPT gave substantive responses. Kimi is non-responsive and recorded as `Spot-check waiver: model=Kimi; reason=non-response; round=R2; evidence=operator-designated unavailable in external panel batch; still-applies=no;`. Raw panel text remains external to the repository.
+
+1. **Q1 — ADOPT (7/8; robust after any single-response removal):** use Astro in static-first/islands mode for `apps/web`. The implementation must produce static article HTML without adding a server responsibility. Astro's content-authoring details remain implementation-verified rather than assumed from the selection.
+2. **Q2 — ADOPT (8/8; robust after any single-response removal):** select the Status Quo / Null Option for v0.2 API runtime. No supplied v0.2 fact requires a server-owned behavior; the later paid review/QA service remains a revisit trigger only.
+3. **Q3 — ADOPT (8/8; robust after any single-response removal):** select the Status Quo / Null Option for persistence and migration. No supplied v0.2 fact names restart-surviving mutable data, retained data, and a migration/recovery test.
+4. **Q4 — ADOPT (8/8; robust after any single-response removal):** select the Status Quo / Null Option for contract authority. Q2 fails and no browser-to-API boundary, transport shapes, or checked browser artifact exists.
+
+| Question | Gate | Locked result | Gate-evaluation result |
+|---|---|---|---|
+| Q1 | PASS | Astro static-first/islands | 8 condition-level evaluations; 0 echo-only votes |
+| Q2 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
+| Q3 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
+| Q4 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
+
+**Reopen record:** Q2's null result meets the roadmap's monorepo-structure two-deployable reopen trigger. It is recorded only: before `apps/api` is treated as an implementation target, reopen that premise under the existing protocol. This cycle does not reopen monorepo-structure or change its locked constraints.
+
+**Revisit triggers:** a supplied v0.2 artifact requiring private access, form submission, payment processing, visitor-specific state/content, or a persisting visitor action; a named restart-surviving record plus migration/recovery test; or a real browser-to-API boundary with transport shapes and a checked browser artifact. Each trigger re-gates the affected question; it does not retroactively turn roadmap intent into evidence.
+
 ## monorepo-structure — R1 real-panel provenance supersession (2026-09-29)
 
 **Status:** locked by real web-panel R1; action: close (research-only).
