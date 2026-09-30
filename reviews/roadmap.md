@@ -2,7 +2,7 @@
 
 ## stack-selection: v0.2 full-stack selection
 
-Status: RESEARCH COMPLETE — implementation BLOCKED pending monorepo-structure topology reopen (2026-09-29)
+Status: RESEARCH COMPLETE; topology/manager prerequisites SETTLED by tiebreak R2; implementation PENDING lifecycle recovery/admission (2026-09-30)
 
 Type: research + implementation
 
@@ -20,6 +20,8 @@ Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substa
 | Select no v0.2 browser-to-API contract authority | 8/8, robust after any one removal | R2 |
 
 Runbook: `reviews/runbook/stack-selection.md`
+
+Current prerequisite update (2026-09-30): `monorepo-structure-topology-tiebreak` R1/R2 now selects `frontend/` and application-local npm with `frontend/package-lock.json`. For current path/manager instructions, use `reviews/runbook/monorepo-structure-topology-tiebreak.md`. Historical `apps/web` and pnpm examples below describe the prior research record. Actual scaffold execution remains pending applicable implementation admission and the separate lifecycle recovery; no recovery A/B is selected here.
 
 Upstream filing state: not applicable
 
@@ -82,7 +84,7 @@ Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its 
 
 ## monorepo-structure-topology-reopen: v0.2 topology reopen
 
-Status: R1 RESEARCH COMPLETE; same-slug R2 scope skeleton VOID. Product scaffold remains blocked by the R1 Q1/Q2 Null locks pending the fresh `monorepo-structure-topology-tiebreak` research result (2026-09-30)
+Status: R1 RESEARCH COMPLETE; same-slug R2 scope skeleton VOID. Fresh tiebreak R1/R2 prospectively settles the first-app location and local manager; implementation PENDING lifecycle recovery/admission (2026-09-30)
 
 Type: research + implementation
 
@@ -98,6 +100,8 @@ Cross-review stats: 1 research round; 9 dispatched panelists; 9 substantive resp
 | Do not create a root pnpm workspace or root lockfile without a gate-passing layout, pnpm selection, and durable one-package benefit | 9/9, robust after any one removal | R1 |
 
 Runbook: `reviews/runbook/monorepo-structure-topology-reopen.md`
+
+Current supersession update (2026-09-30): the fresh tiebreak selects `frontend/` and application-local npm prospectively. Historical R1 Null ledgers/runbook remain unchanged; root workspace/root lockfile exclusions still apply. This topic remains implementation-pending, with lifecycle recovery A/B outside the tiebreak resolve.
 
 Upstream filing state: not applicable
 
@@ -125,30 +129,51 @@ Form: SUPERSEDED. The scope content below is carried to the fresh `monorepo-stru
 
 ## monorepo-structure-topology-tiebreak: v0.2 topology tie-break and package-manager authority
 
-Status: R1 PARTIALLY RESOLVED; R2 BUNDLED — research open; implementation pending (2026-09-30)
+Status: RESEARCH COMPLETE in R2; implementation PENDING (2026-09-30)
 
-Goal: With `docs/research/monorepo-structure-topology-spike.md` as evidence of measured equivalence across `frontend/`, `apps/web/`, and the repository root, first select and justify a neutral tie-break rule and then apply it to one location or the Q1 Null Option. Separately decide whether the observed npm-command installation and package-local npm lockfile are package-manager authority, whether a deliberate selection is required, or whether to retain the Q2 Null Option. Root workspace and root lockfile selection are excluded.
+Type: research + implementation
 
-Evidence record: `docs/research/monorepo-structure-topology-spike.md`.
+Goal: Select an evidence-grounded first static Astro application location and an explicit application-local manager/installer-lockfile rule, without creating a root workspace or importing future-service requirements.
 
-Form: Fresh topic slug; its first research artifact is R1. The closed `monorepo-structure-topology-reopen` file state routes its next non-close bundle/resolve to implementation; this new topic has no runbook or closing ledger, so its first bundle routes to research.
+Result: R1 adopted the qualified baseline-reuse rule and `frontend/` designation (6/9), plus deliberate-selection authority (6/9), while the manager split failed removal robustness and rolled. R2 adopts a complete demonstrated-adequacy selection rule with zero/multiple/root-loss fallback (6/9), with a broader current singleton core supported by seven panelists. Applying the panelists' own qualified rules selects npm only within `frontend/`, prospective installer lockfile `frontend/package-lock.json` (7/9 conservative active-panel support). Declared rule-family/npm votes are each 9/9; DeepSeek's unsupported locked Astro version prerequisite and Z.AI's absent complete prior rule exclude their qualified applications. Gemini's multiple-candidate overhead ranking is outside the adopted complete rule. All nine single removals preserve strict majorities: complete rule worst 5/8, singleton core/npm worst 6/8. Research closes at R2 below cap 4, with two fully locked questions and no open follow-ups or force dispositions. Implementation remains pending.
 
-Result: The operator explicitly directed this collected-batch resolve ahead of the one-open-topic recovery. Nine panelists responded; two raw-text semantic derivations reconciled with no differences. Q1's declared baseline-delta rule family has eight votes versus one differentiator-required Null rule, but only six supply a qualified shared baseline-reuse rule and a location that follows from it. The resulting `frontend/` designation remains robust even using the full nine-member denominator. Gemini/Kimi's two claimed frontend outcomes are excluded for prior-rule/Null-order deficiencies, not converted into Null votes. Q2's deliberate-selection policy is robust at 6/9, while the manager outcome splits npm 5/9 versus unselected 4/9 and fails single-removal robustness. R1 therefore records `action: roll`; R2 tests the local selection rule and its actual manager/no-selection outcome without reopening the settled location or importing workspace authority.
+Cross-review stats: 2 research rounds; 9 dispatched/responding seats in each tiebreak round; R2 9 substantive responses, 0 non-responses/echoes/duplicates/degenerate bodies; 2 R2 qualified-rule/application exclusions; 2 fully locked questions; 0 investigate; no implementation/audit cycle, source-code findings or sweep. Two independent semantic and arithmetic derivations reconcile without mismatch.
 
-Cross-review stats: 1 resolved research round; 9 dispatched/responding panelists; 0 non-responses; 0 echoes; 2 Q1 rule/application exclusions; 1 fully locked question; Q2 policy separately locked; 1 open manager-outcome follow-up; R2 intake prepared; no implementation/audit cycle or source-code findings.
+| Key change | Impact |
+|---|---|
+| Immutable closing R2 ledger | Keeps per-model admissibility, independent tallies, evidence hashes and every removal case beside R1 |
+| Current R2 decisions and implementation runbook | Replaces unresolved manager authority prospectively and gives exact application-local execution/admission boundaries |
+| Complete research close trail | Records research+implementation Type while keeping implementation and earlier-topic recovery pending |
 
-| Decision layer | R1 consensus | State |
-|---|---:|---|
-| Qualified baseline-reuse rule core | 6/9 qualified support; declared family 8/9 | LOCKED for this E1/E5 baseline; extra metrics/filters not locked |
-| First Astro application location: `frontend/` | 6/9 conservative; 6/7 admissible location votes; worst removal 5/8 conservative | LOCKED prospective designation |
-| Package-manager authority: deliberate selection | 6/9; worst removal 5/8 | LOCKED governance policy |
-| Actual manager and installer-lockfile authority | npm 5/9, unselected 4/9; deliberate camp 3/3; npm falls to 4/8 after removal | OPEN — R2 |
+| Key decision | Consensus | Round |
+|---|---:|---:|
+| Qualified baseline-reuse rule and first application root `frontend/` | 6/9 qualified; worst removal 5/8 | R1 carried |
+| Deliberate-selection manager authority | 6/9; worst removal 5/8 | R1 carried |
+| Qualified current demonstrated-singleton rule core | 7/9; worst removal 6/8 | R2 |
+| Complete zero/multiple/root-loss fallback rule | 6/9; worst removal 5/8 | R2 |
+| npm within `frontend/`; prospective `frontend/package-lock.json` | 7/9 active; 7/7 admissible; worst active removal 6/8 | R2 |
 
-Next panel intake: `reviews/monorepo-structure-topology-tiebreak/intakes/research-r2.md` (17,390 bytes; SHA-256 `c029413500ca2168dbbdfa17f7a3834376b8ae61e182f559601652a43f8c6e96`). Compiler/ledger validation passed; two soft missing-file warnings refer to the prospective `frontend/package-lock.json`, which is deliberately absent.
+Implementation authority: the topology and manager-selection prerequisites for the blocked stack-selection scaffold are settled. A later admitted implementation may create static Astro source/configuration/dependencies inside `frontend/`, use npm there, retain `frontend/package-lock.json`, and build `frontend/dist/`. Actual execution still needs applicable implementation admission and instructions consistent with the current decisions, including the separately pending lifecycle recovery of stack-selection/topology-reopen. This research task executes no scaffold/install, selects no recovery A/B, and creates no version pin or manager declaration. Root workspace/root lockfile and excluded domains remain unauthorized. Earlier runbooks' path/pnpm examples are historical for this first application; their old bytes remain preserved.
 
-Implementation authority: stack-selection's first scaffold remains blocked. The new locks designate a location and an authority policy; they select no manager and permit no Astro source/configuration/dependencies, installer, manager pin, or installer lockfile yet. Root workspace/root lockfile and other excluded domains remain unauthorized. No research close, runbook/impact marker, Type stamp, implementation completion, version/tag action, or recovery A/B choice is recorded here.
+Runbook: `reviews/runbook/monorepo-structure-topology-tiebreak.md`
 
-Operator sequencing record: `reviews/decisions.md`. Stack-selection and topology-reopen remain topic-open with implementation pending; their recovery disposition comes after this resolve.
+Evidence record: `docs/research/monorepo-structure-topology-spike.md`; published R2 intake: `reviews/monorepo-structure-topology-tiebreak/intakes/research-r2.md`; closing ledger: `reviews/monorepo-structure-topology-tiebreak/state/research/resolve-r2.json`.
+
+Operator sequencing/commit exception: `reviews/decisions.md`. The brief requires a normal-hook research-result commit despite impact=yes; implementation is not declared complete.
+
+Upstream filing state: not applicable
+
+### Premise Challenge Record
+
+| Field | Value |
+|---|---|
+| Premise challenged? | Y |
+| Challenge source | Panel (research) |
+| Signal strength | Strong |
+| Outcome | Modified |
+| Prevented waste? | Unknown |
+| Caused waste? | N |
+| Notes | Apparatus bias and policy-only npm inference were tested. The bounded prospective adequacy rule is adopted; no superiority claim or inherited-command authority follows. Unsupported rule/application claims are excluded. |
 
 ## monorepo-structure: Monorepo foundation decision
 

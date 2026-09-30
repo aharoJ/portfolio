@@ -1,5 +1,42 @@
 # Changelog -- portfolio reviews
 
+## 2026-09-30 — topology tiebreak R2 research convergence
+
+**Type:** research + implementation; research complete, implementation pending.
+
+**Constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+Two-round adversarial research review of the first static Astro application's location and installation authority. R1 locked the qualified `frontend/` designation and deliberate-selection policy, then rolled the manager split. R2 completes Q2 by adopting a bounded demonstrated-adequacy rule and selecting npm with prospective `frontend/package-lock.json`. The final research branch is convergence/close at R2, below cap 4; no follow-up or force disposition remains. No product implementation or installer execution occurred.
+
+### Decisions
+
+- **Q1**: carried R1 location/rule core — ADOPT `frontend/` (6/9 qualified, worst removal 5/8).
+- **Q2 policy**: carried R1 deliberate-selection authority — ADOPT (6/9, worst removal 5/8); not an extra question or new R2 vote.
+- **Q2 local selection rule**: ADOPT qualified current singleton core (7/9, worst removal 6/8) and complete zero/multiple/root-loss fallback (6/9, worst removal 5/8). Gemini's separate multiple-candidate overhead ranking is not adopted.
+- **Q2 resulting manager/lockfile**: ADOPT npm, only within `frontend/`, prospective `frontend/package-lock.json` (7/9 conservative active-panel support; 7/7 admissible outcome ballots; worst removal 6/8 conservative).
+
+### Accounting and validation
+
+R2 dispatched/responded: 9/9; non-response, echo-only, duplicate and degenerate counts: 0. Declared rule-family and npm ADOPT votes are each 9/9. DeepSeek's prior rule requires an absent locked Astro version; Z.AI claims a complete prior rule absent from its response. Both are excluded from qualified support without becoming Null ballots. Every response still substantively maps all four Q2 gates. Two independent full semantic derivations and separate arithmetic derivations agree on every ballot, layer and all nine single-removal cases. The full rule and its outcome remain robust; two research questions lock, zero investigate.
+
+Both immutable topic ledgers pass production validation; close-only supersession relaxation surfaces no supersession. The production SOT interleave check passes with four files and zero findings. Applicable file-state/type/freshness/environment checks pass. No source-code tests or cross-pattern sweep apply to this research close. Protocol-header/tree/completeness gates are protocol-project-only; no downstream tree-adoption tier is recorded. No agent dispatch was used in this cycle, so no routing manifest is required. The project constraint corpus and all cycle citation arrays are empty; no constraint append is planned or performed.
+
+### Modified review artifacts
+
+- `reviews/monorepo-structure-topology-tiebreak/state/research/resolve-r2.json` — atomic compiler-skeleton-derived closing ledger; per-model admissibility, provenance, independent derivation reconciliation, all removal cases, and prospective authority.
+- `reviews/decisions.md` — current R2 rule/outcome locks, exclusions, evidence limits, precise scope and prospective supersession, with historical R1 retained.
+- `reviews/runbook/monorepo-structure-topology-tiebreak.md` — implementation guide with `Implementation Impact: yes`, application-local npm paths, admission boundary, verification, and re-gating.
+- `reviews/roadmap.md` — research-complete/implementation-pending tiebreak entry, key changes/decisions, premise record and current prerequisite pointers for earlier pending topics.
+- `reviews/CHANGELOG.md` — this newest-first research close entry.
+
+The external step log and evidence receipts are under `/private/tmp/portfolio-sol-high/audit/`; raw panel text is confined to `/private/tmp/portfolio-sol-high/panel/` and never enters the repository. No old intake, manifest, ledger, runbook, product file, hook, or canonical protocol is changed. Existing `.hook-allowlist` already names the exact R2 compiler-manifest path; no new manifest or allowance is needed for close.
+
+**Execution authority:** a later admitted implementation can scaffold the selected static Astro slice in `frontend/`, use npm there, retain `frontend/package-lock.json`, and build `frontend/dist/`. The location and manager-selection prerequisites are settled. Actual execution still requires applicable implementation admission with current instructions and the separately pending stack-selection/topology-reopen recovery; neither recovery A/B nor product execution occurs here. Root workspace/root lockfile and excluded domains remain unauthorized; no version pin or manager declaration is selected.
+
+**Operator commit exception:** the isolated brief requires a normal-hook research-result commit despite impact=yes, overriding only usual final-implementation-close commit timing. Earlier topics and this topic's implementation remain pending; no release tag or push is performed.
+
+**Procedural limitations:** no native compaction tool is exposed; disclosed compact durable checkpoints precede tally, ledger and close. The decisions update had a prior read but missed its pre-action edit-gate emission; the omission is logged rather than retroactively fabricated.
+
 ## 2026-09-30 — topology tiebreak R1 partial resolution and R2 bundle
 
 **State:** research remains OPEN; R1 action is `roll`. This entry records a round resolution, not a close or implementation completion.

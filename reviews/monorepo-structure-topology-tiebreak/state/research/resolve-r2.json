@@ -1,0 +1,803 @@
+{
+  "schema_version": "1.0",
+  "topic": "monorepo-structure-topology-tiebreak",
+  "cycle_type": "research",
+  "round": 2,
+  "verdicts": {
+    "Q1": {
+      "disposition": "ADOPT; carried R1 lock",
+      "fully_locked": true,
+      "location": "frontend/",
+      "source": "reviews/monorepo-structure-topology-tiebreak/state/research/resolve-r1.json"
+    },
+    "Q2": {
+      "disposition": "ADOPT rule then npm outcome",
+      "fully_locked": true,
+      "policy_layer": {
+        "locked": "deliberate-selection authority",
+        "carried": true,
+        "re_voted": false
+      },
+      "rule_layer": {
+        "declared_family_votes": {
+          "unique-demonstrated-adequacy": 9
+        },
+        "qualified_singleton_core_support": 7,
+        "qualified_singleton_core_supporters": [
+          "Gemini",
+          "Mistral",
+          "Grok",
+          "MEMO",
+          "Claude.ai",
+          "Kimi",
+          "GPT"
+        ],
+        "complete_tie_safe_rule_support": 6,
+        "complete_tie_safe_rule_supporters": [
+          "Mistral",
+          "Grok",
+          "MEMO",
+          "Claude.ai",
+          "Kimi",
+          "GPT"
+        ],
+        "qualified_core_robust_majority": true,
+        "complete_rule_robust_majority": true,
+        "locked": "For this E1–E6 static application record and Q1 frontend/ root, prospectively select a uniquely demonstrated manager with repeatable successful local installation/build/verification evidence, an application-local installer lockfile and no recorded carried-boundary conflict. Missing root or zero qualifying managers yields no authority. Multiple qualifiers yields no selection pending re-gating; no name/order/convention or unmeasured-superiority preference applies.",
+        "not_locked": [
+          "Gemini multiple-candidate overhead ranking and equal/missing-overhead behavior",
+          "DeepSeek locked Astro version prerequisite",
+          "different detailed test thresholds, universal future checksum rule and version pins"
+        ],
+        "conservative_active_denominator": 9,
+        "worst_core_removal": "6/8",
+        "worst_complete_rule_removal": "5/8"
+      },
+      "outcome_layer": {
+        "declared_votes": {
+          "npm": 9,
+          "unselected": 0
+        },
+        "admissible_votes": {
+          "npm": 7,
+          "unselected": 0
+        },
+        "inconsistent_or_unestablished_applications": [
+          "DeepSeek",
+          "Z.AI"
+        ],
+        "excluded_votes_converted_to_null": false,
+        "locked_manager": "npm",
+        "application_root": "frontend/",
+        "installer_lockfile": "frontend/package-lock.json",
+        "robust_majority_after_any_single_removal": true,
+        "conservative_active_denominator": 9,
+        "eligible_outcome_denominator": 7,
+        "worst_conservative_removal": "6/8",
+        "worst_eligible_removal": "6/6"
+      },
+      "gate_evaluation": {
+        "evaluated_votes": 9,
+        "echo_only_votes": [],
+        "evidence_mapping": "All four required gates have substantive E1–E6 or precise absence/inapplicability mappings; this does not cure rule/application deficiencies."
+      }
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": true,
+    "open_follow_up_questions": false,
+    "research_cap_reached": false,
+    "panel_responses_complete": true,
+    "qualified_rule_core_robust": true,
+    "complete_tie_safe_rule_robust": true,
+    "npm_outcome_robust": true,
+    "echo_only_votes_present": false,
+    "second_semantic_derivation_reconciled": true,
+    "independent_arithmetic_reconciled": true,
+    "required_evidence_missing": false
+  },
+  "selected_branch": "convergence",
+  "action": "close",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
+    ],
+    "responded": [
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Split only the nine exact dispatched # <Model> lines; embedded headings stay inside their owner response.",
+    "Nine distinct substantive responses; zero duplicate bodies, degenerate outputs, non-response, waivers or echo-only votes.",
+    "DeepSeek own rule requires an unsupported locked Astro version; its declared npm is not an admissible outcome ballot.",
+    "Z.AI asserts a full prior rule that does not exist in its response; application-table reconstruction is not accepted as a prior rule.",
+    "Gemini supports the current singleton result but not the adopted complete multiple-qualifier fallback; its separate overhead ranking is not adopted.",
+    "Grok full rule precedes candidate application despite preceding gate-map/output ordering; no later criterion repairs its npm outcome.",
+    "No exclusions are recast as no-selection ballots.",
+    "Research voting has no same-family adjustment; declared panel-seat identities are not authenticated runtime-family or canary capability evidence.",
+    "First panel-order and independently authored reverse-order semantic derivations reconcile; separate arithmetic algorithms independently reconcile every tally/removal.",
+    "R1 durable ledger records no delegated agent dispatch; R2 used no delegated agents. No C51 dispatch was invoked in this cycle.",
+    "Raw response text is external and not committed."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-09-30T23:02:49+00:00",
+  "decisions_locked": 2,
+  "investigate": 0,
+  "decision_counting": {
+    "unit": "fully locked research question",
+    "carried_fully_locked_questions": [
+      "Q1"
+    ],
+    "newly_completed_questions": [
+      "Q2"
+    ],
+    "fully_locked_questions": [
+      "Q1",
+      "Q2"
+    ],
+    "policy_counted_as_extra_question": false,
+    "open_components": [],
+    "force_dispositions": 0
+  },
+  "response_accounting": {
+    "models": [
+      {
+        "model": "Gemini",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Full demonstrated cycle, no local disqualifier, unique demonstrated manager selects; zero eligible or lost root yields Null. Multiple candidates use recorded boundary overhead. Equal/absent overhead handling is unspecified and is not adopted.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [
+          "No current rule/outcome contradiction; future multiple-candidate tie handling is incomplete."
+        ],
+        "rule_lines": [
+          14,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          24,
+          25
+        ],
+        "gate_lines": [
+          40,
+          41,
+          42,
+          43
+        ],
+        "application_lines": [
+          53,
+          54,
+          55,
+          56,
+          61,
+          62,
+          63,
+          66,
+          70,
+          74
+        ],
+        "full_tie_safe_rule_support": false,
+        "issue_code": null
+      },
+      {
+        "model": "DeepSeek",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Unique complete repeated installation/build record at selected root against a locked Astro version; zero or unresolved multiple records yields no selection.",
+        "rule_admissible_for_shared_singleton_core": false,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": false,
+        "admissible_outcome": null,
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [
+          "The prior rule requires a locked Astro version. E2 locks Astro as framework; E1 reports an observed dependency range, not a locked version. This extra prerequisite is unavailable; exclude the claimed npm application, do not repair locked into observed."
+        ],
+        "rule_lines": [
+          124
+        ],
+        "gate_lines": [
+          147,
+          148,
+          149,
+          150
+        ],
+        "application_lines": [
+          158,
+          159,
+          160
+        ],
+        "full_tie_safe_rule_support": false,
+        "issue_code": "unsupported-locked-framework-version-prerequisite"
+      },
+      {
+        "model": "Mistral",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Unique repeated normalized full local cycle at designated root, local lockfile and no disqualifier; zero yields Null, multiple yields INVESTIGATE.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [],
+        "rule_lines": [
+          210,
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220
+        ],
+        "gate_lines": [
+          241,
+          242,
+          243,
+          244
+        ],
+        "application_lines": [
+          254,
+          255,
+          256
+        ],
+        "full_tie_safe_rule_support": true,
+        "issue_code": null
+      },
+      {
+        "model": "Grok",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Positive repeated local initialization/install/build/static verification at selected root with local lockfile; one selects, zero or multiple retains none.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [
+          "Gate map and declared result precede the complete rule text, but explicit rule precedes candidate application and produces npm without a later condition."
+        ],
+        "rule_lines": [
+          318,
+          319,
+          321,
+          322,
+          323,
+          324,
+          325,
+          326
+        ],
+        "gate_lines": [
+          312,
+          313,
+          314,
+          315
+        ],
+        "application_lines": [
+          328,
+          330,
+          331,
+          332
+        ],
+        "full_tie_safe_rule_support": true,
+        "issue_code": null
+      },
+      {
+        "model": "MEMO",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Repeated full in-boundary demonstrated adequacy and no recorded disqualifier; one selects, zero yields Null, multiple INVESTIGATE.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [],
+        "rule_lines": [
+          373,
+          375,
+          379,
+          380,
+          381,
+          382,
+          386,
+          387,
+          388,
+          390,
+          394,
+          395,
+          396,
+          398,
+          400
+        ],
+        "gate_lines": [
+          448,
+          449,
+          450,
+          451
+        ],
+        "application_lines": [
+          459,
+          460,
+          461,
+          465
+        ],
+        "full_tie_safe_rule_support": true,
+        "issue_code": null
+      },
+      {
+        "model": "Z.AI",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Declares Demonstrated-Unique-Feasibility ADOPT; later tables suggest execution, verified build/lockfile/test and no falsifier; fallback appears during comparison.",
+        "rule_admissible_for_shared_singleton_core": false,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": false,
+        "admissible_outcome": null,
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [
+          "No complete prior rule block exists despite G4 claiming eligibility and 0/1/2+ handling were stated above. The aggregator would have to assemble it from application tables. Exclude qualified prior-rule and outcome support; substantive gate maps make this a rule deficiency, not an echo."
+        ],
+        "rule_lines": [],
+        "gate_lines": [
+          574,
+          575,
+          576,
+          577
+        ],
+        "application_lines": [
+          585,
+          587,
+          588,
+          589,
+          590,
+          591
+        ],
+        "full_tie_safe_rule_support": false,
+        "issue_code": "missing-complete-prior-rule"
+      },
+      {
+        "model": "Claude.ai",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Repeated full execution at selected root; exactly one eligible selects, zero or multiple selects none, no pin/declaration/execution selected.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [],
+        "rule_lines": [
+          684,
+          686,
+          687,
+          688,
+          689,
+          690,
+          691,
+          692,
+          693,
+          694,
+          695,
+          696
+        ],
+        "gate_lines": [
+          720,
+          721,
+          722,
+          723
+        ],
+        "application_lines": [
+          729,
+          730,
+          731,
+          732
+        ],
+        "full_tie_safe_rule_support": true,
+        "issue_code": null
+      },
+      {
+        "model": "Kimi",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Full locally demonstrated bounded chain; one selects, zero yields Null, multiple INVESTIGATE; root loss fallback and explicit non-inheritance.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [
+          "Unverified alternative lockfile-format statement is outside the npm lock and is not adopted."
+        ],
+        "rule_lines": [
+          787,
+          789,
+          790,
+          791,
+          792,
+          793,
+          794
+        ],
+        "gate_lines": [
+          839,
+          840,
+          841,
+          842
+        ],
+        "application_lines": [
+          809,
+          810,
+          811,
+          815,
+          820,
+          825,
+          830,
+          831
+        ],
+        "full_tie_safe_rule_support": true,
+        "issue_code": null
+      },
+      {
+        "model": "GPT",
+        "rule_disposition": "ADOPT",
+        "declared_rule_family": "unique-demonstrated-adequacy",
+        "rule_summary": "Respect carried scope, require repeated local install/build/static/browser checks and no contradiction; one qualifier selects, zero/multiple/lost root yields no selection.",
+        "rule_admissible_for_shared_singleton_core": true,
+        "declared_outcome": "npm",
+        "rule_yields_supported_outcome": true,
+        "admissible_outcome": "npm",
+        "prospective_lockfile": "frontend/package-lock.json",
+        "echo_only": false,
+        "gates_mapped": [
+          "Q1-root:E3/E6; physical boundary E5",
+          "fact-not-authority:E1 repeated successful local chain; adoption normative",
+          "boundary:E1 app-local lockfile/build paths; exclusions E3/E6",
+          "sufficiency:E1 only npm tested; other manager records absent; E5 no preference"
+        ],
+        "issues": [],
+        "rule_lines": [
+          940,
+          942,
+          943,
+          944,
+          945,
+          946,
+          947,
+          948,
+          949
+        ],
+        "gate_lines": [
+          971,
+          972,
+          973,
+          974
+        ],
+        "application_lines": [
+          982,
+          983,
+          984
+        ],
+        "full_tie_safe_rule_support": true,
+        "issue_code": null
+      }
+    ],
+    "echo_only_votes": [],
+    "raw_provenance": {
+      "raw_path": "/private/tmp/portfolio-sol-high/panel/research-r2-panel.md",
+      "raw_bytes": 144235,
+      "raw_sha256": "625c8c6e532d88fac559b75d5aa1a145ca2b6d857ea8f895bb056548cb159d62",
+      "intake_sha256": "c029413500ca2168dbbdfa17f7a3834376b8ae61e182f559601652a43f8c6e96",
+      "responses": [
+        {
+          "model": "Gemini",
+          "heading_line": 1,
+          "last_line": 118,
+          "bytes": 10291,
+          "sha256": "2825da102ead6a8da1df5d19149b0da91b5c7dacf66c4c74686bd02d34fdaa35"
+        },
+        {
+          "model": "DeepSeek",
+          "heading_line": 119,
+          "last_line": 197,
+          "bytes": 12390,
+          "sha256": "d578890afac8528ab6e9d6d5de84128098e3fa3b2484c1d70f165773fb8508bb"
+        },
+        {
+          "model": "Mistral",
+          "heading_line": 198,
+          "last_line": 297,
+          "bytes": 15024,
+          "sha256": "ee383921418fead35f81f901f939cf8c5d86bb14196d84265959d1c885540130"
+        },
+        {
+          "model": "Grok",
+          "heading_line": 298,
+          "last_line": 360,
+          "bytes": 7619,
+          "sha256": "7febb19e5bbece8b44a939642d70b16e305c27e23aab88541502fbaf0e633e60"
+        },
+        {
+          "model": "MEMO",
+          "heading_line": 361,
+          "last_line": 540,
+          "bytes": 33399,
+          "sha256": "c770775269080b10c9dd7ac2174c888fe0d457682749542a8cf681cfb8382b4d"
+        },
+        {
+          "model": "Z.AI",
+          "heading_line": 541,
+          "last_line": 677,
+          "bytes": 24744,
+          "sha256": "4b8901ed7cd4e25a5458bad7ef30b96063004169ab761c46292eb3a849197e00"
+        },
+        {
+          "model": "Claude.ai",
+          "heading_line": 678,
+          "last_line": 772,
+          "bytes": 11782,
+          "sha256": "96b09297992f1e3faea720c80fe79e66d7addb0312de0f157ee5b5e0cdd818ae"
+        },
+        {
+          "model": "Kimi",
+          "heading_line": 773,
+          "last_line": 931,
+          "bytes": 16912,
+          "sha256": "d8d8e4fd96b92a6530dd0f989772ff5966ce5421623bb2598e9de808de760ce6"
+        },
+        {
+          "model": "GPT",
+          "heading_line": 932,
+          "last_line": 1020,
+          "bytes": 11998,
+          "sha256": "6498b5303935933240d828b4703ca2bfc125b14bde02b3e2f66d1b0d7bfb9297"
+        }
+      ]
+    }
+  },
+  "tally_reconciliation": {
+    "semantic_method": "Two separately authored full raw readings: panel order, then reverse; first derivation was not input to second.",
+    "arithmetic_method": "Counter/set aggregation over first semantic product; independent incremental-fold and per-removal loop over second product.",
+    "fields_compared": [
+      "family",
+      "valid",
+      "outcome",
+      "echo",
+      "rule_adopt"
+    ],
+    "mismatches": [],
+    "artifact_paths": [
+      "/private/tmp/portfolio-sol-high/audit/derivation-1.json",
+      "/private/tmp/portfolio-sol-high/audit/derivation-2.json",
+      "/private/tmp/portfolio-sol-high/audit/arithmetic-derivation-1.json",
+      "/private/tmp/portfolio-sol-high/audit/arithmetic-derivation-2.json"
+    ]
+  },
+  "single_removal_robustness": [
+    {
+      "removed": "Gemini",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 6,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "DeepSeek",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 7,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 6,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 7,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 7,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "Mistral",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 5,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "Grok",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 5,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "MEMO",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 5,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "Z.AI",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 7,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 6,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 7,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 7,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "Claude.ai",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 5,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "Kimi",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 5,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    },
+    {
+      "removed": "GPT",
+      "remaining_active": 8,
+      "qualified_rule_core_support": 6,
+      "qualified_rule_core_strict_majority": true,
+      "fully_specified_tie_safe_rule_support": 5,
+      "fully_specified_tie_safe_rule_strict_majority": true,
+      "admissible_npm_outcome_support": 6,
+      "npm_strict_majority_conservative": true,
+      "eligible_outcome_denominator": 6,
+      "npm_strict_majority_eligible": true
+    }
+  ],
+  "implementation_authority": {
+    "research_closed": true,
+    "implementation_complete": false,
+    "application_root": "frontend/",
+    "package_manager": "npm",
+    "installer_lockfile": "frontend/package-lock.json prospective, only in a later admitted implementation",
+    "static_framework": "Astro; stack-selection carried lock",
+    "product_scaffold": "Location and manager selection blockers settled; actual scaffold/install still requires applicable implementation admission and instructions consistent with these locks. No execution performed or authorized by this isolated research task.",
+    "manager_pin": "not selected",
+    "packageManager_declaration": "not created or required",
+    "root_workspace": "unauthorized",
+    "root_lockfile": "unauthorized",
+    "lockfile_outside_application_root": "unauthorized",
+    "earlier_topic_recovery": "pending A/B; neither selected"
+  },
+  "operator_exception": {
+    "source": "/private/tmp/portfolio-sol-high/BRIEF.md; reviews/decisions.md operator-directed sequencing exception",
+    "scope": "resolve R2 end to end, selected close, normal-hook research-result commit, external audit RESULT and DONE, then stop",
+    "commit_timing_override": true,
+    "decision_lock_threshold_override": false,
+    "product_execution_authority": false
+  },
+  "compaction": {
+    "native_available": false,
+    "method": "Disclosed durable checkpoint fallback, not native context compaction",
+    "before_tally": "/private/tmp/portfolio-sol-high/audit/CHECKPOINT-before-tally.md",
+    "before_ledger": "/private/tmp/portfolio-sol-high/audit/CHECKPOINT-before-ledger.md",
+    "before_close_planned": "/private/tmp/portfolio-sol-high/audit/CHECKPOINT-before-close.md"
+  },
+  "raw_panel_text": "external; not committed"
+}
