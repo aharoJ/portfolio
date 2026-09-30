@@ -6,6 +6,8 @@ Status: SCOPED — awaiting approval (2026-09-29)
 
 Goal: Select the smallest reviewable, self-verifiable stack for `apps/web`, `apps/api`, the API-owned database/ORM, and—if the first real web/API boundary warrants it—one transport-contract authority, while preserving the locked monorepo structure.
 
+Staged plan: v0.2 builds only what its stated product facts justify. The later paid review/QA service (login, submissions, payments) is a v0.3 trigger, not v0.2 sizing input; when it becomes a real requirement, open a separate research topic for API, authentication, and persistence. If stack-selection Q2 locks the null API outcome, reopen monorepo-structure's two-deployable premise before treating `apps/api` as an implementation target.
+
 ## monorepo-structure: R1 real-panel provenance supersession
 
 Status: COMPLETE (2026-09-29)

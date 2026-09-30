@@ -71,7 +71,7 @@ Candidate order does not express preference. Evaluate every named option, includ
 
 **Evidence gate — PASS iff all four operator-stated conditions are true:** (1) public visitors need to read short articles; (2) v0.2 is read-only; (3) publishing is operator-owned and infrequent; and (4) no visitor action persists. All four are supplied facts. `FAIL` only if a supplied fact is contradicted. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]
 
-On `PASS`, choose one: Astro static-first/islands; Next.js; static HTML/CSS/JavaScript; or Vite + React. On `FAIL`, choose the null option. Compare the supplied product facts against rendering model, browser-testability, build transparency, API-boundary clarity, and static deployment portability. Do not add a server responsibility to `apps/web` merely to justify a candidate.
+On `PASS`, choose one: Astro static-first/islands; Eleventy; Hugo; Next.js; static HTML/CSS/JavaScript; or Vite + React. On `FAIL`, choose the null option. Compare the supplied product facts against rendering model, browser-testability, build transparency, API-boundary clarity, static deployment portability, and content-authoring format (Markdown versus MDX). Do not add a server responsibility to `apps/web` merely to justify a candidate.
 
 ### Q2: API runtime
 
