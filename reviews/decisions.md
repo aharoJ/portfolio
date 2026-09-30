@@ -2,7 +2,9 @@
 
 ## stack-selection — R2 product-evidence resolution (2026-09-29)
 
-**Status:** locked by the R2 real-panel gate resolution; action: close (research + implementation).
+**Status:** locked by the R2 real-panel gate resolution; research action: close. **Type:** research + implementation.
+
+**Implementation admission:** blocked pending a monorepo-structure topology research reopen. The research action closes R2; it does not declare the full topic or its implementation complete.
 
 **Evidence boundary:** The four operator-stated product facts are the supplied acceptance record for this round. They remain operator evidence, not independently verified product facts. The panel evaluated the gates by condition-to-fact or condition-to-absence mapping; no respondent was counted merely for echoing an intake verdict.
 
@@ -20,7 +22,9 @@
 | Q3 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
 | Q4 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
 
-**Reopen record:** Q2's null result meets the roadmap's monorepo-structure two-deployable reopen trigger. It is recorded only: before `apps/api` is treated as an implementation target, reopen that premise under the existing protocol. This cycle does not reopen monorepo-structure or change its locked constraints.
+**Gate-independence interpretation:** Q2–Q4's 8/8 null outcomes are agreement on conditional gate application, not independent product-fact confirmation. The intake supplied one-sided facts and a precomputed FAIL path unless a conflicting supplied v0.2 artifact existed. The decisions remain valid conditional on that acceptance record; future research must separately test or challenge the product-fact premise before using unanimity as independent evidence.
+
+**Reopen disposition:** Q2's null result does require a monorepo-structure topology research reopen before any scaffold. The active monorepo lock says `apps/web` and `apps/api` are the two deployable roots, while its implementation gate permits creating them only if the two-deployable premise survives the first scaffold and otherwise directs a topology reopen before substantial paths accumulate. The null API means that premise is not met; it is not merely a rule for where a hypothetical future API would live. No `apps/web` or `apps/api` scaffold may begin until the reopened research round settles the topology.
 
 **Revisit triggers:** a supplied v0.2 artifact requiring private access, form submission, payment processing, visitor-specific state/content, or a persisting visitor action; a named restart-surviving record plus migration/recovery test; or a real browser-to-API boundary with transport shapes and a checked browser artifact. Each trigger re-gates the affected question; it does not retroactively turn roadmap intent into evidence.
 

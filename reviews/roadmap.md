@@ -2,13 +2,13 @@
 
 ## stack-selection: v0.2 full-stack selection
 
-Status: RESEARCH COMPLETE — implementation pending (2026-09-29)
+Status: RESEARCH COMPLETE — implementation BLOCKED pending monorepo-structure topology reopen (2026-09-29)
 
 Type: research + implementation
 
 Goal: Select the smallest reviewable, self-verifiable stack for `apps/web`, `apps/api`, the API-owned database/ORM, and—if the first real web/API boundary warrants it—one transport-contract authority, while preserving the locked monorepo structure.
 
-Result: R1 left all four choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for `apps/web` (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists all evaluated each binary gate at condition level; no echo-only vote was counted. The locks establish how to apply the supplied facts, not independent verification of those facts. Research is complete; implementation remains pending and must start through `$review implement stack-selection`.
+Result: R1 left all four choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for `apps/web` (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists all evaluated each binary gate at condition level; no echo-only vote was counted. Q2–Q4 unanimity is conditional gate agreement, not independent confirmation of the operator facts: the intake precomputed FAIL absent a conflicting supplied artifact. Research is complete, but implementation is blocked until the monorepo topology reopen settles.
 
 Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substantive responses; 1 waived non-response; 4 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
 
@@ -25,7 +25,7 @@ Upstream filing state: not applicable
 
 ### Monorepo premise record
 
-The Q2-null condition meets the existing monorepo-structure two-deployable reopen trigger. It is recorded here only. Before `apps/api` is treated as an implementation target, reopen that premise under the existing protocol; do not create a monorepo topic, alter the locked monorepo decision, or scaffold an API as part of this cycle.
+The Q2-null condition meets the existing monorepo-structure two-deployable reopen trigger. **Disposition: REOPEN REQUIRED.** The monorepo lock names `apps/web` and `apps/api` as the two deployable roots, and its implementation gate requires the two-deployable premise to survive the first scaffold; otherwise it directs topology research to reopen before substantial paths accumulate. The null API means that condition is not met. Do not scaffold `apps/web` or `apps/api` until the reopened research round settles the topology.
 
 ### Premise Challenge Record
 

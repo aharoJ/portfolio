@@ -1,5 +1,11 @@
 # Changelog -- portfolio reviews
 
+## 2026-09-29 — stack-selection implementation-admission correction
+
+The R2 close is a completed **research** action with `Type: research + implementation`; it is not a complete implementation topic. The prior compact wording is separated in `decisions.md` to preserve that distinction. Review of the monorepo lock and its implementation gate found that Q2's null API outcome fails the required two-deployable premise: a monorepo-structure topology research reopen is required before any scaffold, including `apps/web`. R2's Q2–Q4 8/8 null tally remains a valid conditional gate result but is not independent panel confirmation of the operator product facts, because the intake precomputed FAIL absent a conflicting supplied artifact. No product, infrastructure, or protocol code changed.
+
+**Modified review artifacts:** `reviews/decisions.md`, `reviews/roadmap.md`, `reviews/runbook/stack-selection.md`, `reviews/runbook/monorepo-structure.md`, and this changelog.
+
 ## 2026-09-29 — stack-selection research convergence
 
 **Type:** research + implementation

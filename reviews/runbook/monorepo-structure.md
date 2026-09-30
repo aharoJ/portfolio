@@ -31,6 +31,10 @@ This research-only runbook records the real-panel R1 decisions for the eventual 
 | Create `infra/` | The first deployment/VPS file needs a repository-level owner | Create `infra/` for deployment invocation only | Keep no placeholder directory |
 | Reassign database lifecycle | A second independent writer or migration owner exists | Open a new ownership research topic | Keep API as sole owner |
 
+## Current trigger status
+
+**2026-09-29 — stack-selection Q2 null:** the two-deployable premise is not met for v0.2 because no API runtime is justified. Under the application-roots gate above, reopen topology research before substantial paths accumulate. This is not a reinterpretation of `apps/api` as a merely hypothetical location: the current lock names two deployable roots and makes their creation conditional on the premise surviving the first scaffold. No scaffold begins until the reopened research round resolves the topology.
+
 ## Verification when implementation eventually begins
 
 - Prove each application builds, tests, and deploys without importing another application's internals.
