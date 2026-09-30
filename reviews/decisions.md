@@ -28,6 +28,16 @@
 
 **Revisit triggers:** a supplied v0.2 artifact requiring private access, form submission, payment processing, visitor-specific state/content, or a persisting visitor action; a named restart-surviving record plus migration/recovery test; or a real browser-to-API boundary with transport shapes and a checked browser artifact. Each trigger re-gates the affected question; it does not retroactively turn roadmap intent into evidence.
 
+## monorepo-structure — void R2 bundle (2026-09-29)
+
+**Status:** VOID — no decision, lock, panel result, or implementation authority.
+
+**Reason:** `cf69b70` added `reviews/monorepo-structure/research/monorepo-structure-r2.md` and the matching compiled intake/manifest after the active R1 ledger recorded `action: "close"`, with a runbook and locked decisions already present. It also bypassed the required `$review scope` sequence: no scope summary was presented and no closed-list operator affirmation authorized a bundle.
+
+**Disposition:** retain the draft, intake, and manifest in Git as procedural-history evidence only. They are void, must not be pasted, tallied, resolved, or cited as research evidence, and do not amend the R1 locks.
+
+**Recovery:** `$review scope monorepo-structure-topology-reopen` is the fresh research entry. It is limited to v0.2 application topology and the one-package root pnpm-workspace question; it must stop for explicit scope affirmation before any bundle.
+
 ## monorepo-structure — R1 real-panel provenance supersession (2026-09-29)
 
 **Status:** locked by real web-panel R1; action: close (research-only).

@@ -74,11 +74,17 @@ Upstream filing state: not applicable
 | Caused waste? | N |
 | Notes | The panel tested the source report's `apps/` anchoring risk and still selected the two deployable roots 6/8, but rejected placeholder packages and tool-specific overcommitment. |
 
-## monorepo-structure: R2 topology reopen
+## monorepo-structure: void R2 intake bundle
 
-Status: REOPENED — research R2 intake ready for panel paste (2026-09-29)
+Status: VOID — retained as procedural-history only; do not paste, tally, resolve, or implement (2026-09-29)
 
-Goal: Re-evaluate only the v0.2 application layout and single-package root pnpm-workspace policy after stack-selection locked one static Astro deployable and no v0.2 API. Keep the paid review/QA service as a v0.3 revisit trigger, not a sizing input.
+Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its manifest after the R1 research ledger had closed and without the required `$review scope` summary and explicit affirmation. The artifacts remain in Git for auditability but are not a valid round, do not reopen R1, and create no decision or implementation authority.
+
+## monorepo-structure-topology-reopen: v0.2 topology reopen
+
+Status: SCOPED — awaiting explicit operator affirmation; no bundle authorized (2026-09-29)
+
+Goal: Re-evaluate only the first v0.2 application layout and one-package root pnpm-workspace question after the locked no-API result invalidated the former two-deployable premise. The possible v0.3 service remains a revisit trigger rather than sizing input.
 
 ## monorepo-structure: Monorepo foundation decision
 
