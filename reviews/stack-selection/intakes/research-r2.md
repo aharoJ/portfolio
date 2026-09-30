@@ -1,47 +1,89 @@
 # Research: Stack Selection (Round 2)
 
-> **For**: Independent tie-breaking cross-validation by web LLMs
+> **Claim-surface disclosure (automated, D-CCSD-Q4).** Author lines
+> carrying a mechanically detectable factual assertion, with or without a
+> supporting record are marked `[UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]`.
+>
+> A `CITED RECORD` line reproduces a command, an exit status and an
+> artifact path **that the author supplied**. The compiler executes
+> nothing and cannot vouch for who produced that artifact, so a cited
+> record is **not evidence and never clears the marker**. Its claim
+> line stays marked exactly like an unsupported one. Test it.
+>
+> **The detector is not complete, and an absent marker is not a
+> verification stamp.** It covers four shapes only -- COUNT, GATE, STATUS, REF -- and does
+> not scan fenced code, inline code spans, headings, or the
+> marker-planning region. Test any claim you intend to rely on
+> against primary evidence, marked or not.
+>
+> This build: 4 claim-bearing line(s) detected, all 4 labeled; 0
+> author-cited record(s) rendered, none of which clears a marker.
+
+
+> **For**: Independent evidence-gate cross-validation
 > **From**: Angel (aharoJ) + Codex -- portfolio project
 > **Date**: 2026-09-29
-> **Context**: R1 produced no robust majority for any of four stack decisions. This round narrows the decision predicates; it does not reopen the locked monorepo structure.
+> **Context**: R1 did not produce a robust majority for any stack choice. R2 tests whether the repository contains enough product evidence to select a stack at all; it does not reopen locked monorepo decisions.
 
 ## Locked constraints
 
-- `apps/web` and `apps/api` remain the deployable roots; neither may import the other's internals.
-- Use one root pnpm workspace and lockfile for pnpm-managed packages. A non-pnpm API need not join it.
-- Do not create an empty `packages/` directory or generic shared/types/utils/common package. A named package needs a demonstrated reusable boundary.
-- The API is the sole initial semantic and migration owner of any database.
-- Public contracts are transport-only: no ORM, persistence, domain-internal, or UI types cross the boundary.
-- Deployment, authentication, payments, cloud, CI platforms, and visual design remain out of scope.
+- `apps/web` and `apps/api` are the deployable roots; neither imports the other's internals.
+- pnpm-managed packages use one root workspace and lockfile; a non-pnpm API need not join it.
+- Do not create an empty `packages/` directory or generic shared/types/utils/common package.
+- The API is the sole semantic and migration owner of any database.
+- Any public contract is transport-only: it excludes ORM, persistence, domain-internal, and UI types.
+- Deployment, authentication, payments, cloud, CI platforms, and visual design are out of scope.
 
-## R1 evidence and defect correction
+## Evidence baseline
 
-R1 split across every candidate: web (Astro 3, Vite+React 2, null 2, static JS 1); API (Hono 3, Fastify 2, null 2, Node `http` 1); DB (SQLite explicit SQL 2, SQLite+Drizzle 1, null 2, investigate 2); contract (OpenAPI 2, runtime schemas 2, null 2, investigate 1). These are a summary, not raw panel text.
+At intake authoring, the repository contains no product source, acceptance scenario, endpoint definition, persistence requirement, or browser-consumer contract. Treat that as the complete evidence baseline. Do not infer an unstated feature from v0.2's planned scaffold or from a candidate framework.
 
-The prior ASP.NET Core comparator citation used `?view=aspnetcore-6.0`, an EOL version, and several panelists encountered a sign-in gate. Treat it as invalid intake evidence. Use only the current, accessible Microsoft Learn OpenAPI documentation for any ASP.NET-specific claim, and state the exact version/source used.
+The R1 aggregate was split for every question; raw responses are external and are not part of this intake.
 
-## Decision rule
+## Web-Leverage / Industry Landscape
 
-For each question, choose exactly one `ADOPT — <option>` or `INVESTIGATE — <specific missing product fact>`. A null option is valid only if you name the concrete first-slice fact that makes it correct. Do not vote for a framework merely because v0.2 plans a scaffold: identify the smallest demonstrable behavior that earns it. Explain compatibility across all four choices and provide one deterministic verification check per choice.
+Use live, tool-backed web research only if available in this session and declare that capability yourself; do not infer it from a model name. Every web-derived claim needs a verifiable URL, author, and date where available, and must be separated from inference. Do not fabricate, launder, or include credential-bearing URLs; use `No live web access used` when applicable.
+
+Project constraints outrank external examples and vendor documentation. External material may verify a candidate capability but cannot create a missing product requirement or override a locked boundary.
+
+The prior Microsoft Learn ASP.NET 6 link is excluded: it is EOL-scoped. The current .NET 10 OpenAPI page was HTTP-fetchable during this intake review, but its HTML also contains an authorization banner; it is therefore not intake authority. A panelist proposing ASP.NET may cite an accessible current primary source and must state the exact version. The candidate remains neutral without that claim.
+
+## Uniform decision rule
+
+For each question, first evaluate its evidence gate exactly as written. `PASS` means every listed condition is present in a committed or supplied acceptance record; `FAIL` means any condition is absent. Do not substitute plausibility, roadmap intent, or a framework's capability.
+
+- On `FAIL`, recommend `ADOPT — Status Quo / Null Option` and name the missing condition.
+- On `PASS`, select exactly one listed non-null option and give the smallest verification check that distinguishes it from the other options.
+- `INVESTIGATE` is allowed only when supplied evidence conflicts; name the conflicting artifacts. Absence is `FAIL`, not INVESTIGATE.
+
+Candidate order does not express preference. Evaluate every named option, including the null option, against the same gate and locked constraints.
 
 ## Research questions
 
-### Q1: Web threshold
+### Q1: Browser stack
 
-Assume the first slice must show one browser-rendered portfolio item, one user-triggered interaction, and one browser test. Which single option best meets that threshold: static HTML/CSS/JavaScript; Astro static-first/islands; Vite+React; or defer `apps/web` because that threshold still fails to earn a web app? Compare only build transparency, browser-testability, API-boundary clarity, and static deployment portability. Reject Next.js for this slice unless you can show a capability unavailable from the listed options that does not conflict with the separate `apps/api` root.
+**Evidence gate — PASS iff one acceptance record names all four facts:** (1) a browser route; (2) the exact user action; (3) the observable DOM or URL result; and (4) the browser-test command that proves that result. The current baseline fails this gate. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]
 
-### Q2: API threshold
+If the gate passes, choose one: Astro static-first/islands; Next.js; static HTML/CSS/JavaScript; or Vite + React. If it fails, choose the null option. Compare only the recorded behavior's rendering model, browser-testability, build transparency, API-boundary clarity, and static deployment portability. Do not add a server responsibility to `apps/web` merely to justify a candidate.
 
-Assume the first slice must expose one validated JSON endpoint consumed by the browser and must make a generated or checked transport artifact reproducible in local tests. Which single option best meets that threshold: minimal Node `http`; Hono on Node; Fastify on Node; ASP.NET Core Minimal APIs on the current supported .NET release; or no API because the stated threshold is still insufficient? Treat `node:http` as the baseline. If selecting ASP.NET Core, verify the claimed current OpenAPI path against an accessible current Microsoft Learn source and account for its second toolchain.
+### Q2: API runtime
 
-### Q3: Persistence gate
+**Evidence gate — PASS iff one acceptance record names all four facts:** (1) HTTP method and path; (2) successful transport response shape; (3) one invalid-input or server-owned behavior; and (4) the local command that tests both outcomes. The current baseline fails this gate. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]
 
-Given Q2's one-endpoint threshold, should v0.2 require one durable user-authored record, or explicitly keep the endpoint read-only/fixture-backed? Choose exactly one: no database; SQLite plus explicit SQL and an API-owned numbered-SQL migration runner; SQLite plus Drizzle; PostgreSQL plus thin query/migration layer; or PostgreSQL plus ORM. State the behavioral fact that justifies persistence and the exact migration/retry checks. A database cannot be selected solely to make the audit look more complete.
+If the gate passes, choose one: ASP.NET Core Minimal APIs on the named current .NET release; Fastify on Node; Hono on Node; or minimal Node `http`. If it fails, choose the null option. Compare validation surface, test seam, build/runtime complexity, toolchain count, and compatibility with Q4; treat no framework as a genuine baseline. An ASP.NET recommendation must supply an accessible current primary source for any claimed OpenAPI capability; lack of that source disqualifies only that claim, not the candidate.
 
-### Q4: Contract authority timing
+### Q3: Persistence and migration
 
-For exactly one browser consumer and one API endpoint, choose exactly one: API-owned OpenAPI with generated web types; API-owned runtime transport schemas kept local to `apps/api` with no package; or defer authority until the endpoint exists. The answer must preserve no cross-app internal imports and transport-only material. State whether the selected authority is lockable before code exists, and the concrete trigger that earns `packages/contracts`.
+**Evidence gate — PASS iff the accepted API behavior requires a durable write that remains observable after process restart, and its record names both the data to retain and a migration/recovery test.** The current baseline fails this gate. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]
 
-## Output format
+If the gate passes, choose one: PostgreSQL plus a thin query/migration layer; PostgreSQL plus an ORM; SQLite plus Drizzle; or SQLite plus explicit SQL and an API-owned numbered-SQL migration runner. If it fails, choose the null option. State the migration command/test and the failure it catches. The API remains the migration owner under every non-null choice.
 
-For each question provide: recommendation; one-sentence rationale tied to the stated threshold; cross-question coupling; one exact command/test/artifact check and its failure mode; and `Sources used` with primary URLs or `No live web access used`. Do not invent sources. Do not paste raw responses or alter the locked constraints.
+### Q4: Contract authority
+
+**Evidence gate — PASS iff accepted records define both one browser consumer and one API endpoint, including request and successful-response transport shapes, and identify the generated or checked artifact consumed by the browser.** The current baseline fails this gate. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]
+
+If the gate passes, choose one: API-owned OpenAPI with generated web-facing types; or API-owned runtime transport schemas local to `apps/api` with a checked hand-maintained browser client. If it fails, choose the null option. A `packages/contracts` package is out of scope unless a second real consumer requires delivery of the same transport-only artifact; name that consumer and artifact if proposing it.
+
+## Required output
+
+For each question provide: `PASS` or `FAIL` with each gate condition checked; one recommendation in the allowed form; the exact missing condition or the selected-option differentiator; cross-question compatibility; one local command/test/artifact check and its failure mode; and `Sources used` with sanitized primary URLs or `No live web access used`. Do not introduce unlisted stacks, product requirements, or raw panel text.
