@@ -1,5 +1,11 @@
 # Roadmap -- portfolio
 
+## stack-selection: v0.2 full-stack selection
+
+Status: SCOPED — awaiting approval (2026-09-29)
+
+Goal: Select the smallest reviewable, self-verifiable stack for `apps/web`, `apps/api`, the API-owned database/ORM, and—if the first real web/API boundary warrants it—one transport-contract authority, while preserving the locked monorepo structure.
+
 ## monorepo-structure: R1 real-panel provenance supersession
 
 Status: COMPLETE (2026-09-29)
