@@ -82,7 +82,7 @@ Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its 
 
 ## monorepo-structure-topology-reopen: v0.2 topology reopen
 
-Status: R1 RESEARCH COMPLETE; R2 SCOPED — awaiting explicit affirmation before bundle. Product scaffold remains blocked by the R1 Q1/Q2 Null locks pending the R2 research result (2026-09-30)
+Status: R1 RESEARCH COMPLETE; same-slug R2 scope skeleton VOID. Product scaffold remains blocked by the R1 Q1/Q2 Null locks pending the fresh `monorepo-structure-topology-tiebreak` research result (2026-09-30)
 
 Type: research + implementation
 
@@ -115,13 +115,23 @@ Upstream filing state: not applicable
 
 ### R2 scope — topology tie-break and package-manager authority (2026-09-30)
 
-Status: SCOPED — awaiting explicit affirmation before bundle.
+Status: VOID — retained as procedural history. The closed topic's next non-close bundle or resolve routes to implementation, not to a research R2.
 
 Goal: Reconsider only Q1's decision mechanism when a measured one-app static slice is operationally equivalent across `frontend/`, `apps/web/`, and the repository root; first select a neutral tie-break rule and then apply it. Reconsider only Q2's package-manager authority in light of the observed npm-command installation and package-local lockfile, without selecting a root workspace or root lockfile.
 
 Evidence record: `docs/research/monorepo-structure-topology-spike.md`.
 
-Form: R2 under the existing `monorepo-structure-topology-reopen` slug. The protocol defines the slug as the topic identity and uses round-numbered files beneath that one topic directory; existing research therefore continues as a new round rather than a new slug.
+Form: SUPERSEDED. The scope content below is carried to the fresh `monorepo-structure-topology-tiebreak` topic; no same-slug research bundle is authorized.
+
+## monorepo-structure-topology-tiebreak: v0.2 topology tie-break and package-manager authority
+
+Status: SCOPED — awaiting explicit affirmation before bundle (2026-09-30)
+
+Goal: With `docs/research/monorepo-structure-topology-spike.md` as evidence of measured equivalence across `frontend/`, `apps/web/`, and the repository root, first select and justify a neutral tie-break rule and then apply it to one location or the Q1 Null Option. Separately decide whether the observed npm-command installation and package-local npm lockfile are package-manager authority, whether a deliberate selection is required, or whether to retain the Q2 Null Option. Root workspace and root lockfile selection are excluded.
+
+Evidence record: `docs/research/monorepo-structure-topology-spike.md`.
+
+Form: Fresh topic slug; its first research artifact is R1. The closed `monorepo-structure-topology-reopen` file state routes its next non-close bundle/resolve to implementation; this new topic has no runbook or closing ledger, so its first bundle routes to research.
 
 ## monorepo-structure: Monorepo foundation decision
 

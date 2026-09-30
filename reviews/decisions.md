@@ -114,3 +114,15 @@ Q2 directly blocks the root pnpm workspace/root-lockfile shape; it does not synt
 **Record:** `docs/research/monorepo-structure-topology-spike.md` records the tested revision, commands and exit codes, app/config/test payload, lockfile locations, output locations, static-output checksums, browser-test results, warnings, and unmeasured surfaces.
 
 **Scope of this approval:** The filing exception creates no new `reviews/<topic>/` artifact slot and records no Q1 or Q2 decision result.
+
+## monorepo-structure-topology-tiebreak — reopen-routing correction (2026-09-30)
+
+**Status:** procedural ruling; no Q1 or Q2 candidate is selected.
+
+**Evidence:** `monorepo-structure-topology-reopen` has a runbook with `Implementation Impact: yes`, a delimiter-matching locked-decision heading, no audit draft, and its latest research ledger records `action: "close"` in commit `e3d723f`. It is therefore research-complete under the protocol definition.
+
+**Protocol citations:** Research completion is defined at `/Users/aharoj/.skills/review-protocol/protocol.md:188`; the non-close research rule requires research not complete at `:219`; the marker-yes completed-topic rule routes to implementation at `:221`; unmatched non-close state halts at `:223`. The one-topic/one-directory rule is at `:162-177`.
+
+**Ruling:** For a non-close `$review bundle` or `$review resolve`, the completed `monorepo-structure-topology-reopen` topic cannot match the research-cycle rule. Its valid `Implementation Impact: yes` marker instead matches the implementation-cycle rule. A same-slug research R2 cannot be bundled or resolved as research from that file state.
+
+**Disposition:** The same-slug R2 scope skeleton remains recorded in `reviews/roadmap.md` and `LOG.md` as procedural history, but is VOID and superseded. The pending research scope is the fresh topic slug `monorepo-structure-topology-tiebreak`; it has no runbook or closed research ledger, and no Q1 or Q2 candidate is locked for that topic. Its first research artifact is R1, and its first bundle has the incomplete-research file state required for a research cycle.
