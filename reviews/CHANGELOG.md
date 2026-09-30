@@ -1,5 +1,13 @@
 # Changelog -- portfolio reviews
 
+## 2026-09-29 — monorepo topology null-gate deadlock harness finding
+
+The post-close challenge of `e3d723f` is **CONFIRMED** as a product-path deadlock. Q1's adopted Null does not select existing `frontend/` as an Astro location: that action was the distinct, rejected Candidate B. Q2's direct ban is root-workspace/root-lockfile scoped, but its no-substitute-manager lock and absence of a Q1 layout or manager selection mean a package-local installer lockfile is not an authorized escape. The R1 immutable ledger and both 9/9 locks remain unchanged.
+
+`Implementation Impact: yes` continues to admit implementation-cycle routing, not product scaffolding. v0.2 may perform only non-topology evidence work; it may not create Astro source/dependencies or a manager lockfile in `frontend/`, select a package manager, or create `apps/`, root workspace, or root lockfile. A documentation clarification corrects that boundary; a narrow `$review scope monorepo-structure-topology-reopen` reopen with fresh evidence is required to authorize any non-null action.
+
+**Modified review artifacts:** `LOG.md`, `reviews/decisions.md`, `reviews/runbook/monorepo-structure-topology-reopen.md`, `reviews/roadmap.md`, and this changelog. No raw panel response was added to the repository.
+
 ## 2026-09-29 — monorepo-structure topology reopen R1 convergence
 
 **Type:** research + implementation

@@ -96,3 +96,13 @@
 **Rationale:** The compiled research intake challenged the prior `apps/` recommendation. Four isolated bounded panel sessions responded; Q1 supported retaining root application names 3–1, and Q2–Q4 converged on conditional, ownership-first decisions. The robust-majority test remains true after removing any one panel response. See `reviews/monorepo-structure/research/monorepo-structure-r1.md`, `reviews/monorepo-structure/intakes/research-r1.md`, and `reviews/monorepo-structure/state/research/resolve-r1.json`.
 
 **Revisit triggers:** a third deployable; a second independent database writer or migration owner; evidence that pnpm is not the selected shared runtime; a real reusable public-contract artifact; measured task-graph duplication/caching need; or a project evidence record that duplicates rather than links durable evidence.
+
+## monorepo-structure-topology-reopen — null-gate deadlock harness clarification (2026-09-29)
+
+**Status:** interpretive correction only; it does not amend the R1 ledger, the two locked Null Options, or any panel tally.
+
+`Implementation Impact: yes` admits the completed topic to implementation-cycle routing. It does not authorize a product artifact that violates a Null lock. Q1's existing `frontend/` directory is not an implicitly selected Astro location: the R1 intake treated precisely that action as Candidate B, whereas the adopted Null retains only its minimal manifest. Creating an Astro app there is therefore a prohibited location-selecting scaffold.
+
+Q2 directly blocks the root pnpm workspace/root-lockfile shape; it does not syntactically ban every package-local lockfile. That narrower pathname observation does not authorize an Astro installer to choose npm, yarn, pnpm, or another manager: the Q2 lock forbids a substitute-manager escape, Q1 has no gate-passing layout, and E5 selects no manager. A package-local install artifact remains unauthorized as part of an unapproved application scaffold.
+
+**Remedy:** a clarification may correct "unblocked" to mean process routing only, but it cannot lift these locks. Any authority to create the Astro application, choose `frontend/` as its location, or choose a package manager requires a narrow `$review scope monorepo-structure-topology-reopen` reopen with the protocol's strong-contradiction acknowledgment, scope affirmation, and fresh evidence. Until then, only non-topology evidence work is permitted.

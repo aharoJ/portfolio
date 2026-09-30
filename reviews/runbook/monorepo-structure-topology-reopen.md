@@ -38,3 +38,11 @@ Reopen Q1 when a current build, deployment, ownership, or verification record pr
 ## Evidence boundary
 
 The R1 close records condition-level application of E1–E5 by nine responding panelists; it does not manufacture a missing operational constraint. Raw panel text remains outside the repository.
+
+## Harness clarification — null-gate deadlock (2026-09-29)
+
+`Implementation Impact: yes` unlocks implementation-cycle routing only. It does not authorize a product scaffold. In particular, the existing `frontend/` directory is not an implicit Astro location: the R1 intake made that a distinct non-null candidate, while Q1 locked no application creation or location selection.
+
+The Q2 root-workspace/root-lockfile ban does not syntactically enumerate every package-local lockfile, but no current record selects a package manager and the Q2 decision forbids treating an alternate manager as an escape. Do not create a package-local installer lockfile while installing Astro under the present locks.
+
+To authorize any such product action, first obtain a current pre-scaffold differentiator and reopen this topic through `$review scope`. A clarification cannot replace that research decision. Until then, implementation may only perform non-topology evidence work that does not choose an application location or package manager.
