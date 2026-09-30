@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "topic": "monorepo-structure-topology-reopen",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "gate": "FAIL",
+      "recommendation_votes": {
+        "DISMISS non-null candidates / select Status Quo / Null Option": 9,
+        "ADOPT non-null candidate": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "robust_majority_after_any_single_removal": true,
+      "locked": "ADOPT — Status Quo / Null Option: create or move no v0.2 application and reserve no API path; retain the minimal frontend manifest and documentation state until a current operational or verification constraint materially distinguishes the layouts.",
+      "gate_evaluation": {
+        "evaluated_votes": 9,
+        "echo_only_votes": [],
+        "countable": true,
+        "evidence_boundary": "All nine respondents mapped conditions 1–3 to E1/E2 (with E5 corroborating the current manifest where used) and condition 4 to the precise absence of a current E1–E5 operational or verification differentiator; E3/E4 were identified as the superseded two-deployable history, not reused as a current differentiator."
+      }
+    },
+    "Q2": {
+      "gate": "FAIL",
+      "recommendation_votes": {
+        "DISMISS root pnpm workspace / select Status Quo / Null Option": 9,
+        "ADOPT root pnpm workspace": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "robust_majority_after_any_single_removal": true,
+      "locked": "ADOPT — Status Quo / Null Option: do not create a root pnpm workspace or root lockfile; defer pnpm selection and lockfile placement until a gate-passing layout, a current pnpm selection, and a one-package v0.2 benefit that survives no v0.3 service are evidenced.",
+      "gate_evaluation": {
+        "evaluated_votes": 9,
+        "echo_only_votes": [],
+        "countable": true,
+        "evidence_boundary": "All nine respondents mapped condition 1 to Q1's failed gate, condition 2 to E5's absent package-manager selection and E4's inapplicable historic premise, and conditions 3–4 to the precise absence of a current one-package workspace benefit in E1–E5."
+      }
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": true,
+    "open_follow_up_questions": false,
+    "research_cap_reached": false,
+    "robust_majority_after_any_single_removal": true,
+    "all_gates_evaluated": true,
+    "echo_only_votes_present": false,
+    "panel_responses_complete": true,
+    "second_derivation_reconciled": true
+  },
+  "selected_branch": "converged",
+  "action": "close",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
+    ],
+    "responded": [
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Blind tally segmentation used only the nine exact dispatched # <Model> headings; embedded Markdown headings remained within their model response.",
+    "All nine dispatched panelists responded; there are no non-responses or C71 waivers.",
+    "For both questions, Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT mapped all four conditions to cited E1–E5 evidence or a precise absent/inapplicable record. No echo-only observation was counted.",
+    "The second raw-text derivation reproduced Q1 9/9 and Q2 9/9 Null-Option tallies with no mismatch from the blind tally.",
+    "Raw panel response text remains external to the repository."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-09-29T23:28:30-07:00",
+  "decisions_locked": 2,
+  "investigate": 0,
+  "response_accounting": {
+    "normal_votes": {
+      "Q1": 9,
+      "Q2": 9
+    },
+    "echo_only_votes": {
+      "Q1": [],
+      "Q2": []
+    },
+    "non_voting_observations": {},
+    "per_model_gate_mapping": {
+      "Gemini": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "DeepSeek": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "Mistral": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "Grok": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "MEMO": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "Z.AI": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "Claude.ai": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "Kimi": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"},
+      "GPT": {"Q1": "all-4-mapped", "Q2": "all-4-mapped"}
+    }
+  },
+  "tally_reconciliation": {
+    "method": "Independent second pass from the external raw text using the same exact-heading boundary list.",
+    "Q1": {
+      "blind_tally": 9,
+      "second_derivation": 9,
+      "outcome": "DISMISS non-null candidates / Status Quo / Null Option",
+      "mismatch": false,
+      "after_any_single_removal": "8/8 supports the same outcome"
+    },
+    "Q2": {
+      "blind_tally": 9,
+      "second_derivation": 9,
+      "outcome": "DISMISS root pnpm workspace / Status Quo / Null Option",
+      "mismatch": false,
+      "after_any_single_removal": "8/8 supports the same outcome"
+    }
+  },
+  "raw_panel_text": "external; not committed"
+}

@@ -82,9 +82,36 @@ Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its 
 
 ## monorepo-structure-topology-reopen: v0.2 topology reopen
 
-Status: SCOPED — awaiting explicit operator affirmation; no bundle authorized (2026-09-29)
+Status: RESEARCH COMPLETE — v0.2 `$review implement` UNBLOCKED; first scaffold remains evidence-gated (2026-09-29)
+
+Type: research + implementation
 
 Goal: Re-evaluate only the first v0.2 application layout and one-package root pnpm-workspace question after the locked no-API result invalidated the former two-deployable premise. The possible v0.3 service remains a revisit trigger rather than sizing input.
+
+Result: One blind research round split the external panel only at the nine exact dispatched model headings. All nine panelists responded, and all nine made condition-level E1–E5 or precise-absence mappings for both gates; no echo-only vote was counted. Q1 and Q2 both lock the Status Quo / Null Option: no v0.2 application move or API reservation, and no root pnpm workspace or root lockfile. The R1 close admits the v0.2 implementation cycle through its explicit runbook marker, while keeping every non-null topology action gated on new current evidence.
+
+Cross-review stats: 1 research round; 9 dispatched panelists; 9 substantive responses; 0 non-responses; 2 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
+
+| Key decision | Consensus | Round |
+|---|---:|---:|
+| Keep the current topology state; do not choose an application path or API reservation without a current path-dependent constraint | 9/9, robust after any one removal | R1 |
+| Do not create a root pnpm workspace or root lockfile without a gate-passing layout, pnpm selection, and durable one-package benefit | 9/9, robust after any one removal | R1 |
+
+Runbook: `reviews/runbook/monorepo-structure-topology-reopen.md`
+
+Upstream filing state: not applicable
+
+### Premise Challenge Record
+
+| Field | Value |
+|---|---|
+| Premise challenged? | Y |
+| Challenge source | Panel (research) |
+| Signal strength | Strong |
+| Outcome | Modified |
+| Prevented waste? | Y |
+| Caused waste? | N |
+| Notes | The panel rejected carrying forward the two-deployable path and workspace premise without a current one-application operational differentiator or pnpm benefit. |
 
 ## monorepo-structure: Monorepo foundation decision
 

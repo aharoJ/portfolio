@@ -1,5 +1,33 @@
 # Changelog -- portfolio reviews
 
+## 2026-09-29 — monorepo-structure topology reopen R1 convergence
+
+**Type:** research + implementation
+
+**Constraint economy:** active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+One research round re-tested only the retired two-deployable topology and one-package root-workspace assumptions against E1–E5. Nine named panelists responded. Both binary gates failed because the current record supplies neither a path-dependent first-scaffold constraint nor a current pnpm selection and durable one-package root-workspace benefit. The close therefore locks the Status Quo / Null Option for both questions. No product, infrastructure, API, workspace, or lockfile was created; raw panel text was not committed.
+
+### Decisions
+
+- **Q1**: application layout — ADOPT Status Quo / Null Option (9/9, robust after any one response removal).
+- **Q2**: root pnpm workspace and lockfile — ADOPT Status Quo / Null Option (9/9, robust after any one response removal).
+
+### Modified review artifacts
+
+- `reviews/monorepo-structure-topology-reopen/state/research/resolve-r1.json` — compiler-skeleton ledger, blind/second-pass tally reconciliation, response accounting, and closing branch.
+- `reviews/decisions.md` — the two v0.2 topology locks, evidence boundary, and revisit conditions.
+- `reviews/runbook/monorepo-structure-topology-reopen.md` — implementation-admission runbook with explicit `Implementation Impact: yes`.
+- `reviews/roadmap.md` — research-complete, implementation-admitted topology-reopen entry.
+- `.hook-allowlist` — exact-path content-scan allowance for the one compiler manifest blocked by the pre-commit hook.
+- `LOG.md` — resolve, validation, hook-policy, and commit audit trail.
+
+**Review statistics:** 1 research round; 9 dispatched panelists; 9 substantive responses; 0 non-responses; 2 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
+
+**Panel accounting:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT each condition-mapped Q1 and Q2 to E1–E5 or a precise absent/inapplicable record. No echo-only vote was counted. Independent re-derivation from the external raw text reproduced both 9/9 tallies.
+
+**Implementation admission:** v0.2 `$review implement monorepo-structure-topology-reopen` is unblocked by the closed research record and its `Implementation Impact: yes` runbook. That admission preserves the two Null Options: a first application scaffold, pnpm selection, or root workspace still needs the specified current evidence and a reopen before a non-null topology action.
+
 ## 2026-09-29 — stack-selection implementation-admission correction
 
 The R2 close is a completed **research** action with `Type: research + implementation`; it is not a complete implementation topic. The prior compact wording is separated in `decisions.md` to preserve that distinction. Review of the monorepo lock and its implementation gate found that Q2's null API outcome fails the required two-deployable premise: a monorepo-structure topology research reopen is required before any scaffold, including `apps/web`. R2's Q2–Q4 8/8 null tally remains a valid conditional gate result but is not independent panel confirmation of the operator product facts, because the intake precomputed FAIL absent a conflicting supplied artifact. No product, infrastructure, or protocol code changed.

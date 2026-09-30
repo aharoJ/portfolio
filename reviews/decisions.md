@@ -1,5 +1,27 @@
 # Decisions -- portfolio
 
+## monorepo-structure-topology-reopen — R1 topology resolution (2026-09-29)
+
+**Status:** locked by the R1 real-panel gate resolution; research action: close. **Type:** research + implementation.
+
+**Scope and supersession:** this narrow v0.2 reopening supersedes only monorepo-structure R1 Q1's two-deployable application-root decision and Q2's root-pnpm-workspace decision. R1 Q3 ownership and Q4 release-evidence convention remain outside this topic and unchanged.
+
+**Panel accounting:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT all gave substantive responses. Splitting used only those nine exact `# <Model>` headings; embedded Markdown headings were retained inside their response. There are no non-responses or waivers.
+
+**Evidence boundary:** every countable response mapped all four conditions of each gate to E1–E5 or a precise absent/inapplicable record. The careful access caveats from some panelists did not make their responses echoes: they still identified the exact cited record or missing record for each condition. The close independently checked the primary local records. Raw panel text remains external to the repository.
+
+1. **Q1 — ADOPT Status Quo / Null Option (9/9; robust after any single-response removal):** create or move no v0.2 application and reserve no API path. E1 and E2 establish one static browser slice, the v0.2 absence of API/persistence/contract work, and the v0.3 service as a revisit trigger. The fourth condition fails: E1–E5 name no current operational or verification constraint that materially differentiates `apps/web`, root `frontend`, and an API reservation for the one-deployable state. E3/E4 preserve the retired two-deployable history, not a current differentiator; E5 records only the minimal manifest. Therefore `apps/`, `apps/api`, and a location-selecting scaffold remain unauthorized.
+2. **Q2 — ADOPT Status Quo / Null Option (9/9; robust after any single-response removal):** do not create a root pnpm workspace or root lockfile, and do not select a substitute package manager. Q1 did not yield a gate-passing application layout; E5 has no package-manager selection; E4's old pnpm decision depended on the retired two-package premise; and E1–E5 name no one-package v0.2 behavior, ownership duty, or verification benefit that survives the v0.3 service never arriving.
+
+| Question | Gate | Locked result | Countable / echo-only | Robustness |
+|---|---|---|---:|---|
+| Q1 | FAIL | Status Quo / Null Option | 9 / 0 | 8/8 remains after any one removal |
+| Q2 | FAIL | Status Quo / Null Option | 9 / 0 | 8/8 remains after any one removal |
+
+**Tally reconciliation:** the blind tally and a separate re-derivation from the external raw panel both produced Q1 9/9 and Q2 9/9 for the Null Options. No discrepancy or INVESTIGATE result remains.
+
+**Implementation admission:** this close provides the required `Implementation Impact: yes` runbook, so v0.2 `$review implement monorepo-structure-topology-reopen` is unblocked. That is process admission, not authority to bypass the locks: implementation must preserve the Null Options until a current local record supplies the missing Q1 differentiator and, for Q2, a gate-passing layout, explicit pnpm selection, and durable one-package root-workspace benefit. Reopen this topic to test that new record before materializing a non-null topology.
+
 ## stack-selection — R2 product-evidence resolution (2026-09-29)
 
 **Status:** locked by the R2 real-panel gate resolution; research action: close. **Type:** research + implementation.
