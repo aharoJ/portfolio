@@ -74,6 +74,12 @@ Upstream filing state: not applicable
 | Caused waste? | N |
 | Notes | The panel tested the source report's `apps/` anchoring risk and still selected the two deployable roots 6/8, but rejected placeholder packages and tool-specific overcommitment. |
 
+## monorepo-structure: R2 topology reopen
+
+Status: REOPENED — research R2 intake ready for panel paste (2026-09-29)
+
+Goal: Re-evaluate only the v0.2 application layout and single-package root pnpm-workspace policy after stack-selection locked one static Astro deployable and no v0.2 API. Keep the paid review/QA service as a v0.3 revisit trigger, not a sizing input.
+
 ## monorepo-structure: Monorepo foundation decision
 
 Status: SUPERSEDED by the real-panel R1 provenance resolution (2026-09-29)
