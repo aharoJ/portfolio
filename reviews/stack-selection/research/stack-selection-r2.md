@@ -16,9 +16,16 @@
 
 ## Evidence baseline
 
-At intake authoring, the repository contains no product source, acceptance scenario, endpoint definition, persistence requirement, or browser-consumer contract. Treat that as the complete evidence baseline. Do not infer an unstated feature from v0.2's planned scaffold or from a candidate framework.
+At intake authoring, the repository contains no product source, endpoint definition, database requirement, or browser-consumer contract. The operator-stated facts below are supplied product evidence; they are not panel evidence and do not authorize assumptions beyond their text. The R1 aggregate was split for every question; raw responses are external and are not part of this intake.
 
-The R1 aggregate was split for every question; raw responses are external and are not part of this intake.
+## First-slice product facts (operator-stated)
+
+1. The audience is the public. The portfolio branches into technical project write-ups, `$review` harness research, and university/work pieces, presented as short articles.
+2. v0.2 is read-only: no login, forms, or payments. A paid code-review/QA service with login and submissions is a later direction only; it is a revisit trigger, not v0.2 evidence or sizing input.
+3. Content changes rarely and is published by the operator after major reviews or milestones. There is no daily cadence and no visitor-generated content.
+4. No visitor action needs to persist.
+
+The facts neither select nor eliminate a candidate by themselves. Panelists must apply them to the gates below, including the null, no-API, and no-database outcomes where the gate fails.
 
 ## Web-Leverage / Industry Landscape
 
@@ -42,27 +49,27 @@ Candidate order does not express preference. Evaluate every named option, includ
 
 ### Q1: Browser stack
 
-**Evidence gate — PASS iff one acceptance record names all four facts:** (1) a browser route; (2) the exact user action; (3) the observable DOM or URL result; and (4) the browser-test command that proves that result. The current baseline fails this gate.
+**Evidence gate — PASS iff all four operator-stated conditions are true:** (1) public visitors need to read short articles; (2) v0.2 is read-only; (3) publishing is operator-owned and infrequent; and (4) no visitor action persists. All four are supplied facts. `FAIL` only if a supplied fact is contradicted.
 
-If the gate passes, choose one: Astro static-first/islands; Next.js; static HTML/CSS/JavaScript; or Vite + React. If it fails, choose the null option. Compare only the recorded behavior's rendering model, browser-testability, build transparency, API-boundary clarity, and static deployment portability. Do not add a server responsibility to `apps/web` merely to justify a candidate.
+On `PASS`, choose one: Astro static-first/islands; Next.js; static HTML/CSS/JavaScript; or Vite + React. On `FAIL`, choose the null option. Compare the supplied product facts against rendering model, browser-testability, build transparency, API-boundary clarity, and static deployment portability. Do not add a server responsibility to `apps/web` merely to justify a candidate.
 
 ### Q2: API runtime
 
-**Evidence gate — PASS iff one acceptance record names all four facts:** (1) HTTP method and path; (2) successful transport response shape; (3) one invalid-input or server-owned behavior; and (4) the local command that tests both outcomes. The current baseline fails this gate.
+**Evidence gate — PASS iff at least one supplied v0.2 fact requires a server-owned behavior:** private access control, a submitted form, payment processing, visitor-specific state, visitor-generated content, or a visitor action that persists. `FAIL` iff none is required. The supplied facts say none is required; a panelist may mark `PASS` only by identifying a conflicting supplied v0.2 artifact, not the later paid-service direction.
 
-If the gate passes, choose one: ASP.NET Core Minimal APIs on the named current .NET release; Fastify on Node; Hono on Node; or minimal Node `http`. If it fails, choose the null option. Compare validation surface, test seam, build/runtime complexity, toolchain count, and compatibility with Q4; treat no framework as a genuine baseline. An ASP.NET recommendation must supply an accessible current primary source for any claimed OpenAPI capability; lack of that source disqualifies only that claim, not the candidate.
+On `PASS`, choose one: ASP.NET Core Minimal APIs on the named current .NET release; Fastify on Node; Hono on Node; or minimal Node `http`. On `FAIL`, choose the null option. Compare validation surface, test seam, build/runtime complexity, toolchain count, and compatibility with Q4; treat no framework as a genuine baseline. An ASP.NET recommendation must supply an accessible current primary source for any claimed OpenAPI capability; lack of that source disqualifies only that claim, not the candidate.
 
 ### Q3: Persistence and migration
 
-**Evidence gate — PASS iff the accepted API behavior requires a durable write that remains observable after process restart, and its record names both the data to retain and a migration/recovery test.** The current baseline fails this gate.
+**Evidence gate — PASS iff a supplied v0.2 fact requires visitor- or server-originated mutable data to survive process restart, and names the retained data plus a migration/recovery test.** A rare operator content publication is not such a fact by itself. The supplied facts require no visitor persistence and name no server-originated mutable record; this gate is `FAIL` unless a conflicting supplied v0.2 artifact exists.
 
-If the gate passes, choose one: PostgreSQL plus a thin query/migration layer; PostgreSQL plus an ORM; SQLite plus Drizzle; or SQLite plus explicit SQL and an API-owned numbered-SQL migration runner. If it fails, choose the null option. State the migration command/test and the failure it catches. The API remains the migration owner under every non-null choice.
+On `PASS`, choose one: PostgreSQL plus a thin query/migration layer; PostgreSQL plus an ORM; SQLite plus Drizzle; or SQLite plus explicit SQL and an API-owned numbered-SQL migration runner. On `FAIL`, choose the null option. State the migration command/test and the failure it catches. The API remains the migration owner under every non-null choice.
 
 ### Q4: Contract authority
 
-**Evidence gate — PASS iff accepted records define both one browser consumer and one API endpoint, including request and successful-response transport shapes, and identify the generated or checked artifact consumed by the browser.** The current baseline fails this gate.
+**Evidence gate — PASS iff Q2's gate passes and a supplied v0.2 artifact establishes an actual browser-to-API boundary, with request and successful-response transport shapes plus a generated or checked browser-consumed artifact.** The supplied facts do not require an API, so this gate is `FAIL` unless Q2 identifies a conflicting supplied v0.2 artifact.
 
-If the gate passes, choose one: API-owned OpenAPI with generated web-facing types; or API-owned runtime transport schemas local to `apps/api` with a checked hand-maintained browser client. If it fails, choose the null option. A `packages/contracts` package is out of scope unless a second real consumer requires delivery of the same transport-only artifact; name that consumer and artifact if proposing it.
+On `PASS`, choose one: API-owned OpenAPI with generated web-facing types; or API-owned runtime transport schemas local to `apps/api` with a checked hand-maintained browser client. On `FAIL`, choose the null option. A `packages/contracts` package is out of scope unless a second real consumer requires delivery of the same transport-only artifact; name that consumer and artifact if proposing it.
 
 ## Required output
 
