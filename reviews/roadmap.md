@@ -125,13 +125,30 @@ Form: SUPERSEDED. The scope content below is carried to the fresh `monorepo-stru
 
 ## monorepo-structure-topology-tiebreak: v0.2 topology tie-break and package-manager authority
 
-Status: SCOPED — awaiting explicit affirmation before bundle (2026-09-30)
+Status: R1 PARTIALLY RESOLVED; R2 BUNDLED — research open; implementation pending (2026-09-30)
 
 Goal: With `docs/research/monorepo-structure-topology-spike.md` as evidence of measured equivalence across `frontend/`, `apps/web/`, and the repository root, first select and justify a neutral tie-break rule and then apply it to one location or the Q1 Null Option. Separately decide whether the observed npm-command installation and package-local npm lockfile are package-manager authority, whether a deliberate selection is required, or whether to retain the Q2 Null Option. Root workspace and root lockfile selection are excluded.
 
 Evidence record: `docs/research/monorepo-structure-topology-spike.md`.
 
 Form: Fresh topic slug; its first research artifact is R1. The closed `monorepo-structure-topology-reopen` file state routes its next non-close bundle/resolve to implementation; this new topic has no runbook or closing ledger, so its first bundle routes to research.
+
+Result: The operator explicitly directed this collected-batch resolve ahead of the one-open-topic recovery. Nine panelists responded; two raw-text semantic derivations reconciled with no differences. Q1's declared baseline-delta rule family has eight votes versus one differentiator-required Null rule, but only six supply a qualified shared baseline-reuse rule and a location that follows from it. The resulting `frontend/` designation remains robust even using the full nine-member denominator. Gemini/Kimi's two claimed frontend outcomes are excluded for prior-rule/Null-order deficiencies, not converted into Null votes. Q2's deliberate-selection policy is robust at 6/9, while the manager outcome splits npm 5/9 versus unselected 4/9 and fails single-removal robustness. R1 therefore records `action: roll`; R2 tests the local selection rule and its actual manager/no-selection outcome without reopening the settled location or importing workspace authority.
+
+Cross-review stats: 1 resolved research round; 9 dispatched/responding panelists; 0 non-responses; 0 echoes; 2 Q1 rule/application exclusions; 1 fully locked question; Q2 policy separately locked; 1 open manager-outcome follow-up; R2 intake prepared; no implementation/audit cycle or source-code findings.
+
+| Decision layer | R1 consensus | State |
+|---|---:|---|
+| Qualified baseline-reuse rule core | 6/9 qualified support; declared family 8/9 | LOCKED for this E1/E5 baseline; extra metrics/filters not locked |
+| First Astro application location: `frontend/` | 6/9 conservative; 6/7 admissible location votes; worst removal 5/8 conservative | LOCKED prospective designation |
+| Package-manager authority: deliberate selection | 6/9; worst removal 5/8 | LOCKED governance policy |
+| Actual manager and installer-lockfile authority | npm 5/9, unselected 4/9; deliberate camp 3/3; npm falls to 4/8 after removal | OPEN — R2 |
+
+Next panel intake: `reviews/monorepo-structure-topology-tiebreak/intakes/research-r2.md` (17,390 bytes; SHA-256 `c029413500ca2168dbbdfa17f7a3834376b8ae61e182f559601652a43f8c6e96`). Compiler/ledger validation passed; two soft missing-file warnings refer to the prospective `frontend/package-lock.json`, which is deliberately absent.
+
+Implementation authority: stack-selection's first scaffold remains blocked. The new locks designate a location and an authority policy; they select no manager and permit no Astro source/configuration/dependencies, installer, manager pin, or installer lockfile yet. Root workspace/root lockfile and other excluded domains remain unauthorized. No research close, runbook/impact marker, Type stamp, implementation completion, version/tag action, or recovery A/B choice is recorded here.
+
+Operator sequencing record: `reviews/decisions.md`. Stack-selection and topology-reopen remain topic-open with implementation pending; their recovery disposition comes after this resolve.
 
 ## monorepo-structure: Monorepo foundation decision
 

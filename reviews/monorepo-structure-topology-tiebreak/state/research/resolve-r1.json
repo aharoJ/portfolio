@@ -1,0 +1,691 @@
+{
+  "schema_version": "1.0",
+  "topic": "monorepo-structure-topology-tiebreak",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "disposition": "ADOPT",
+      "rule_layer": {
+        "declared_family_votes": {
+          "baseline-mutation": 8,
+          "equivalence-implies-null": 1
+        },
+        "qualified_shared_core_votes": 6,
+        "unqualified_rule_application_votes": [
+          "Gemini",
+          "Kimi"
+        ],
+        "opposing_equivalence_implies_null_votes": 1,
+        "locked": "For this E1/E5 baseline, reuse the uniquely preferred existing package boundary among measured-equivalent non-null candidates; retain Null if no unique evidence-supported scope-compatible concrete choice follows. No universal exact cost formula or additional filter is locked.",
+        "robust_majority_after_any_single_removal": true
+      },
+      "location_layer": {
+        "declared_votes": {
+          "frontend/": 8,
+          "Null": 1
+        },
+        "valid_votes": {
+          "frontend/": 6,
+          "Null": 1
+        },
+        "inconsistent_votes": [
+          "Gemini",
+          "Kimi"
+        ],
+        "excluded_votes_converted_to_null": false,
+        "locked": "frontend/",
+        "robust_majority_after_any_single_removal": true,
+        "conservative_active_denominator": 9,
+        "eligible_location_denominator": 7,
+        "worst_single_removal_conservative": "5/8",
+        "worst_single_removal_eligible": "5/6"
+      },
+      "fully_locked": true,
+      "gate_evaluation": {
+        "evaluated_votes": 9,
+        "echo_only_votes": [],
+        "evidence_mapping": "All four gates substantively mapped to E1\u2013E5 or precise absence/inapplicability; Gemini/Kimi rule application fails despite substantive mapping."
+      }
+    },
+    "Q2": {
+      "disposition": "INVESTIGATE manager outcome; ADOPT policy",
+      "policy_layer": {
+        "votes": {
+          "deliberate-selection": 6,
+          "observed-command": 2,
+          "Null": 1
+        },
+        "locked": "deliberate-selection authority",
+        "robust_majority_after_any_single_removal": true,
+        "worst_single_removal": "5/8"
+      },
+      "outcome_layer": {
+        "votes": {
+          "unselected": 4,
+          "npm": 5
+        },
+        "votes_within_deliberate_policy": {
+          "unselected": 3,
+          "npm": 3
+        },
+        "locked": null,
+        "policy_outcome_inconsistencies": [],
+        "robust_majority_after_any_single_removal": false,
+        "failed_removals": [
+          "DeepSeek",
+          "Mistral",
+          "MEMO",
+          "Z.AI",
+          "Claude.ai"
+        ],
+        "failed_majority": "4/8 after any npm supporter removed",
+        "pending": "R2 must state and apply a local manager-selection rule or retain unselected authority."
+      },
+      "fully_locked": false,
+      "gate_evaluation": {
+        "evaluated_votes": 9,
+        "echo_only_votes": [],
+        "evidence_mapping": "All four gates substantively mapped. Deliberate policy with supplied local npm rule differs from deliberate policy alone with no manager."
+      }
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": false,
+    "q1_rule_and_location_robust": true,
+    "q2_policy_robust": true,
+    "q2_manager_outcome_robust": false,
+    "panel_responses_complete": true,
+    "echo_only_votes_present": false,
+    "second_derivation_reconciled": true
+  },
+  "selected_branch": "follow-up",
+  "action": "roll",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
+    ],
+    "responded": [
+      "Gemini",
+      "DeepSeek",
+      "Mistral",
+      "Grok",
+      "MEMO",
+      "Z.AI",
+      "Claude.ai",
+      "Kimi",
+      "GPT"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Only the nine exact dispatched # <Model> lines split the raw batch; embedded headings did not alter ownership.",
+    "Nine distinct substantive responses; zero duplicate bodies, degenerate outputs, non-response or waivers.",
+    "All Q1/Q2 gate maps are substantive: echo-only exclusions are empty.",
+    "Gemini and Kimi Q1 location votes are excluded for prior-rule/Null-order deficiencies, not recast as Null ballots.",
+    "Research voting has no same-family adjustment. Model labels are declared web-panel seats, not authenticated effective runtime identity.",
+    "First panel-order derivation and independently authored reverse-order raw-text derivation reconcile all per-model fields.",
+    "No delegated agent dispatch was used in this R1 scope/bundle/resolve; no C51 routing compliance or canary identity proof is asserted.",
+    "No raw response text is committed."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-09-30T15:06:25-07:00",
+  "decisions_locked": 1,
+  "investigate": 1,
+  "decision_counting": {
+    "unit": "fully locked research question",
+    "fully_locked_questions": [
+      "Q1"
+    ],
+    "partial_question_policy_locks": [
+      "Q2 authority policy"
+    ],
+    "locked_components": [
+      "Q1 rule core",
+      "Q1 location",
+      "Q2 policy"
+    ],
+    "open_components": [
+      "Q2 manager outcome"
+    ]
+  },
+  "response_accounting": {
+    "models": [
+      {
+        "model": "Gemini",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "least structural mutation; no prior productive-first or Null-fallback clause",
+        "q1_declared": "frontend/",
+        "q1_valid": false,
+        "q1_issue": "Unqualified mutation minimization does not uniquely select frontend: Null changes nothing; frontend and root add no app-root ancestors. Null rejected only during application on deadlock grounds.",
+        "q1_anchors": [
+          17,
+          22,
+          39,
+          41,
+          42
+        ],
+        "q2_policy": "deliberate-selection",
+        "q2_outcome": "unselected",
+        "q2_valid": true,
+        "q2_anchors": [
+          78,
+          84,
+          85,
+          95,
+          110
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "DeepSeek",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "among equivalent non-null candidates minimize new boundaries and reuse existing package; Null fallback",
+        "q1_declared": "frontend/",
+        "q1_valid": true,
+        "q1_anchors": [
+          150,
+          153,
+          164,
+          172,
+          175
+        ],
+        "q2_policy": "deliberate-selection",
+        "q2_outcome": "npm",
+        "q2_valid": true,
+        "q2_anchors": [
+          208,
+          210,
+          212,
+          223,
+          243
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "Mistral",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "minimum new/removed filesystem objects with unspecified-artifact-disposition disqualifier; Null fallback",
+        "q1_declared": "frontend/",
+        "q1_valid": true,
+        "q1_anchors": [
+          282,
+          299,
+          300,
+          301,
+          302
+        ],
+        "q2_policy": "observed-command",
+        "q2_outcome": "npm",
+        "q2_valid": true,
+        "q2_anchors": [
+          335,
+          339,
+          346,
+          354,
+          363
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "Grok",
+        "q1_rule": "equivalence-implies-null",
+        "q1_rule_variant": "retain Null without a measured material differentiator",
+        "q1_declared": "Null",
+        "q1_valid": true,
+        "q1_anchors": [
+          405,
+          406,
+          417,
+          420
+        ],
+        "q2_policy": "Null",
+        "q2_outcome": "unselected",
+        "q2_valid": true,
+        "q2_anchors": [
+          447,
+          450,
+          455,
+          458
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "MEMO",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "new directories/manifests among non-null candidates; explicit unique-minimum, scope and application-required Null fallback",
+        "q1_declared": "frontend/",
+        "q1_valid": true,
+        "q1_anchors": [
+          506,
+          528,
+          532,
+          534,
+          535
+        ],
+        "q2_policy": "observed-command",
+        "q2_outcome": "npm",
+        "q2_valid": true,
+        "q2_anchors": [
+          577,
+          581,
+          583,
+          594,
+          600
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "Z.AI",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "existing directory and manifest preferred; explicit non-null distinction then Null fallback",
+        "q1_declared": "frontend/",
+        "q1_valid": true,
+        "q1_anchors": [
+          663,
+          669,
+          684,
+          686,
+          687
+        ],
+        "q2_policy": "deliberate-selection",
+        "q2_outcome": "npm",
+        "q2_valid": true,
+        "q2_anchors": [
+          723,
+          727,
+          736,
+          743
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "Claude.ai",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "scope containment then minimum new tracked paths; explicit non-null/Null fallback; conditional adoption caveat",
+        "q1_declared": "frontend/",
+        "q1_valid": true,
+        "q1_anchors": [
+          804,
+          805,
+          811,
+          812,
+          813,
+          832,
+          834
+        ],
+        "q2_policy": "deliberate-selection",
+        "q2_outcome": "npm",
+        "q2_valid": true,
+        "q2_anchors": [
+          866,
+          871,
+          873,
+          884,
+          904
+        ],
+        "scope_issue": "Line 904 purports to authorize immediate scaffold/install; R1 scope forbids product implementation. No action authority is inferred.",
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "Kimi",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "minimum new paths, structural declarations and authority claims; productive-first condition introduced after rule",
+        "q1_declared": "frontend/",
+        "q1_valid": false,
+        "q1_issue": "Rule includes all outcomes and does not initially prioritize progress; Null is zero change. Later comparison adds a productive-work requirement and labels a valid Null a non-outcome.",
+        "q1_anchors": [
+          945,
+          953,
+          958,
+          967,
+          978
+        ],
+        "q2_policy": "deliberate-selection",
+        "q2_outcome": "unselected",
+        "q2_valid": true,
+        "q2_anchors": [
+          1015,
+          1019,
+          1026,
+          1038,
+          1053
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      },
+      {
+        "model": "GPT",
+        "q1_rule": "baseline-mutation",
+        "q1_rule_variant": "explicit progress-first then minimum new application-manifest paths; unknown/tie Null fallback",
+        "q1_declared": "frontend/",
+        "q1_valid": true,
+        "q1_anchors": [
+          1105,
+          1117,
+          1119,
+          1136,
+          1138,
+          1139
+        ],
+        "q2_policy": "deliberate-selection",
+        "q2_outcome": "unselected",
+        "q2_valid": true,
+        "q2_anchors": [
+          1175,
+          1181,
+          1194,
+          1200,
+          1211
+        ],
+        "q1_echo": false,
+        "q2_echo": false,
+        "q1_gates": "all-4-substantively-mapped; mapping does not cure invalid rule application",
+        "q2_gates": "all-4-substantively-mapped"
+      }
+    ],
+    "echo_only_votes": {
+      "Q1": [],
+      "Q2": []
+    },
+    "scope_observations": [
+      {
+        "model": "Claude.ai",
+        "raw_line": 904,
+        "issue": "Immediate Astro scaffold/install authorization exceeds the decision-only R1 scope; no product action authority is accepted."
+      }
+    ],
+    "raw_provenance": {
+      "scratch": "/tmp/portfolio-tiebreak-r1-i7hgqu0k",
+      "raw_path": "/Users/aharoj/desk/tmp/portfolio/monorepo-structure-topology-tiebreak/panel-batch/responses/research-r1-panel.md",
+      "raw_bytes": 176303,
+      "raw_sha256": "750f47ac53a8b96bfbf7ab61fc364476ce6d3828aa98d402d9fce7a94c8f1fba",
+      "intake_sha256": "490137ff69bdab6a105e069955164ec311212c1010de0c8f7b22bbae4997c5ee",
+      "models": {
+        "Gemini": {
+          "bytes": 14186,
+          "sha256": "d6ee4c6a73da9b00373db6fffd447a2c9f40a3c43c97e1ab4ac91bb2d29a3aab"
+        },
+        "DeepSeek": {
+          "bytes": 14945,
+          "sha256": "ee6e62bc6cfea88c9c3feac1be0d065a7b031765ed50539966973cbccdb98fbf"
+        },
+        "Mistral": {
+          "bytes": 17324,
+          "sha256": "e424a282d6122bdd7efe9713a991bf5de6ae12c5a871215b797aa063d9ec7b3e"
+        },
+        "Grok": {
+          "bytes": 7897,
+          "sha256": "fc99dea85d623b4d09ad2d112964b34cffa91ae74189cb493fee9ef3a08dc36b"
+        },
+        "MEMO": {
+          "bytes": 40921,
+          "sha256": "1d6cff192a155bb2efd88420a9e4c5fb9aa3ee1dd742a2c68da98ae22e684f82"
+        },
+        "Z.AI": {
+          "bytes": 24761,
+          "sha256": "c0cbff420033e11f007ff51de6c7660fff864fa5cb6c6606d197e08b2b217127"
+        },
+        "Claude.ai": {
+          "bytes": 13263,
+          "sha256": "5e3ec5715d335bcf3bf1ca8a984166709186cdbde61133d2f6de43d91f2d2fed"
+        },
+        "Kimi": {
+          "bytes": 25330,
+          "sha256": "33fcb4e284e7d4336904d4fe7951bc75338d97046b91f284739a5bd712040687"
+        },
+        "GPT": {
+          "bytes": 17609,
+          "sha256": "ca5d634f27f136311f039b4e638b5ffa4bca1e180d437156a6bd41eabc8bfd57"
+        }
+      }
+    }
+  },
+  "tally_reconciliation": {
+    "method": "Separately authored panel-order first pass and reverse-order raw-text second pass; re-read definitions/dispositions/candidate comparisons independently, then compare all models.",
+    "mismatches": [],
+    "fields_compared": [
+      "q1_rule",
+      "q1_declared",
+      "q1_valid",
+      "q2_policy",
+      "q2_outcome",
+      "q2_valid",
+      "q1_echo",
+      "q2_echo"
+    ],
+    "first_pass": {
+      "reconciled": true,
+      "comparison_fields": [
+        "q1_rule",
+        "q1_declared",
+        "q1_valid",
+        "q2_policy",
+        "q2_outcome",
+        "q2_valid",
+        "q1_echo",
+        "q2_echo"
+      ],
+      "q1_rule_declared": {
+        "baseline-mutation": 8,
+        "equivalence-implies-null": 1
+      },
+      "q1_location_declared": {
+        "frontend/": 8,
+        "Null": 1
+      },
+      "q1_location_valid": {
+        "frontend/": 6,
+        "Null": 1
+      },
+      "q1_inconsistent": [
+        "Gemini",
+        "Kimi"
+      ],
+      "q2_policy": {
+        "deliberate-selection": 6,
+        "observed-command": 2,
+        "Null": 1
+      },
+      "q2_outcome": {
+        "unselected": 4,
+        "npm": 5
+      },
+      "q2_within_deliberate": {
+        "unselected": 3,
+        "npm": 3
+      },
+      "q1_location_robust": true,
+      "q2_policy_robust": true,
+      "q2_outcome_robust": false
+    },
+    "second_pass_same": true
+  },
+  "single_removal_robustness": [
+    {
+      "removed": "Gemini",
+      "remaining_active": 8,
+      "q1_valid_frontend": 6,
+      "q1_valid_location_denominator": 7,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 5,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 5,
+      "q2_outcome_strict_majority": true,
+      "deliberate_only_npm": 3,
+      "deliberate_only_denominator": 5
+    },
+    {
+      "removed": "DeepSeek",
+      "remaining_active": 8,
+      "q1_valid_frontend": 5,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 5,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 4,
+      "q2_outcome_strict_majority": false,
+      "deliberate_only_npm": 2,
+      "deliberate_only_denominator": 5
+    },
+    {
+      "removed": "Mistral",
+      "remaining_active": 8,
+      "q1_valid_frontend": 5,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 6,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 4,
+      "q2_outcome_strict_majority": false,
+      "deliberate_only_npm": 3,
+      "deliberate_only_denominator": 6
+    },
+    {
+      "removed": "Grok",
+      "remaining_active": 8,
+      "q1_valid_frontend": 6,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 6,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 5,
+      "q2_outcome_strict_majority": true,
+      "deliberate_only_npm": 3,
+      "deliberate_only_denominator": 6
+    },
+    {
+      "removed": "MEMO",
+      "remaining_active": 8,
+      "q1_valid_frontend": 5,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 6,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 4,
+      "q2_outcome_strict_majority": false,
+      "deliberate_only_npm": 3,
+      "deliberate_only_denominator": 6
+    },
+    {
+      "removed": "Z.AI",
+      "remaining_active": 8,
+      "q1_valid_frontend": 5,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 5,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 4,
+      "q2_outcome_strict_majority": false,
+      "deliberate_only_npm": 2,
+      "deliberate_only_denominator": 5
+    },
+    {
+      "removed": "Claude.ai",
+      "remaining_active": 8,
+      "q1_valid_frontend": 5,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 5,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 4,
+      "q2_outcome_strict_majority": false,
+      "deliberate_only_npm": 2,
+      "deliberate_only_denominator": 5
+    },
+    {
+      "removed": "Kimi",
+      "remaining_active": 8,
+      "q1_valid_frontend": 6,
+      "q1_valid_location_denominator": 7,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 5,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 5,
+      "q2_outcome_strict_majority": true,
+      "deliberate_only_npm": 3,
+      "deliberate_only_denominator": 5
+    },
+    {
+      "removed": "GPT",
+      "remaining_active": 8,
+      "q1_valid_frontend": 5,
+      "q1_valid_location_denominator": 6,
+      "q1_strict_majority_conservative": true,
+      "q1_strict_majority_eligible": true,
+      "q2_deliberate": 5,
+      "q2_policy_strict_majority": true,
+      "q2_npm": 5,
+      "q2_outcome_strict_majority": true,
+      "deliberate_only_npm": 3,
+      "deliberate_only_denominator": 5
+    }
+  ],
+  "operator_exception": {
+    "source": "reviews/decisions.md operator-directed one-open-topic exception 2026-09-30",
+    "scope": "resolve already collected tiebreak now; commit result normally; earlier topics implementation-pending; recovery A/B after resolve",
+    "lock_threshold_override": false
+  },
+  "implementation_authority": {
+    "application_location": "frontend/ prospective designation",
+    "package_manager": "unselected",
+    "installer_lockfile": "unauthorized",
+    "product_scaffold": "still blocked",
+    "root_workspace": "unauthorized",
+    "root_lockfile": "unauthorized",
+    "earlier_topic_recovery": "pending A/B; not selected",
+    "research_closed": false
+  },
+  "compaction": {
+    "native_available": false,
+    "fallback": "External compact durable checkpoint before tally and before ledger; disclosed to operator. No close selected, so no close boundary occurs."
+  },
+  "raw_panel_text": "external; not committed"
+}

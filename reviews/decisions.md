@@ -1,5 +1,49 @@
 # Decisions -- portfolio
 
+## Operator-directed one-open-topic exception — topology tiebreak resolve (2026-09-30)
+
+**Authority:** The operator explicitly directed resolution of the already collected `monorepo-structure-topology-tiebreak` research R1 batch now, end to end, as an exception to the one-open-topic policy. This is a sequencing exception; it supplies no Q1/Q2 vote or decision-lock exception.
+
+**Required order:** Commit the pending lifecycle-audit `LOG.md` entry first (completed as `0487813`), then resolve the tiebreak R1 batch and take its protocol-selected next action. `stack-selection` and `monorepo-structure-topology-reopen` remain open topics with research closed and implementation pending. Their recovery disposition—option A (operator-approved recovery of genuinely zero-code decision topics) or option B (explicit exception/recovery sequence) from the audit—comes after this resolve. Neither is selected or executed here.
+
+**Boundaries:** Preserve all historical research ledgers and intake bodies. Do not mark either earlier topic complete, change its impact marker, retag it, or infer a retroactive research-only conversion. A split question rolls to R2 under the protocol; a converged research close records an explicit impact marker and the precise prospective scaffold authority. The operator separately requires a normal commit of this result; for a marker-yes research close, that is an explicit exception to the usual final-implementation-close-only commit timing, not a claim that implementation is complete. No standing waiver or further topic kickoff is authorized.
+
+## monorepo-structure-topology-tiebreak — R1 partial resolution (2026-09-30)
+
+**Status:** Q1 rule core and location locked; Q2 authority policy locked, manager outcome OPEN. Research action: roll to R2. One fully resolved question and one open follow-up; this is not research convergence or a topic close.
+
+**Panel and provenance:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT all responded. Exact `# <Model>` lines alone define ownership; embedded headings remain inside their model response. Nine distinct substantive bodies range from 7,897 to 40,921 bytes. No duplicates, degenerate outputs, non-responses, or waivers. Published intake SHA-256: `490137ff69bdab6a105e069955164ec311212c1010de0c8f7b22bbae4997c5ee`; external raw batch SHA-256: `750f47ac53a8b96bfbf7ab61fc364476ce6d3828aa98d402d9fce7a94c8f1fba`. Raw text is not stored in this repository.
+
+### Q1 — ordered rule and location resolution
+
+**Declared rule-family tally:** baseline reuse / minimum structural delta 8/9; equivalence-without-a-material-differentiator implies Null 1/9 (Grok). This family tally is not agreement on an exact edit-cost formula. The per-model variants are retained in the ledger: existing-boundary reuse; new/removed-object minimization with an unspecified-artifact filter; new-directory/manifest minimization; scope containment followed by new-path minimization; and progress followed by new-manifest-path minimization. Additional filters, exact weights, total edit costs, and hypothetical future-baseline rankings are not locked.
+
+**ADOPT the qualified shared rule core (6/9, robust):** under E1's measured equivalence, resolve the first application-location prerequisite by reusing the uniquely preferred existing package boundary rather than introducing a new application manifest/boundary at another location. Compare the non-null measured candidates against E5's actual baseline; retain Null when no unique, evidence-supported, scope-compatible concrete choice follows. This is a prospective tie-break preference, not a measured performance or deployment advantage. DeepSeek, Mistral, MEMO, Z.AI, Claude.ai, and GPT supply that non-null comparison and Null fallback. The common core is adopted only for this recorded baseline; their different additional rules are not silently merged into one universal metric.
+
+**Then ADOPT `frontend/` as the first Astro application root (6/9 conservative active-panel support; 6/7 admissible location votes):** E5 records the sole existing application-package manifest there. `apps/web/` introduces a manifest and directories; the repository root introduces an application manifest. Each of the six qualified panelists' own rule therefore yields `frontend/`. Grok's differentiator-required rule consistently yields Null and remains a substantive minority vote. The eight declared frontend outcomes are not eight valid location votes.
+
+**Rule-location exclusions:** Gemini's prior least-structural-mutation rule does not order the zero-change Null behind a productive non-null choice; its application later rejects Null on deadlock grounds. Kimi's prior fewest-paths/declarations/authority-claims rule also lacks that priority, while its application calls Null a non-outcome and adds a requirement to enable downstream work. Neither prior rule uniquely establishes its claimed frontend outcome against all listed outcomes. Exclude these two location votes and their unqualified formulations from support for the locked rule core. Do not repair their rule on their behalf or count them as Null votes. These are rule/application deficiencies, not echoes or non-responses.
+
+**Evidence and robustness:** all nine substantively map the four gates to E1–E5 or precise absence/inapplicability; Q1 echo-only exclusions=0. A gate map does not cure a rule/application deficiency. Every single removal leaves at least 5/8 conservative active-panel support for the qualified rule core and frontend outcome; using only admissible location votes, the worst is 5/6. No presumed benefit on CI, deployment, ownership, future services, or total edit effort participates in the lock. A changed manifest baseline or new measured requirement requires re-evaluation.
+
+### Q2 — policy lock, outcome split
+
+**ADOPT deliberate-selection authority (6/9, robust):** Gemini, DeepSeek, Z.AI, Claude.ai, Kimi, and GPT require an explicit, stated application-local selection rule before a manager gains authority. Mistral and MEMO select observed-command authority (2/9); Grok selects Q2 Null (1/9). Retain their stated policies even when the same npm outcome occurs; do not relabel the two observed-command ballots as deliberate-selection ballots. E1's successful npm commands are experiment evidence, not inherited manager authority or proof that Astro selected npm. Every single removal leaves at least 5/8 for deliberate selection.
+
+**Manager outcome remains OPEN:** npm 5/9 (DeepSeek, Mistral, MEMO, Z.AI, Claude.ai); unselected 4/9 (Gemini, Grok, Kimi, GPT). Removing any npm supporter leaves 4/8, which fails the strict-majority robustness test. Within the six deliberate-selection ballots, npm and unselected split 3/3. The observed-command ballots do not manufacture a manager consensus under the winning deliberate policy.
+
+**Policy/outcome consistency:** DeepSeek, Z.AI, and Claude.ai state and apply an E1-based local rule selecting npm. Gemini, Kimi, and GPT select the governance policy alone and expressly leave its later local selection rule absent. Mistral/MEMO's observed policies yield npm; Grok's Null yields no manager. There is no Q2 policy/outcome contradiction and no echo-only vote; all nine substantively map all four gates. Policy-only unselected is not a Q2 Null-policy vote. Claude.ai's sentence purporting to authorize immediate scaffold/install exceeds R1's decision-only scope and grants no implementation authority.
+
+**R2 follow-up:** decide whether to adopt and apply an explicit, evidence-grounded local rule selecting npm for `frontend/` now, adopt another fully stated in-scope selection rule, or leave manager/installer-lockfile authority unselected. Test the rule before its result, including the no-selection fallback. Selecting a deliberate policy alone does not finish Q2. Do not repeat a broad package-manager comparison or import a workspace decision.
+
+### Reconciliation, supersession, and scaffold authority
+
+Two separately authored semantic passes from the raw text—first in panel order, second in reverse order—agree for every model on rule family, declared location, admissibility, policy, actual outcome, and echo classification. All nine single-removal cases are persisted in the immutable R1 ledger; there are zero reconciliation differences.
+
+The fresh Q1 lock prospectively replaces only the earlier no-selected-location outcome for the first static Astro application. Historical topology-reopen ledgers/runbooks remain historical evidence and are not rewritten. Root workspace/root lockfile authority, API/persistence/contracts, and other excluded domains remain outside these new locks. The earlier no-manager state continues because Q2's manager outcome has not converged; stack-selection's Astro choice itself remains unchanged.
+
+**Exactly authorized now:** record `frontend/` as the prospective first Astro application location, record deliberate-selection authority, and conduct the R2 manager-outcome research. **Scaffold authority:** stack-selection may not yet create Astro source/configuration/dependencies, run an installer, choose or pin a manager, or create any installer lockfile. Neither a root workspace nor a root lockfile is authorized. Research is still open: no tiebreak runbook, `Implementation Impact:` marker, Type stamp, close, implementation audit, or release tag is claimed. Stack-selection and topology-reopen remain open with implementation pending; their recovery A/B decision follows this resolve and is not supplied by these panel locks.
+
 ## monorepo-structure-topology-reopen — R1 topology resolution (2026-09-29)
 
 **Status:** locked by the R1 real-panel gate resolution; research action: close. **Type:** research + implementation.
