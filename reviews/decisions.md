@@ -1,5 +1,27 @@
 # Decisions -- portfolio
 
+## monorepo-structure-topology-reopen: v0.3 linked-continuation recovery (2026-09-30)
+
+**Authority:** The operator's `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/BRIEF.md` directs one logical topology topic/version and expressly authorizes the metadata-only fallback when a compliant physical merge is unavailable. The cited ruling is `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/RULING.md`. This is repository metadata recovery, not a panel resolve, formal close, or authorization to execute the separately requested lifecycle recommendation.
+
+**Ruling:** Keep both mechanical slugs and every historical artifact in place. Existing research ledgers are read-only after write (`/Users/aharoj/.skills/review-protocol/SKILL.md:470`; `protocol.md:1126`). Topic slug is mechanical identity while version is metadata (`protocol.md:187-188`). The proposed tiebreak R1 -> reopen R2 and tiebreak R2 -> reopen R3 moves each fail the production ledger validator's topic and round binding; rewriting the ledger fields would violate immutability. The closed-world tree has no relocation-map or nested historical-topic slot (`protocol.md:84-95`, `:1318-1328`), and close 0.d citation-supersession acceptance is not an identity-migration waiver (`protocol.md:1190`). The closing tiebreak R2 ledger also embeds Q1.source at the original tiebreak R1 ledger path; moving R1 would break that reference, and rewriting it would violate the same sealed-ledger rule. A prose mapping has no routing consumer. The operator-directed fallback preserves the evidence rather than asserting a physical consolidation.
+
+**Version supersession:** `stack-selection` remains v0.2. `monorepo-structure-topology-reopen` and its `monorepo-structure-topology-tiebreak` continuation both carry v0.3 as one logical topology lineage, with two retained mechanical topic directories. This supersedes their stale current v0.2 labels and the prior report-only v0.4 tiebreak proposal in `LOG.md`; it does not change historical product facts, intakes, decision counts, or future-service triggers. This bounded two-folder/one-version exception does not satisfy the one-open-topic lifecycle policy by itself (`protocol.md:162-177`, `:187`; explicit fallback authority above).
+
+| v0.3 reading-order label only | Authoritative topic and research round | Historical action |
+|---|---|---|
+| R1 | `monorepo-structure-topology-reopen` R1 | close; two Null Options |
+| R2 | `monorepo-structure-topology-tiebreak` R1 | roll; location and deliberate-selection policy |
+| R3 | `monorepo-structure-topology-tiebreak` R2 | close; npm and application-local installer authority |
+
+The R2/R3 labels above are presentation only. All filenames, embedded topic/round values, waiver round references, manifest paths/hashes, and mechanical command arguments retain their original identities. Follow the [reopen record](monorepo-structure-topology-reopen/state/research/resolve-r1.json), then the [tiebreak R1 record](monorepo-structure-topology-tiebreak/state/research/resolve-r1.json), then the [tiebreak R2 closing record](monorepo-structure-topology-tiebreak/state/research/resolve-r2.json). Both roadmap entries link this continuation explicitly.
+
+**Current authority:** The tiebreak R1/R2 decisions and [tiebreak runbook](runbook/monorepo-structure-topology-tiebreak.md) prospectively govern the first static Astro application's `frontend/` location, npm, and `frontend/package-lock.json`. Stack-selection's Astro/static and API/persistence/contract Null locks remain applicable. Earlier Null/location/manager instructions remain historical evidence where prospectively superseded; root workspace/root lockfile and excluded-domain restrictions continue. This records the existing supersession without new votes or new locks (`protocol.md:187-188`; `SKILL.md:470`).
+
+**Routing and preservation:** Reopen's R1 research was already complete; marker=yes completed topics route non-close bundle/resolve to implementation (`protocol.md:188`, `:217-223`). Commit `e2d7118`'s void monorepo R2 bundle and the later void same-slug reopen R2 scope remain VOID; no retroactive research reopening is claimed. All three pending runbooks retain `Implementation Impact: yes` and their topics remain research-complete/implementation-pending. No manual Type reclassification or final close is performed (`protocol.md:189-209`, `:1453`, `:1510-1526`). C71/C70 close 0.g is implementation-only, not a research-ballot floor (`protocol.md:1219-1223`); later implementation must use its own actual chain. Compiler artifacts and exact `.hook-allowlist` entries stay at their unchanged paths (`SKILL.md:386-401`, `:691`; operator policy B).
+
+**Commit/tag boundary:** The brief authorizes a normal-hook Step 2 maintenance commit. This is not either topology topic's final close. No git tag is created or moved; final-close tag decisions and zero-code lifecycle recovery remain recommendations for the operator (`protocol.md:1510-1526`; BRIEF.md Step 3).
+
 ## Operator-directed one-open-topic exception — topology tiebreak resolve (2026-09-30)
 
 **Authority:** The operator explicitly directed resolution of the already collected `monorepo-structure-topology-tiebreak` research R1 batch now, end to end, as an exception to the one-open-topic policy. This is a sequencing exception; it supplies no Q1/Q2 vote or decision-lock exception.

@@ -82,7 +82,7 @@ Status: VOID — retained as procedural-history only; do not paste, tally, resol
 
 Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its manifest after the R1 research ledger had closed and without the required `$review scope` summary and explicit affirmation. The artifacts remain in Git for auditability but are not a valid round, do not reopen R1, and create no decision or implementation authority.
 
-## monorepo-structure-topology-reopen: v0.2 topology reopen
+## monorepo-structure-topology-reopen: v0.3 topology reopen
 
 Status: R1 RESEARCH COMPLETE; same-slug R2 scope skeleton VOID. Fresh tiebreak R1/R2 prospectively settles the first-app location and local manager; implementation PENDING lifecycle recovery/admission (2026-09-30)
 
@@ -102,6 +102,18 @@ Cross-review stats: 1 research round; 9 dispatched panelists; 9 substantive resp
 Runbook: `reviews/runbook/monorepo-structure-topology-reopen.md`
 
 Current supersession update (2026-09-30): the fresh tiebreak selects `frontend/` and application-local npm prospectively. Historical R1 Null ledgers/runbook remain unchanged; root workspace/root lockfile exclusions still apply. This topic remains implementation-pending, with lifecycle recovery A/B outside the tiebreak resolve.
+
+### v0.3 linked continuation (operator recovery, 2026-09-30)
+
+Version: v0.3 for this topology lineage and its [tiebreak continuation](#monorepo-structure-topology-tiebreak-v03-topology-tie-break-and-package-manager-authority); stack-selection remains v0.2. The two retained mechanical slugs form the explicitly authorized metadata-only fallback. Current version-label correction does not retime historical v0.2 product evidence or the possible v0.3 service trigger.
+
+| Reading-order label only | Preserved mechanical research identity | Action |
+|---|---|---|
+| R1 | `monorepo-structure-topology-reopen` R1 | close |
+| R2 | `monorepo-structure-topology-tiebreak` R1 | roll |
+| R3 | `monorepo-structure-topology-tiebreak` R2 | close |
+
+Follow the preserved [reopen R1 ledger](monorepo-structure-topology-reopen/state/research/resolve-r1.json), [tiebreak R1 ledger](monorepo-structure-topology-tiebreak/state/research/resolve-r1.json), and [tiebreak R2 closing ledger](monorepo-structure-topology-tiebreak/state/research/resolve-r2.json). These labels change no round numbers, artifact paths, ledgers, intakes, manifests, runbook markers or command routing. Current execution boundaries are in the [tiebreak runbook](runbook/monorepo-structure-topology-tiebreak.md); research remains complete and implementation pending for both topic records. No final close or tag is claimed. Rationale and operator exception: `reviews/decisions.md`, v0.3 linked-continuation recovery; external ruling: `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/RULING.md`.
 
 Upstream filing state: not applicable
 
@@ -127,9 +139,11 @@ Evidence record: `docs/research/monorepo-structure-topology-spike.md`.
 
 Form: SUPERSEDED. The scope content below is carried to the fresh `monorepo-structure-topology-tiebreak` topic; no same-slug research bundle is authorized.
 
-## monorepo-structure-topology-tiebreak: v0.2 topology tie-break and package-manager authority
+## monorepo-structure-topology-tiebreak: v0.3 topology tie-break and package-manager authority
 
 Status: RESEARCH COMPLETE in R2; implementation PENDING (2026-09-30)
+
+Continuation: this is the v0.3 continuation of [topology-reopen](#monorepo-structure-topology-reopen-v03-topology-reopen), under the operator's metadata-only recovery. Its mechanical R1/R2 correspond to reading-order R2/R3 only; its closing ledger remains `monorepo-structure-topology-tiebreak` research R2. There is one logical topology version label, two preserved topic directories, and no physical merge or lifecycle reclassification. The prior proposed v0.4 assignment is superseded; separately authorized recovery is still required before only stack-selection remains open.
 
 Type: research + implementation
 
