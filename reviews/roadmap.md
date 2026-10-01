@@ -84,13 +84,19 @@ Result: Commit `cf69b70` created `research-r2.md`, its compiled intake, and its 
 
 ## monorepo-structure-topology-reopen: v0.3 topology reopen
 
-Status: R1 RESEARCH COMPLETE; same-slug R2 scope skeleton VOID. Fresh tiebreak R1/R2 prospectively settles the first-app location and local manager; implementation PENDING lifecycle recovery/admission (2026-09-30)
+Status: COMPLETE; operator-authorized research-only zero-code recovery (2026-09-30)
 
-Type: research + implementation
+Type: research-only
+
+Result: Final recovery close classifies this zero-code decision topic as research-only from its marker=no and absent audit drafts. Its 1 completed research rounds, two locked questions and local evidence satisfy the operator's deliverable; application code and implementation audit belong exclusively to stack-selection. Sealed research identities and the original close trail remain intact. All applicable close preflight, trail and economy checks pass. This topic is COMPLETE; the linked tiebreak recovery must still close before the v0.3 lineage is final.
+
+Current lifecycle supersession: the dated verbatim authorization in decisions.md overrides earlier implementation-pending/admission statements below. Those statements remain historical; they neither require a topology implementation audit nor block the subsequently admitted stack-selection slice. No application code, extra research round, constraint, tag or shared audit closure is claimed.
+
+### Historical research and linked-continuation record
 
 Goal: Re-evaluate only the first v0.2 application layout and one-package root pnpm-workspace question after the locked no-API result invalidated the former two-deployable premise. The possible v0.3 service remains a revisit trigger rather than sizing input.
 
-Result: One blind research round split the external panel only at the nine exact dispatched model headings. All nine panelists responded, and all nine made condition-level E1–E5 or precise-absence mappings for both gates; no echo-only vote was counted. Q1 and Q2 both lock the Status Quo / Null Option: no v0.2 application move or API reservation, and no root pnpm workspace or root lockfile. The R1 close admits the v0.2 implementation cycle through its explicit runbook marker, while keeping every non-null topology action gated on new current evidence. The post-close null-gate harness finding confirms that this admits cycle routing only: it does not authorize an Astro scaffold in `frontend/`, a package-manager selection, or a package-local installer lockfile.
+Historical research result: One blind research round split the external panel only at the nine exact dispatched model headings. All nine panelists responded, and all nine made condition-level E1–E5 or precise-absence mappings for both gates; no echo-only vote was counted. Q1 and Q2 both lock the Status Quo / Null Option: no v0.2 application move or API reservation, and no root pnpm workspace or root lockfile. The R1 close admits the v0.2 implementation cycle through its explicit runbook marker, while keeping every non-null topology action gated on new current evidence. The post-close null-gate harness finding confirms that this admits cycle routing only: it does not authorize an Astro scaffold in `frontend/`, a package-manager selection, or a package-local installer lockfile.
 
 Cross-review stats: 1 research round; 9 dispatched panelists; 9 substantive responses; 0 non-responses; 2 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
 
@@ -101,7 +107,7 @@ Cross-review stats: 1 research round; 9 dispatched panelists; 9 substantive resp
 
 Runbook: `reviews/runbook/monorepo-structure-topology-reopen.md`
 
-Current supersession update (2026-09-30): the fresh tiebreak selects `frontend/` and application-local npm prospectively. Historical R1 Null ledgers/runbook remain unchanged; root workspace/root lockfile exclusions still apply. This topic remains implementation-pending, with lifecycle recovery A/B outside the tiebreak resolve.
+Historical supersession update (2026-09-30): the fresh tiebreak selects `frontend/` and application-local npm prospectively. Historical R1 Null ledgers/runbook remain unchanged; root workspace/root lockfile exclusions still apply. This topic remains implementation-pending, with lifecycle recovery A/B outside the tiebreak resolve.
 
 ### v0.3 linked continuation (operator recovery, 2026-09-30)
 

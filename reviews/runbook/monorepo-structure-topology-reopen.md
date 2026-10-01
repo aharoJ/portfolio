@@ -1,8 +1,18 @@
 # Monorepo Structure Topology Reopen Runbook
 
-Implementation Impact: yes
+Implementation Impact: no
 Lifecycle: A
-Status: Research R1 closed — v0.2 implementation-cycle admission is unblocked.
+Status: COMPLETE; research-only zero-code recovery (2026-09-30).
+
+## Current recovery scope (2026-09-30)
+
+This topic delivers only the completed R1 design decisions and local evidence. All application code and implementation audit belong to `stack-selection`. The operator explicitly authorized retrospective zero-code recovery; this runbook's marker is therefore no. Its historical implementation-routing guidance below is superseded.
+
+The later tiebreak R1/R2 decisions prospectively select `frontend/`, npm and `frontend/package-lock.json`; follow the current stack-selection runbook after both topology recoveries close. This supersedes R1's no-application/no-selected-manager admission for the first static slice while retaining its exclusions of a root workspace/root installer lockfile and unearned service domains. Original drafts, intakes, manifests and ledgers remain unchanged. This topic requires no product scaffold or implementation audit.
+
+## Historical guidance (superseded admission)
+
+The following guidance records the original marker=yes research-close state. Its process-routing and pre-scaffold blockers are historical; current application execution belongs to stack-selection under the later tiebreak locks.
 
 ## Purpose
 

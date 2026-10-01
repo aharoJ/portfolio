@@ -1,5 +1,13 @@
 # Decisions -- portfolio
 
+## monorepo-structure-topology-reopen: operator-authorized zero-code recovery (2026-09-30)
+
+**Operator authorization (2026-09-30):** the operator explicitly authorizes the zero-code recovery you recommended in `RECOVERY-RECOMMENDATION.md` for both `monorepo-structure-topology-reopen` and `monorepo-structure-topology-tiebreak`. Their deliverable is the completed design decisions and local evidence. All application code will be delivered and audited under `stack-selection`. Record this authorization verbatim, with a date, in `reviews/decisions.md` as part of the first recovery.
+
+The authorized deliverable for each topology topic is its completed design decisions and local evidence. Application implementation and its audit belong exclusively to `stack-selection`; this recovery changes lifecycle classification without changing either topic's sealed research evidence or votes. Recover-close reopen first, then tiebreak, preserving their distinct mechanical slugs under the v0.3 linked-continuation exception. The rejected physical merge and both VOID R2 rulings remain preserved.
+
+Authority: `BRIEF-RECOVERY.md` in `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/`. The marker/no-audit rule computes research-only at close, and the latest action=close ledger selects research recovery (`protocol.md:202-217`; `SKILL.md:489-493`). Zero-code implementation omission is documented in the roadmap (`protocol.md:158`; `SKILL.md:254`). Research close is the final close for this classification (`SKILL.md:606,639-647`). No additional research lock, vote, version pin, tag or application artifact follows from this operator disposition.
+
 ## monorepo-structure-topology-reopen: v0.3 linked-continuation recovery (2026-09-30)
 
 **Authority:** The operator's `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/BRIEF.md` directs one logical topology topic/version and expressly authorizes the metadata-only fallback when a compliant physical merge is unavailable. The cited ruling is `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/RULING.md`. This is repository metadata recovery, not a panel resolve, formal close, or authorization to execute the separately requested lifecycle recommendation.

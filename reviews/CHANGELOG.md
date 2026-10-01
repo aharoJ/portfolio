@@ -1,5 +1,30 @@
 # Changelog -- portfolio reviews
 
+## 2026-09-30 -- monorepo-structure-topology-reopen v0.3 research-only recovery close
+
+**Type:** research-only
+
+**Constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+1-round adversarial multi-model topology research record, nine named external panelists per round. Two questions locked; zero open follow-ups or deferred/accepted-risk dispositions. This operator-authorized recovery adds no panel round and no source-code findings, fixes or implementation audit. Final resolution rate: 2 open questions -> 0 after R1. Research decisions and local evidence are the complete deliverable; all application code belongs to stack-selection.
+
+### Decisions
+
+Q1: preserve the R1 Status Quo / Null application-path decision (9/9); Q2: preserve no root pnpm workspace or root lockfile (9/9). Later tiebreak decisions supersede first-application and manager admission prospectively.
+
+### Modified review artifacts
+
+- `reviews/decisions.md`: verbatim dated operator authorization and bounded recovery rationale; no new research lock.
+- `reviews/runbook/monorepo-structure-topology-reopen.md`: impact marker yes to no; current zero-code scope and explicit supersession of historical implementation admission.
+- `reviews/roadmap.md`: computed research-only Type, COMPLETE status, dated final recovery result; original research statistics, decision tables and premise record retained.
+- `reviews/CHANGELOG.md`: this unique newest-first recovery-close entry, preserving the original close trail.
+
+### Accounting and validation
+
+Close 0.a-0.i completes before this append. Production ledger validation with close-only supersession handling passes with no supersession; SOT interleave and armed topic-tree checks pass. Durable LOG.md:14 proves no C51 dispatch; no routing manifest is needed. Research skips implementation test, override, C70/C71 and Model Intel gates. Successful untracked-file probe finds no root Java/class artifact. Protocol-header and completeness gates are downstream N/A. No constraints are planned or appended; economy uses the sealed C80 arrays, not bootstrap. Protocol, hooks, tags and sealed historical drafts/intakes/manifests/ledgers remain unchanged.
+
+The reopen topic is COMPLETE. The logical v0.3 lineage still awaits the separately executed tiebreak recovery close; this first commit is not its tag target. No tag is created here.
+
 ## 2026-09-30 — topology tiebreak R2 research convergence
 
 **Type:** research + implementation; research complete, implementation pending.
