@@ -2,13 +2,13 @@
 
 ## stack-selection: v0.2 full-stack selection
 
-Status: RESEARCH COMPLETE; topology/manager prerequisites SETTLED by tiebreak R2; implementation PENDING lifecycle recovery/admission (2026-09-30)
+Status: RESEARCH COMPLETE; implementation ADMITTED under operator-authorized recovery; awaiting static article slice and audit R1 (2026-09-30)
 
 Type: research + implementation
 
 Goal: Select the smallest reviewable, self-verifiable stack for `apps/web`, `apps/api`, the API-owned database/ORM, and—if the first real web/API boundary warrants it—one transport-contract authority, while preserving the locked monorepo structure.
 
-Result: R1 left all four choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for `apps/web` (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists all evaluated each binary gate at condition level; no echo-only vote was counted. Q2–Q4 unanimity is conditional gate agreement, not independent confirmation of the operator facts: the intake precomputed FAIL absent a conflicting supplied artifact. Research is complete, but implementation is blocked until the monorepo topology reopen settles.
+Result: R1 left all four choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for `apps/web` (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists all evaluated each binary gate at condition level; no echo-only vote was counted. Q2–Q4 unanimity is conditional gate agreement, not independent confirmation of the operator facts: the intake precomputed FAIL absent a conflicting supplied artifact. Research is complete. Both topology recoveries are COMPLETE; the static application is admitted in frontend/ with npm and an application-local lockfile. Stack-selection remains implementation-pending until its own audit closes.
 
 Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substantive responses; 1 waived non-response; 4 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
 
@@ -21,13 +21,15 @@ Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substa
 
 Runbook: `reviews/runbook/stack-selection.md`
 
-Current prerequisite update (2026-09-30): `monorepo-structure-topology-tiebreak` R1/R2 now selects `frontend/` and application-local npm with `frontend/package-lock.json`. For current path/manager instructions, use `reviews/runbook/monorepo-structure-topology-tiebreak.md`. Historical `apps/web` and pnpm examples below describe the prior research record. Actual scaffold execution remains pending applicable implementation admission and the separate lifecycle recovery; no recovery A/B is selected here.
+Current prerequisite update (2026-09-30): topology-reopen is COMPLETE at `c7e6ce27ed669df589adc29bb5e2047301591bb8`; tiebreak is COMPLETE at `a4006ace6012e1e7c002b9996e3c63a40877a0e1`. The operator-authorized zero-code recovery assigns all application code and audit to stack-selection, the sole remaining open topic. The current [stack-selection runbook](runbook/stack-selection.md) supersedes old blockers and `apps/web`/root-pnpm execution examples with `frontend/`, npm and `frontend/package-lock.json`. Astro's static article choice and API/persistence/contract exclusions remain locked.
 
 Upstream filing state: not applicable
 
-### Monorepo premise record
+### Historical monorepo premise record
 
 The Q2-null condition meets the existing monorepo-structure two-deployable reopen trigger. **Disposition: REOPEN REQUIRED.** The monorepo lock names `apps/web` and `apps/api` as the two deployable roots, and its implementation gate requires the two-deployable premise to survive the first scaffold; otherwise it directs topology research to reopen before substantial paths accumulate. The null API means that condition is not met. Do not scaffold `apps/web` or `apps/api` until the reopened research round settles the topology.
+
+Current disposition: the historical reopen requirement above is fulfilled by tiebreak decisions and both final topology recovery closes. It no longer blocks the admitted frontend/npm slice.
 
 ### Premise Challenge Record
 
