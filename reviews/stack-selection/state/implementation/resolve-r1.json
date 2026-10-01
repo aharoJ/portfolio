@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "topic": "stack-selection",
+  "cycle_type": "implementation",
+  "round": 1,
+  "timestamp": "2026-10-01T21:55:00Z",
+  "verdicts": {
+    "gemini-cli": "FAIL: one generated-artifact ignore claim; rejected after source check",
+    "astra-cli": "FAIL: Node floor, browser provisioning, stale dist, and ignore claims",
+    "fable-cli": "FAIL: Node floor and stale dist claims; possible ignore gap rejected after source check",
+    "deepseek-cli": "FAIL: Node floor and generated-artifact ignore claims; ignore claim rejected after source check"
+  },
+  "predicates": {
+    "B1_zero_findings_first_global_round": false,
+    "B2_convergence": false,
+    "B3_real_findings_and_cap_permits": true,
+    "B4_hard_cap": false,
+    "B5_evidence_missing_or_contradictory": false
+  },
+  "selected_branch": "B3 auto-roll: three REAL ISSUEs are present in implementation R1 and round 1 is below cap 9; repair now, then compile audit R2 for external confirmation.",
+  "action": "roll",
+  "cap": 9,
+  "hard_cap_override_state": "absent",
+  "panel": {
+    "dispatched": [
+      "gemini-cli",
+      "astra-cli",
+      "fable-cli",
+      "deepseek-cli"
+    ],
+    "responded": [
+      "gemini-cli",
+      "astra-cli",
+      "fable-cli",
+      "deepseek-cli"
+    ],
+    "distinct_sources": 4,
+    "pastes_received": 4,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "C71: first implementation round; all four dispatched panelists responded, so no absence waiver applies.",
+    "Family note: the operator specifies a Sol lead; Astra's native runtime record is gpt-5.6-terra. Terra and Sol are treated as distinct model families, so Astra receives no same-family sole-agreement discount. Gemini, Claude, and DeepSeek runtime identities are separately bound in the admitted gate evidence.",
+    "Fable operator exception: The breach is read-only access to shared global npm packages (`semver`, `npm-install-checks`, rows 92/102), no other panelist output, no memory, and no repo writes. The exception covers exactly that.",
+    "Fable exception scope is enforced by the gate against the continuation decision hash, the reviewed Fable session hash, exactly rows 92/102, packages semver/npm-install-checks, and exact tool-input SHA-256 values; probe/ remains an allowed own-folder descendant.",
+    "C69 routing note: one bounded mechanical decoder QA delegate was requested as GPT-6.1-Sol at low effort for one turn; returned runtime metadata did not expose effective model/tier. It did not classify, gate, repair, dispatch, or count as a panel source; no C51 verified-routing claim is made."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings_count": 4,
+  "findings_real": 3,
+  "findings_fp": 1,
+  "findings": [
+    {
+      "id": "R1-FP-IGNORE",
+      "classification": "FALSE POSITIVE — Incorrect Assumption",
+      "severity": "n-a",
+      "disposition": "REJECTED",
+      "summary": "The claim that generated frontend directories are unignored omits the tracked root .gitignore. Its node_modules/ and dist/ rules apply to frontend descendants; git check-ignore --no-index reports both frontend/node_modules/example.js and frontend/dist/example.html as ignored. No frontend/.gitignore duplication is needed.",
+      "sources": [
+        "gemini-cli",
+        "astra-cli",
+        "fable-cli",
+        "deepseek-cli"
+      ],
+      "attribution_state": "attributed",
+      "evidence": "repository root .gitignore lines 1 and 4; lead git check-ignore command recorded in external continuation log"
+    },
+    {
+      "id": "R1-ENGINE-FLOOR",
+      "classification": "REAL ISSUE",
+      "severity": "P2",
+      "disposition": "FIXABLE",
+      "summary": "frontend/package.json and the package-lock root advertise Node >=22.12.0 while required production dependency undici@8.11.2 requires >=22.19.0 through Astro -> unifont. A declared-floor 22.12–22.18 runtime is outside the locked dependency's support and engine-strict installation fails.",
+      "sources": [
+        "astra-cli",
+        "fable-cli",
+        "deepseek-cli"
+      ],
+      "attribution_state": "attributed",
+      "corroboration": "3/4 independent runtime-family sources; exceeds P2 high threshold",
+      "repair_scope": "frontend/package.json and frontend/package-lock.json root metadata"
+    },
+    {
+      "id": "R1-BROWSER-FRESHNESS",
+      "classification": "REAL ISSUE",
+      "severity": "P2",
+      "disposition": "FIXABLE",
+      "summary": "test:browser invokes Playwright only while its configured web server serves existing dist/. A source edit after a previous build can therefore pass browser tests against stale output rather than current static artifacts.",
+      "sources": [
+        "astra-cli",
+        "fable-cli"
+      ],
+      "attribution_state": "attributed",
+      "corroboration": "2/4 independent runtime-family sources; meets P2 high threshold",
+      "repair_scope": "frontend/package.json test:browser entry point"
+    },
+    {
+      "id": "R1-BROWSER-PROVISIONING",
+      "classification": "REAL ISSUE",
+      "severity": "P2",
+      "disposition": "FIXABLE — operator-directed direct reproduction",
+      "summary": "The configured Chromium test has no provisioning command. With PLAYWRIGHT_BROWSERS_PATH set to a fresh private directory, Chromium launch fails with Playwright's missing-executable diagnostic and an explicit playwright install instruction.",
+      "sources": [
+        "astra-cli"
+      ],
+      "attribution_state": "attributed",
+      "corroboration": "1/4 external sources; direct lead reproduction is recorded and the operator explicitly directs repair of every real issue",
+      "repair_scope": "frontend/package.json test:browser entry point"
+    }
+  ],
+  "gate_evidence": {
+    "path": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r1-redispatch-resolve/dispatch-evidence-r1-redispatch.json",
+    "sha256": "160514c5416d6188bffaec1433433e90673a6e03f9a4c2d0f7c40e4b4e97a2b3"
+  },
+  "decoder_qa": {
+    "path": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r1-redispatch-resolve/receipts/decoder-qa-results.json",
+    "result": "48/48 PASS"
+  },
+  "fix_plan": [
+    "Raise Node support floor and mirror it in lockfile root metadata.",
+    "Make test:browser build current static output and provision Chromium before Playwright runs.",
+    "Do not modify frontend/.gitignore because repository-level tracked ignores already cover generated directories."
+  ]
+}

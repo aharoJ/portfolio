@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22.12.0",
+    "node": ">=22.19.0",
     "npm": ">=9.6.5"
   },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "test:browser": "playwright test"
+    "test:browser": "npm run build && playwright install chromium && playwright test"
   },
   "dependencies": {
     "astro": "^7.3.5"

@@ -1,0 +1,49 @@
+{
+  "schema_version": "v3.19",
+  "artifact_type": "routing-verification",
+  "topic": "stack-selection",
+  "cycle_type": "implementation",
+  "created_at": "2026-10-01T21:55:00Z",
+  "session_id": "/root",
+  "runtime_global_routing_inputs": {
+    "CLAUDE_CODE_SUBAGENT_MODEL_set": false,
+    "note": "The Codex collaboration runtime exposed a requested model/effort at spawn but no effective runtime model or tier in returned metadata."
+  },
+  "subagent_spawns": [
+    {
+      "spawn_id": "decoder_qa_grounding",
+      "round": 1,
+      "purpose": "Bounded mechanical inspection of actual Astra/DeepSeek prompt-delivery record shapes and proposed regression assertions; no classification, admission, repair, panel dispatch, network, or build work.",
+      "execution_cap": "one turn; no follow-up",
+      "requested_model": "gpt-6.1-sol",
+      "requested_tier": "low",
+      "effective_model": null,
+      "effective_tier": null,
+      "verification_source": "none",
+      "verification_evidence": "The returned subagent completion explicitly reports effective runtime model and service tier unavailable from visible system/runtime evidence.",
+      "status": "missing"
+    },
+    {
+      "spawn_id": "clean_frontend_verify",
+      "round": 1,
+      "purpose": "Bounded independent clean-room frontend verification: private temporary copy only; Node 22.19 clean install, static build, fresh Chromium provisioning, and browser test execution. No repository writes, review edits, classification, panel dispatch, tmux, or relay.",
+      "execution_cap": "one turn; no follow-up",
+      "requested_model": "gpt-6.1-sol",
+      "requested_tier": "low",
+      "effective_model": null,
+      "effective_tier": null,
+      "verification_source": "none",
+      "verification_evidence": "The returned subagent completion explicitly reports effective runtime model and service tier unavailable from visible system/runtime evidence.",
+      "status": "missing"
+    }
+  ],
+  "aggregate_counts": {
+    "c51_spawns_total": 2,
+    "verified": 0,
+    "missing": 2,
+    "divergent": 0
+  },
+  "close_gate_result": "unverified",
+  "upstream_filing_state": "not-applicable",
+  "telemetry_notes": "Requested GPT-6.1-Sol/low is routing intent only. This artifact makes no effective-tier or C51-compliance claim and will block a normal close unless later direct evidence resolves it."
+}
