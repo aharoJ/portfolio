@@ -1,5 +1,21 @@
 {
   "name": "@angel/portfolio-frontend",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=9.6.5"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
 }
