@@ -1,5 +1,11 @@
 # Decisions -- portfolio
 
+## monorepo-structure-topology-tiebreak: final zero-code recovery disposition (2026-09-30)
+
+The operator's verbatim dated authorization in the topology-reopen recovery entry applies to this continuation as well. Its deliverable is the completed R1/R2 design decisions and local evidence; all application code and audit belong to stack-selection. The reopen recovery is already COMPLETE at `c7e6ce27ed669df589adc29bb5e2047301591bb8`. This separately executed close finalizes the remaining zero-code topology record under the existing v0.3 linked-continuation exception.
+
+The R2 closing ledger, npm outcome, R1 source pointer, qualified-rule exclusions and original manifests remain sealed at their original identities. Marker=no and no audit drafts compute research-only; the valid latest research action=close selects the recovery cycle (`protocol.md:202-217`; `SKILL.md:489-493`). No new decision vote or implementation evidence is claimed. The final tiebreak recovery-close commit is the v0.3 tag target after both records are COMPLETE; BRIEF-RECOVERY.md reserves tag creation to the operator (`SKILL.md:639-647`).
+
 ## monorepo-structure-topology-reopen: operator-authorized zero-code recovery (2026-09-30)
 
 **Operator authorization (2026-09-30):** the operator explicitly authorizes the zero-code recovery you recommended in `RECOVERY-RECOMMENDATION.md` for both `monorepo-structure-topology-reopen` and `monorepo-structure-topology-tiebreak`. Their deliverable is the completed design decisions and local evidence. All application code will be delivered and audited under `stack-selection`. Record this authorization verbatim, with a date, in `reviews/decisions.md` as part of the first recovery.

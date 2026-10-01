@@ -1,6 +1,15 @@
 # Topology Tie-Break Implementation Runbook
 
-Implementation Impact: yes
+Implementation Impact: no
+Status: COMPLETE; research-only zero-code recovery (2026-09-30).
+
+## Current recovery scope (2026-09-30)
+
+This completed design topic delivers only its locked decisions and local evidence. The operator explicitly authorized zero-code recovery; no application implementation or audit is due under this slug. All application code and implementation audit belong to `stack-selection`, which retains impact=yes. Both topology records close separately as research-only under the linked v0.3 lineage.
+
+For the admitted static slice, the current stack-selection runbook carries these settled prerequisites: `frontend/`, npm, `frontend/package-lock.json`, static Astro output, and the exclusions below. Historical implementation-pending and recovery-A/B statements below are superseded by this operator disposition. The original execution guidance is retained as the source of prerequisites; stack-selection owns the executable application scope and actual verification.
+
+## Historical research-close guidance (execution now owned by stack-selection)
 
 ## Admission and current authority
 
