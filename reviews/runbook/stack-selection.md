@@ -32,11 +32,13 @@ npm ci
 npm run build
 ```
 
-Serve the build with a plain static server from the same application root:
+Serve the built static output with Astro's Node-native preview command from the same application root:
 
 ```sh
-python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
+npm run preview -- --host 127.0.0.1 --port 4173 --ignore-lock
 ```
+
+This supersedes the Python instruction introduced by implementation commit `af41f12`; no research round ratified that host prerequisite, so using the implementation-authored line to reject R2 was circular. The locked Astro toolchain adds no dependency. `--ignore-lock` keeps the test server foregrounded for Playwright supervision instead of detaching it.
 
 Inspect the article through direct navigation and through the index-page link. Verify this implementation, rather than treating the topology spike's result or hashes as this slice's evidence. Commit the scaffold normally before its implementation audit.
 
