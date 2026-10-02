@@ -3,7 +3,7 @@
   "artifact_type": "routing-verification",
   "topic": "stack-selection",
   "cycle_type": "implementation",
-  "created_at": "2026-10-01T21:55:00Z",
+  "created_at": "2026-10-02T03:06:33Z",
   "session_id": "/root",
   "runtime_global_routing_inputs": {
     "CLAUDE_CODE_SUBAGENT_MODEL_set": false,
@@ -17,11 +17,11 @@
       "execution_cap": "one turn; no follow-up",
       "requested_model": "gpt-6.1-sol",
       "requested_tier": "low",
-      "effective_model": null,
-      "effective_tier": null,
-      "verification_source": "none",
-      "verification_evidence": "The returned subagent completion explicitly reports effective runtime model and service tier unavailable from visible system/runtime evidence.",
-      "status": "missing"
+      "effective_model": "gpt-6.1-sol",
+      "effective_tier": "low",
+      "verification_source": "native-session-meta-and-turn-context",
+      "verification_evidence": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r3-resolve/receipts/routing-decoder_qa_grounding-native.jsonl:1 parent_thread_id/agent_path; :8 model=gpt-6.1-sol, effort=low; sha256=883df6ab43e95eeaf14bf46b9cabfec0981c909a1a39eebd302efbc58a09f218",
+      "status": "verified"
     },
     {
       "spawn_id": "clean_frontend_verify",
@@ -30,20 +30,20 @@
       "execution_cap": "one turn; no follow-up",
       "requested_model": "gpt-6.1-sol",
       "requested_tier": "low",
-      "effective_model": null,
-      "effective_tier": null,
-      "verification_source": "none",
-      "verification_evidence": "The returned subagent completion explicitly reports effective runtime model and service tier unavailable from visible system/runtime evidence.",
-      "status": "missing"
+      "effective_model": "gpt-6.1-sol",
+      "effective_tier": "low",
+      "verification_source": "native-session-meta-and-turn-context",
+      "verification_evidence": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r3-resolve/receipts/routing-clean_frontend_verify-native.jsonl:1 parent_thread_id/agent_path; :8 model=gpt-6.1-sol, effort=low; sha256=2826d5964df24a306fb38a029a101de8c7bd8037183ccf8fc08a2ef7056c01af",
+      "status": "verified"
     }
   ],
   "aggregate_counts": {
     "c51_spawns_total": 2,
-    "verified": 0,
-    "missing": 2,
+    "verified": 2,
+    "missing": 0,
     "divergent": 0
   },
-  "close_gate_result": "unverified",
+  "close_gate_result": "verified",
   "upstream_filing_state": "not-applicable",
-  "telemetry_notes": "Requested GPT-6.1-Sol/low is routing intent only. This artifact makes no effective-tier or C51-compliance claim and will block a normal close unless later direct evidence resolves it."
+  "telemetry_notes": "Two R1 subagent native session_meta/turn_context snapshots directly confirm effective GPT-6.1-Sol low routing; prior unverified manifest preserved externally before replacement."
 }

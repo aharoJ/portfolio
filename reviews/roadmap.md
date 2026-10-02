@@ -2,15 +2,22 @@
 
 ## stack-selection: v0.2 full-stack selection
 
-Status: RESEARCH COMPLETE; implementation ADMITTED under operator-authorized recovery; awaiting static article slice and audit R1 (2026-09-30)
+Status: COMPLETE (2026-10-01)
 
 Type: research + implementation
 
 Goal: Select the smallest reviewable, self-verifiable stack for `apps/web`, `apps/api`, the API-owned database/ORM, and—if the first real web/API boundary warrants it—one transport-contract authority, while preserving the locked monorepo structure.
 
-Result: R1 left all four choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for `apps/web` (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists all evaluated each binary gate at condition level; no echo-only vote was counted. Q2–Q4 unanimity is conditional gate agreement, not independent confirmation of the operator facts: the intake precomputed FAIL absent a conflicting supplied artifact. Research is complete. Both topology recoveries are COMPLETE; the static application is admitted in frontend/ with npm and an application-local lockfile. Stack-selection remains implementation-pending until its own audit closes.
+Result: R1 left all four research choices open. R2 used the supplied operator product facts as the acceptance record and locked Astro static-first/islands for the first web slice (7/8, robust) while locking the Status Quo / Null Option for API runtime, persistence/migration, and contract authority (8/8 each, robust). The 8 responding panelists evaluated each binary gate at condition level; Q2–Q4 unanimity remains conditional gate agreement, not independent confirmation of the supplied facts. Both topology recoveries then selected `frontend/`, npm and an application-local lockfile for the admitted static slice. The slice now builds article HTML and passes JavaScript-disabled navigation without hydration. Three implementation audit rounds resolved four real defects: three P2 issues in R1 and the R2 Python host prerequisite, reclassified P3 by dated operator decision and repaired without changing its sealed historical ledger. R3 found zero new issues and converged with four responding PASS sources. Its DeepSeek line-106 read-only shell-chaining exception is bound exactly in external gate evidence and the copied verifier. Research and implementation are complete; the historical API, persistence and contract exclusions still apply.
 
-Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substantive responses; 1 waived non-response; 4 locked decisions; 0 open follow-ups; no implementation/audit cycle; no source-code findings.
+Cross-review stats: 2 research rounds; research R2 dispatched 9 named panelists, with 8 substantive responses and 1 waived non-response; 4 locked decisions and 0 open research follow-ups. Implementation: 3 audit rounds, 4 final-round responding panel seats, 4 direct real defects fixed, 0 additional sweep fixes (sweep ratio 0/4), and 0 reported zero-hit sweeps. R1 had 3 P2 repairs and 1 incorrect-assumption false positive; R2's Python false-positive disposition was operator-corrected to REAL ISSUE P3 and repaired; R3 had 0 new issues, 2 clean PASS and 2 PASS with verification limits. C70 four-source and C71 roster checks pass without override. Review intake total 485910 bytes does not trigger C56 economics.
+
+| Key change | Impact |
+|---|---|
+| Static Astro article in `frontend/` with application-local npm lockfile | Delivers the admitted v0.2 browser slice while preserving the Null API, persistence and contract decisions |
+| Node `>=22.19.0`, build-first Playwright flow, Chromium provisioning and Astro preview | Resolves three R1 P2 defects and the R2 P3 undeclared Python prerequisite; Node 22.19.0/npm 10.9.3 build and JavaScript-disabled browser checks pass |
+| Three audit drafts, intakes/manifests, sealed ledgers and native routing proof | Preserves the review trail, corrected R2 classification history, R3 operator exception and verified C51/C70/C71 provenance |
+| Implementation close trail | Records the final result, runbook, constraint economy and normal-hook commit as the v0.2 tag target; no tag is created here |
 
 | Key decision | Consensus | Round |
 |---|---:|---:|
@@ -21,7 +28,7 @@ Cross-review stats: 2 research rounds; R2 dispatched 9 named panelists; 8 substa
 
 Runbook: `reviews/runbook/stack-selection.md`
 
-Current prerequisite update (2026-09-30): topology-reopen is COMPLETE at `c7e6ce27ed669df589adc29bb5e2047301591bb8`; tiebreak is COMPLETE at `a4006ace6012e1e7c002b9996e3c63a40877a0e1`. The operator-authorized zero-code recovery assigns all application code and audit to stack-selection, the sole remaining open topic. The current [stack-selection runbook](runbook/stack-selection.md) supersedes old blockers and `apps/web`/root-pnpm execution examples with `frontend/`, npm and `frontend/package-lock.json`. Astro's static article choice and API/persistence/contract exclusions remain locked.
+Prerequisite and close update (2026-10-01): topology-reopen is COMPLETE at `c7e6ce27ed669df589adc29bb5e2047301591bb8`; tiebreak is COMPLETE at `a4006ace6012e1e7c002b9996e3c63a40877a0e1`. Their operator-authorized zero-code recovery assigned application code and audit to stack-selection. The [stack-selection runbook](runbook/stack-selection.md) now records the completed `frontend/`, npm, `frontend/package-lock.json` execution path. Astro's static article choice and API/persistence/contract exclusions remain locked.
 
 Upstream filing state: not applicable
 
@@ -41,7 +48,7 @@ Current disposition: the historical reopen requirement above is fulfilled by tie
 | Outcome | Modified |
 | Prevented waste? | Y |
 | Caused waste? | N |
-| Notes | R2 rejected the unearned full-stack premise for API, persistence, and contract work while retaining a separately justified static web slice. |
+| Notes | Research R2 rejected the unearned full-stack premise for API, persistence, and contract work while retaining a separately justified static web slice. Implementation R2's Python prerequisite was reclassified as a real portability defect by operator decision; the static slice now runs with the Node-native preview path. |
 
 ## monorepo-structure: R1 real-panel provenance supersession
 

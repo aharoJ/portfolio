@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "topic": "stack-selection",
+  "cycle_type": "implementation",
+  "round": 3,
+  "verdicts": {
+    "gemini-cli": "PASS: no blockers found",
+    "astra-cli": "PASS: no blockers found",
+    "fable-cli": "PASS-with-monitoring: no blockers; isolated panel could not install/build/test",
+    "deepseek-cli": "PASS-with-monitoring: no blockers; requested full article expansion but identified no defect"
+  },
+  "predicates": {
+    "B1_zero_findings_first_global_round": false,
+    "B2_convergence": true,
+    "B3_real_findings_and_cap_permits": false,
+    "B4_hard_cap": false,
+    "B5_evidence_missing_or_contradictory": false
+  },
+  "selected_branch": "B2 convergence: R3 has zero REAL ISSUEs and four admitted responding PASS sources; execute close gates.",
+  "action": "close",
+  "cap": 9,
+  "hard_cap_override_state": "absent",
+  "panel": {
+    "dispatched": [
+      "gemini-cli",
+      "astra-cli",
+      "fable-cli",
+      "deepseek-cli"
+    ],
+    "responded": [
+      "gemini-cli",
+      "astra-cli",
+      "fable-cli",
+      "deepseek-cli"
+    ],
+    "distinct_sources": 4,
+    "pastes_received": 4,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "C71: all four CLI seats dispatched in R1-R3 responded in R3; no panel-set drop or waiver applies.",
+    "C70: Gemini and Astra PASS; Fable and DeepSeek PASS-with-monitoring; four distinct responding PASS sources meet the four-source floor without an override.",
+    "Operator exception A: DeepSeek R3 native JSONL line 106 chained three read-only prompt-authorized git -C rev-parse HEAD:<file> metadata checks in one Bash call despite the no-shell-chaining rule; the dated operator decision authorizes exactly this row. Decision, stable session SHA-256 and tool-input SHA-256 are bound in dispatch-evidence-r3.json; no repo write, nonmetadata outside read, other panelist output or memory was found.",
+    "Family note: Astra effective gpt-6-sol is in the Sol lead's OpenAI/Sol family; C25 finding-specific sole-agreement rule has no finding to weight and does not change C70 PASS counts.",
+    "R2-PYTHON-RUNTIME was corrected by the dated operator decision to REAL ISSUE P3 and fixed in 461bc3f; sealed resolve-r2.json remains historical and was not edited. The R3 repair held under Node 22.19.0 clean install, static build and Python-free 2/2 browser tests.",
+    "R1/R2 superseded dispatches and their operator exceptions remain historical, with no carry-forward authority except this exact R3 DeepSeek line-106 decision."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-02T03:04:59Z",
+  "findings_count": 0,
+  "findings_real": 0,
+  "findings_fp": 0,
+  "gate_evidence": {
+    "path": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r3-resolve/dispatch-evidence-r3.json",
+    "sha256": "446f88002c23ab9eee3c7abafbfb6b3b43c7ae321210c486ae6717faefa22bf7"
+  },
+  "cross_check": {
+    "path": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r3-resolve/receipts/cross-check.json",
+    "result": "Gemini 18/18 (14 mechanical, 4 visually normalized), Astra 4/4, Fable 36/36, DeepSeek 16/16 substantive lines matched live panes"
+  }
+}

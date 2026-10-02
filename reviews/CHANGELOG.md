@@ -1,5 +1,32 @@
 # Changelog -- portfolio reviews
 
+## 2026-10-01 -- stack-selection v0.2 implementation close
+
+**Type:** research + implementation
+
+**Constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+Three implementation audit rounds followed the locked Astro static, `frontend/`, npm and application-local lockfile decisions. Four panel seats responded in the final round; Gemini and Astra returned PASS, Fable and DeepSeek returned PASS with verification limits, and the final round found zero new P0–P3 issues. The R3 evidence gate passed under the operator's exact DeepSeek line-106 read-only exception. C71 has no dropped CLI seat and C70 has four responding PASS sources; no convergence override is needed.
+
+### Changes and findings
+
+- `frontend/package.json` and `frontend/package-lock.json`: Node floor `>=22.19.0` matches the installed dependency tree; npm remains application-local. The browser script builds current static output and provisions Chromium before Playwright. R1 engine-floor and browser-provisioning findings: REAL ISSUE P2, fixed in `2d4b06f`.
+- `frontend/playwright.config.mjs`: the build-first browser flow tests the current `dist/`, refuses existing listeners, and uses Astro's Node-native preview server. R1 stale-output finding: REAL ISSUE P2, fixed in `2d4b06f`. R2 undeclared Python host prerequisite: REAL ISSUE P3 under the dated operator correction, fixed in `461bc3f` without a new dependency.
+- `reviews/runbook/stack-selection.md`: records the Node-native execution and verification path and explicitly supersedes the implementation-authored Python instruction. The research locks, not that former runbook line, govern design-intent classifications.
+- `reviews/stack-selection/audit/stack-selection-r1.md` through `-r3.md`, their three compiler-produced intakes/manifests, `.baseline-ref`, and implementation resolve ledgers: preserve the adversarial trail. The sealed R2 ledger's Python false-positive disposition is historical and superseded by the dated operator decision; it was not edited.
+- `reviews/stack-selection/state/implementation/routing-verification.json`: native subagent session metadata now proves the two R1 bounded GPT-6.1-Sol low-effort routes; the prior unverified manifest is preserved outside the repo.
+- `.hook-allowlist`: adds exact compiler-manifest and generated-intake paths to the normal-hook content-scan allowlist; the frontend lockfile was already listed. The intake exception covers false matches on dependency names such as `comma-separated-tokens` and `@azure/keyvault-secrets`. No hook bypass, raw panel response, or tag is included.
+
+### Review accounting
+
+R1: three REAL ISSUE P2 repairs, one incorrect-assumption FP about existing ignore rules. R2: one REAL ISSUE P3 after operator re-adjudication of the Python prerequisite, repaired before R3. R3: zero new issues; two clean PASS and two PASS with verification limits. Four direct defects fixed, zero additional sweep fixes recorded, no deferred or accepted-risk finding. The final Node 22.19.0/npm 10.9.3 strict clean install, static build, Python-free 2/2 JavaScript-disabled browser tests, no-hydration HTML scan, generated-path ignore checks, and normal close browser run passed. Review intake bytes: 163302 + 160283 + 162325 = 485910, below the 500000-byte C56 trigger; no hard-cap or convergence override exists and no post-zero issue class arose. No C56 economics block is triggered.
+
+### Close trail
+
+All five research/implementation ledgers pass the canonical schema check; the source-of-truth interleave check passes. The R3 panel gate exits 0, C51 routing is verified for two historical subagents, C71 roster is clean, C70 counts four PASS sources, the panelist-environment probe finds no root Java/class artifact, and the topic-tree gate passes. `reviews/roadmap.md` records COMPLETE with the implementation results and premise trail. No new operational constraint was warranted: the two final-round verification limits were resolved by lead tests or remain bundle-coverage notes, not product constraints.
+
+The implementation-close commit is the `v0.2` tag target; the operator creates the tag. No tag is created by this close.
+
 ## 2026-09-30 -- monorepo-structure-topology-tiebreak v0.3 research-only recovery close
 
 **Type:** research-only

@@ -2,3 +2,9 @@ reviews/monorepo-structure-topology-reopen/intakes/research-r1.manifest.json
 reviews/monorepo-structure-topology-tiebreak/intakes/research-r1.manifest.json
 reviews/monorepo-structure-topology-tiebreak/intakes/research-r2.manifest.json
 frontend/package-lock.json
+reviews/stack-selection/intakes/audit-r1.manifest.json
+reviews/stack-selection/intakes/audit-r2.manifest.json
+reviews/stack-selection/intakes/audit-r3.manifest.json
+reviews/stack-selection/intakes/audit-r1.md
+reviews/stack-selection/intakes/audit-r2.md
+reviews/stack-selection/intakes/audit-r3.md

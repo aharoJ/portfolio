@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "topic": "stack-selection",
+  "cycle_type": "implementation",
+  "round": 2,
+  "timestamp": "2026-10-01T23:40:00Z",
+  "verdicts": {
+    "gemini-cli": "PASS: no blockers found",
+    "astra-cli": "FAIL: undeclared python3 runtime claim; rejected after runbook and support-contract check",
+    "fable-cli": "FAIL: undeclared python3 runtime claim; conditionally withdrawn if runbook requires it, which source verification confirms",
+    "deepseek-cli": "PASS: no material defects; python3 noted below materiality and as pre-existing configuration"
+  },
+  "predicates": {
+    "B1_zero_findings_first_global_round": false,
+    "B2_convergence": true,
+    "B3_real_findings_and_cap_permits": false,
+    "B4_hard_cap": false,
+    "B5_evidence_missing_or_contradictory": false
+  },
+  "selected_branch": "B2 convergence: zero REAL ISSUEs in implementation R2 and the adversarial confirmation is complete; close remains separately subject to C70/C71.",
+  "action": "close",
+  "cap": 9,
+  "hard_cap_override_state": "absent",
+  "panel": {
+    "dispatched": ["gemini-cli", "astra-cli", "fable-cli", "deepseek-cli"],
+    "responded": ["gemini-cli", "astra-cli", "fable-cli", "deepseek-cli"],
+    "distinct_sources": 4,
+    "pastes_received": 4,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "C71: all four dispatched R2 panelists responded through the same CLI lineup as R1; no panel-drop or model-substitution waiver applies.",
+    "C70: only Gemini and DeepSeek supplied explicit PASS verdicts in the convergence round. Two distinct PASS sources are below the four-source floor, so close requires an active valid reviews/stack-selection/.convergence-override.json; none exists.",
+    "Family note: effective runtime families are Google/Gemini, OpenAI (Astra gpt-5.6-terra), Anthropic/Claude, and DeepSeek. The lead is Sol; Astra Terra is not treated as the lead's family for finding-specific corroboration.",
+    "No subagent delegation was used in R2 resolution.",
+    "Gate admission followed two copied-tool decoder repairs: exact C82 Git metadata command recognition and the reviewed visible relay prefix on the exact injection line. Regression positives and near-miss negatives passed before the final evidence gate."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings_count": 1,
+  "findings_real": 0,
+  "findings_fp": 1,
+  "findings": [
+    {
+      "id": "R2-PYTHON-RUNTIME",
+      "classification": "FALSE POSITIVE — Design Intent / Incorrect Assumption",
+      "severity": "n-a",
+      "disposition": "REJECTED",
+      "summary": "The claim assumes every test prerequisite must be supplied by package.json and that Node-only hosts are supported. The locked runbook explicitly prescribes serving the static build with python3 -m http.server, while package engines correctly describe Node/npm compatibility rather than all host tools. The workflow fails loudly when python3 is absent and makes no portability promise for minimal Node images or Windows-only hosts.",
+      "sources": ["astra-cli", "fable-cli"],
+      "attribution_state": "attributed",
+      "evidence": "reviews/runbook/stack-selection.md:25-41 explicitly prescribes the plain python3 static server; frontend/playwright.config.mjs:10-14 implements it; frontend/package.json:6-20 does not claim a Node-only host contract; DeepSeek independently treated the same observation as non-material and pre-existing."
+    }
+  ],
+  "gate_evidence": {
+    "path": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r2-resolve/dispatch-evidence-r2.json",
+    "sha256": "46a05dcdacee8921eb009eb82be474f45e5b8dd6c334c837967666b34933b93f"
+  },
+  "cross_check": {
+    "path": "/Users/aharoj/desk/audits/portfolio/2026-10-01-audit-r2-resolve/receipts/cross-check.json",
+    "result": "Gemini 48/48, Astra 7/7, Fable 34/34, DeepSeek 11/11 normalized substantive lines matched live pane scrollback"
+  }
+}

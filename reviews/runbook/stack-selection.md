@@ -3,13 +3,13 @@
 Implementation Impact: yes
 Lifecycle: A
 
-## Current admission and supersession (2026-09-30)
+## Completed admission and supersession (2026-10-01)
 
-Both topology records are COMPLETE after the operator-authorized zero-code recovery: reopen at `c7e6ce27ed669df589adc29bb5e2047301591bb8`, then tiebreak at `a4006ace6012e1e7c002b9996e3c63a40877a0e1`. Their deliverable is completed design decisions and local evidence. Stack-selection is the sole remaining implementation topic, version v0.2, and owns the application scaffold and implementation audit.
+Both topology records are COMPLETE after the operator-authorized zero-code recovery: reopen at `c7e6ce27ed669df589adc29bb5e2047301591bb8`, then tiebreak at `a4006ace6012e1e7c002b9996e3c63a40877a0e1`. Their deliverable is completed design decisions and local evidence. Stack-selection owns the v0.2 application scaffold and completed implementation audit.
 
 The tiebreak's locked R1/R2 prerequisites select `frontend/`, npm and the application-local installer lockfile `frontend/package-lock.json`. These replace the former `apps/web`, root-pnpm and topology-blocker instructions for this first static application. See the attributed locks in `reviews/decisions.md` and selection boundary in `reviews/runbook/monorepo-structure-topology-tiebreak.md`. Observed Astro/npm versions are reference configuration, not research version locks; record and verify the implementation configuration actually used.
 
-The operator's BRIEF-RECOVERY.md authorizes the smallest representative static article slice, a normal scaffold commit, and `$review implement stack-selection` through its blind R1 draft and compiler intake. Stop at an applicable operator-affirmation gate. After the intake is ready, stop for the operator's panel paste; do not resolve or claim implementation complete.
+The operator's BRIEF-RECOVERY.md authorized the smallest representative static article slice, a normal scaffold commit, and `$review implement stack-selection` through its blind R1 draft and compiler intake. The subsequent three audit rounds and dated operator decisions resolved the implementation cycle; the R3 convergence close is recorded in the CHANGELOG and roadmap. The R1/R2 superseded dispatches and their exact operator exceptions remain historical evidence.
 
 ## Purpose and locked selections
 
@@ -24,12 +24,13 @@ Implement the R2 static Astro browser choice within the settled frontend topolog
 
 ## Execution
 
-Add only the source/configuration needed for the representative page and article. Install Astro with npm from the application root and retain the generated npm lockfile. After the lockfile exists, verify a clean installation and build:
+Add only the source/configuration needed for the representative page and article. Use Node `>=22.19.0` and npm `>=9.6.5` from the application root, and retain the npm lockfile. Verify a strict clean installation, static build, and JavaScript-disabled browser navigation:
 
 ```sh
 cd frontend
-npm ci
+npm ci --engine-strict
 npm run build
+npm run test:browser
 ```
 
 Serve the built static output with Astro's Node-native preview command from the same application root:
@@ -40,7 +41,9 @@ npm run preview -- --host 127.0.0.1 --port 4173 --ignore-lock
 
 This supersedes the Python instruction introduced by implementation commit `af41f12`; no research round ratified that host prerequisite, so using the implementation-authored line to reject R2 was circular. The locked Astro toolchain adds no dependency. `--ignore-lock` keeps the test server foregrounded for Playwright supervision instead of detaching it.
 
-Inspect the article through direct navigation and through the index-page link. Verify this implementation, rather than treating the topology spike's result or hashes as this slice's evidence. Commit the scaffold normally before its implementation audit.
+`test:browser` rebuilds before provisioning Chromium and running Playwright. It serves that build through Astro preview, refuses an existing listener, and defaults to port 4173. Set `PORTFOLIO_TEST_PORT` to a free private port when 4173 is occupied; the test URL and server command use the same value. The emitted pages must contain no `script`, `astro-island`, or `astro-server-island` element.
+
+Inspect the article through direct navigation and through the index-page link. Verify this implementation, rather than treating the topology spike's result or hashes as this slice's evidence. The scaffold was committed normally before its implementation audit.
 
 ## Required implementation checks
 
