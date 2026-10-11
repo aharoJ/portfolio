@@ -1,0 +1,581 @@
+{
+  "schema_version": "1.0",
+  "topic": "astro-backend-compatibility",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "limited_readiness_rule_support": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT \u2014 Integration readiness rule only; retain present Null",
+      "supporting_seats": [
+        "GEMINI",
+        "DEEPSEEK",
+        "MISTRAL",
+        "GROK",
+        "MEMO",
+        "CLAUDE.AI",
+        "KIMI",
+        "GPT"
+      ],
+      "qualified_scope": "Evidence/revisit rule only; no present or default future design. Concrete feature fact plus bounded proof precedes later scoped choices."
+    },
+    "Q2": {
+      "raw_recommendations": {
+        "ADOPT": 7,
+        "DISMISS": 1,
+        "INVESTIGATE": 0
+      },
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "limited_readiness_rule_support": 7,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT \u2014 Forms/auth readiness rule only; retain present Null",
+      "supporting_seats": [
+        "GEMINI",
+        "DEEPSEEK",
+        "GROK",
+        "MEMO",
+        "CLAUDE.AI",
+        "KIMI",
+        "GPT"
+      ],
+      "qualified_scope": "Evidence/revisit rule only; no present or default future design. Concrete feature fact plus bounded proof precedes later scoped choices."
+    },
+    "Q3": {
+      "raw_recommendations": {
+        "ADOPT": 7,
+        "DISMISS": 0,
+        "INVESTIGATE": 1
+      },
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "limited_readiness_rule_support": 7,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT \u2014 Transport readiness rule only; retain present Null",
+      "supporting_seats": [
+        "GEMINI",
+        "DEEPSEEK",
+        "GROK",
+        "MEMO",
+        "CLAUDE.AI",
+        "KIMI",
+        "GPT"
+      ],
+      "qualified_scope": "Evidence/revisit rule only; no present or default future design. Concrete feature fact plus bounded proof precedes later scoped choices."
+    },
+    "Q4": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "option_votes": {
+        "Status Quo / Null Option": 8
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "limited_readiness_rule_support": 8,
+      "robust_majority_after_any_single_removal": true,
+      "locked": true,
+      "decision": "ADOPT \u2014 Deployment revisit evidence rule only; retain present Null",
+      "supporting_seats": [
+        "GEMINI",
+        "DEEPSEEK",
+        "MISTRAL",
+        "GROK",
+        "MEMO",
+        "CLAUDE.AI",
+        "KIMI",
+        "GPT"
+      ],
+      "qualified_scope": "Evidence/revisit rule only; no present or default future design. Concrete feature fact plus bounded proof precedes later scoped choices."
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": true,
+    "open_follow_up_questions": false,
+    "research_cap_reached": false,
+    "robust_majority_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "converged",
+  "action": "close",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "responded": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "distinct_sources": 8,
+    "pastes_received": 9,
+    "non_response": [
+      "Z.AI"
+    ]
+  },
+  "panel_set_notes": [
+    "Angel (2026-10-10), verbatim: \"A count kimi\"; authorizes KIMI in R1 only, with no change to default lineup.",
+    "Spot-check waiver: model=Z.AI; reason=non-response; round=R1; evidence=body summarizes historical topology/stack votes and supplies no answer to current Q1-Q4; still-applies=no;",
+    "Raw Mistral Q2 DISMISS means present need dismissed/Null wins, not opposition to deferral; preserved without relabelling.",
+    "Raw Mistral Q3 INVESTIGATE is expressly \"conditionally, at future gate time / Null now\"; preserved as minority recommendation. Its payload/drift proof is included in Q3 readiness, not an unresolved present choice or force-disposition.",
+    "No echo-only vote from eight topical respondents: each supplies conditional mechanisms, hazards/costs, and a falsifiable prospective proof. MEMO includes intake/search echoes before its final answer; only final answer lines 344 onward supply one vote per question. KIMI preamble supplies no extra votes.",
+    "Every decision passes strict majority after every single removal with the full nine-seat roster conservatively retained in denominators.",
+    "Primary hand-derived matrix independently recomputed by source-anchor extraction and exhaustive retained-subset calculation; two methods by the same lead, not a separate agent or model.",
+    "Separate source/proof and authority pass checks current config, carried Null/ownership locks and official docs; generic proxy/cookie/date/validator/host recipes outside the approved scope are not adopted.",
+    "No C51 subagent or agentic CLI dispatch was used: web-paste roster and preserved source are the complete external panel transport.",
+    "Lead: Codex, common OpenAI family; effective model/profile unverified. Web seat names are labels, not proof of effective identity; no independent-family or independently executed runtime claim. Same-family finding discount does not change research votes."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-11T06:01:10+00:00",
+  "decisions_locked": 4,
+  "investigate": 0,
+  "evidence": {
+    "intake_sha256": "93eae2411994baa0f70d05ca008ff0c3cab61e553669c4dc22b1e2d05a6d1263",
+    "response_sha256": "cba9ef7aca27fca70153b4969ef103e7e3ec66e477a2caef1630540c1942eb8e",
+    "roster_authorization": "/Users/aharoj/desk/tmp/portfolio/astro-backend-compatibility/panel-batch/r1/roster-authorization.json",
+    "vote_locations": {
+      "GEMINI": [
+        {
+          "line": 44,
+          "quote": "1. **Recommendation:** **ADOPT** the integration-mode readiness rule. Maintain the **Status Quo / Null Option** today (retain static Astro output; select no backend, adapter, or runtime mode). Non-Null options are evaluated conditionally only."
+        },
+        {
+          "line": 55,
+          "quote": "1. **Recommendation:** **ADOPT** the security and authentication boundary readiness rule. Maintain the **Status Quo / Null Option** today (no forms, auth, sessions, private pages, or security intermediaries)."
+        },
+        {
+          "line": 71,
+          "quote": "1. **Recommendation:** **ADOPT** the transport contract readiness rule. Maintain the **Status Quo / Null Option** today (no API, shared package, generated client, or contract tooling)."
+        },
+        {
+          "line": 87,
+          "quote": "1. **Recommendation:** **ADOPT** the deployment revisit readiness rule. Maintain the **Status Quo / Null Option** today (retain current static distribution, select no host, proxy, adapter, or deployment pipeline)."
+        }
+      ],
+      "DEEPSEEK": [
+        {
+          "line": 10,
+          "quote": "**1. Decision:** **ADOPT** a conditional readiness rule: _any non-static integration mode requires a concrete feature fact plus a bounded prospective proof of adapter/runtime compatibility before it may be evaluated as actionable._ **DISMISS** every present integration-mode selection. Today: **DEFER/Null** \u2014 retain static Astro + separate API as the null baseline; no adapter, SSR mode, endpoint, or proxy is selected."
+        },
+        {
+          "line": 50,
+          "quote": "**1. Decision:** **ADOPT** a strict deferral rule: _no validation, authentication, session, cookie, CSRF, CORS, or caching design is adopted until a concrete form, private page, or persisting visitor action exists as supplied evidence._ **DISMISS** every present auth/session/intermediary selection. Today: **DEFER/Null** \u2014 no forms, auth, sessions, private pages, or corresponding infrastructure."
+        },
+        {
+          "line": 86,
+          "quote": "**1. Decision:** **ADOPT** a conditional contract-readiness rule: _a transport contract may be evaluated only after a real browser-to-API boundary exists with request/success-response shapes and a checkable consumer artifact; contract tooling is not adopted in advance._ **DISMISS** every present contract-generation, schema, shared-package, or validation selection. Today: **DEFER/Null** \u2014 no API, shared package, generated client, schema tool, or transport-contract authority."
+        },
+        {
+          "line": 119,
+          "quote": "**1. Decision:** **ADOPT** a revisit-evidence mapping rule: _any future deployment topology must be evaluated as a bounded prospective proof against the existing repository-level infrastructure ownership of deployment invocation; no host, adapter, proxy, topology, or CI choice is selected now._ **DISMISS** every present deployment selection. Today: **DEFER/Null** \u2014 retain the static artifact and existing ownership boundaries."
+        }
+      ],
+      "MISTRAL": [
+        {
+          "line": 10,
+          "quote": "**1. Verdict: ADOPT (readiness rule only).** Adopt the rule: _portable HTTP integration (static HTML + separate backend API) is the default-compatible future mode; Astro adapter/endpoint modes are conditional and require their own gate._ No adapter, endpoint, runtime, or transport design is adopted now."
+        },
+        {
+          "line": 26,
+          "quote": "**1. Verdict: DISMISS (as present need) / Null wins.** No forms, auth, sessions, or infrastructure now. Nothing is adopted except a conditional ownership rule."
+        },
+        {
+          "line": 42,
+          "quote": "**1. Verdict: INVESTIGATE (conditionally, at future gate time) / Null now.** No API, shared package, client, schema tool, or contract generation now."
+        },
+        {
+          "line": 58,
+          "quote": "**1. Verdict: ADOPT (revisit-evidence rule only).** Keep the current static artifact and existing ownership boundaries; deployment invocation stays with repository-level infrastructure under the carried monorepo Q3 lock. No host, adapter, proxy, topology, CI, or runtime selected."
+        }
+      ],
+      "GROK": [
+        {
+          "line": 7,
+          "quote": "**ADOPT** the readiness/revisit rule: retain pure static Astro output; evaluate any integration mode only after a concrete feature fact (private access, form submission, visitor-specific state, or restart-surviving action) appears and a bounded proof of necessity is produced. No mode is selected now."
+        },
+        {
+          "line": 34,
+          "quote": "**ADOPT** the readiness rule: defer all validation, authentication, session, cookie, CSRF/CORS, and caching design until a concrete feature fact requiring them exists. No intermediary or backend choice is adopted."
+        },
+        {
+          "line": 60,
+          "quote": "**ADOPT** the readiness rule: keep the existing contract Null gate; reopen only when a real browser-to-API boundary exists together with a checkable consumer artifact. No schema tool, generated client, or shared package is adopted."
+        },
+        {
+          "line": 86,
+          "quote": "**ADOPT** the readiness/revisit rule: keep the current static artifact and the locked repository-level ownership of deployment invocation. Map any future evidence into that ownership; do not re-decide it. Revisit only on concrete feature facts that break the static premise."
+        }
+      ],
+      "MEMO": [
+        {
+          "line": 344,
+          "quote": "1.ADOPT \u2014 Status Quo / Null Option + mode-readiness rule. Retain static Astro; all three modes remain DEFER. Rule: a mode becomes considerable only when (a) a supplied feature artifact names a behavior static output cannot deliver, and (b) its bounded proof passes on the installed versions. Immediate adoption of any mode/design is DISMISSed as premature. Portability of HTTP is technically possible (I), not verified compatibility, and not product-justified."
+        },
+        {
+          "line": 353,
+          "quote": "1.ADOPT \u2014 Null + responsibility-placement readiness rule. No forms, auth, sessions, or private pages now; no intermediary choice. Rule (conditional): identity, credentials, and trust-boundary validation live in the backend; presentation hints may live in Astro; session persistence is persistence-domain and would trip the Q3 persistence re-gate; cookie/CSRF/CORS policy follows origin topology, which is unset."
+        },
+        {
+          "line": 362,
+          "quote": "1.ADOPT \u2014 Null + boundary/contract readiness rule. No API, shared package, generated client, or schema tool now. Rule: transport authority stays at the API boundary; internal Rust domain types never become frontend types by assumption; any future contract artifact must be generated or checked, not hand-synced; runtime validation, not compile-time types alone, guards the boundary."
+        },
+        {
+          "line": 371,
+          "quote": "1.ADOPT \u2014 Null + carried ownership + deployment-evidence readiness rule. Deployment invocation ownership stays with repository-level infrastructure (carried monorepo Q3 lock \u2014 not re-decided here). No host, adapter, proxy, CI, or backend runtime now."
+        }
+      ],
+      "CLAUDE.AI": [
+        {
+          "line": 10,
+          "quote": "**Vote: ADOPT** this readiness rule: _Null now. A non-static mode becomes eligible only when a supplied feature fact needs request-time data that a build or the browser cannot safely provide, and only after a bounded proof passes._ No mode is selected."
+        },
+        {
+          "line": 46,
+          "quote": "**Vote: ADOPT** this readiness rule: _No security design now. Any form, login or private page reopens Q2 with a written trust boundary that names a single owner for each of validation, auth, session, CSRF/CORS and cache policy._ Status Quo stays in force."
+        },
+        {
+          "line": 80,
+          "quote": "**Vote: ADOPT** this readiness rule: _No contract tooling now. When the Q4 gate passes, the API owns the wire shapes, the browser consumer validates at runtime, and generated TypeScript types are a convenience, never the authority._"
+        },
+        {
+          "line": 97,
+          "quote": "**Vote: ADOPT** this readiness rule: _No host, adapter, proxy or topology now. Any non-static deployment proposal must show its build and deploy invocation running from repository-level infrastructure, per the carried monorepo Q3 lock, and must state its cache policy for private responses._"
+        }
+      ],
+      "KIMI": [
+        {
+          "line": 76,
+          "quote": "Q1 \u2014 Integration modes: ADOPT (readiness rule only)"
+        },
+        {
+          "line": 87,
+          "quote": "Q2 \u2014 Forms, authentication, sessions: ADOPT (readiness rule only)"
+        },
+        {
+          "line": 96,
+          "quote": "Q3 \u2014 Rust and transport contracts: ADOPT (readiness rule only)"
+        },
+        {
+          "line": 106,
+          "quote": "Q4 \u2014 Deployment ownership and revisit evidence: ADOPT (readiness rule only)"
+        }
+      ],
+      "GPT": [
+        {
+          "line": 5,
+          "quote": "**Q1 \u2014 Integration modes: ADOPT a feature-driven verification rule**"
+        },
+        {
+          "line": 31,
+          "quote": "**Q2 \u2014 Forms, authentication, and sessions: ADOPT a boundary-and-isolation readiness rule**"
+        },
+        {
+          "line": 57,
+          "quote": "**Q3 \u2014 Rust and transport contracts: ADOPT a wire-behavior proof rule**"
+        },
+        {
+          "line": 82,
+          "quote": "**Q4 \u2014 Deployment ownership and revisit evidence: ADOPT a bounded deployment-evidence rule**"
+        }
+      ]
+    },
+    "robustness": {
+      "Q1": {
+        "raw_tally": {
+          "ADOPT": 8,
+          "DISMISS": 0,
+          "INVESTIGATE": 0
+        },
+        "single_removals": [
+          {
+            "removed": "GEMINI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "DEEPSEEK",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MISTRAL",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GROK",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MEMO",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "Z.AI",
+            "adopt": 8,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "CLAUDE.AI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "KIMI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GPT",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          }
+        ],
+        "independent_exhaustive_min_support": 7
+      },
+      "Q2": {
+        "raw_tally": {
+          "ADOPT": 7,
+          "DISMISS": 1,
+          "INVESTIGATE": 0
+        },
+        "single_removals": [
+          {
+            "removed": "GEMINI",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "DEEPSEEK",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MISTRAL",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GROK",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MEMO",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "Z.AI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "CLAUDE.AI",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "KIMI",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GPT",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          }
+        ],
+        "independent_exhaustive_min_support": 6
+      },
+      "Q3": {
+        "raw_tally": {
+          "ADOPT": 7,
+          "DISMISS": 0,
+          "INVESTIGATE": 1
+        },
+        "single_removals": [
+          {
+            "removed": "GEMINI",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "DEEPSEEK",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MISTRAL",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GROK",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MEMO",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "Z.AI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "CLAUDE.AI",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "KIMI",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GPT",
+            "adopt": 6,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          }
+        ],
+        "independent_exhaustive_min_support": 6
+      },
+      "Q4": {
+        "raw_tally": {
+          "ADOPT": 8,
+          "DISMISS": 0,
+          "INVESTIGATE": 0
+        },
+        "single_removals": [
+          {
+            "removed": "GEMINI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "DEEPSEEK",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MISTRAL",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GROK",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "MEMO",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "Z.AI",
+            "adopt": 8,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "CLAUDE.AI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "KIMI",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          },
+          {
+            "removed": "GPT",
+            "adopt": 7,
+            "conservative_roster_denominator": 8,
+            "strict_majority": true
+          }
+        ],
+        "independent_exhaustive_min_support": 7
+      }
+    },
+    "identity_limits": "No effective web-model identities independently verified; no deployed runtime proof executed."
+  }
+}

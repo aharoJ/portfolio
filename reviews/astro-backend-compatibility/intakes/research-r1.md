@@ -1,0 +1,449 @@
+# Research: Astro and future backend compatibility (Round 1)
+
+> **Claim-surface disclosure (automated, D-CCSD-Q4).** Author lines
+> carrying a mechanically detectable factual assertion, with or without a
+> supporting record are marked `[UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]`.
+>
+> A `CITED RECORD` line reproduces a command, an exit status and an
+> artifact path **that the author supplied**. The compiler executes
+> nothing and cannot vouch for who produced that artifact, so a cited
+> record is **not evidence and never clears the marker**. Its claim
+> line stays marked exactly like an unsupported one. Test it.
+>
+> **The detector is not complete, and an absent marker is not a
+> verification stamp.** It covers four shapes only -- COUNT, GATE, STATUS, REF -- and does
+> not scan fenced code, inline code spans, headings, or the
+> marker-planning region. Test any claim you intend to rely on
+> against primary evidence, marked or not.
+>
+> This build: 3 claim-bearing line(s) detected, all 3 labeled; 0
+> author-cited record(s) rendered, none of which clears a marker.
+
+
+> **For**: Independent research cross-validation by web LLMs
+> **From**: Angel + Codex (underlying model unverified) -- portfolio project
+> **Date**: 2026-10-10
+> **Context**: Revised scope explicitly approved by Angel on 2026-10-10; apply the four presented RED fixes and bundle. Retain Astro, leave backend Null, evaluate future compatibility rather than choose future infrastructure. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]
+
+## About the Project
+
+This portfolio currently serves public static content. The operator prefers few dependencies and in-house solutions, likes Astro, and considers Rust a possible future backend. No current feature requires a backend.
+
+## Current Setup
+
+Baseline: `a07c6f28f18153bee48970949aad0552bfd377e7`. `frontend/astro.config.mjs` sets `output: 'static'`. npm and the application-local lockfile are authoritative. Existing research locked Astro static-first, conditional islands, and Null API, persistence, and contract choices. v0.1–v0.3 are tagged; existing topic closure records are complete; this topic has no prior round.
+
+Prior research evaluated API-boundary clarity, build/content handling, and conditional backend gates. It excluded concrete deployment and authentication design. Those criteria do not demonstrate a future Rust integration, session design, adapter compatibility, or hosting topology. Deployment invocation ownership was already assigned to repository-level infrastructure; this review carries that lock forward.
+
+Authoritative repository context (historical proposals in the prior intake are superseded by its final runbook and current decisions):
+
+**File: `frontend/astro.config.mjs`**
+```javascript
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({ output: 'static' });
+
+```
+
+
+**File: `reviews/runbook/stack-selection.md`**
+````markdown
+# Stack Selection Decision Runbook
+
+Implementation Impact: yes
+Lifecycle: A
+
+## Completed admission and supersession (2026-10-01)
+
+Both topology records are COMPLETE after the operator-authorized zero-code recovery: reopen at `c7e6ce27ed669df589adc29bb5e2047301591bb8`, then tiebreak at `a4006ace6012e1e7c002b9996e3c63a40877a0e1`. Their deliverable is completed design decisions and local evidence. Stack-selection owns the v0.2 application scaffold and completed implementation audit.
+
+The tiebreak's locked R1/R2 prerequisites select `frontend/`, npm and the application-local installer lockfile `frontend/package-lock.json`. These replace the former `apps/web`, root-pnpm and topology-blocker instructions for this first static application. See the attributed locks in `reviews/decisions.md` and selection boundary in `reviews/runbook/monorepo-structure-topology-tiebreak.md`. Observed Astro/npm versions are reference configuration, not research version locks; record and verify the implementation configuration actually used.
+
+The operator's BRIEF-RECOVERY.md authorized the smallest representative static article slice, a normal scaffold commit, and `$review implement stack-selection` through its blind R1 draft and compiler intake. The subsequent three audit rounds and dated operator decisions resolved the implementation cycle; the R3 convergence close is recorded in the CHANGELOG and roadmap. The R1/R2 superseded dispatches and their exact operator exceptions remain historical evidence.
+
+## Purpose and locked selections
+
+Implement the R2 static Astro browser choice within the settled frontend topology. API, persistence and browser-to-API contract work remain unjustified.
+
+1. Build the smallest Astro static article and a page linking to it inside `frontend/`. The production build must emit readable article HTML without an SSR adapter or server responsibility. Use islands only if actual product evidence earns them; the present slice requires none.
+2. Use npm from `frontend/`. Extend the existing private package manifest with admitted scripts/dependency and retain `frontend/package-lock.json`.
+3. Keep source, configuration, application dependencies, installer lockfile and output in `frontend/`; static output belongs in `frontend/dist/`.
+4. Do not scaffold an API runtime, service placeholder, authentication, database, ORM, migrations, container, persistence dependency or recovery claim.
+5. Do not add a browser-to-API contract, API client, OpenAPI document or `packages/contracts` artifact.
+6. Do not create a root workspace, root installer lockfile, `apps/` reservation, empty/generic `packages/`, catalogs, task runner, CI or deployment configuration. Future database ownership remains API-owned and any later public contract remains transport-only; those boundaries grant no present scaffold authority.
+
+## Execution
+
+Add only the source/configuration needed for the representative page and article. Use Node `>=22.19.0` and npm `>=9.6.5` from the application root, and retain the npm lockfile. Verify a strict clean installation, static build, and JavaScript-disabled browser navigation:
+
+```sh
+cd frontend
+npm ci --engine-strict
+npm run build
+npm run test:browser
+```
+
+Serve the built static output with Astro's Node-native preview command from the same application root:
+
+```sh
+npm run preview -- --host 127.0.0.1 --port 4173 --ignore-lock
+```
+
+This supersedes the Python instruction introduced by implementation commit `af41f12`; no research round ratified that host prerequisite, so using the implementation-authored line to reject R2 was circular. The locked Astro toolchain adds no dependency. `--ignore-lock` keeps the test server foregrounded for Playwright supervision instead of detaching it.
+
+`test:browser` rebuilds before provisioning Chromium and running Playwright. It serves that build through Astro preview, refuses an existing listener, and defaults to port 4173. Set `PORTFOLIO_TEST_PORT` to a free private port when 4173 is occupied; the test URL and server command use the same value. The emitted pages must contain no `script`, `astro-island`, or `astro-server-island` element.
+
+Inspect the article through direct navigation and through the index-page link. Verify this implementation, rather than treating the topology spike's result or hashes as this slice's evidence. The scaffold was committed normally before its implementation audit.
+
+## Required implementation checks
+
+| Check | Expected result | Failure caught |
+|---|---|---|
+| Clean npm lockfile install and build from `frontend/` | Install/build succeeds from retained application lockfile | Missing or drifting dependency state |
+| Inspect `frontend/dist/articles/first/index.html` | Static HTML contains article text without an SSR adapter | Client-only or server-required article rendering |
+| Inspect no-island article output and dependencies | Reading requires no hydration, injected application JavaScript or server runtime | Unearned browser/runtime work |
+| Serve `frontend/dist/`; open `/articles/first/` directly and follow the index link | Reading and navigation work without an API listener | Hidden API dependency or broken static route |
+| Inspect application diff, manifests and installer artifacts | Local npm lock retained; excluded domains and root workspace/lockfiles absent | Infrastructure, topology or contract work beyond scope |
+
+## Historical premise and its resolution
+
+The stack R2 null API result met the old two-deployable monorepo reopen trigger; the original research correctly blocked a scaffold pending topology decisions. Reopen R1 preserved Null outcomes, then the fresh tiebreak R1/R2 prospectively selected the single static application's root and manager. Both topology recoveries now close that prerequisite chain. The historical REOPEN REQUIRED blocker and root-pnpm examples no longer govern this slice. Original research ledgers, intakes and locks remain sealed.
+
+## Re-gating conditions
+
+| Question | Evidence needed before reconsideration |
+|---|---|
+| Q2 API runtime | A supplied v0.2 artifact requiring private access, a submitted form, payment processing, visitor-specific state/content, or a persisting visitor action |
+| Q3 persistence | A supplied v0.2 artifact naming restart-surviving mutable data and a migration/recovery test |
+| Q4 contract authority | A passing Q2 gate plus a real browser-to-API boundary with request/success-response transport shapes and a generated or checked browser artifact |
+
+The future paid review/QA service remains only a revisit trigger until it appears as supplied current evidence. Revisit topology if the frontend designation is invalidated, a required artifact crosses its boundary, another manager gains qualifying equivalent evidence, or a material configuration/scope change invalidates npm's demonstrated adequacy. Verify actual configuration changes before relying on the selection.
+
+````
+
+
+**File: `reviews/decisions.md`**
+```markdown
+# Decisions -- portfolio
+
+## monorepo-structure-topology-tiebreak: final zero-code recovery disposition (2026-09-30)
+
+The operator's verbatim dated authorization in the topology-reopen recovery entry applies to this continuation as well. Its deliverable is the completed R1/R2 design decisions and local evidence; all application code and audit belong to stack-selection. The reopen recovery is already COMPLETE at `c7e6ce27ed669df589adc29bb5e2047301591bb8`. This separately executed close finalizes the remaining zero-code topology record under the existing v0.3 linked-continuation exception.
+
+The R2 closing ledger, npm outcome, R1 source pointer, qualified-rule exclusions and original manifests remain sealed at their original identities. Marker=no and no audit drafts compute research-only; the valid latest research action=close selects the recovery cycle (`protocol.md:202-217`; `SKILL.md:489-493`). No new decision vote or implementation evidence is claimed. The final tiebreak recovery-close commit is the v0.3 tag target after both records are COMPLETE; BRIEF-RECOVERY.md reserves tag creation to the operator (`SKILL.md:639-647`).
+
+## monorepo-structure-topology-reopen: operator-authorized zero-code recovery (2026-09-30)
+
+**Operator authorization (2026-09-30):** the operator explicitly authorizes the zero-code recovery you recommended in `RECOVERY-RECOMMENDATION.md` for both `monorepo-structure-topology-reopen` and `monorepo-structure-topology-tiebreak`. Their deliverable is the completed design decisions and local evidence. All application code will be delivered and audited under `stack-selection`. Record this authorization verbatim, with a date, in `reviews/decisions.md` as part of the first recovery.
+
+The authorized deliverable for each topology topic is its completed design decisions and local evidence. Application implementation and its audit belong exclusively to `stack-selection`; this recovery changes lifecycle classification without changing either topic's sealed research evidence or votes. Recover-close reopen first, then tiebreak, preserving their distinct mechanical slugs under the v0.3 linked-continuation exception. The rejected physical merge and both VOID R2 rulings remain preserved.
+
+Authority: `BRIEF-RECOVERY.md` in `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/`. The marker/no-audit rule computes research-only at close, and the latest action=close ledger selects research recovery (`protocol.md:202-217`; `SKILL.md:489-493`). Zero-code implementation omission is documented in the roadmap (`protocol.md:158`; `SKILL.md:254`). Research close is the final close for this classification (`SKILL.md:606,639-647`). No additional research lock, vote, version pin, tag or application artifact follows from this operator disposition.
+
+## monorepo-structure-topology-reopen: v0.3 linked-continuation recovery (2026-09-30)
+
+**Authority:** The operator's `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/BRIEF.md` directs one logical topology topic/version and expressly authorizes the metadata-only fallback when a compliant physical merge is unavailable. The cited ruling is `/Users/aharoj/desk/audits/portfolio/2026-09-30-topology-merge/RULING.md`. This is repository metadata recovery, not a panel resolve, formal close, or authorization to execute the separately requested lifecycle recommendation.
+
+**Ruling:** Keep both mechanical slugs and every historical artifact in place. Existing research ledgers are read-only after write (`/Users/aharoj/.skills/review-protocol/SKILL.md:470`; `protocol.md:1126`). Topic slug is mechanical identity while version is metadata (`protocol.md:187-188`). The proposed tiebreak R1 -> reopen R2 and tiebreak R2 -> reopen R3 moves each fail the production ledger validator's topic and round binding; rewriting the ledger fields would violate immutability. The closed-world tree has no relocation-map or nested historical-topic slot (`protocol.md:84-95`, `:1318-1328`), and close 0.d citation-supersession acceptance is not an identity-migration waiver (`protocol.md:1190`). The closing tiebreak R2 ledger also embeds Q1.source at the original tiebreak R1 ledger path; moving R1 would break that reference, and rewriting it would violate the same sealed-ledger rule. A prose mapping has no routing consumer. The operator-directed fallback preserves the evidence rather than asserting a physical consolidation.
+
+**Version supersession:** `stack-selection` remains v0.2. `monorepo-structure-topology-reopen` and its `monorepo-structure-topology-tiebreak` continuation both carry v0.3 as one logical topology lineage, with two retained mechanical topic directories. This supersedes their stale current v0.2 labels and the prior report-only v0.4 tiebreak proposal in `LOG.md`; it does not change historical product facts, intakes, decision counts, or future-service triggers. This bounded two-folder/one-version exception does not satisfy the one-open-topic lifecycle policy by itself (`protocol.md:162-177`, `:187`; explicit fallback authority above).
+
+| v0.3 reading-order label only | Authoritative topic and research round | Historical action |
+|---|---|---|
+| R1 | `monorepo-structure-topology-reopen` R1 | close; two Null Options |
+| R2 | `monorepo-structure-topology-tiebreak` R1 | roll; location and deliberate-selection policy |
+| R3 | `monorepo-structure-topology-tiebreak` R2 | close; npm and application-local installer authority |
+
+The R2/R3 labels above are presentation only. All filenames, embedded topic/round values, waiver round references, manifest paths/hashes, and mechanical command arguments retain their original identities. Follow the [reopen record](monorepo-structure-topology-reopen/state/research/resolve-r1.json), then the [tiebreak R1 record](monorepo-structure-topology-tiebreak/state/research/resolve-r1.json), then the [tiebreak R2 closing record](monorepo-structure-topology-tiebreak/state/research/resolve-r2.json). Both roadmap entries link this continuation explicitly.
+
+**Current authority:** The tiebreak R1/R2 decisions and [tiebreak runbook](runbook/monorepo-structure-topology-tiebreak.md) prospectively govern the first static Astro application's `frontend/` location, npm, and `frontend/package-lock.json`. Stack-selection's Astro/static and API/persistence/contract Null locks remain applicable. Earlier Null/location/manager instructions remain historical evidence where prospectively superseded; root workspace/root lockfile and excluded-domain restrictions continue. This records the existing supersession without new votes or new locks (`protocol.md:187-188`; `SKILL.md:470`).
+
+**Routing and preservation:** Reopen's R1 research was already complete; marker=yes completed topics route non-close bundle/resolve to implementation (`protocol.md:188`, `:217-223`). Commit `e2d7118`'s void monorepo R2 bundle and the later void same-slug reopen R2 scope remain VOID; no retroactive research reopening is claimed. All three pending runbooks retain `Implementation Impact: yes` and their topics remain research-complete/implementation-pending. No manual Type reclassification or final close is performed (`protocol.md:189-209`, `:1453`, `:1510-1526`). C71/C70 close 0.g is implementation-only, not a research-ballot floor (`protocol.md:1219-1223`); later implementation must use its own actual chain. Compiler artifacts and exact `.hook-allowlist` entries stay at their unchanged paths (`SKILL.md:386-401`, `:691`; operator policy B).
+
+**Commit/tag boundary:** The brief authorizes a normal-hook Step 2 maintenance commit. This is not either topology topic's final close. No git tag is created or moved; final-close tag decisions and zero-code lifecycle recovery remain recommendations for the operator (`protocol.md:1510-1526`; BRIEF.md Step 3).
+
+## Operator-directed one-open-topic exception — topology tiebreak resolve (2026-09-30)
+
+**Authority:** The operator explicitly directed resolution of the already collected `monorepo-structure-topology-tiebreak` research R1 batch now, end to end, as an exception to the one-open-topic policy. This is a sequencing exception; it supplies no Q1/Q2 vote or decision-lock exception.
+
+**Required order:** Commit the pending lifecycle-audit `LOG.md` entry first (completed as `0487813`), then resolve the tiebreak R1 batch and take its protocol-selected next action. `stack-selection` and `monorepo-structure-topology-reopen` remain open topics with research closed and implementation pending. Their recovery disposition—option A (operator-approved recovery of genuinely zero-code decision topics) or option B (explicit exception/recovery sequence) from the audit—comes after this resolve. Neither is selected or executed here.
+
+**Boundaries:** Preserve all historical research ledgers and intake bodies. Do not mark either earlier topic complete, change its impact marker, retag it, or infer a retroactive research-only conversion. A split question rolls to R2 under the protocol; a converged research close records an explicit impact marker and the precise prospective scaffold authority. The operator separately requires a normal commit of this result; for a marker-yes research close, that is an explicit exception to the usual final-implementation-close-only commit timing, not a claim that implementation is complete. No standing waiver or further topic kickoff is authorized.
+
+## monorepo-structure-topology-tiebreak — R2 manager resolution (2026-09-30)
+
+**Status:** research converged in two rounds: Q1 carried locked; Q2 now fully locked. Two fully resolved questions, zero open follow-ups or force dispositions. Research action: close; implementation remains pending.
+
+**Panel and evidence:** all nine dispatched seats responded: Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, GPT. Only their exact `# <Model>` lines delimit responses; MEMO's embedded H1 and other embedded headings remain inside the owning response. All nine map all four Q2 gates to E1–E6 or precise absence/inapplicability. Echo-only, non-response, duplicate, and degenerate counts are each zero. These are substantive applications of the published evidence, not independent reproduction of the spike or authenticated runtime identity. Raw panel text stays outside the repository. Intake SHA-256: `c029413500ca2168dbbdfa17f7a3834376b8ae61e182f559601652a43f8c6e96`; raw batch SHA-256: `625c8c6e532d88fac559b75d5aa1a145ca2b6d857ea8f895bb056548cb159d62`.
+
+### Q2 — rule first, then its manager and lockfile outcome
+
+**Declared recommendations:** unique demonstrated adequacy / feasibility rule family ADOPT 9/9; npm outcome ADOPT 9/9; unselected 0, other named manager 0, DISMISS 0, INVESTIGATE 0. Declared agreement is not the admissible tally.
+
+**ADOPT the qualified local singleton rule core (7/9):** given Q1's designated application root, use affirmative, repeatable local installation, static-build and verification evidence with a contained installer lockfile and no recorded conflict with the carried boundary. A uniquely demonstrated qualifying manager is sufficient for prospective selection. An untested manager is unestablished, not inferior; comparative superiority, popularity, names, historical commands, framework compatibility alone, progress pressure, and E5's manifest presence supply no selection authority. Missing qualifying evidence or loss of the root yields no manager authority. Gemini, Mistral, Grok, MEMO, Claude.ai, Kimi, and GPT each state a rule whose current singleton application produces npm.
+
+**Complete tie/fallback handling (6/9):** Mistral, Grok, MEMO, Claude.ai, Kimi, and GPT additionally specify that zero qualifying managers selects none and multiple qualifying managers leaves no selection pending a further evidence-grounded decision (some label that state INVESTIGATE). Adopt that common no-selection/re-gating behavior. Gemini's proposed multiple-candidate overhead ranking, including its unspecified equal/missing-overhead fallback, is not adopted. The lock is bounded to the present E1–E6 static application record; different detailed eligibility formulations, extra rankings, a universal test list, or an exact future checksum rule are not silently merged.
+
+**Then ADOPT npm only within `frontend/`, with prospective installer lockfile `frontend/package-lock.json` (7/9 conservative active-panel support; 7/7 admissible outcome ballots):** E1 has two successful fresh runs at the selected location, within six runs across three locations, with matching normalized payload and outputs, successful static checks and Chromium test, and package-local npm lockfile v3. E1 exercised no other manager. E5 supplies no manager preference, competing installation policy, or version pin. Adoption of the stated local rule supplies authority; E1 supplies the observed feasibility input. No unmeasured manager superiority is asserted. npm `11.17.0`, Astro `^7.3.5`, and lockfile v3 are the observed configuration, not newly locked version requirements.
+
+**Rule/application deficiencies:** DeepSeek's prior rule at external raw line 124 requires a record against a locked Astro version. E2 locks the framework; E1's dependency range is observed, not an adopted version lock. Its mapping/application at lines 150/158 does not establish that prerequisite. Exclude its qualified rule/application support rather than silently replacing locked with observed. Z.AI names a rule and claims at line 577 that its complete eligibility and zero/one/multiple handling appeared above, but no complete prior rule block exists; the criteria and fallback are assembled only in application tables at lines 585–591. Exclude its qualified support rather than composing a rule on its behalf. Neither exclusion is converted into a Null, echo, or non-response vote. Grok places its gate map before the full rule text, but its explicit rule at lines 319–326 precedes candidate comparison and produces npm without a later criterion; retain the ordering caveat. Kimi's unverified alternative lockfile-format claim does not enter this npm decision.
+
+**Robustness:** all nine single-removal cases pass. The qualified singleton core and npm outcome remain at least 6/8 on the conservative active denominator; the complete tie-safe rule remains at least 5/8. Eligible outcome support is 7/7, worst 6/6. Rule variants are not pooled merely because their final manager labels match. Two independently authored full semantic readings, in panel order and then reverse order, plus separate arithmetic derivations reconcile every ballot and removal with no differences. The immutable R2 ledger records the accounting and all cases.
+
+### Prospective authority, supersession, and lifecycle
+
+The R1 Q1 location/rule core and deliberate-selection policy remain carried locks. This R2 decision prospectively supersedes only the outstanding no-manager/no-local-installer-authority state for the designated first static Astro application. Historical ledgers, intakes, and earlier runbooks retain their historical bytes. The fresh tiebreak runbook governs the current location/manager boundary; old `apps/web` and root-pnpm commands are historical inputs.
+
+**Exactly authorized for a later admitted implementation:** create the stack-selected static Astro application in `frontend/`, use npm there for its dependencies, create and retain `frontend/package-lock.json`, and build to `frontend/dist/`. The topology and manager-selection blockers are settled by this research close. Actual scaffold/install execution still requires implementation admission with instructions consistent with these locks and the separately pending lifecycle recovery of stack-selection/topology-reopen. No recovery A/B choice is made here. This resolve creates no product scaffold, installer run, dependency, `packageManager` declaration, or version pin. It grants no root workspace, root lockfile, installer lockfile outside `frontend/`, API/service reservation, persistence, contracts, authentication, CI, deployment, `packages/`, catalogs, task runner, or framework replacement.
+
+**Re-gating:** loss of the Q1 root, invalidated selected-location evidence, a recorded boundary conflict, another qualifying manager, or a material scope/configuration change requires re-evaluation before relying on this selection. A future service is a trigger, not present authority. Apparatus bias limits the conclusion to normative demonstrated adequacy; it does not disappear merely because the panel adopts that standard.
+
+The runbook has `Implementation Impact: yes`; close therefore classifies this topic as `research + implementation`, with research complete and implementation pending. The brief explicitly requires a normal-hook research-result commit, overriding only the usual final-implementation-close commit timing. It supplies no decision threshold waiver or authority to execute product work. Native context compaction is unavailable; disclosed compact durable checkpoints precede tally, ledger write, and close.
+
+## monorepo-structure-topology-tiebreak — R1 partial resolution (2026-09-30)
+
+**Status:** Q1 rule core and location locked; Q2 authority policy locked, manager outcome OPEN. Research action: roll to R2. One fully resolved question and one open follow-up; this is not research convergence or a topic close.
+
+**Panel and provenance:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT all responded. Exact `# <Model>` lines alone define ownership; embedded headings remain inside their model response. Nine distinct substantive bodies range from 7,897 to 40,921 bytes. No duplicates, degenerate outputs, non-responses, or waivers. Published intake SHA-256: `490137ff69bdab6a105e069955164ec311212c1010de0c8f7b22bbae4997c5ee`; external raw batch SHA-256: `750f47ac53a8b96bfbf7ab61fc364476ce6d3828aa98d402d9fce7a94c8f1fba`. Raw text is not stored in this repository.
+
+### Q1 — ordered rule and location resolution
+
+**Declared rule-family tally:** baseline reuse / minimum structural delta 8/9; equivalence-without-a-material-differentiator implies Null 1/9 (Grok). This family tally is not agreement on an exact edit-cost formula. The per-model variants are retained in the ledger: existing-boundary reuse; new/removed-object minimization with an unspecified-artifact filter; new-directory/manifest minimization; scope containment followed by new-path minimization; and progress followed by new-manifest-path minimization. Additional filters, exact weights, total edit costs, and hypothetical future-baseline rankings are not locked.
+
+**ADOPT the qualified shared rule core (6/9, robust):** under E1's measured equivalence, resolve the first application-location prerequisite by reusing the uniquely preferred existing package boundary rather than introducing a new application manifest/boundary at another location. Compare the non-null measured candidates against E5's actual baseline; retain Null when no unique, evidence-supported, scope-compatible concrete choice follows. This is a prospective tie-break preference, not a measured performance or deployment advantage. DeepSeek, Mistral, MEMO, Z.AI, Claude.ai, and GPT supply that non-null comparison and Null fallback. The common core is adopted only for this recorded baseline; their different additional rules are not silently merged into one universal metric.
+
+**Then ADOPT `frontend/` as the first Astro application root (6/9 conservative active-panel support; 6/7 admissible location votes):** E5 records the sole existing application-package manifest there. `apps/web/` introduces a manifest and directories; the repository root introduces an application manifest. Each of the six qualified panelists' own rule therefore yields `frontend/`. Grok's differentiator-required rule consistently yields Null and remains a substantive minority vote. The eight declared frontend outcomes are not eight valid location votes.
+
+**Rule-location exclusions:** Gemini's prior least-structural-mutation rule does not order the zero-change Null behind a productive non-null choice; its application later rejects Null on deadlock grounds. Kimi's prior fewest-paths/declarations/authority-claims rule also lacks that priority, while its application calls Null a non-outcome and adds a requirement to enable downstream work. Neither prior rule uniquely establishes its claimed frontend outcome against all listed outcomes. Exclude these two location votes and their unqualified formulations from support for the locked rule core. Do not repair their rule on their behalf or count them as Null votes. These are rule/application deficiencies, not echoes or non-responses.
+
+**Evidence and robustness:** all nine substantively map the four gates to E1–E5 or precise absence/inapplicability; Q1 echo-only exclusions=0. A gate map does not cure a rule/application deficiency. Every single removal leaves at least 5/8 conservative active-panel support for the qualified rule core and frontend outcome; using only admissible location votes, the worst is 5/6. No presumed benefit on CI, deployment, ownership, future services, or total edit effort participates in the lock. A changed manifest baseline or new measured requirement requires re-evaluation.
+
+### Q2 — policy lock, outcome split
+
+**ADOPT deliberate-selection authority (6/9, robust):** Gemini, DeepSeek, Z.AI, Claude.ai, Kimi, and GPT require an explicit, stated application-local selection rule before a manager gains authority. Mistral and MEMO select observed-command authority (2/9); Grok selects Q2 Null (1/9). Retain their stated policies even when the same npm outcome occurs; do not relabel the two observed-command ballots as deliberate-selection ballots. E1's successful npm commands are experiment evidence, not inherited manager authority or proof that Astro selected npm. Every single removal leaves at least 5/8 for deliberate selection.
+
+**Manager outcome remains OPEN:** npm 5/9 (DeepSeek, Mistral, MEMO, Z.AI, Claude.ai); unselected 4/9 (Gemini, Grok, Kimi, GPT). Removing any npm supporter leaves 4/8, which fails the strict-majority robustness test. Within the six deliberate-selection ballots, npm and unselected split 3/3. The observed-command ballots do not manufacture a manager consensus under the winning deliberate policy.
+
+**Policy/outcome consistency:** DeepSeek, Z.AI, and Claude.ai state and apply an E1-based local rule selecting npm. Gemini, Kimi, and GPT select the governance policy alone and expressly leave its later local selection rule absent. Mistral/MEMO's observed policies yield npm; Grok's Null yields no manager. There is no Q2 policy/outcome contradiction and no echo-only vote; all nine substantively map all four gates. Policy-only unselected is not a Q2 Null-policy vote. Claude.ai's sentence purporting to authorize immediate scaffold/install exceeds R1's decision-only scope and grants no implementation authority.
+
+**R2 follow-up:** decide whether to adopt and apply an explicit, evidence-grounded local rule selecting npm for `frontend/` now, adopt another fully stated in-scope selection rule, or leave manager/installer-lockfile authority unselected. Test the rule before its result, including the no-selection fallback. Selecting a deliberate policy alone does not finish Q2. Do not repeat a broad package-manager comparison or import a workspace decision.
+
+### Reconciliation, supersession, and scaffold authority
+
+Two separately authored semantic passes from the raw text—first in panel order, second in reverse order—agree for every model on rule family, declared location, admissibility, policy, actual outcome, and echo classification. All nine single-removal cases are persisted in the immutable R1 ledger; there are zero reconciliation differences.
+
+The fresh Q1 lock prospectively replaces only the earlier no-selected-location outcome for the first static Astro application. Historical topology-reopen ledgers/runbooks remain historical evidence and are not rewritten. Root workspace/root lockfile authority, API/persistence/contracts, and other excluded domains remain outside these new locks. The earlier no-manager state continues because Q2's manager outcome has not converged; stack-selection's Astro choice itself remains unchanged.
+
+**Exactly authorized now:** record `frontend/` as the prospective first Astro application location, record deliberate-selection authority, and conduct the R2 manager-outcome research. **Scaffold authority:** stack-selection may not yet create Astro source/configuration/dependencies, run an installer, choose or pin a manager, or create any installer lockfile. Neither a root workspace nor a root lockfile is authorized. Research is still open: no tiebreak runbook, `Implementation Impact:` marker, Type stamp, close, implementation audit, or release tag is claimed. Stack-selection and topology-reopen remain open with implementation pending; their recovery A/B decision follows this resolve and is not supplied by these panel locks.
+
+## monorepo-structure-topology-reopen — R1 topology resolution (2026-09-29)
+
+**Status:** locked by the R1 real-panel gate resolution; research action: close. **Type:** research + implementation.
+
+**Scope and supersession:** this narrow v0.2 reopening supersedes only monorepo-structure R1 Q1's two-deployable application-root decision and Q2's root-pnpm-workspace decision. R1 Q3 ownership and Q4 release-evidence convention remain outside this topic and unchanged.
+
+**Panel accounting:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT all gave substantive responses. Splitting used only those nine exact `# <Model>` headings; embedded Markdown headings were retained inside their response. There are no non-responses or waivers.
+
+**Evidence boundary:** every countable response mapped all four conditions of each gate to E1–E5 or a precise absent/inapplicable record. The careful access caveats from some panelists did not make their responses echoes: they still identified the exact cited record or missing record for each condition. The close independently checked the primary local records. Raw panel text remains external to the repository.
+
+1. **Q1 — ADOPT Status Quo / Null Option (9/9; robust after any single-response removal):** create or move no v0.2 application and reserve no API path. E1 and E2 establish one static browser slice, the v0.2 absence of API/persistence/contract work, and the v0.3 service as a revisit trigger. The fourth condition fails: E1–E5 name no current operational or verification constraint that materially differentiates `apps/web`, root `frontend`, and an API reservation for the one-deployable state. E3/E4 preserve the retired two-deployable history, not a current differentiator; E5 records only the minimal manifest. Therefore `apps/`, `apps/api`, and a location-selecting scaffold remain unauthorized.
+2. **Q2 — ADOPT Status Quo / Null Option (9/9; robust after any single-response removal):** do not create a root pnpm workspace or root lockfile, and do not select a substitute package manager. Q1 did not yield a gate-passing application layout; E5 has no package-manager selection; E4's old pnpm decision depended on the retired two-package premise; and E1–E5 name no one-package v0.2 behavior, ownership duty, or verification benefit that survives the v0.3 service never arriving.
+
+| Question | Gate | Locked result | Countable / echo-only | Robustness |
+|---|---|---|---:|---|
+| Q1 | FAIL | Status Quo / Null Option | 9 / 0 | 8/8 remains after any one removal |
+| Q2 | FAIL | Status Quo / Null Option | 9 / 0 | 8/8 remains after any one removal |
+
+**Tally reconciliation:** the blind tally and a separate re-derivation from the external raw panel both produced Q1 9/9 and Q2 9/9 for the Null Options. No discrepancy or INVESTIGATE result remains.
+
+**Implementation admission:** this close provides the required `Implementation Impact: yes` runbook, so v0.2 `$review implement monorepo-structure-topology-reopen` is unblocked. That is process admission, not authority to bypass the locks: implementation must preserve the Null Options until a current local record supplies the missing Q1 differentiator and, for Q2, a gate-passing layout, explicit pnpm selection, and durable one-package root-workspace benefit. Reopen this topic to test that new record before materializing a non-null topology.
+
+## stack-selection — R2 product-evidence resolution (2026-09-29)
+
+**Status:** locked by the R2 real-panel gate resolution; research action: close. **Type:** research + implementation.
+
+**Implementation admission:** blocked pending a monorepo-structure topology research reopen. The research action closes R2; it does not declare the full topic or its implementation complete.
+
+**Evidence boundary:** The four operator-stated product facts are the supplied acceptance record for this round. They remain operator evidence, not independently verified product facts. The panel evaluated the gates by condition-to-fact or condition-to-absence mapping; no respondent was counted merely for echoing an intake verdict.
+
+**Panel accounting:** Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, and GPT gave substantive responses. Kimi is non-responsive and recorded as `Spot-check waiver: model=Kimi; reason=non-response; round=R2; evidence=operator-designated unavailable in external panel batch; still-applies=no;`. Raw panel text remains external to the repository.
+
+1. **Q1 — ADOPT (7/8; robust after any single-response removal):** use Astro in static-first/islands mode for `apps/web`. The implementation must produce static article HTML without adding a server responsibility. Astro's content-authoring details remain implementation-verified rather than assumed from the selection.
+2. **Q2 — ADOPT (8/8; robust after any single-response removal):** select the Status Quo / Null Option for v0.2 API runtime. No supplied v0.2 fact requires a server-owned behavior; the later paid review/QA service remains a revisit trigger only.
+3. **Q3 — ADOPT (8/8; robust after any single-response removal):** select the Status Quo / Null Option for persistence and migration. No supplied v0.2 fact names restart-surviving mutable data, retained data, and a migration/recovery test.
+4. **Q4 — ADOPT (8/8; robust after any single-response removal):** select the Status Quo / Null Option for contract authority. Q2 fails and no browser-to-API boundary, transport shapes, or checked browser artifact exists.
+
+| Question | Gate | Locked result | Gate-evaluation result |
+|---|---|---|---|
+| Q1 | PASS | Astro static-first/islands | 8 condition-level evaluations; 0 echo-only votes |
+| Q2 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
+| Q3 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
+| Q4 | FAIL | Status Quo / Null Option | 8 condition-level evaluations; 0 echo-only votes |
+
+**Gate-independence interpretation:** Q2–Q4's 8/8 null outcomes are agreement on conditional gate application, not independent product-fact confirmation. The intake supplied one-sided facts and a precomputed FAIL path unless a conflicting supplied v0.2 artifact existed. The decisions remain valid conditional on that acceptance record; future research must separately test or challenge the product-fact premise before using unanimity as independent evidence.
+
+**Reopen disposition:** Q2's null result does require a monorepo-structure topology research reopen before any scaffold. The active monorepo lock says `apps/web` and `apps/api` are the two deployable roots, while its implementation gate permits creating them only if the two-deployable premise survives the first scaffold and otherwise directs a topology reopen before substantial paths accumulate. The null API means that premise is not met; it is not merely a rule for where a hypothetical future API would live. No `apps/web` or `apps/api` scaffold may begin until the reopened research round settles the topology.
+
+**Revisit triggers:** a supplied v0.2 artifact requiring private access, form submission, payment processing, visitor-specific state/content, or a persisting visitor action; a named restart-surviving record plus migration/recovery test; or a real browser-to-API boundary with transport shapes and a checked browser artifact. Each trigger re-gates the affected question; it does not retroactively turn roadmap intent into evidence.
+
+## monorepo-structure — void R2 bundle (2026-09-29)
+
+**Status:** VOID — no decision, lock, panel result, or implementation authority.
+
+**Reason:** `cf69b70` added `reviews/monorepo-structure/research/monorepo-structure-r2.md` and the matching compiled intake/manifest after the active R1 ledger recorded `action: "close"`, with a runbook and locked decisions already present. It also bypassed the required `$review scope` sequence: no scope summary was presented and no closed-list operator affirmation authorized a bundle.
+
+**Disposition:** retain the draft, intake, and manifest in Git as procedural-history evidence only. They are void, must not be pasted, tallied, resolved, or cited as research evidence, and do not amend the R1 locks.
+
+**Recovery:** `$review scope monorepo-structure-topology-reopen` is the fresh research entry. It is limited to v0.2 application topology and the one-package root pnpm-workspace question; it must stop for explicit scope affirmation before any bundle.
+
+## monorepo-structure — R1 real-panel provenance supersession (2026-09-29)
+
+**Status:** locked by real web-panel R1; action: close (research-only).
+
+**Supersedes:** the Codex-only R1 decision record below and the prior ledger committed as `1ae58ceff8842dd8870bd5c86ae68aef4655b749`. The former record remains in Git history as historical context; it is not the active evidence basis.
+
+1. **Q1 — ADOPT (6/8; robust after any single-response removal):** use `apps/web` and `apps/api` as the deployable roots. Do not create an empty `packages/` directory; create a package only for a demonstrated reusable boundary. This overturns the prior root-`frontend`/`backend` decision.
+2. **Q2 — ADOPT (8/8; robust after any single-response removal):** establish one root pnpm workspace and lockfile for pnpm-managed packages now. Use `workspace:` only for real internal dependency edges; add catalogs only for demonstrated shared versions and Turborepo only when a real task graph warrants it. A non-pnpm API is not implied to join the workspace. This overturns the prior pnpm-selection deferral.
+3. **Q3 — ADOPT (8/8; robust after any single-response removal):** the API owns the initial database lifecycle; public contract material remains transport-only; repository-level infrastructure owns deployment invocation when deployment material exists. Framework, ORM, provider, contract-authority, and physical-package choices remain open. This keeps the prior ownership-first decision.
+4. **Q4 — ADOPT (7/8; robust after any single-response removal):** at the first real feature or release slice, create one concise local record linking applicable contract, migration, CI/task, deployment, and test evidence. It must never copy or modify `$review`. This keeps the prior evidence-convention decision while deferring a heavy schema.
+
+| Question | ADOPT | DISMISS | INVESTIGATE | Result |
+|---|---:|---:|---:|---|
+| Q1 | 6 | 1 | 1 | ADOPT; overturn |
+| Q2 | 8 | 0 | 0 | ADOPT; overturn |
+| Q3 | 8 | 0 | 0 | ADOPT; keep |
+| Q4 | 7 | 0 | 1 | ADOPT; keep |
+
+**Panel accounting:** dispatched Gemini, DeepSeek, Mistral, Grok, MEMO, Z.AI, Claude.ai, Kimi, and GPT; substantive responses from all except MEMO. C71 record: `Spot-check waiver: model=MEMO; reason=non-response; round=R1; evidence=provider-busy error returned; still-applies=no;`.
+
+**Rationale:** The real-panel response file was segmented only at the nine exact dispatched model headings, so embedded Markdown headings and comments did not alter model ownership. The active ledger records the blind tally and provenance supersession; raw panel text remains external to the repository.
+
+**Revisit triggers:** the first scaffold contradicts the two-deployable premise; the API is not pnpm-managed; a reusable boundary gains a second consumer; a real task graph or dependency-version policy needs catalogs/Turborepo; a second database writer appears; or a release-evidence record starts duplicating rather than linking durable evidence.
+
+## monorepo-structure (2026-09-29)
+
+**Status:** superseded on 2026-09-29 by the real-panel R1 ledger; preserved as the prior Codex-only historical record.
+
+1. Retain root `frontend/` and `backend/` as the initial application locations. Do not introduce `apps/web` and `apps/api` merely for visual hierarchy. Reopen this only when a third deployable appears or a measured ownership, build, deployment, or discovery ambiguity is solved by grouping applications.
+2. Do not select pnpm from the empty repository alone. If both real applications are pnpm-managed, use a single root workspace and lockfile; use `workspace:` only for real internal dependencies. Add catalog entries only for intentionally shared versions and add Turborepo only after a documented task-ordering, filtering, or caching need exceeds package-manager scripts.
+3. Lock semantic ownership before selecting tools: the API is the sole initial database-semantic and migration owner; environment/VPS operations belong under `infra/` and invoke an API-owned migration interface; public transport contracts never expose ORM, persistence, or UI internals. Exact directory shape, schema authority, migration tool, and whether a contracts package is warranted remain unselected until the first real endpoint and consumer exist.
+4. Use one small project-local release-evidence record inside each future `reviews/<topic>/` area. It must identify the reviewed revision, applicable contract/migration/test/CI/artifact/deployment evidence, and an explicit reason for every not-applicable or pending item. It links evidence; it neither copies nor changes canonical `$review` machinery.
+
+**Rationale:** The compiled research intake challenged the prior `apps/` recommendation. Four isolated bounded panel sessions responded; Q1 supported retaining root application names 3–1, and Q2–Q4 converged on conditional, ownership-first decisions. The robust-majority test remains true after removing any one panel response. See `reviews/monorepo-structure/research/monorepo-structure-r1.md`, `reviews/monorepo-structure/intakes/research-r1.md`, and `reviews/monorepo-structure/state/research/resolve-r1.json`.
+
+**Revisit triggers:** a third deployable; a second independent database writer or migration owner; evidence that pnpm is not the selected shared runtime; a real reusable public-contract artifact; measured task-graph duplication/caching need; or a project evidence record that duplicates rather than links durable evidence.
+
+## monorepo-structure-topology-reopen — null-gate deadlock harness clarification (2026-09-29)
+
+**Status:** interpretive correction only; it does not amend the R1 ledger, the two locked Null Options, or any panel tally.
+
+`Implementation Impact: yes` admits the completed topic to implementation-cycle routing. It does not authorize a product artifact that violates a Null lock. Q1's existing `frontend/` directory is not an implicitly selected Astro location: the R1 intake treated precisely that action as Candidate B, whereas the adopted Null retains only its minimal manifest. Creating an Astro app there is therefore a prohibited location-selecting scaffold.
+
+Q2 directly blocks the root pnpm workspace/root-lockfile shape; it does not syntactically ban every package-local lockfile. That narrower pathname observation does not authorize an Astro installer to choose npm, yarn, pnpm, or another manager: the Q2 lock forbids a substitute-manager escape, Q1 has no gate-passing layout, and E5 selects no manager. A package-local install artifact remains unauthorized as part of an unapproved application scaffold.
+
+**Remedy:** a clarification may correct "unblocked" to mean process routing only, but it cannot lift these locks. Any authority to create the Astro application, choose `frontend/` as its location, or choose a package manager requires a narrow `$review scope monorepo-structure-topology-reopen` reopen with the protocol's strong-contradiction acknowledgment, scope affirmation, and fresh evidence. Until then, only non-topology evidence work is permitted.
+
+## monorepo-structure-topology-reopen — topology-spike evidence filing exception (2026-09-30)
+
+**Operator approval:** On 2026-09-30, the operator approved `docs/research/monorepo-structure-topology-spike.md` as the filing location for the out-of-tree topology evidence spike. The approval is an explicit exception to the earlier requirement that the project-local release-evidence record live inside `reviews/<topic>/`.
+
+**Record:** `docs/research/monorepo-structure-topology-spike.md` records the tested revision, commands and exit codes, app/config/test payload, lockfile locations, output locations, static-output checksums, browser-test results, warnings, and unmeasured surfaces.
+
+**Scope of this approval:** The filing exception creates no new `reviews/<topic>/` artifact slot and records no Q1 or Q2 decision result.
+
+## monorepo-structure-topology-tiebreak — reopen-routing correction (2026-09-30)
+
+**Status:** procedural ruling; no Q1 or Q2 candidate is selected.
+
+**Evidence:** `monorepo-structure-topology-reopen` has a runbook with `Implementation Impact: yes`, a delimiter-matching locked-decision heading, no audit draft, and its latest research ledger records `action: "close"` in commit `e3d723f`. It is therefore research-complete under the protocol definition.
+
+**Protocol citations:** Research completion is defined at `/Users/aharoj/.skills/review-protocol/protocol.md:188`; the non-close research rule requires research not complete at `:219`; the marker-yes completed-topic rule routes to implementation at `:221`; unmatched non-close state halts at `:223`. The one-topic/one-directory rule is at `:162-177`.
+
+**Ruling:** For a non-close `$review bundle` or `$review resolve`, the completed `monorepo-structure-topology-reopen` topic cannot match the research-cycle rule. Its valid `Implementation Impact: yes` marker instead matches the implementation-cycle rule. A same-slug research R2 cannot be bundled or resolved as research from that file state.
+
+**Disposition:** The same-slug R2 scope skeleton remains recorded in `reviews/roadmap.md` and `LOG.md` as procedural history, but is VOID and superseded. The pending research scope is the fresh topic slug `monorepo-structure-topology-tiebreak`; it has no runbook or closed research ledger, and no Q1 or Q2 candidate is locked for that topic. Its first research artifact is R1, and its first bundle has the incomplete-research file state required for a research cycle.
+
+```
+
+
+Carry prior dependency reconnaissance without repeating it: Astro's resolved production closure was 287 package locations; existing inspected static output had no script tags or JavaScript assets. These are prior snapshots, not a fresh build or measurements of future SSR. Do not compare an unresolved alternative's direct dependency count to this resolved closure. Stack replacement is excluded.
+
+## Your Role
+
+Evaluate integration feasibility, conditional benefits and costs, boundary ownership, and risks against the actual static setup. Distinguish technical possibility from verified compatibility and justified product need. Limit recommendations to these questions and preserve existing ownership and Null locks.
+
+## What We Need From You
+
+Provide a compact integration-mode comparison and a conditional readiness checklist. State what Astro helps with, what it adds, and what remains the backend's responsibility. Future examples are hypothetical probes; they do not activate existing gates. Recommend deferral when feature facts are absent. No current implementation authorization follows from this research.
+
+## Output Format
+
+For each question give:
+1. ADOPT / DISMISS / INVESTIGATE. ADOPT may adopt only an evidence/readiness/revisit rule, never an auth, runtime, transport, contract, SSR, adapter, endpoint, host, proxy, or topology design. Today all such designs remain DEFER/Null. Describe non-Null future options only conditionally: require a concrete feature fact plus a bounded prospective proof before any non-Null recommendation could become actionable.
+2. Expected outcome and the feature condition under which it applies.
+3. Implementation: exact prospective verification steps; do not execute them or imply current authorization. Where Null wins, say no steps now.
+4. Risks and uncertainty, including runtime or version limitations.
+5. Verification: smallest future falsifiable proof and what it would establish.
+6. Sources used: sanitized direct URLs/titles for load-bearing web claims, or `No live web access used`.
+
+## Constraints
+
+- Retain Astro and static output now; no framework selection reopening.
+- Backend, persistence, and contract remain Null. Rust is a candidate, not an adopted runtime.
+- Conditional comparison, no present implementation: no code, installs, new services, auth, adapters, deploy/CI changes, or implementation commitments. Lifecycle Type is determined at close, not at scope.
+- Keep API/database/migrations owned by the backend, transport authority at the API boundary, and deployment invocation with repository-level infrastructure under the carried monorepo Q3 ownership lock (decisions.md). No shared internal domain package by assumption.
+- Minimize added dependencies and operational burden; report required runtimes and maintenance honestly. In-house preference is not permission to invent cryptography or claim bespoke code is maintenance-free.
+- Current gate facts are absent. Conditional diagrams and experiments must be labelled hypothetical.
+
+## Premise Risks
+
+| Risk | Source | Signal |
+|---|---|---|
+| Designing an unspecified backend prematurely would conflict with current Null locks; this scope evaluates conditions without choosing or implementing a backend. | decisions.md; stack-selection runbook; operator brief | Weak |
+| API-boundary clarity was already evaluated, so repeat selection work would waste effort. Concrete integration modes, auth/session/form boundaries, Rust contract mismatches, and hosting costs remain untested. | stack-selection research R2 and runbook | Weak |
+| Dependency count alone does not establish shipped browser weight or future runtime cost. | prior RECON.md and RED.md | Weak  [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]|
+
+No Strong contradiction found. Research scope does not assert any product-trigger activation.
+
+## Web-Leverage / Industry Landscape
+
+Lead has live web tools and used official Astro documentation for preliminary scoping; this is not a panel result or proof against the pinned application version. Declare your actual browsing capability; model labels do not establish it. If unavailable, do not claim live verification.
+
+Use official primary documentation for technical claims. Anti-hallucination and source-hygiene: do not invent citations or use citation-laundering; separate evidence from inference; sanitize URLs and do not paste credentials. Session-capability self-declaration is required, not brand classification; capability varies by session. Codebase-constraint supremacy: external patterns do not become authority by prestige. Cite verifiable URL, author or documentation maintainer, and publication/update date where available (otherwise say not stated); distinguish documented behavior, inference, version applicability, and untested assumptions. Check adapter/runtime requirements and external HTTP integration separately. Do not equate unanimous panel agreement with independent verification of operator facts. Strip credential/token/session query parameters; use safe title/domain references where needed. Project constraints outrank ecosystem popularity. Provide at most three high-signal primary-source examples, roughly 300 words total; mark external patterns absent from this codebase as potential gaps, not adoption authority.
+
+Starting references (verify applicability to the pinned project before relying on them):
+- https://docs.astro.build/en/guides/on-demand-rendering/
+- https://docs.astro.build/en/guides/endpoints/
+- https://docs.astro.build/en/guides/sessions/
+
+## Research Questions
+
+### Q1 — Integration modes
+
+How can retained Astro connect to a future Rust or other backend? Compare static HTML plus separate API, build-time backend reads, and selective request rendering with an Astro adapter/endpoints. Explain benefits, costs, runtime requirements, browser JavaScript implications, and the concrete feature evidence that would justify each mode. Distinguish portable HTTP integration from adapter/runtime compatibility.
+
+**Status Quo / Null Option:** Keep the existing static Astro output; defer every backend and integration-mode choice. No claim of proven backend readiness.
+
+### Q2 — Forms, authentication, and sessions
+
+For explicitly hypothetical forms or private pages, where could validation, authentication, sessions, cookie policy, CSRF/CORS, and caching responsibilities live? Compare direct backend handling with an Astro intermediary; identify build-time/private-data hazards and what requires request-time processing. Describe readiness conditions only; no present validation/auth/session design or intermediary choice is adopted. Do not infer a present need for login or forms.
+
+**Status Quo / Null Option:** No forms, authentication, sessions, private pages, or corresponding infrastructure now; defer security design until a concrete feature exists.
+
+### Q3 — Rust and transport contracts
+
+What interoperability limits arise when a Rust or other backend serves Astro/browser consumers? Evaluate JSON shape and error semantics, integer/date/optional-field mismatches, runtime validation versus compile-time TypeScript declarations, and conditional contract generation. Respect API-owned transport authority and avoid making internal backend models shared frontend types. Evaluate readiness conditions only; no present validation strategy, schema tooling, contract generation, or transport design is adopted.
+
+**Status Quo / Null Option:** No API, shared package, generated client, schema tool, or transport-contract authority now. Keep the existing contract gate; reopen only with a real boundary and checkable consumer artifact.
+
+### Q4 — Deployment ownership and revisit evidence
+
+Compare the operational costs and boundaries of static frontend plus independent backend versus selectively server-rendered Astro plus backend. Cover same-origin routing versus cross-origin hosting, adapter/runtime hosting constraints, cache/private response behavior, and map future deployment evidence into the already locked repository-level infrastructure ownership of deployment invocation; do not re-decide ownership. Give the minimum future feature facts and bounded proof needed to revisit current locks.
+
+**Status Quo / Null Option:** Keep the current static artifact and existing ownership boundaries. Select no host, adapter, proxy, deployment topology, CI, or backend runtime now; retain existing revisit gates.
+
+## Exclusions and scope state
+
+No backend/runtime selection, persistence/ORM evaluation, framework replacement, wholesale package inventory, vendor-host selection, code or deployment implementation. API/persistence/contract gates are preserved. Integration conclusions must remain conditional, not a stealth architectural lock.
+
+Scope authorization (Angel, 2026-10-10, verbatim as relayed in BRIEF-codex-2.md): "I APPROVE end to end; everything said I approve; lets keep it moving; love you". This approved the four already presented RED FIX rows and the revised scope. No new operator modification request accompanied that approval; protocol modification-overrides-affirmation therefore does not require another confirmation. Authorization permits bundle and panel preparation, not a present backend design or implementation. Research scope seals are N/A under the compiler; the external scope inventory remains descriptive, not a compiler seal. [UNVERIFIED AUTHOR ASSERTION -- test, do not inherit]

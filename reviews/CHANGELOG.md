@@ -1,5 +1,33 @@
 # Changelog -- portfolio reviews
 
+## v0.4 -- Astro/backend compatibility Research Convergence (2026-10-10)
+
+**Constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+One-round adversarial web-panel research review of future backend compatibility while retaining Astro. Nine authorized seats supplied pasted bodies; eight answered this topic and one historical-summary response supplied no votes. Effective web-model identities were not independently verified. Four limited readiness/evidence/revisit decisions locked; zero present follow-ups or force-dispositions. Resolution: four scoped questions -> four robust readiness locks -> zero open questions. All backend, persistence, contract and concrete integration choices remain Null.
+
+### Decisions
+
+- **Q1 integration**: ADOPT feature-and-proof readiness rule; 8 ADOPT/0 DISMISS/0 INVESTIGATE.
+- **Q2 forms/auth**: ADOPT limited deferral/evidence rule; 7 ADOPT/1 DISMISS/0 INVESTIGATE. The dissent dismisses present need and retains Null.
+- **Q3 transport**: ADOPT boundary-proof readiness rule; 7 ADOPT/0 DISMISS/1 INVESTIGATE. The minority investigation is explicitly future gate-time work, included in the checklist, not an open present design.
+- **Q4 deployment**: ADOPT evidence mapping into carried infrastructure deployment-invocation ownership; 8 ADOPT/0 DISMISS/0 INVESTIGATE.
+
+### Changes and evidence
+
+- Added `reviews/astro-backend-compatibility/research/astro-backend-compatibility-r1.md`, the compiler-produced `intakes/research-r1.md`/manifest pair, and immutable validated `state/research/resolve-r1.json`.
+- Updated `reviews/decisions.md` with dated locks, literal minority votes, KIMI one-round authorization and non-voting Z.AI disposition. Specific architecture/security/tool recipes are not adopted.
+- Added `reviews/runbook/astro-backend-compatibility.md`: conditional mode comparison, bounded proof checklist, scope/authority and verification limits; `Implementation Impact: no`.
+- `.hook-allowlist`: adds only the compiler metadata sidecar path after the normal hook falsely matched its `forbidden_tokens_found` zero count. The manifest was checked for actual secret material; the hook itself is unchanged, with no bypass.
+- Updated `reviews/roadmap.md` with completion, computed Type and premise challenge record. No product code, dependencies, deployment or global protocol files changed; no new project constraints or acceptance-risk items.
+- Input integrity: canonical/copy intake 62177 bytes, SHA-256 93eae2411994baa0f70d05ca008ff0c3cab61e553669c4dc22b1e2d05a6d1263; raw source 181830 bytes, SHA-256 cba9ef7aca27fca70153b4969ef103e7e3ec66e477a2caef1630540c1942eb8e. Raw replies and verbatim splits remain external.
+- Two derivation methods by the same lead agree; every single removal remains strict-majority even using all nine authorized seats conservatively. Worst support Q1/Q4 7/8; Q2/Q3 6/8. No independent-agent or deployed-runtime proof claimed.
+- Local schema candidate validation refused fractional timestamp precision before publication; corrected privately. Published ledger validates strictly and is read-only. Compiler validation is clean; no intake warning. Source checks qualified Astro/Serde/HTTP/TypeScript claims rather than endorsing panel defaults.
+
+### Close trail
+
+Research-only, with implementation skipped because the completed deliverable requires no product code. Existing static config/lockfile remain unchanged. Freshness: zero halts, three missing adapter-version-anchor warnings. Ledger, SOT interleave and topic-tree checks pass; panel environment probe clean. No C51 subagent dispatch; web-paste-only evidence retained. Implementation-only cap/PASS/completeness gates are inapplicable; downstream close does not modify the shared protocol. Commit occurs at this final topic close through the normal hook.
+
 ## 2026-10-01 -- stack-selection v0.2 implementation close
 
 **Type:** research + implementation

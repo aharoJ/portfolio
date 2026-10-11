@@ -1,5 +1,44 @@
 # Roadmap -- portfolio
 
+## astro-backend-compatibility: v0.4 Astro and future backend compatibility
+
+Status: COMPLETE (2026-10-10)
+
+Type: research-only
+
+Goal: Evaluate benefits, costs and compatibility limits of retained Astro with a hypothetical future Rust or other backend while preserving present static output and Null API, persistence and contract decisions.
+
+Result: One web research round produced a conditional integration comparison and a readiness checklist, with no present implementation. The earlier API-boundary criteria were useful but had not evaluated concrete modes or Rust wire mismatches; deployment-invocation ownership was already locked and carried forward. Four evidence/readiness/revisit rules converged robustly. All current concrete designs remain Null: no backend, adapter, endpoint, auth/session mechanism, transport tool, proxy, host, topology or CI selection. Rust remains a candidate. Conditional HTTP paths preserve a plausible future integration path; no runtime compatibility is certified.
+
+Cross-review stats: 1 round; 9 authorized/pasted seats; 8 topical responses; Z.AI historical-summary non-response preserved with zero votes. Raw tallies: Q1 8/0/0, Q2 7/1/0, Q3 7/0/1, Q4 8/0/0 (ADOPT/DISMISS/INVESTIGATE). All eight retain current Null. Mistral's Q3 investigation is expressly future gate-time work, included in the checklist, with no unresolved present question. Four locks; zero open questions; no force-disposition; no code findings or implementation/audit cycle. Source extraction and exhaustive removal independently reproduce the primary tally by a second method from the same lead, not a separate agent. Web effective identities remain unverified.
+
+| Key decision | Consensus | Round |
+|---|---:|---:|
+| Integration mode becomes actionable only with feature evidence and bounded proof; no mode selected | 8/8 topical; worst removal 7/8 with full roster denominator | R1 |
+| Forms/auth readiness only; no present design | 7/8 raw ADOPT; worst removal 6/8 with full roster denominator | R1 |
+| Existing API/transport gate plus actual wire-behavior proof; no contract tooling | 7/8 raw ADOPT; worst removal 6/8 with full roster denominator | R1 |
+| Future deployment proof maps into existing infrastructure ownership | 8/8 topical; worst removal 7/8 with full roster denominator | R1 |
+
+Implementation skip: the locked deliverable is completed comparison/checklist documentation. No product code or infrastructure changes are required; runbook marker=no and no audit drafts compute research-only at close. Future features require fresh scope and evidence, not automatic implementation.
+
+Runbook: `reviews/runbook/astro-backend-compatibility.md`
+
+Upstream filing state: not applicable
+
+Authorization: Angel (2026-10-10) approved all four presented RED fixes and revised scope: "I APPROVE end to end; everything said I approve; lets keep it moving; love you". R1 roster extension, same date, verbatim: "A count kimi". KIMI authorization is R1-only; default lineup unchanged. Research scope seal is N/A; external descriptive inventory grants no compiler or implementation authority.
+
+### Premise Challenge Record
+
+| Field | Value |
+|---|---|
+| Premise challenged? | Y |
+| Challenge source | Both |
+| Signal strength | Weak |
+| Outcome | Modified |
+| Prevented waste? | Y |
+| Caused waste? | N |
+| Notes | Narrowed scope to readiness rules, carried existing deployment ownership and excluded concrete future designs. Panel qualifications preserve Null and distinguish documentation/portability from verified runtime compatibility. |
+
 ## stack-selection: v0.2 full-stack selection
 
 Status: COMPLETE (2026-10-01)
