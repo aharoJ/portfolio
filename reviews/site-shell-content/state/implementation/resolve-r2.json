@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "topic": "site-shell-content",
+  "cycle_type": "implementation",
+  "round": 2,
+  "verdicts": {
+    "pass": 4,
+    "monitoring": 0,
+    "fail": 0,
+    "models": [
+      {
+        "model": "gemini-cli",
+        "verdict": "PASS"
+      },
+      {
+        "model": "astra-cli",
+        "verdict": "PASS"
+      },
+      {
+        "model": "fable-cli",
+        "verdict": "PASS"
+      },
+      {
+        "model": "deepseek-cli",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "predicates": {
+    "B1": false,
+    "B2": true,
+    "B3": false,
+    "B4": false,
+    "B5": false
+  },
+  "selected_branch": "B2",
+  "action": "close",
+  "cap": 9,
+  "hard_cap_override_state": "absent",
+  "panel": {
+    "dispatched": [
+      "gemini-cli",
+      "astra-cli",
+      "fable-cli",
+      "deepseek-cli"
+    ],
+    "responded": [
+      "gemini-cli",
+      "astra-cli",
+      "fable-cli",
+      "deepseek-cli"
+    ],
+    "non_response": [],
+    "distinct_sources": 4
+  },
+  "panel_set_notes": [
+    "All four current R2 finals admitted through aggregate native evidence verifier before votes; four distinct eligible PASS sources, no standing FAIL, no dropped seat or spot-check waiver.",
+    "Formal production adapter activation pending; protocol-owner #p6x3 and operator #a1d9/#x4jg authorize the same handwritten native CLI practice; project-local prepared schema retained. No formal qualified-adapter or new account-policy activation claim.",
+    "Fable row53 /tmp/x scratch write is admitted only under #x4jg exact command/full-final-snapshot R2 exception. No R1 waiver reused, no severity/quorum/floor/close waiver inferred.",
+    "Current canonical packet and independently checked V3 technical delivery bind separately. Earlier r2a/r2b were abandoned before launch, zero replacements or steering.",
+    "R1-F1 regression repair verified independently by final restored 21/21 test run and four isolating bad-output mutations; R1-F2 fixed by actual measured-evidence delivery to all four seats. R1 immutable findings/raw FAILs retained.",
+    "Lead OpenAI identity from runtime role; exact effective profile unavailable. Checker identifies Codex, visible UI GPT-5.6-Terra max fast; backend exact family/profile unverified, no extra panel vote or independent-family corroboration credit.",
+    "Requested Astra gpt-6-sol low differs from native effective gpt-6-luna low. Gemini effective identity is native UI Gemini3.8Flash Low; Fable/DeepSeek native assistant models are claude-sonnet-5-5/deepseek-flash. Material non-execution/binary/visual limits disclosed and retained.",
+    "No C51 subagent spawns by this lead or panel seats: installed CLI seat processes and existing independent checker are not C51 agent-tool dispatch. Complete native tools show no descendants."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-11T22:52:16+00:00",
+  "findings_count": 0,
+  "findings_real": 0,
+  "findings_fp": 0,
+  "admission_evidence": [
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/EVIDENCE.json",
+      "sha256": "1813298ed01dc009619e7ee48463b91a00c31cbfd12aa4d1924b0f2553def0f2"
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/ADMISSION-GATE.json",
+      "sha256": "e24ec3a60e3d9fa5a47fd066ec2591e0da837622e8b193ac80a93c6761b08eda"
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/VERIFY.log",
+      "sha256": "9702c4cea643feb23d84921450dd9c05c6e2e10ca3aa406337068978c533b5f7"
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/OPERATOR-EXCEPTION-R2.json",
+      "sha256": "056c88f165f862288b62186ca5edc23d5cbca5ba03004c2b67e679e584eb8c95"
+    }
+  ],
+  "input_binding": {
+    "path": "/Users/aharoj/.repository/portfolio/reviews/site-shell-content/intakes/audit-r2.md",
+    "sha256": "03b0b2d8b573a6cff3164ce5841b7f3580e3022aa6dbdfca38ea68e2929c85af"
+  },
+  "delivered_input_binding": {
+    "path": "/Users/aharoj/desk/tmp/portfolio/v0.5-site-shell/R2-TECHNICAL-PROJECTION-V3.md",
+    "sha256": "665d2ab6b40162ae4915c182a527538a808368639b814f7e2b8e4a88edc59420"
+  },
+  "independent_convergence_proof": {
+    "path": "/Users/aharoj/desk/tmp/portfolio/v0.5-site-shell/RED-CONVERGENCE-R2.md",
+    "sha256": "7608a26a6576b50c7e65db574858a945d605e45c9884a8e872e66f908e18a316"
+  },
+  "independent_proof_authority": {
+    "path": "/Users/aharoj/desk/tmp/relay/baf72e98.md",
+    "sha256": "2a3772520a8dc7153224af40ec5b8fcff4f43bc596f46ee2ba1aa5a827b7d384"
+  },
+  "manual_operator_practice_authority": [
+    {
+      "path": "/Users/aharoj/desk/tmp/relay/c740aaa8.md",
+      "sha256": "1ceb1537991743491a43acd023d1ce1cbcd81e3d4e358860184e2471a923b51b"
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/relay/c908e142.md",
+      "sha256": "518059fab3f483df4c83f9e0d59a12e7b7c438dff0cdf5284d1c73315943f5d3"
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/relay/35aeda44.md",
+      "sha256": "a7a94de3b3328424c2bc8e06a586dd72d95dba51cae31fdf67d5b242d4cb2e5f"
+    }
+  ],
+  "standing_fail": [],
+  "reviewed_baseline": "a604c68071178a5db24b38b016e8b51b03c2be19"
+}

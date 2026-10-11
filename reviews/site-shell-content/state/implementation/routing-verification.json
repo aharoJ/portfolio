@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "topic": "site-shell-content",
+  "cycle_type": "implementation",
+  "created_at": "2026-10-11T22:53:41+00:00",
+  "runtime_global_routing_inputs": {
+    "CLAUDE_CODE_SUBAGENT_MODEL_set": false,
+    "applicability": "C51 agent-tool dispatch unused; native CLI panel seats and existing checker are direct external processes"
+  },
+  "subagent_spawns": [],
+  "aggregate_counts": {
+    "c51_spawns": 0,
+    "verified": 0,
+    "missing": 0,
+    "divergent": 0
+  },
+  "close_gate_result": "verified",
+  "upstream_filing_state": "not applicable",
+  "evidence": [
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r1a/native/astra.jsonl",
+      "sha256": "862e570e925d6f374111945e4b20a0e420b141ded6118373817432168bde824c",
+      "tool_names": [
+        "exec"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r1a/native/fable.jsonl",
+      "sha256": "7d8849e1f81f62b26997a7abac4a79a61bfac27fe9b81053f3e50d845db9f665",
+      "tool_names": [
+        "Bash",
+        "Read"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r1a/native/deepseek.jsonl",
+      "sha256": "0ec4859d56372922683dc51ec971514b8309128b0a5ef7f22e958cb1f3536a11",
+      "tool_names": [
+        "Bash",
+        "Read"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r1a/native/gemini-decoded-steps.json",
+      "sha256": "38542912d379721f7350a70a4ccb89084d8f74ba39bbb8001f6195fb3909babd",
+      "invoked_tools": [
+        "view_file",
+        "run_command",
+        "run_command",
+        "view_file",
+        "run_command",
+        "view_file",
+        "view_file",
+        "run_command",
+        "view_file",
+        "view_file",
+        "run_command",
+        "run_command",
+        "run_command"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/native/astra.jsonl",
+      "sha256": "13fc52b6492190916566632f3de738d022b8e8b7b34901ad375ed2879a8787d4",
+      "tool_names": [
+        "exec"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/native/fable.jsonl",
+      "sha256": "b5946bf24772364572f94041e9a80367d5d2d1a59d9af48ac263e20ed24bd25c",
+      "tool_names": [
+        "Bash",
+        "Read"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/native/deepseek.jsonl",
+      "sha256": "4f306303e279a229000cdf8e334d37c99b220ec37cceda57ab30fcdab8d2d285",
+      "tool_names": [
+        "Bash",
+        "Read"
+      ],
+      "descendant_spawns": 0
+    },
+    {
+      "path": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/native/gemini-decoded-steps.json",
+      "sha256": "1c86f8d9893aa75fbfc946373b35594c52aa6881b303f61f139a305f72aa03fb",
+      "invoked_tools": [
+        "view_file",
+        "run_command",
+        "run_command",
+        "view_file",
+        "view_file",
+        "view_file"
+      ],
+      "descendant_spawns": 0
+    }
+  ],
+  "lead_dispatch": "Zero collaboration/Agent spawning tools used; explicit panel-seat path only",
+  "formal_agentic_activation": "pending separately; no formal adapter claim"
+}

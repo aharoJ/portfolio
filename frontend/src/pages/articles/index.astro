@@ -1,0 +1,8 @@
+---
+import Page from '../../layouts/Page.astro';
+const articles = Object.values(import.meta.glob('./*.md', { eager: true })) as { url: string; frontmatter: { title: string; description: string } }[];
+---
+<Page title="Articles" description="Articles by Angel Jair Haro.">
+  <h1>Articles</h1>
+  <ul>{articles.map(article => <li><a href={article.url}>{article.frontmatter.title}</a><p>{article.frontmatter.description}</p></li>)}</ul>
+</Page>

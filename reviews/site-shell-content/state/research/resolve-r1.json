@@ -1,0 +1,1032 @@
+{
+  "schema_version": "1.0",
+  "topic": "site-shell-content",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT exact route/navigation contract"
+    },
+    "Q2": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT bounded confirmed text/project tuples"
+    },
+    "Q3": {
+      "raw_recommendations": {
+        "ADOPT": 2,
+        "DISMISS": 2,
+        "INVESTIGATE": 4
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": false,
+      "robust_majority_after_any_single_removal": false,
+      "decision": "INVESTIGATE image admission; text-only interim default"
+    },
+    "Q4": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT static skills list and project category headings; native anchors optional, no control dependency"
+    },
+    "Q5": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT both confirmed contact links outside primary nav, shared footer"
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": false,
+    "locked_decisions_robust_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "open-follow-up",
+  "action": "roll",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "responded": [
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "distinct_sources": 8,
+    "pastes_received": 9,
+    "non_response": [
+      "GEMINI"
+    ]
+  },
+  "panel_set_notes": [
+    "Angel (2026-10-11), verbatim: \"count kimi WHEN I add it\"; pasted KIMI is authorized, default generated lineup unchanged.",
+    "Spot-check waiver: model=GEMINI; reason=non-response; round=R1; evidence=formatted intake echo without recommendations; R2 re-dispatch planned in default lineup; still-applies=yes;",
+    "Eight current topical responses; MEMO and KIMI preambles/thinking supply no additional votes. Z.AI supplies current Q1-Q5 reasoning and is counted.",
+    "Q3 DeepSeek explicitly ADOPT text-only and DISMISS current image admission; raw dual wording retained in source anchors, image-admission projection counted DISMISS. KIMI ADOPT is portrait-conditional with project images INVESTIGATE, not all-five admission.",
+    "Q5 Mistral raw ADOPT supports GitHub-only/About; seven others support both links, with robust footer support.",
+    "Four decisions lock; Q3 remains open and cannot be waived by common support for interim text-only.",
+    "No C51/subagent/agentic CLI dispatch used; authorized web paste is external transport. Lead Codex/common OpenAI family, effective model/profile unverified; all seat effective identities unverified.",
+    "Independent second derivation means reverse-order source-anchor extraction and all-removal calculation by same lead, not independent-model reproduction."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-11T19:28:08+00:00",
+  "decisions_locked": 4,
+  "investigate": 1,
+  "evidence": {
+    "split": {
+      "source": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/r1/responses.md",
+      "bytes": 207027,
+      "sha256": "26ae011f79a39286c0d4be5329677d260e9f4255f2bb403a93914afe7da0e53f",
+      "authorization": "count kimi WHEN I add it",
+      "blocks": {
+        "GEMINI": {
+          "bytes": 42951,
+          "sha256": "24e66332b112687bd4319d623c983710285668297958416df11119a1612d93b6"
+        },
+        "DEEPSEEK": {
+          "bytes": 16027,
+          "sha256": "7941f9ab9e90c168e83cb52ecc63c5fefad7c610e101f0fb695158455bfe96a4"
+        },
+        "MISTRAL": {
+          "bytes": 18497,
+          "sha256": "0177947e5c6cf889217a9c61e3fde01942baba64e2b3ceec590a3aee60d07554"
+        },
+        "GROK": {
+          "bytes": 10504,
+          "sha256": "fe77ac0eda711e797b7ca5c79425c15ae77952d6d53867e97679ce77337e51a9"
+        },
+        "MEMO": {
+          "bytes": 50679,
+          "sha256": "3bdb747a365b8a4d9399a4bc4ac4034bf775b3663e4c4362206aabceaa040de6"
+        },
+        "Z.AI": {
+          "bytes": 7549,
+          "sha256": "fa89c158f375aaa070f75c10037d24e6266d7f574477a2c5df93cf70edaac43f"
+        },
+        "CLAUDE.AI": {
+          "bytes": 17943,
+          "sha256": "9c7c2480a9d3622d42bca02f810dfef7a8425151396bf75ae0a21a4ade0bcfbc"
+        },
+        "KIMI": {
+          "bytes": 25071,
+          "sha256": "077fda1c74e5d2036ba28ae8b8d76903dec39bc3f048a7962e06f7f121822032"
+        },
+        "GPT": {
+          "bytes": 14763,
+          "sha256": "8ec4fd2a2df8444b024970bdd6aae6407a53d315c3b6efa5ad91f5ea34834970"
+        }
+      },
+      "intake_sha256": "37afc0d9968cba724a60276d18fc49cb51c11d6264ae94c7ecdf7c874b5d151e"
+    },
+    "primary_manual_matrix": {
+      "DEEPSEEK": [
+        "ADOPT",
+        "ADOPT",
+        "DISMISS",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "MISTRAL": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "GROK": [
+        "ADOPT",
+        "ADOPT",
+        "DISMISS",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "MEMO": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "Z.AI": [
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "CLAUDE.AI": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "KIMI": [
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "GPT": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ]
+    },
+    "independent_reverse_order_source_extraction": {
+      "GPT": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "KIMI": [
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "CLAUDE.AI": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "Z.AI": [
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "MEMO": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "GROK": [
+        "ADOPT",
+        "ADOPT",
+        "DISMISS",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "MISTRAL": [
+        "ADOPT",
+        "ADOPT",
+        "INVESTIGATE",
+        "ADOPT",
+        "ADOPT"
+      ],
+      "DEEPSEEK": [
+        "ADOPT",
+        "ADOPT",
+        "DISMISS",
+        "ADOPT",
+        "ADOPT"
+      ]
+    },
+    "reconciliation_differences": 0,
+    "vote_locations": {
+      "GPT": [
+        {
+          "question": "Q1",
+          "line": 8,
+          "quote": "| Q1       | **ADOPT** the exact route/navigation contract                                  | Retain the existing root article index                   |"
+        },
+        {
+          "question": "Q2",
+          "line": 9,
+          "quote": "| Q2       | **ADOPT conditionally** the exact confirmed text allowlist                     | Omit unverified records; retain accepted article content |"
+        },
+        {
+          "question": "Q3",
+          "line": 10,
+          "quote": "| Q3       | **INVESTIGATE** portrait-only admission; retain text-only output pending proof | No migrated binaries                                     |"
+        },
+        {
+          "question": "Q4",
+          "line": 11,
+          "quote": "| Q4       | **ADOPT** static lists and project headings; omit category controls            | Simple complete project list, no skills section          |"
+        },
+        {
+          "question": "Q5",
+          "line": 12,
+          "quote": "| Q5       | **ADOPT conditionally** both plain contact links in the footer                 | Omit contact links                                       |"
+        }
+      ],
+      "KIMI": [
+        {
+          "question": "Q1",
+          "line": 92,
+          "quote": "1. Decision: ADOPT the five-route shell (/ Home, /about/ About, /projects/ Projects, /articles/ Articles, carried /articles/first/) with the single shared semantic navigation and the stated aria-current rules. Null alternative rejected: keeping / as the article index contradicts the operator's explicit four-page request and would force Home to be a reading-log page, not a portfolio landing."
+        },
+        {
+          "question": "Q2",
+          "line": 104,
+          "quote": "7. Decision: ADOPT with the stated narrowing. Use only the confirmed pool: identity (Angel Jair Haro / Software Engineer / aharoJ), the eight named skills, and the four named projects with title + category + GitHub href only. Null alternative (no archive claims) is rejected because operator authorization (2026-10-11, #b5n9) explicitly approved this pool \u2014 but note this authorization is author-supplied evidence; the content itself remains unverified by me, which is exactly why the exclusion rules must be enforced mechanically rather than by judgment."
+        },
+        {
+          "question": "Q3",
+          "line": 114,
+          "quote": "13. Decision: ADOPT conditionally \u2014 portrait admitted; project images INVESTIGATE against measured bounds before admission; text-only remains the default until every bound is verified. Null alternative (text-only) stays the fallback if any bound fails. The stated arithmetic is tight: 150,000 (portrait) + 4 \u00d7 200,000 = 950,000 of the 1,000,000 emitted-byte cap \u2014 only 50,000 bytes of headroom, so the \"reject admission that misses any bound\" rule will likely bite at least one project image (tmux.png is 18,643,137 bytes of original PNG; a screenshot PNG downscaled to a bounded width usually lands well under 200,000 bytes as WebP, but this is inference, not measurement)."
+        },
+        {
+          "question": "Q4",
+          "line": 125,
+          "quote": "19. Decision: ADOPT plain grouped lists with semantic category headings; DISMISS anchor links, tabs, filters, islands, icons, and animation for this cycle. Null alternative (no grouping at all) is unnecessary since the content model carries a category field anyway \u2014 rendering it as a visible heading costs nothing and is more honest than a hidden taxonomy."
+        },
+        {
+          "question": "Q5",
+          "line": 132,
+          "quote": "25. Decision: ADOPT both confirmed destinations as plain links outside the four-item primary navigation: Email mailto:haro.j.angel@gmail.com and GitHub https://github.com/aharoj, placed in the shared footer of Page.astro (present on all five routes, including the article \u2014 zero marginal complexity). Null alternative rejected only because the operator confirmed both destinations; if confirmation were absent, omission would win. The rejected angel@aharoj.io stays rejected and should be asserted absent from output."
+        }
+      ],
+      "CLAUDE.AI": [
+        {
+          "question": "Q1",
+          "line": 19,
+          "quote": "**1. Verdict: ADOPT** the five-route contract, with three precision fixes. Null alternative: keep the current `/` index and the `/` back-link. I reject the Null because the operator explicitly requested the four pages."
+        },
+        {
+          "question": "Q2",
+          "line": 77,
+          "quote": "**1. Verdict: ADOPT, narrowed by two fields.** Use the identity (name, role, handle), the 8 skills and the 4 project titles with their GitHub links. Hold **project category labels** and the bare title **\"Twitter\"** for one more explicit confirmation from Angel. Null alternative: article-only content with neutral headings. I reject it because confirmation exists for the core pool."
+        },
+        {
+          "question": "Q3",
+          "line": 108,
+          "quote": "**1. Verdict: INVESTIGATE.**"
+        },
+        {
+          "question": "Q4",
+          "line": 180,
+          "quote": "- **Skills: ADOPT** as one flat list."
+        },
+        {
+          "question": "Q5",
+          "line": 209,
+          "quote": "**1. Verdict: ADOPT** both links in a shared `<footer>` outside the primary nav. Null alternative: omit both. Both destinations are confirmed, and they cost 0 bytes of JS and 2 links."
+        }
+      ],
+      "Z.AI": [
+        {
+          "question": "Q1",
+          "line": 4,
+          "quote": "1. **ADOPT** the proposed fixed route and link acceptance contract (5 routes, shared nav, updated back-link) over the Null option."
+        },
+        {
+          "question": "Q2",
+          "line": 18,
+          "quote": "1. **ADOPT** the bounded candidate content (confirmed identity, skills list, 4 projects) over the Null option."
+        },
+        {
+          "question": "Q3",
+          "line": 30,
+          "quote": "1. **ADOPT** the optional images with the proposed size bounds (Portrait <=150KB, Project <=200KB per variant, total <=1MB, route <=600KB) over the Null text-only option."
+        },
+        {
+          "question": "Q4",
+          "line": 43,
+          "quote": "1. **ADOPT** plain grouped skill lists and project category headings over the Null option."
+        },
+        {
+          "question": "Q5",
+          "line": 55,
+          "quote": "1. **ADOPT** the confirmed contact links (Email and GitHub) over the Null option."
+        }
+      ],
+      "MEMO": [
+        {
+          "question": "Q1",
+          "line": 129,
+          "quote": "1. **ADOPT** the proposed five-route contract exactly as tabled: `/`, `/about/`, `/projects/`, `/articles/`, `/articles/first/`, four primary nav items, canonical trailing-slash hrefs, `aria-current=\"page\"` on exact route, `aria-current=\"location\"` on Articles for the article descendant, logo link to `/` tested separately, back-link retargeted to `/articles/`. **Null alternative:** keep current `/` article index, single header link, and `/` back-link. The contract is the smallest shell that satisfies the stated four-page request plus the preserved article route; no route or label in it is redundant, and nothing outside it is required."
+        },
+        {
+          "question": "Q2",
+          "line": 149,
+          "quote": "1. **ADOPT** the allowlist as a hard maximum, conditioned on a per-record confirmation gate; and **DISMISS** nothing in it outright. **Null alternative:** article-only, no identity/skills/project claims. Naming the decision: publish at most the confirmed identity trio (name, role, handle), the eight bare skill names, and the four project records (title, category, GitHub destination), each only where the corresponding primary confirmation record can be produced at build time; omit any field or record whose confirmation is missing rather than paraphrase or invent."
+        },
+        {
+          "question": "Q3",
+          "line": 163,
+          "quote": "1. **INVESTIGATE**, with a concrete finding: the proposed budget is internally inconsistent and must be narrowed before it can serve as an acceptance gate. **ADOPT** the text-only default now (Null stands as the shipped baseline). If images are pursued, **ADOPT the budget framework with a narrower per-variant bound**: project-image variants **\u2264 140,000 encoded bytes** rather than 200,000. Arithmetic: four project images on `/projects/` at 200,000 bytes each = 800,000 bytes of unique fetched bodies after scrolling, which already exceeds the 600,000-byte route cap; 4 \u00d7 150,000 = 600,000 exactly, with zero margin for DPR-2 selection or measurement variance. At 140,000 the route totals 560,000 with margin. **Null alternative:** no migrated binaries at all."
+        },
+        {
+          "question": "Q4",
+          "line": 177,
+          "quote": "1. **ADOPT** plain grouped lists and category headings with optional native in-page anchor links, exactly as scoped. **Null alternative:** no skills section and a flat project list if Q2 lands Null or narrow. No tablist, no filter, no island, no icon library, no animation \u2014 the intake correctly notes that archive React state is not evidence of earned interactivity."
+        },
+        {
+          "question": "Q5",
+          "line": 191,
+          "quote": "1. **ADOPT (conditional)** two plain links outside the four-item primary navigation, placed in a footer: Email `mailto:haro.j.angel@gmail.com` with accessible name containing the address (e.g. `Email haro.j.angel@gmail.com`), and GitHub `https://github.com/aharoj` with an approved exact label (e.g. `GitHub (aharoj)`). **Null alternative:** omit both, and this remains the correct fallback if the confirmation record cannot be produced at build time. No contact route, form, phone, widget, or backend under any outcome."
+        }
+      ],
+      "GROK": [
+        {
+          "question": "Q1",
+          "line": 3,
+          "quote": "1. **ADOPT** the proposed fixed routes and labels (`/` Home, `/about/` About, `/projects/` Projects, `/articles/` Articles, `/articles/first/` preserved). Null alternative: keep current `/` as article index with single header link and existing `/` back-link."
+        },
+        {
+          "question": "Q2",
+          "line": 23,
+          "quote": "1. **ADOPT** the bounded candidate records (identity/role/handle, listed skills, four projects with title/category/GitHub only). Null alternative: current article content only; route shells (if Q1 adopts) use neutral headings with no archive claims."
+        },
+        {
+          "question": "Q3",
+          "line": 43,
+          "quote": "1. **DISMISS** admission of the five candidate images under the stated prospective bounds (default remains text-only). Null alternative: text-only Home/About/Projects; no migrated binaries."
+        },
+        {
+          "question": "Q4",
+          "line": 57,
+          "quote": "1. **ADOPT** plain grouped skill lists and project category headings (optional native fragment anchors). Null alternative: no skills section; projects (if Q2 admits) as a single complete static list."
+        },
+        {
+          "question": "Q5",
+          "line": 75,
+          "quote": "1. **ADOPT** plain links outside the four-item primary navigation: Email `mailto:haro.j.angel@gmail.com` and GitHub `https://github.com/aharoj` (both confirmed). Null alternative: omit every contact link."
+        }
+      ],
+      "MISTRAL": [
+        {
+          "question": "Q1",
+          "line": 10,
+          "quote": "**1. Decision: ADOPT** the five-route contract (`/`, `/about/`, `/projects/`, `/articles/`, `/articles/first/`), the `/articles/` back-link retarget, and `aria-current` semantics as specified. Null alternative: keep the current single-index `/` shell; it does not satisfy the operator's four-page request and is inferior only on that ground, not on any technical defect."
+        },
+        {
+          "question": "Q2",
+          "line": 43,
+          "quote": "**1. Decision: ADOPT the allowlist as bounded, with a Null per-field fallback.** Use: Home heading \"Angel Jair Haro\", role \"Software Engineer\", handle `aharoJ`; About reusing identity plus the eight named skills as plain text; Projects listing the four named records with title, category, GitHub link only. Null alternative: route shells with neutral factual headings and no archive-derived claims \u2014 apply this to any field whose confirmation cannot be re-established at build time."
+        },
+        {
+          "question": "Q3",
+          "line": 75,
+          "quote": "**1. Decision: INVESTIGATE, text-first default retained.** The proposed bounds are coherent and unusually well-constructed (per-variant caps, aggregate cap, per-route body cap, DPR 1/2, cold loads, inventory-based accounting, hard reject on any missed bound). The blocker is the optimization path: the intake says \"no new optimizer/image library by assumption,\" but Astro's built-in `<Image>` component requires `sharp` as a dependency in current Astro versions \u2014 a fact that must be resolved before admission can pass from INVESTIGATE to ADOPT."
+        },
+        {
+          "question": "Q4",
+          "line": 101,
+          "quote": "**1. Decision: ADOPT** plain semantic grouped lists with build-time category grouping and optional native fragment anchor links. Null alternative (no skills section, flat project list) is dominated here: the content is Q2-admitted, grouping is pure HTML, and the descendant-anchor links are progressive enhancement that degrades to plain text \u2014 no JS, no island, no dependency."
+        },
+        {
+          "question": "Q5",
+          "line": 125,
+          "quote": "**1. Decision: ADOPT, narrowed to one placement: GitHub only, in the About page body; omit the mailto link for v0.5.** Null alternative (omit everything) is fully viable and should be taken if the mailto's exposure tradeoff is judged negative. Rationale: the GitHub destination is doubly confirmed (operator + pinned `socials/items.ts`), doubles as the handle's meaning, and has no spam-exposure cost. A `mailto:` publishes a scraped-address magnet into a static page with no obfuscation mechanism; the address is already public elsewhere, but _this_ site gains a cost without a demonstrated need (no contact use case is in scope). This is a presentation judgment within the panel's authority; the destinations themselves were confirmed by Angel, and that confirmation is not re-certified here."
+        }
+      ],
+      "DEEPSEEK": [
+        {
+          "question": "Q1",
+          "line": 14,
+          "quote": "**ADOPT** the proposed fixed route/link contract: `/` Home, `/about/` About, `/projects/` Projects, `/articles/` Articles, `/articles/first/` existing article."
+        },
+        {
+          "question": "Q2",
+          "line": 71,
+          "quote": "**ADOPT** the bounded allowlist, narrowed to confirmed fields only."
+        },
+        {
+          "question": "Q3",
+          "line": 114,
+          "quote": "**ADOPT** text-only default. **DISMISS** admission of the five candidate images for this round."
+        },
+        {
+          "question": "Q4",
+          "line": 164,
+          "quote": "**ADOPT** plain grouped skill lists and project category headings with optional native anchors only if they remain simple links. No islands, tabs, filters, animation, icon library, or filter dependency."
+        },
+        {
+          "question": "Q5",
+          "line": 203,
+          "quote": "**ADOPT** plain contact links outside the four-item primary navigation, using only the operator-confirmed destinations, if the operator wants contact on the site."
+        }
+      ]
+    },
+    "every_single_removal": {
+      "Q1": [
+        {
+          "removed": "GEMINI",
+          "support": 8,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ],
+      "Q2": [
+        {
+          "removed": "GEMINI",
+          "support": 8,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ],
+      "Q4": [
+        {
+          "removed": "GEMINI",
+          "support": 8,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ],
+      "Q5": [
+        {
+          "removed": "GEMINI",
+          "support": 8,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ],
+      "Q2-full-tuples": [
+        {
+          "removed": "GEMINI",
+          "support": 7,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ],
+      "Q4-category-grouping": [
+        {
+          "removed": "GEMINI",
+          "support": 7,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ],
+      "Q5-both-footer": [
+        {
+          "removed": "GEMINI",
+          "support": 7,
+          "active_denominator": 8,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "DEEPSEEK",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MISTRAL",
+          "support": 7,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GROK",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "MEMO",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "Z.AI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "CLAUDE.AI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "KIMI",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        },
+        {
+          "removed": "GPT",
+          "support": 6,
+          "active_denominator": 7,
+          "roster_denominator": 8,
+          "active_strict_majority": true,
+          "conservative_strict_majority": true
+        }
+      ]
+    },
+    "limitations": "Two derivations by same lead, not a separate agent/model. Seat labels/effective underlying identities unverified; no independent-family credit claimed.",
+    "proof_checks": {
+      "caps_feasible_example": "Five source images each emitting two 50,000-byte files total 500,000 emitted bytes; four project bodies sum 200,000 per route. All proposed ceilings can coexist; example is arithmetic, not actual asset measurements.",
+      "no_js_lazy": "WHATWG lazy-loading algorithm returns false when scripting disabled; https://html.spec.whatwg.org/multipage/urls-and-fetching.html#lazy-loading-attributes",
+      "optimizer": "Lock and npm ls show Astro 7.3.5 -> optional sharp 0.35.5; package import succeeds with libvips 8.18.7. No clean-install or Astro asset-transform proof claimed.",
+      "confirmation": "FACTS-angel.md #b5n9 confirms shown pool, not every possible claim. Category/title narrowing retained as minority; full tuple adoption has 7/8 topical support."
+    }
+  }
+}

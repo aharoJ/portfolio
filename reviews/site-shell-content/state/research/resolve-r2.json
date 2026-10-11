@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0",
+  "topic": "site-shell-content",
+  "cycle_type": "research",
+  "round": 2,
+  "verdicts": {
+    "Q1": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT exact route/navigation contract",
+      "carried_from": {
+        "path": "reviews/site-shell-content/state/research/resolve-r1.json",
+        "sha256": "23bf873ae9d8fc217375d190d31158f5178a69e0ad4d8d24eb3688431bbf1d30"
+      }
+    },
+    "Q2": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT bounded confirmed text/project tuples",
+      "carried_from": {
+        "path": "reviews/site-shell-content/state/research/resolve-r1.json",
+        "sha256": "23bf873ae9d8fc217375d190d31158f5178a69e0ad4d8d24eb3688431bbf1d30"
+      }
+    },
+    "Q4": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT static skills list and project category headings; native anchors optional, no control dependency",
+      "carried_from": {
+        "path": "reviews/site-shell-content/state/research/resolve-r1.json",
+        "sha256": "23bf873ae9d8fc217375d190d31158f5178a69e0ad4d8d24eb3688431bbf1d30"
+      }
+    },
+    "Q5": {
+      "raw_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT both confirmed contact links outside primary nav, shared footer",
+      "carried_from": {
+        "path": "reviews/site-shell-content/state/research/resolve-r1.json",
+        "sha256": "23bf873ae9d8fc217375d190d31158f5178a69e0ad4d8d24eb3688431bbf1d30"
+      }
+    },
+    "Q3": {
+      "raw_recommendations": {
+        "ADOPT": 9,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "authorized_roster": 9,
+      "locked": true,
+      "robust_majority_after_any_single_removal": true,
+      "decision": "ADOPT P: About-only portrait, existing build pipeline, one WebP format, at most two widths 240/480, rendered <=240 CSS px; actual admission gated; automatic text-only Null on any failed gate. No project images.",
+      "exact_width_policy_support": 8,
+      "minority": "CLAUDE.AI P1: one 480px derivative; not adopted as universal rule."
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": true,
+    "open_follow_up_questions": false,
+    "research_cap_reached": false,
+    "locked_decisions_robust_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "converged",
+  "action": "close",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "GPT",
+      "KIMI"
+    ],
+    "responded": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "GPT",
+      "KIMI"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Angel standing authorization, verbatim: \"count kimi WHEN I add it\". KIMI counts; default eight-seat generator unchanged.",
+    "All nine R2 responses substantive; Gemini now gives current recommendation and mechanisms, not intake echo. R1 waiver fulfilled by R2 re-inclusion.",
+    "Primary policy ADOPT P 9/9. Claude P1 one 480px derivative is a minority implementation refinement; width-start policy 8/9, worst 7/8. No derivative admitted today.",
+    "No C51/subagent/agentic dispatch used in either research round; external authorized web paste only. Lead and effective seat model identities unverified; no independent-family claim.",
+    "Independent derivation is reverse-order source-anchor extraction by same lead, not a separate model.",
+    "No new project constraints planned: bounded acceptance conditions belong to decisions and implementation runbook, avoiding duplicate law."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-11T20:29:22+00:00",
+  "decisions_locked": 5,
+  "investigate": 0,
+  "evidence": {
+    "split": {
+      "source": "/Users/aharoj/desk/tmp/portfolio/site-shell-content/panel-batch/r2/responses.md",
+      "sha256": "c40a7f17c09498599b861decf6bf16d501dac8d05c0519a30d3b734bb0c66dcc",
+      "bytes": 112961,
+      "blocks": {
+        "GEMINI": {
+          "bytes": 10997,
+          "sha256": "748504d6bb6587403032744e7b1c5489526ec54b3af485db0fc5ad1fb6399c67"
+        },
+        "DEEPSEEK": {
+          "bytes": 17062,
+          "sha256": "a906ed9e5e23a378c82c5eaa288ca874ca1a3850318ae3833519e410ac36344e"
+        },
+        "MISTRAL": {
+          "bytes": 6105,
+          "sha256": "a44f7ae4810deb6c9b37b442c792d647cc96abde59ecf7b27cff20405c1b30a6"
+        },
+        "GROK": {
+          "bytes": 8203,
+          "sha256": "efc4cc22df57f2d10c1b738c9de4b3b2ebf6b986b71394f62b7aa8433d9b587e"
+        },
+        "MEMO": {
+          "bytes": 25786,
+          "sha256": "742a3c4d83e1b2e9e080d39928a2b083e306b9f5b119144c70720f984bd1b769"
+        },
+        "Z.AI": {
+          "bytes": 5511,
+          "sha256": "97085c3144b8d5611ff607fd5f8ca3272c48f45d7f59a75c11536b76a9d0ea9f"
+        },
+        "CLAUDE.AI": {
+          "bytes": 10786,
+          "sha256": "098399d240d852999db1fe4003235eb61d4b4403a906e0a12b5eb3f7a7586632"
+        },
+        "GPT": {
+          "bytes": 8110,
+          "sha256": "021b8ea3f4db1f8bc92a37c13d231170caa798b876e937ea0b9835fe55484465"
+        },
+        "KIMI": {
+          "bytes": 17361,
+          "sha256": "d02f586b545f118feacd9e83d853302695e8935c116e2a8f74123635d1b725a9"
+        }
+      },
+      "intake_sha256": "sha256:0dba43ba6e5c7ec202c7c9f0445c80ce1f833d41d71f80e2130b92b11bf8acf6"
+    },
+    "primary_manual_matrix": {
+      "GEMINI": "ADOPT",
+      "DEEPSEEK": "ADOPT",
+      "MISTRAL": "ADOPT",
+      "GROK": "ADOPT",
+      "MEMO": "ADOPT",
+      "Z.AI": "ADOPT",
+      "CLAUDE.AI": "ADOPT",
+      "GPT": "ADOPT",
+      "KIMI": "ADOPT"
+    },
+    "reverse_order_source_extraction": {
+      "KIMI": "ADOPT",
+      "GPT": "ADOPT",
+      "CLAUDE.AI": "ADOPT",
+      "Z.AI": "ADOPT",
+      "MEMO": "ADOPT",
+      "GROK": "ADOPT",
+      "MISTRAL": "ADOPT",
+      "DEEPSEEK": "ADOPT",
+      "GEMINI": "ADOPT"
+    },
+    "vote_locations": {
+      "KIMI": [
+        {
+          "line": 72,
+          "quote": "1. ADOPT \u2014 Option P exactly as specified: portrait-first, gated later build"
+        }
+      ],
+      "GPT": [
+        {
+          "line": 1,
+          "quote": "**Q3 \u2014 ADOPT option P: portrait on About only, conditional on later build acceptance.** The Null alternative is the complete text-only v0.5 shell, with no migrated images or optimization work. This recommendation does **not** admit an image today or authorize implementation."
+        }
+      ],
+      "CLAUDE.AI": [
+        {
+          "line": 8,
+          "quote": "**ADOPT option P, with one change: emit a single derivative (call it P1).** If any gate fails, the Null alternative applies mechanically: v0.5 ships text-only, using the identical locked shell."
+        }
+      ],
+      "Z.AI": [
+        {
+          "line": 4,
+          "quote": "1. **ADOPT** Option P (portrait first, gated later build) over the Null alternative (text-only)."
+        }
+      ],
+      "MEMO": [
+        {
+          "line": 173,
+          "quote": "ADOPT \u2014 Option P: portrait-only, gated later build."
+        },
+        {
+          "line": 245,
+          "quote": "Summary: ADOPT Option P as a complete, bounded, mechanical-gates policy for v0.5, with the Null text-only shell as its explicit and automatic fallback. DISMISS Alternative F for v0.5 \u2014 the project screenshots have no demonstrated purpose under the locked Q2 tuple and would reintroduce the unmeasured-scope problem P was designed to remove. No new dependency, no new island, no implementation, no commit in this round."
+        }
+      ],
+      "GROK": [
+        {
+          "line": 4,
+          "quote": "**ADOPT option P (portrait-first, gated later build)** as the primary policy for v0.5."
+        }
+      ],
+      "MISTRAL": [
+        {
+          "line": 4,
+          "quote": "**1. Recommendation: ADOPT Option P (portrait-first, gated later build). Null alternative: v0.5 ships entirely text-only; if any later-build gate fails, revert to that Null automatically.**"
+        }
+      ],
+      "DEEPSEEK": [
+        {
+          "line": 4,
+          "quote": "## 1. Decision: ADOPT Option P (Portrait-first, gated later build) with mechanical failure-to-Null"
+        }
+      ],
+      "GEMINI": [
+        {
+          "line": 6,
+          "quote": "**ADOPT Option P (Gated Portrait-First)**; **DISMISS Alternative F (Broader Candidate Admission)**; retain **Status Quo Null (Text-Only Shell)** as the automated fallback gate."
+        }
+      ]
+    },
+    "every_single_removal": [
+      {
+        "removed": "GEMINI",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "DEEPSEEK",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "MISTRAL",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "GROK",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "MEMO",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "Z.AI",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "CLAUDE.AI",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 8,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "GPT",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      },
+      {
+        "removed": "KIMI",
+        "support": 8,
+        "denominator": 8,
+        "strict_majority": true,
+        "width_policy_support": 7,
+        "width_policy_denominator": 8
+      }
+    ],
+    "reconciliation_differences": 0,
+    "limitations": "Two methods by same lead, not independent agent/model; effective web identities unverified. Thinking preambles are not additional votes.",
+    "carried_r1_sha256": "23bf873ae9d8fc217375d190d31158f5178a69e0ad4d8d24eb3688431bbf1d30",
+    "proof_checks": {
+      "feasible_caps": "Two 150000-byte files = 300000, below 1000000 emitted; at most 300000 unique fetched bytes below 600000 per-route. This is ceiling arithmetic, not measured image feasibility.",
+      "original": "Pinned portrait exists; Sharp import verified in R1. Actual transform/quality/metadata/no-JS fetches remain later admission gates.",
+      "api_recipes": "Panel recipes are not authoritative code: Image format is singular; no plural formats, picture requirement, global codec config, extra dependency or guessed byte/quality approval is adopted."
+    }
+  }
+}

@@ -1,5 +1,57 @@
 # Roadmap -- portfolio
 
+## site-shell-content: v0.5 static site shell and bounded archive content
+
+Status: COMPLETE (2026-10-11)
+
+Type: research + implementation
+
+Goal: Deliver Home, About, Projects and Articles with preserved `/articles/first/`, using retained static Astro, frontend/npm/local lockfile and confirmed bounded archive content. Backend/persistence/contract remain Null; no dependency, hydration or interactive-control feature is earned.
+
+Result: Two research rounds locked five decisions, then two native CLI implementation audit rounds delivered the complete static five-route shell. R1 resolved the P2 image regression gap and P3 missing measured-evidence handoff; R2 found zero new product issues and converged with four admitted PASS sources. The full 21-test suite, four invalid-output mutations and current source/output hashes were independently verified. R1 research locked four questions and rolled image policy; R2 research locked gated portrait-first P. Five locked decisions, zero investigate, two rounds below cap 4, no force-disposition. Archive pin `fd049bab81c18c42c6bfb2a1d98ffee325578e91`; Angel #b5n9 confirmed presented allowlist with "approve with the fix, all yes". Preserve the identity trio, eight skill names and four title/category/GitHub tuples only. Shared footer links the confirmed public email and GitHub; archive contact/experience/placeholder claims remain excluded.
+
+| Key decision | Consensus | Round |
+|---|---|---|
+| Exact five routes, shared four-item nav, article continuity and no-JS acceptance | 8/8 topical; worst 7/8 conservative | R1 |
+| Confirmed bounded identity/skills/project tuple allowlist | Core 8/8; full tuples 7/8, worst 6/8 conservative | R1 |
+| Gated About-only portrait, one WebP format, ≤2 widths, complete text-only failure fallback | 9/9 core, worst 8/8; width policy 8/9, worst 7/8 | R2 |
+| Static skills lists/project category headings | Core 8/8; categories 7/8, worst 6/8 conservative | R1 |
+| Both confirmed contact links outside nav in shared footer | 7/8 concrete outcome, worst 6/8 conservative | R1 |
+
+Cross-review stats: R1 nine authorized pastes/eight topical responses, Gemini echo non-vote; R2 nine authorized substantive responses, including Gemini. KIMI authorized by standing "count kimi WHEN I add it". R2 raw image policy 9 ADOPT/0 DISMISS/0 INVESTIGATE; Claude's one-480px refinement retained as minority. Two same-lead derivations reconcile; effective model identities unverified. Research produced no source-code findings. Implementation: two rounds, four native seats, finding rate2 ->0; two direct findings resolved, one defect-class sweep with zero additional fixes (ratio0/2), one new inventory test and stronger image checks in twenty contexts. Four final PASS responses have honest no-build/no-binary seat limits; independent local proof and close tests cover execution. No dropped seat, standing FAIL, untested sweep or floor waiver.
+
+Implementation impact: yes; authorized product implementation is complete. One metadata-free About-only240x320 WebP was admitted at11292 bytes; other four routes request zero images. Twenty fresh no-JS width/DPR contexts, canonical navigation, keyboard focus, exact allowlist/footer targets and zero hydration pass. A strict clean lockfile installation reproduced all six output hashes. No added dependency, second image width, project image, backend, persistence, contract, CI or deployment implementation.
+
+| Key change | Impact |
+|---|---|
+| Shared layout, canonical navigation and footer | All five routes work without client JavaScript; current-state and keyboard access verified |
+| Home/About/Projects/Articles and local confirmed data | Only confirmed bounded archive fields rendered; original article retained except its return link |
+| Managed portrait through existing Astro/Sharp | About-only11292-byte metadata-free output, well below every simultaneous image cap |
+| Inventory/body acceptance regression checks | Per-file/metadata/format/orphan violations fail before acceptance; real encoded bytes collected |
+| Native evidence and immutable closing ledger | Four verified responding PASS sources; exact round-limited boundary exceptions preserved |
+
+Audit measurements:2 intakes,383779 total bytes,largest196972; first zero-finding roundR2, no later bytes/issues; no cap/floor override, no unsatisfied applicable artifact. C63 gates_absent_at_close is explicitly computed; its inapplicable-only records do not trigger an economics block.
+
+Harness follow-up:4 seat breaches across2 rounds (R1 Astra/Fable/DeepSeek; R2 Fable). Metadata chains/cwd and an outside scratch write expose prose-only containment limits. Provide a writable scratch directory inside each seat folder and enforce boundaries. This routed owner evidence adds no product finding or numbered project constraint; exact exceptions remain round/snapshot/command bound. Formal adapter activation remains pending under owner-approved manual CLI practice.
+
+Runbook: `reviews/runbook/site-shell-content.md`
+
+Evidence: canonical research and audit drafts/intakes/manifests and immutable ledgers under `reviews/site-shell-content/`; zero-spawn routing proof in `state/implementation/routing-verification.json`. Native snapshots, individual receipts, aggregate gate, independent projection/convergence proofs and image/build/test evidence are external under `~/desk/tmp/portfolio/site-shell-content/panel-batch/redispatch-r2c/` and `~/desk/tmp/portfolio/v0.5-site-shell/`. Research locks and exact admission exceptions are retained; no history rewritten. Project constraints remain0 active/0 cited. Research checkpoint and final implementation close are complete; this combined close is the sole topic commit point.
+
+Upstream filing state: not applicable
+
+### Premise Challenge Record
+
+| Field | Value |
+|---|---|
+| Premise challenged? | Y |
+| Challenge source | Both |
+| Signal strength | Weak |
+| Outcome | Modified |
+| Prevented waste? | Y |
+| Caused waste? | N |
+| Notes | Bounded confirmed fields avoid stale/fabricated archive claims; five oversized image candidates narrowed to conditional portrait-only or complete text-only. Old article-index/back-link assertions update deliberately for the requested shell. |
+
 ## astro-backend-compatibility: v0.4 Astro and future backend compatibility
 
 Status: COMPLETE (2026-10-10)

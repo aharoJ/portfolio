@@ -1,5 +1,47 @@
 # Changelog -- portfolio reviews
 
+## v0.5 -- Site shell content Cross-Review Hardening (2026-10-11)
+
+**Constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+Two research rounds locked five decisions; two native CLI implementation audit rounds resolved two direct findings (P2 acceptance regression gap; P3 missing image-evidence handoff). Finding rate: 2 -> 0. R1 retained two PASS/two FAIL and three source-verified false positives; R2 converges with four admitted PASS sources and zero new findings. One new emitted-inventory test and stronger image-body checks in all 20 existing no-JS route contexts pass; one defect-class sweep found no additional occurrences or fixes (sweep ratio 0/2). No deferred, mitigated or accepted-risk item.
+
+### Product modifications
+
+- `frontend/astro.config.mjs`: preserve static output and emit canonical trailing-slash paths.
+- `frontend/src/data/portfolio.mjs`: local confirmed identity, eight skills and four title/category/GitHub tuples, with pinned archive provenance; no archive component imports or additional claims.
+- `frontend/src/layouts/Page.astro`: shared identity link, four-item responsive primary nav, exact/descendant current-state semantics, skip link/focus, landmarks, restrained CSS and confirmed same-tab email/GitHub footer.
+- `frontend/src/pages/index.astro`, `about.astro`, `projects.astro`, `articles/index.astro`: Home, About, category-grouped projects and the existing article index, with route-specific metadata and semantic static markup.
+- `frontend/src/pages/articles/first.md`: return link points to `/articles/`; body/title/frontmatter retained.
+- `frontend/src/assets/portrait.png`: metadata-free managed 480x640 source from the confirmed pinned original, used only on About. Existing Astro/Sharp emits one 240x320 WebP at quality80: 11292 bytes, no metadata, hash `938f9d78e68872582e8987f69580d34c23f39fff5cc5b25f4517bcb457822fb0`. No project image, new dependency, runtime JS, backend, persistence or deployment work.
+- `frontend/tests/static.spec.mjs`: **P2** shared RIFF/WebP/chunk/metadata/per-file checker, complete emitted-image/reference inventory, MIME and actual unique-response-body accounting. Deliberate oversize, EXIF, non-WebP and allowed-name orphan mutations each fail at the intended gate. Navigation, allowlist, accessible focus, overflow and five-route matrix remain checked.
+
+### Review and close artifacts
+
+- `.hook-allowlist`: exact four compiler sidecars and two audit intake paths after the normal hook falsely matched `forbidden_tokens_found:0` and public dependency names containing tokens/secrets. Both lockfile expansions equal the already allowlisted application lockfile, all compiler sidecars report zero forbidden tokens, and actual token/private-key signatures were checked. Path blocks and the normal hook remain active; no bypass.
+
+- `reviews/site-shell-content/.baseline-ref`: retained `a604c68071178a5db24b38b016e8b51b03c2be19` before edits.
+- Two `research/site-shell-content-r*.md` drafts, two `audit/site-shell-content-r*.md` drafts, four compiled intakes/manifests and four immutable research/implementation resolve ledgers preserve the canonical review trail. R2 technical delivery separately excludes identity/outcomes/history while preserving all25 fenced source/test/evidence blocks; two rejected preparations were never launched.
+- **P3** R2 handoff includes measured provenance, inventory, clean-install reproducibility, browser matrix and mutation evidence; all four actual delivered intake hashes match. Raw native finals, full snapshots, extraction/pane checks and typed admission exceptions remain external and hash-bound by the ledgers.
+- `reviews/site-shell-content/state/implementation/routing-verification.json`: complete native tool review and lead dispatch prove zero C51 subagent spawns. CLI panel seats and the existing independent checker are direct review processes.
+- `reviews/decisions.md`: dated five research locks and complete contents index. `reviews/runbook/site-shell-content.md`: actual admitted transform, regression/verification instructions and attributable downstream model contributions. `reviews/roadmap.md`: computed combined Type, completed outcome, changes/statistics and preserved premise challenge.
+- Independent `RED-CONVERGENCE-R2.md` verifies all21 current frozen source hashes, fresh build, final restored 21/21 test run, four isolating failures and byte-identical restored outputs. Close-time build-first suite again passes21/21 (21.0s). All four final answers match native extraction and their exact visible panes.
+- Manual native admission follows explicit protocol-owner/operator practice; formal production adapter activation remains pending. Angel's R2-only Fable row53 exception binds the exact scratch-write command and full final snapshot. It grants no general boundary, severity, quorum or close waiver. No missing seat, standing FAIL, dropped-seat waiver or convergence-floor override.
+
+Harness note: four seat boundary breaches across two rounds (R1 Astra/Fable/DeepSeek; R2 Fable). R1 involved forbidden metadata command chains/cwd; R2 wrote its own excerpt bytes to `/tmp/x`. Exact exceptions are preserved. Owners should provide an in-folder scratch directory and enforce containment; prose instructions are not OS isolation. This is routed harness evidence, not an additional product finding or project constraint. Full pointer: `~/desk/tmp/portfolio/v0.5-site-shell/HARNESS-NOTE-breach-rate.md`.
+
+Audit economics: 2 intakes, 383779 total bytes, largest196972; first zero R2, no later bytes/issues, no cap/floor override. C63 `gates_absent_at_close` was computed as a list: formal activation and protocol-version-anchored completeness are inapplicable under this downstream manual practice; no unsatisfied applicable artifact gate. Threshold economics block is not triggered. Freshness, four ledger validations, SOT interleave and closed-world topic tree pass; three missing protocol-adapter-version anchors are nonblocking warnings. No new numbered constraints (0 active/0 cited); no shared protocol repository writes.
+
+### Prior research checkpoint (retained phase record)
+
+**Prior research-close constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
+
+Two web research rounds resolved five questions. R1 locked exact five-route navigation/article continuity, confirmed bounded identity/skills/project fields, semantic static grouping and both confirmed contact links in a shared footer. Q3 rolled with 2 ADOPT/2 DISMISS/4 INVESTIGATE. R2 adopted gated About-only portrait policy 9/0/0, with automatic text-only Null on failed later admission. Five locks, zero open follow-ups, no force-disposition or code findings. R1 had 8 topical responses from 9 authorized pastes; R2 had 9/9, with Gemini substantive after its prior echo. Effective identities are unverified.
+
+Changes: two research drafts, compiler intakes/manifests and immutable resolve ledgers; dated decision locks and full decision contents index; prospective implementation runbook; roadmap research-complete/implementation-pending stamp and premise challenge record. Raw replies and verbatim splits remain external. Portrait policy narrows five candidate images to one eligible source; no product asset or source, dependency, installer, build or audit changed/executed. R1's concrete minority-qualified locks remain robust worst 6/8 conservatively; R2 portrait core stays 8/8 after any removal, width-policy support worst 7/8. Two same-lead derivations reconcile without independent-model claims.
+
+Close: Implementation Impact=yes and no audit drafts compute research + implementation. Both ledgers validate; SOT interleave and closed-world tree checks pass. Freshness has zero halts and three nonblocking missing adapter-version-anchor warnings. No root panelist Java/class artifact; C51 unused by durable web-paste evidence. Implementation-only gates and protocol-project-only completeness/header maintenance are inapplicable. No new constraints: bounded operational acceptance lives in decisions/runbook. Research closes now; implementation, actual portrait proof and final topic commit remain pending. Next: authorized build per runbook, then `$review implement site-shell-content`.
+
 ## v0.4 -- Astro/backend compatibility Research Convergence (2026-10-10)
 
 **Constraint economy**: active=0; distinct-cited=0; load-bearing-ratio=n-a
