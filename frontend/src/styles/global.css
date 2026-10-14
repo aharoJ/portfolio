@@ -1,0 +1,148 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  font-size: 100%;
+  line-height: 1.65;
+  background: #fcfcfb;
+  color: #171717;
+  --muted: #5c5c5a;
+  --rule: #8f8f8c;
+  --hairline: #e8e8e6;
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 1rem;
+  --s4: 1.5rem;
+  --s5: 2.5rem;
+  --s6: 4rem;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-wrap: anywhere;
+  max-width: 36.5rem;
+  margin: 0 auto;
+  padding: var(--s6) 1.25rem;
+  font-size: 1rem;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+a:focus-visible,
+main:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+header,
+nav,
+footer {
+  line-height: 1.5;
+}
+header {
+  margin-bottom: var(--s5);
+}
+.identity,
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header > .identity {
+  display: inline-block;
+  margin-bottom: var(--s3);
+}
+nav a[aria-current] {
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--s3);
+}
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: var(--s5) 0 var(--s3);
+}
+p {
+  margin: 0 0 var(--s3);
+}
+.name {
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin-bottom: var(--s1);
+}
+.muted,
+time {
+  color: var(--muted);
+}
+.writing {
+  padding: 0;
+  list-style: none;
+}
+.writing li {
+  margin-bottom: var(--s4);
+}
+.writing p {
+  margin-top: var(--s1);
+}
+.sample {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin-top: var(--s5);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--hairline);
+  font-size: 0.875rem;
+}
+.skip {
+  position: absolute;
+  top: 0.5rem;
+  left: 1.25rem;
+  transform: translateY(-200%);
+}
+.skip:focus {
+  transform: none;
+}
+article ul,
+article ol {
+  padding-left: var(--s4);
+  margin-bottom: var(--s3);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #111111;
+    color: #ececea;
+    --muted: #a3a3a0;
+    --rule: #6e6e6b;
+    --hairline: #262626;
+  }
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+code {
+  font: inherit;
+}
+time {
+  font-size: 0.875rem;
+}

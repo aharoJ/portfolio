@@ -2,6 +2,7 @@
 
 Contents (historical and current records):
 
+- [frontend-foundations: v0.6 operator-fixed premises (2026-10-11)](#frontend-foundations-v06-operator-fixed-premises-2026-10-11)
 - [site-shell-content: v0.5 R2 image-policy resolution (2026-10-11)](#site-shell-content-v05-r2-image-policy-resolution-2026-10-11)
 - [monorepo-structure-topology-tiebreak: final zero-code recovery disposition (2026-09-30)](#monorepo-structure-topology-tiebreak-final-zero-code-recovery-disposition-2026-09-30)
 - [monorepo-structure-topology-reopen: operator-authorized zero-code recovery (2026-09-30)](#monorepo-structure-topology-reopen-operator-authorized-zero-code-recovery-2026-09-30)
@@ -321,3 +322,216 @@ Actual reproducible Astro transform, emitted-file inventory, output metadata, vi
 **Panel integrity:** all nine authorized bodies are substantive, including Gemini, which now gives original current recommendation and mechanism/risk/gate reasoning; its R1 echo waiver is fulfilled by re-inclusion. Angel's standing rule remains "count kimi WHEN I add it". MEMO/KIMI thinking preambles add no votes. Raw ADOPT/DISMISS/INVESTIGATE is 9/0/0. Hand matrix and reverse-order source-anchor derivation reconcile with zero differences; every removal is recorded. Two methods by the same lead, not separate-model corroboration. Effective seat identities remain unverified; no independent-family credit.
 
 **Evidence:** immutable `site-shell-content/state/research/resolve-r2.json`; external `~/desk/tmp/portfolio/v0.5-site-shell/R2-ANALYSIS.json` and `R2-SPLIT-MANIFEST.json`; raw source SHA-256 `c40a7f17c09498599b861decf6bf16d501dac8d05c0519a30d3b734bb0c66dcc`, 112961 bytes; intake SHA-256 `0dba43ba6e5c7ec202c7c9f0445c80ce1f833d41d71f80e2130b92b11bf8acf6`. Only authorized external web-paste transport; C51/agentic dispatch unused. Prospective build/acceptance/handoff: [runbook](runbook/site-shell-content.md). Commit is deferred to final implementation close; current brief forbids starting implementation.
+
+## frontend-foundations: v0.6 operator-fixed premises (2026-10-11)
+
+**Authority:** Angel, relayed in `~/desk/tmp/portfolio/v0.6-foundations/BRIEF-codex.md`, verbatim: "one thing is I want TS soo vote me in for TS and for the other questions yes I agree".
+
+**TypeScript — OPERATOR FIXED:** Use TypeScript for the fresh frontend. The panel evaluates strictness, checker coverage, minimal development tooling and explicit migration boundaries; it does not vote JS versus TS. This is a dated explicitly accepted requirement, not a fabricated panel vote, majority lock or completed research result. Protocol scope steps0/2 distinguish operator context and accepted premises (`protocol.md:440-444,458-461`); the explicit N/A status-quo allowance covers retaining JS as an unavailable final-language option. The protocol recognizes explicitly accepted requirements/dated operator dispositions as authority (`protocol.md:630`) and keeps panel-majority locking distinct (`protocol.md:798`). It defines no special operator-fixed ballot encoding; this record does not invent one.
+
+**Fresh-source direction:** The corrective brief and operator-declared HIGH incident reject migration/mimicry of `v3-archive`. Fresh IA/design/content must come from Angel; the v0.5 archive-derived identity/skills/project copy and old portrait are slated for removal or replacement in later authorized implementation. Current routes and copied claims are historical baseline evidence, not new content authorization. This prospectively challenges site-shell-content's migration premise; the incident records Angel's acknowledgment before this scope is drafted. Old decisions, ledgers and tags remain unchanged.
+
+**Deployment — OPERATOR DEFERRED:** "not until I say so", as supplied by the corrective brief. No deployment research selection, hosting, publishing or production operation is authorized by v0.6 scope. Public audience and short-article purpose are carried from `stack-selection/research/stack-selection-r2.md:21-26`, subject to current priority confirmation.
+
+**Scope affirmation (Angel, 2026-10-11, verbatim):** "yes I approve it; or lets wait for red agent before but if its good I auto approive". RED.md (#v6rd) confirms the mandatory goal/dimensions/TS/Null/no-archive checks. F1–F4 correct the factual TS Null, complete default/privacy rows, persist trigger emission and panel mechanics; they do not select a research outcome or change the approved framing. BRIEF-codex-2.md (#v6bd) explicitly confirms the conditional approval applies and authorizes the fixed R1 bundle and generated web-panel batch. The previous scope-only restriction is superseded for this bounded next step. No second affirmation, panel tally, implementation start or deployment authority is inferred.
+
+## frontend-foundations: v0.6 R1 partial resolution (2026-10-11)
+
+Round: r1
+
+**Status:** two bounded decisions locked; four followups remain; research action=roll to R2. No research close, final runbook/handoff, implementation, Type stamp or commit.
+
+**Panel integrity:** nine substantive corrected web submissions. Angel said “gemini fixed” (#v6r3), superseding the original intake-equivalent operator paste error; it is not a Gemini echo/non-response. Installed validate_final.py handles indented END lines with no framing defects. All nine corrected bodies are retained verbatim; the other eight differ only in formatting (normalized word sequences identical). MEMO/KIMI thinking/search text contributes no extra votes. Requested web labels do not verify effective model/profile/family identity; no independent-family credit. No agentic/C51 dispatch.
+
+| Question | Primary ADOPT | DISMISS | INVESTIGATE | Resolution |
+|---|---:|---:|---:|---|
+| Q1 | 9 | 0 | 0 | Strict/checker core; full typed migration supported8/9; optional stronger flags/command/version followup Q1a |
+| Q2 | 9 | 0 | 0 | Owned plain scoped/global CSS with small tokens/utilities; no styling additions |
+| Q3 | 8 | 0 | 1 | Proposed strategy/targets only; actual geometry/50-50/browser/navigation remain open |
+| Q4 | 1 | 0 | 8 | Fresh direction/budgets open; Gemini’s dossier proposal not approved taste |
+| Q5 | 6 | 0 | 3 | Model/removal proposals do not settle IA/schema/routes/fresh content |
+
+Primary labels summarize each final section, not every mixed option-level recommendation. Conditional ADOPT and accompanying INVESTIGATE are preserved in source; they cannot erase an unresolved choice. TypeScript is operator-fixed, not an Angel/panel language vote.
+
+1. **Q1 core — ADOPT at least strict project checking and full typed migration (exact migration core8/9; strict/checker9/9):** compatible `typescript` and `@astrojs/check` as development tooling; explicitly include/check `.astro`, standalone data, Astro config, Playwright config/tests. Migrate all four current `.mjs` boundaries to typed forms, replacing archive-derived data with fresh facts rather than merely retyping it. No silent JS retention; any demonstrated tool limitation needs an explicit accepted boundary. Run the checker independently of build/transpilation; prove coverage later by temporary intentional errors per file class. Build/browser success is not type-check proof; Markdown metadata also needs build-time validation. Exact stronger flags, minimum sufficient command, compatible versions and measured dependency delta remain Q1a, not guessed locks. Gemini’s optional `.mjs` config retention without accepted boundary is retained as minority and excluded from full-migration support.
+2. **Q2 — ADOPT plain Astro scoped/global CSS with small owned custom-property tokens and utilities only for demonstrated repetition (9/9):** intentional global foundations/prose and scoped component rules; zero new third-party styling dependencies. Tailwind/component tooling not selected for current scope; revisit only for a concrete missing capability with actual cost/owned alternative. Exact palette/fonts/scales/containers/breakpoints/budgets remain Q4 choices; no token literals or generic grep/linter framework are adopted from panel recipes.
+
+**Robustness:** every single removal is retained. Q1 exact core worst7/8; Q2 worst8/8; both >50%. Hand semantic matrix and separate reverse-order final-section/source-anchor extraction/count arithmetic reconcile with zero differences; same lead, two methods, not separate-agent/model corroboration. No forced disposition or extra schema/content lock.
+
+**Four open followups:** Q1a stronger flags/compiler-checker compatibility/minimum sufficient command; Q3 actual CSS viewport/zoom/mobile targets/50-50/support/navigation criteria; Q4 audience/taste-led fresh design and exact accessibility/resource budgets; Q5 fresh facts/pieces, final schema/taxonomy/ordering/IA/routes/continuity. Questions for Angel are retained in external R1-PENDING-FACTS.md; no answers inferred from the archive. Optional RSS/favicon/OG/print remain proposals/Null, not invented public-site requirements.
+
+**Verified technical limits:** installed Astro7.3.5 checker rejects TypeScript>=7 and asks for TypeScript6; its strict preset inherits allowJs:true and verbatimModuleSyntax:true. Compatible exact versions and checking coverage require later actual proof. Playwright supports TS transformation but does not check types. WCAG2.5.8 AA specifies24×24 CSSpx with exceptions;44px is enhanced/proposed, not universal AA. Reflow320CSSpx corresponds to1280 at400% with intrinsically two-dimensional exceptions. Do not inherit unmeasured transitive counts, CSS performance/byte identity, fabricated contrast guarantees, mandatory Lighthouse/RSS, old content-collection recipes or blanket raw-literal greps.
+
+**Evidence:** canonical ledger `frontend-foundations/state/research/resolve-r1.json`; external R1-FINAL-ANALYSIS.json and R1-FINAL-SPLIT-MANIFEST.json at `~/desk/tmp/portfolio/v0.6-foundations/`. Corrected raw206356 bytes SHA256 `836baf488ec492cd0e3e5cd12acb7e9d5dd19aa4a08ffa800a95739829d22ea9`; intake SHA256 `08fcb89dad3a62a6d6e05a2f0a42e969d8cbc90e0a3af3ccd6b2943294e94401`. Original paste/source and provisional analysis remain superseded evidence externally. Astro docs https://docs.astro.build/en/guides/typescript/ and https://docs.astro.build/en/guides/styling/ ; Playwright https://playwright.dev/docs/test-typescript ; W3C https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html and https://www.w3.org/WAI/WCAG22/Understanding/reflow.html (accessed2026-10-11, living primary docs). Local installed CLI/presets govern retained-version observations; no installation executed.
+
+## frontend-foundations: v0.6 accepted launch facts and R2 supersession (2026-10-11)
+
+Source: #v6f1, `~/desk/tmp/relay/ebf6d379.md`, and `~/desk/tmp/portfolio/v0.6-foundations/OPERATOR-FACTS.md`. Exact supplied fact file follows; numbered defaults accepted by Angel’s verbatim “go”. Final continuity statement is CC context, not an invented Angel quotation.
+
+```text
+# #v6f1 v0.6 operator facts (Angel, 2026-10-11)
+CC presented these defaults ("reply go to accept, or change any line"); Angel replied verbatim: "go".
+1. Audience: public tech readers. Landing page = short intro plus your latest writing.
+2. Sections: Projects, Harness research, University/Work.
+3. Launch content: keep the one existing sample article for now; real pieces later.
+4. Identity: "Angel J. Haro", Software Engineer. Contact: email (haro.j.angel@gmail.com) and GitHub (github.com/aharoj), as confirmed earlier.
+5. Look: the panel proposes 2–3 fresh design directions; Angel picks.
+6. Images: text only for now.
+7. Screens: 14" MacBook (~1512px CSS width) first, then iPhone-size (390px). 50/50 = equal quality on both.
+Optional reference site: not supplied (skipped).
+Not covered by these defaults: URL continuity (nothing has been publicly served; nothing to preserve, deploy deferred). The portrait is dropped (text only).
+```
+
+These are accepted operator inputs, not research votes. Preserve R1 immutable ledger/locks. Supersede unsent R2 as abandoned-before-paste; verified all nine response bodies empty; preserve full prior packet externally at `~/desk/tmp/portfolio/v0.6-foundations/abandoned-before-paste-r2/`, old intake SHA25622cdd15519adef49e09063559cecfd7f6868eb647dd754c61269bbbadfa64aea. Recompile same canonical R2 and regenerate batch per explicit #v6f1 authority; no extra round/ledger or retrospective mutation.
+
+Scope effects:1512/390 CSSpx are accepted target widths, not actual innerHeight/zoom measurements; equal quality confirmed. Keep the current sample (“Start with the reader”) explicitly as sample with no invented publication date; this is a narrow current-file exception, not archive content permission. Fresh identity/contact accepted; text only and portrait removed. Public-tech-reader intro/latest-writing and three sections are fixed inputs; technical IA/schema/testing decisions remain for R2. Panel proposes2–3 fresh design directions; Angel chooses final direction, not automatic panel taste ratification. No reference supplied, deployment still deferred. No product edit/install/build, final runbook/handoff, research close, Type stamp, new constraint, commit/tag/push or deploy.
+
+## frontend-foundations: v0.6 R2 partial resolution (2026-10-11)
+
+Round: r2
+
+**Status:** four bounded core decisions locked (Q1/Q2 carried; Q3/Q5 core added); three followups remain (Q1a exact flags/command; Q4 Angel design pick/values/budgets; Q5a exact routes/schema/validator). Research rollsR3 below cap4. No force disposition, research close, runbook/handoff, Type stamp or implementation.
+
+**Panel:** all9 authorized web bodies substantive and unique; no echo/off-topic/format exclusion. Installed splitter preserved exact byte-range bodies; thinking/search preambles from MEMO/KIMI give no extra votes. Effective models/profiles unknown; no family credit. Primary ADOPT/DISMISS/INVESTIGATE: Q1 9/0/0, Q3 9/0/0, Q4 7/0/2, Q5 9/0/0. Q4 ADOPT is candidate/process support, never Angel’s final visual choice. Mixed option recommendations are retained, not flattened into exact-contract unanimity. No agentic/C51 dispatch.
+
+**Q1 refinement — strict-first with separately justified stronger flags (8/9, worst7/8):** carry R1 minimum-strict/full-migration/checker core; do not immediately adopt all strictest flags without a justified trial. Claude’s strictest-first/fallback trial remains minority. Exact named flags remain unresolved: indexed/optional/unused/override/fallthrough choices and timing differ. Conditional-single checker DS/Grok/Claude/KIMI/GPT5/9 vs standing-dual Gemini/Mistral/MEMO/Z.AI4/9; removal of a conditional supporter gives4/8, so no command lock. Built-in validation5/9 likewise falls4/8; neither majority is robust. Docs do not establish universal config/test skipping by astro check; they say included TS files are checked. Prove actual per-class coverage later, without claiming probes executed now.
+
+**Q3 — ADOPT1512/390 equal-quality acceptance core (9/9, every removal8/8):** accepted target widths remain operator inputs. Content-driven breakpoints, fluid prose, one semantic content order and initially visible wrapping native navigation;320px reflow/stress and intermediate widths supplement primary targets. Retain no-JS Chromium function/regression evidence separately from human laptop/mobile hierarchy/reading/navigation review and recorded actual MacBook/iPhone browser evidence. Optional other-engine smoke does not establish Safari-device support. Reflow/zoom/text-spacing/keyboard-focus/touch/contrast checks are explicit later proof, not asserted conformance. Harness heights differ across responses and are not exact locked values or physical measurements; record chosen testing heights, zoom/browser measurements and scroll behavior during later implementation. No shared exact breakpoint/type/spacing/minimum mobile line-length recipe. Failed device checks remain unverified; do not hide them behind emulation.
+
+**Q5 core — ADOPT home intro/latest writing plus three separate section pages (8/9; every removal≥7/8):** Projects, Harness research, University/Work keep honest empty states; GPT’s two-route/home-anchor alternative is retained as minority. No fake promised active work, separate About biography or duplicate writing index is needed. Keep neutral visibly undated current sample, unchanged title/body and no invented pillar assignment/date. Use freshly accepted identity/contact and text-only/no portrait. Validate required nonempty title/description and metadata at build separately from TS code types; sort deterministically, keeping sample status visible. Maintain intentional slash-consistent local links, no public origin/host redirect/410 assumptions, and no analytics/tracking/visitor persistence. Optional feed/OG/favicon/print omitted absent concrete need. Exact route slugs, schema field semantics/published-date/draft-output policy and validation mechanism stay Q5a; core agreement does not silently select one incompatible recipe.
+
+**Q4 — Angel chooses:** concrete ≤40-line pick sheet at `~/desk/tmp/portfolio/v0.6-foundations/Q4-DIRECTIONS.md`: A Open editorial (GPT exact variant), B Rail and ledger (Claude exact variant), C Dark technical (Claude exact variant); related panel variants are distinguished. No palette/typeface/theme/resource budget is locked. Exact pending question: “Which do you pick: A, B or C? You can also name a specific change.” Final selection requires dated Angel reply; similar panel preferences are not a taste vote. Sections/intro/empty-state prose remain bounded copy proposals, not biography.
+
+**Source checks and recipe corrections:** installed Astro7.3.5 checker rejectsTS>=7 and asksTS6; compatible exact versions/transitive cost/runtime still unproved. allowJs:false does not police arbitrary leftover-file inventory. Installed content config rejects legacy type/missing-loader; official current collection docs use src/content.config.ts, glob from astro/loaders and z from astro/zod. Old src/content/config.ts/type-content recipe is not adopted. No TS5.x pin, fabricated1.5s timing/contrast, “four routes” omitting article, future-publication ban, root-base hosting assumption,55–75ch mobile minimum or automatic sample-date/category rule is imported as consensus. Source errors are research corrections, not bugFP/REAL labels.
+
+**Independent proof:** hand semantic reading plus reverse final-section/source-anchor count derivation and independent exhaustive subset arithmetic reconcile with zero differences. Same lead/two methods, not another agent/model. Each of9removals retained, including exact5/9failures. Panel source/hash evidence remains external; no response files added to review tree.
+
+**Evidence:** immutable `frontend-foundations/state/research/resolve-r2.json`; external `R2-ANALYSIS.json`, `R2-SPLIT-MANIFEST.json` and raw batch `~/desk/tmp/portfolio/frontend-foundations/panel-batch/r2/responses.md`219437bytes SHA256847f107c1742254cdefa737d2ac82b1bb58874e2a610d295fe055c35a3c8be6d; intakeSHA2561bc6b761137b64861daf2fdf6ce4a919329e2cf2206e05dd45b54b1f828bb417. Primary docs accessed2026-10-11: https://docs.astro.build/en/guides/typescript/ , https://playwright.dev/docs/test-typescript , https://docs.astro.build/en/guides/content-collections/ , https://www.typescriptlang.org/tsconfig/allowJs.html . Installed code governs retained-version observations; no package/build/probe executed. Current project constraints empty; cited/planned arrays[].
+
+## frontend-foundations: v0.6 ultra-minimal operator direction and R3 supersession (2026-10-11)
+
+Authority: #v6d1 `~/desk/tmp/relay/96c4d240.md`; supplied exact source `~/desk/tmp/portfolio/v0.6-foundations/OPERATOR-Q4-DIRECTION.md` follows verbatim. Angel’s quote is distinguished from CC’s interpretation.
+
+```text
+# #v6d1 v0.6 Q4 operator design direction (Angel, 2026-10-11, verbatim)
+After viewing the A/B/C mock page (https://claude.ai/artifact/26CS55WU2dtJDfgKYzSYRo), Angel replied:
+"we kinda wanna pushb for an ultra minilistic one > https://leerob.com --- you get me? super bleeding modern; we dont wanna retain the same portoflio or layouts at 90 percent of the people; I just want it to be beuaitufl minilistic and extremly high end asestatically pleasing; love you"
+CC reading: none of A/B/C was picked. Operator direction = ULTRA-MINIMAL, "bleeding modern", extremely high-end aesthetic, explicitly unlike typical portfolio layouts. leerob.com is a FEEL reference (restraint, a single narrow column, small refined type, generous whitespace, near-monochrome, inline links, light/dark), not a template to copy. Avoid imitation of leerob.com's exact layout/copy.
+```
+
+Operator chose a NEW ultra-minimal direction, not A/B/C. This prospectively supersedes the pending pick request; previous sheet/R2ledger stay historical and immutable. Modern/high-end/unlike90% is an aesthetic goal, not verified market uniqueness. leerob.com is feel reference only, no copy/layout/assets/template import. Q4 now refines exact type/scale/measure/spacing/monochrome+optional singleaccent/system light-dark/nav/landing/motion/budgets with locked Q3visible-nav/equal-quality and Q5three-section-page/honest-empty-state cores. Conflicts must be surfaced, not silently excused as minimalism. Exact visual values not panel-locked by this input.
+
+Held R3 verified9empty slots and preserved externally at `~/desk/tmp/portfolio/v0.6-foundations/abandoned-before-paste-r3/`; oldintakeSHA256107bf1575f09e05799a08c51e431217346bf828934ccb14d4bfed2119cee15cb abandoned-before-paste, no extra round/vote/ledger. Explicit #v6d1 authorizes replacement canonical R3 and regenerated batch. Q1a/validator/Q5a remain included. No product edit/install/build, researchclose/runbook/handoff/Type stamp, commit/tag/push/deploy.
+
+## frontend-foundations: v0.6 R3 resolution and exact Quiet selection (2026-10-11)
+
+Round: r3
+
+**Status:**five core decisions locked including operator-selected Q4A; three followups Q1a exact flags,Q4a new eye-comfort palette,Q5a metadata refinements. RollR4finalallowedround; no close/implementation.
+
+**Panel:**9slots,8active GEMINI/MISTRAL/GROK/MEMO/Z.AI/CLAUDE.AI/KIMI/GPT. DeepSeek R3only operator note verbatim "broke dont count as a seat"; provider "A message is being generated, please try again later." BRIEF-codex-5.md explicitly excludes active denominator; source retained, no vote/echo/permanentdrop.8substantive unique bodies,0framing defects; MEMO/KIMI thinking/search noextra votes. Effective identities unknown/nofamilycredit; webpasteonly/noagenticC51.
+
+**Primary A/D/I:**Q1 8/0/0,Q4 8/0/0,Q5 8/0/0; these are differing proposals, not exact whole-contract unanimity.
+1. **ADOPT commandA8/8,worst7/7:**astro check first with explicit app/config/data/test/Astro/tools inclusion; cleanbaseline then isolated negativeprobe eachclass must give expected staticdiagnostic, not config-loading crash. Fix inclusion first; scopedtsc only reproduced remaining gap it catches. FullJS→TSinventory separately enforced fromallowJs:false. Compatible exactpins/dependencydelta/runtime later actualproof,noAstroupgrade/latestchasing.
+2. **ADOPT routes8/8,worst7/7:**/,/projects/,/harness-research/,/university-work/,/articles/first/; neutral /articles/<id>/ future details; no duplicateindex/About. Slashalways/localhref/noorigin/hostredirect/deploy. Sampletitle/description/body preserved except permittedbacklink adjustment.
+3. **ADOPT existing built-in collection glob+schema7/8primary+1conditional,worst6/7:**src/content.config.ts,glob astro/loaders,z astro/zod;0newdirectparser/schemapackages; local retainedAPI/build/schema/draft-outputprobes required before actualcoverage claim. Ownedcross-entry/filter/sort/outputchecks still needed; no automatic filename/overriddenIDcollision theorem.
+
+**Flag split:**indexed+fallthrough3/8(Grok/Claude/KIMI);hygiene3flags2/8(MEMO/Z.AI);hygiene+returns1/8(Gemini);indexed-only1/8(Mistral);indexed+exactoptional+override+fallthrough1/8(GPT). Indexed5/8/fallthrough7/8 componentmajorities are not one namedprofilemajority; do not concatenate into fictionalwhole-profile support. Gemini label conflicts with namedlist/code; preserve both,no guessedindexedvote. Q5date/key/sample/draftsemantics differ; exact finalrefinement remains open despite robust routes/mechanism. KIMI non-strict union strips keys rather than rejecting invalidsampledate/section; coercion does notprove calendar/provenance; old configrecipes notadopted.
+
+**Proof:**hand semantic matrix versus reverse final-sectionanchors/counts/full-profile sets and independently enumerated8removal arithmetic reconcile0differences. Samelead/twomethods,not anotheragent/model/family. ExactA/Bcontrast independently recomputed,no renderedconformance/tasteclaim.
+
+**Dated exact operator pick and new request:**
+```text
+# #v6p1 v0.6 Q4 operator pick (Angel, 2026-10-11, verbatim)
+CC presented Q4-FINAL-PICK.md A (Quiet, Claude.ai) vs B (Clearer, GPT), rendered at https://claude.ai/artifact/26CS55WU2dtJDfgKYzSYRo v3.
+Angel replied: "A bro is much much cleaner cuz its quiet soft on the eyes... we want to conduct reseach on the best colors for the eyes for long steering at a screen but I am thinking naturally to go for a darker shade you know? but for now I am cool with A"
+CC reading:
+- Q4 = A (Quiet) exact package selected now: type, 34rem width, spacing, light and dark palettes, nav, no motion, budgets.
+- New operator research request: eye-comfort palette for long reading sessions, with Angel leaning toward a darker shade. Null = A's exact palettes as picked. Must stay within the ultra-minimal, no-accent direction and contrast rules; evidence-based (readability/visual-fatigue research, contrast/halation trade-offs of dark vs light, pure-black vs dark-grey, text-weight in dark mode), no taste assertions presented as science.
+```
+
+**Q4A Quiet exact selected package:**body1rem/1.65;home-name1rem weight600;articleH1 1.5rem/1.25;H2 1.125rem;labels .875rem;systemsans,mono only samplelabel.34rem centered contentcolumn,1.25remgutters,same1512/390sizes,no widthbreakpoint. Scale .25/.5/1/1.5/2.5/4rem;4remtop;2.5remgroupgaps;1remparagraphgap. Light bg#FCFCFB/text#171717/muted#5C5C5A/functionalrule#8F8F8C/decorativehairline#E8E8E6;dark bg#111111/text#ECECEA/muted#A3A3A0/functionalrule#6E6E6B/hairline#262626. Noaccent;underlinedlinks/currentstate;2pxtextfocus/3pxoffset. Visible3sectionlinks,home through inner-page identity,wrapping390;clear samplereturnpath. Smallname/role/factualpurpose→Writing→contacts;emptyheading+"Nothing published here yet." Motionnone. Document≤30,000raw/10,000gzip;CSS≤6,000raw;fonts/images/JS0. InlineCSS countedonce,reportCSSsubtotal;compressor/settings pinnedlater;inlining option verifiedbuildlater. Noisolatedfavicon/toggle/libraryrecipe adopted.
+
+Selection comes from OPERATOR-Q4-PICK.md and displayed Q4-FINAL-PICK.md exactA,notpanel8/8samevalues.1rempreservesuserroot,no16pxrootoverride;17pxrender-reviewfallback notselected startingvalue. Accuratearia-current followsactualdestination;noexactly-oneclaim onhomewithnoHome navlink. Actualrendering/fontwrap/contrast/deviceproof later.
+
+**Newpalettequestion:**eyecomfort forlongreading,leaning darker;Null=exactApalettes. Keep noaccent/systempreference/nonpaletteAvalues. Darkforcedmode/textweightchanges requireexplicitconflict note; preference/contrast alone is not universal science/medicalbenefit. Distinguishreadingperformance/selfreportedfatigue/glare;ambientlight/displaybrightness/visionvariation,darklight,pureblack/darkgrey,halation and textweight.
+
+**Evidence:**immutable frontend-foundations/state/research/resolve-r3.json;external R3-ANALYSIS.json,R3-SPLIT-MANIFEST.json,R3-DISPOSITIONS.json,R3-RAW-SNAPSHOT.md,Q4-PICK-CONTRAST.json. Raw141656bytesSHA256d919f4165cce7bdc1b352df8c833a1718bf82a84b411b9305808a58f408e771b;intakeSHA2567b03651d84e13839fb516ca20ce1db53780d9934ecdfaa5eea16e183496cc3e3. PrimaryAstro/TS/W3Cdocs and installedAstro7.3.5exports/config checked,noinstall/build/probe. Cited/plannedconstraints[]. No finalrunbook/handoff/close/Typestamp,productedit,implementationaudit,commit/tag/push/deploy.
+
+## frontend-foundations: v0.6 R4 resolution and metadata cap halt (2026-10-12)
+
+Round: r4
+
+**Branch:** R4: research-branch decisions-locked=5; investigate=1; round=4; cap=4; selected=3; action=halt. Five carried core locks remain; Q1a and Q4a now resolved; Q5a exact metadata/source-identity/publication contract remains open. No force-disposition, fifth round or research close is authorized by the cap.
+
+**Panel:** nine distinct substantive web bodies; all nine active, including restored DeepSeek. Gemini answers Q1 only: Q4/Q5 header cards are not complete answers and receive no inferred votes. Angel addendum, verbatim: "yeah gemini did some stupid shit it made an HTML so i copy and paste" (#v6r8, ~/desk/tmp/relay/6d539846.md). Preserve the slot as-is; no re-paste coming. Keep nine-seat denominator conservatively for every question. MEMO/KIMI thinking preambles count once, clipped MEMO opening is not a split defect. Runtime identities unknown/no family credit; no agentic/C51 dispatch. Parser framing defects0; global nonresponses0; Gemini question-level omissions2.
+
+**Q1a — ADOPT exact Profile A (8/9; every removal at least7/8):** strict=true, noUncheckedIndexedAccess=true, noFallthroughCasesInSwitch=true. noUnusedLocals/noUnusedParameters/noImplicitReturns/exactOptionalPropertyTypes/noImplicitOverride remain false/Null; no extra strengthening flag is silently added. Retain Astro strict base/noEmit/moduleResolution Bundler/verbatimModuleSyntax. Full typed migration and allowJs:false are separate obligations: inventory JS absence, explicit inclusion app/config/data/tests/Astro/owned tools, then isolated per-class and two-flag negative diagnostics. Carried commandA: astro check first; correct includes first; targeted tsc only a demonstrated remaining gap it catches; build gated on check. Exact compatible checker/compiler pins and costs remain implementation-time measured evidence, not latest/TS5 assumptions or Astro-upgrade authority. DeepSeek's exact four-extra Profile D is the recorded1/9 minority; its source/claims do not count as A support.
+
+**Q4a — ADOPT Null, exact A Quiet palettes (6/9; every removal at least5/8):** Mistral/Grok/MEMO/Claude.ai/KIMI/GPT retain both exact schemes. DeepSeek proposes a different dark pair1/9; Z.AI mixed INVESTIGATE/ADOPT proposes another dark pair1/9, not the same alternative. Gemini header gives no vote. Light bg#FCFCFB/text-links-focus#171717/muted#5C5C5A/functionalrule#8F8F8C/decorativehairline#E8E8E6; dark bg#111111/text-links-focus#ECECEA/muted#A3A3A0/functionalrule#6E6E6B/decorativehairline#262626. Nonpalette Quiet values, system preference/light fallback/no toggle/no JS/no accent/no motion and budgets remain operator-fixed. Arithmetic retained at Q4-PICK-CONTRAST.json, not rendered proof. No universal eye-health/comfort optimum, pure-black inferiority, halation mitigation or dark-mode font-weight claim adopted. A later operator-triggered device comparison can record personal impressions; it is not an unresolved prerequisite to today's Null or a medical trial.
+
+**Q5a — unresolved at cap:** eight topical answers say primary ADOPT, but not one complete exact contract. Affirmative lead-semantic support Grok/MEMO/Claude.ai/GPT4/9. Z.AI declares lead ADOPT but its only date validation is regex shape and its collection recipe is legacy; preserving this ambiguous extra credit gives at most5/9 and fails single-removal robustness4/8. Mistral conditions the lead draft contract on private repo or acceptable source-visible drafts, which is not an accepted operator boundary. DeepSeek explicitly makes genuine-calendar refinement optional and falsely says its regex rejects February30; KIMI explicitly bans future published dates despite the lead allowing them. Neither is counted as the exact lead contract. MEMO's primary three-status adoption and optional no-draft alternative both remain visible; it supplies no operator WIP fact. The most generous count that credits Z.AI and still respects Mistral's unaccepted condition fails; no cross-recipe flag/field concatenation creates consensus.
+
+**Common ground/proposed disposition, not a lock:** retain the original lead contract: one built-in collection outside pages/public; trimmed nonempty title/description; required sample|published|draft; reject unknown keys; genuine Gregorian YYYY-MM-DD strings if present; sample date/section forbidden; published operator-supported date plus one section required (future dates permitted, published means next successful build, no scheduler); draft optional validated date/section, zero emitted public route/listing/sentinel. Derived valid lowercase single-segment keys checked across all statuses before loader normalization/insertion can hide duplicates; no override without need. Shared selector sorts published date-desc/ASCII-key-asc then samples key-asc; home all public, section only matching published. Preserve sample title/description/body except permitted backlink. Draft exclusion is an emitted-public-output rule, not repository-source confidentiality. Recommend operator ADOPT-with-caveats of that complete proposal, accepting the source boundary and requiring actual retained API/calendar/collision/rebuild-output probes later. No operator acceptance is inferred. DISMISS/DEFER(owner+milestone)/ACCEPTED_RISK are the other protocol disposition options; no fifth round.
+
+**Source and proof limits:** official TypeScript option references inspected; live primary Buchner/Baumgartner2007 abstract distinguishes proofreading performance from unchanged strain/fatigue, with counts/durations/device absent in that abstract. W3C1.4.3/1.4.11 floors are accessibility, not comfort metrics. Installed glob source has configuration-dependent duplicate errors versus warn/ignore; no always-silent collision theorem. Regex shape alone permits impossible dates; Date.UTC constructors special-case years0-99. Do not copy unsound recipes or inherit API/package pin claims. Two same-lead semantic/arithmetic methods reconcile all nine removal cases with zero discrepancies; no extra-agent vote or executed product probe.
+
+**Evidence:** immutable state/research/resolve-r4.json; external ~/desk/tmp/portfolio/v0.6-foundations/R4-ANALYSIS.json, R4-SPLIT-MANIFEST.json, responses-r4/, R4-RAW-SNAPSHOT.md and R4-RESOLVE.md. Raw198116bytes SHA256dfdc52284b210de546efd36b6a9d78455367f9ae868b6fe650c85e273731ad50; intake42093bytes SHA256b26e84b6881a07b60590ebd0c4318cc60f429fcc152cacfef7f979659bd772c8. Cited/planned constraint arrays[]; findings[] (research recommendations, no bug FP/REAL). Earlier ledgers retain exact hashes. No product edit/install/build/probe/audit, final runbook/handoff, close artifacts/Type stamp, commit/tag/push/deploy.
+
+## frontend-foundations: v0.6 Q5 operator disposition and later audit authorization (2026-10-12)
+
+Authority: #v6c1, ~/desk/tmp/relay/0308cb8f.md and BRIEF-RESEARCH-CLOSE.md. The two supplied operator records follow verbatim; their Meaning/Scope explanatory lines are relay interpretation, not extra Angel quotations.
+
+```text
+# Operator disposition: Q5a article metadata contract (R4 cap halt)
+Date: 2026-10-12. Source: Angel in portfolio:claude chat, replying to the operator-actions page https://claude.ai/artifact/8W1t4Jh6pHbVozXuAypPpB.
+Verbatim: "adopt, drafts in the repo are fine"
+Meaning: ADOPT-with-caveats of the lead contract exactly as proposed in R4-RESOLVE.md items 1-7. Draft boundary is accepted: drafts are excluded from emitted output, but source-visible drafts in the repo are acceptable. This is output exclusion, not repository secrecy.
+
+# Operator authorization: v1 panel dispatcher activation for the v0.6 audit
+Date: 2026-10-12. Source: Angel in portfolio:claude chat.
+Verbatim: "ok activate v1 dispatcher for the v0.6 audit"
+Scope: topic frontend-foundations (v0.6), implementation audit cycle only. Dispatcher /Users/aharoj/.config/tmux/tools/panel-dispatch, qualified commit 5b2dbc0, runtime SHA256 8367914b…a30a725; handoff ~/desk/audits/panel-seat/2026-10-11-v1-dispatcher/codex-result.md.
+Not authorized: any other topic or project; Agy/Gemini (unqualified); retry or claim clearing beyond the handoff.
+Not yet: there is no audit before implementation is done. The activation record is written at audit entry, per the handoff.
+```
+
+**Q5a disposition — ADOPT-with-caveats:** Angel accepts the complete R4-RESOLVE.md numbered proposal1-7 and source-visible drafts. This resolves the previously unaccepted Mistral source boundary by explicit operator authority, not retroactive panel vote credit. Retain one built-in collection, strict title/description/status/unknown-key rules, genuine Gregorian date strings, forbidden sample date/section, required published date/one section, future dates allowed without scheduling, validated optional draft metadata and zero emitted public draft artifacts; source identities/uniqueness before loader insertion, shared deterministic selector, preserved sample content, and actual later API/calendar/collision/rebuild-output proofs. The prior R4 ledger's votes and halt remain historical, immutable and correctly attributed. One operator force-disposition, zero remaining substantive research questions; the mechanical research basis remains HALTED until supported recovery/publication exists.
+
+**Later dispatcher authority:** accepted for frontend-foundations/v0.6 implementation audit only, at its actual entry after implementation completes. No activation record/dispatch now; no other topic/project, unqualified Agy/Gemini, retry or claim clearing beyond the qualified handoff. Implementation remains paused pending RED verification of an actually completed research close; deployment stays deferred.
+
+**Protocol integration blocker, not missing Q5 consent:** shared close entry returned RESEARCH-HALTED:latest ledger r4. Loaded v3.58 recognizes action=close completion but unconditionally refuses action=halt before handoff publication; no post-halt operator-disposition consumer is defined. The current publisher refuses immutable replacement and prior halt history; the topic tree does not sanction a separate close record without a declared consumer. This brief expressly forbids R5 or rewriting R4. Do not infer a skip/legacy basis, patch harness authority from the downstream task, invent a sidecar/route, or issue an unbound Research-Handoff. Record both authorizations now as independently authorized durable facts; formal close effects remain unperformed. Prepared external guide: ~/desk/tmp/portfolio/v0.6-foundations/RUNBOOK-RECOVERY-CANDIDATE.md. Result: ~/desk/tmp/portfolio/v0.6-foundations/RESEARCH-CLOSE.md.
+
+## frontend-foundations: KI-09 operator implementation override (2026-10-13)
+
+Angel, verbatim via rp:claude #dc209b: "yes, send portfolio and cvmapp the override". Authority: ~/desk/tmp/portfolio/v0.6-foundations/OPERATOR-OVERRIDE-KI09.md; KI-09 in ~/desk/tmp/review-protocol/v3-freeze/KNOWN-ISSUES.md; execution brief #v6m1.
+
+Operator authorizes v0.6 implementation on accepted R1–R4 decisions plus the existing Q5a disposition. v3.59 will not merge (KI-07). This is an operator decision, not a protocol close. R1–R4 remain immutable; no research close ledger, carrier, Research-Handoff, Type stamp or research version claim. RESEARCH-HALTED remains the actual gate state. No commit, push, tag or deploy until authorized topic close; stop before audit entry for RED verification.
+
+Read-only v3.58 implement-basis diagnostic returned exit 1: `cycle-detect: rule=4; evidence=reviews/frontend-foundations; halt=RESEARCH-HALTED: latest ledger r4; next=halt`. The brief directs STOP when no loaded-protocol route exists. The pure-hotfix skip is inapplicable and cannot supersede active research. Product implementation/proofs remain pending; no audit entry or dispatcher activation. Report: ~/desk/tmp/portfolio/v0.6-foundations/IMPL-REPORT.md.
+
+## frontend-foundations: #v6m2 product-work clarification (2026-10-13)
+
+CC clarified the ambiguous #v6m1 brief in ~/desk/tmp/relay/e1439fff.md: the retained research-basis refusal applies at audit entry, after the authorized product build. The existing KI-09 operator authority permits product work now; this does not create a new research disposition or protocol override artifact. #v6m1 was an early read-only diagnostic, not audit entry. Product implementation/proofs proceed under the accepted b358…f880 draft; implement/bundle gates are not rerun. RED review precedes the separately admitted audit. No commit/push/tag/deploy. Evidence and final outcome: ~/desk/tmp/portfolio/v0.6-foundations/IMPL-REPORT-2.md.
+
+## frontend-foundations: final operator tie-break (2026-10-14)
+
+Angel, verbatim from ~/desk/tmp/portfolio/v0.6-foundations/OPERATOR-TIEBREAK-FINAL.md:
+
+> "Operator tie-break, final: v0.6 research is closed by my decision (Q5a = adopt, drafts in the repo are fine), recorded as KI-09. Don't ask about /review close again; it can't run on v3.58. Proceed: red check, the operator-authorized audit (3 rounds), then commit. No tag."
+
+Research is closed by operator decision, with no protocol close ledger or research-version/Type claim. Historical R1–R4 and the loaded RESEARCH-HALTED gate state stay unchanged. RED has passed; run the independently authorized operator audit, then commit. No tag or push. This tie-break is not forwarded into the blind panel packet.
+
+## frontend-foundations: operator-authorized audit (KI-09), not a /review implement round — R1 entry (2026-10-14)
+
+Authority: BRIEF-AUDIT.md and RP-AUDIT-ROUTE.md under the existing operator override. R1 launched through the exact qualified v1 dispatcher after independent current four-seat projection/first-attempt gates. External record: ~/desk/tmp/portfolio/v0.6-foundations/operator-audit/r1/ACTIVATION.json; baseline HEAD 64d97b672f53068135807071bb7c5a51dc33b711 plus every uncommitted frontend hash in BASELINE.json/V6M2-SOURCE-IDENTITY.json. Blind packet compiled as standalone technical expansion/spec validation, with research/ledger admission flags intentionally unperformed under the explicit outside-basis route; no protocol bundle admission claim. Native launch receipt: operator-audit/r1/batch/launched.json.
+
+Four fresh initial logical seats: Fable/claude-sonnet-5-5, DeepSeek/deepseek-flash, Astra/gpt-6-sol, Astra-frontier/gpt-6-astra; requested effort low. Requested identities are not effective/server/independent-family attestations. Two OpenAI seats and the lead share a common family. Agy/Gemini is excluded. Zero redispatch, no post-start steering; native/boundary/account proofs precede any admitted corroboration. Three-round budget; at R3 with items open, Divergence Report and stop. No close ledger, Type/version/tag/push/deploy. Commit after the completed authorized audit per the retained final tie-break.
+
+## frontend-foundations: operator-authorized audit outcome (2026-10-14)
+
+KI-09 audit completed within R1–R3, outside the /review implementation basis. Every round used four fresh initial CLI seats, zero redispatches, and qualified dispatcher retention/cleanup. Exact raw finals remain record-only; no admission, floor, quorum, backend/family attestation or protocol-close claim is inferred. Reports: ~/desk/tmp/portfolio/v0.6-foundations/AUDIT-R1.md through AUDIT-R3.md. Final independent RED-RESOLVE.md in operator-audit/r3 records no active scoped item and an independent serial acceptance pass; the earlier overlapping-dist test failure is retained, not counted as a pass. No divergence remains.
+
+Angel's lean-core order and CC-LEAN-R3-DIRECTION.md bound the local build script to honest developer mistakes, excluding hostile filesystems, crafted markup and late-signal hardening. Astro explicitly inlines CSS; one short verifier checks typed build acceptance, closed routes, draft links/paragraph sentinels, ordinary resources and budgets. No general parser, large fixture framework or preview/hash-receipt machinery. Final build script4822B; product12775B, tooling/tests12003B. Actual checks:3 unit groups, one isolated draft/failed-check fixture with specific diagnostics and final production rebuild, six Chromium viewport/scheme cases with keyboard/enlarged text. Five HTML files, raw2734–3283B/gzip1261–1561B; owned inline CSS1890B; no browser JS/fonts/images. Physical Safari/iPhone/human comfort remains unverified.
+
+Historical research R1–R4 bytes remain unchanged. Commit is authorized by the final operator tie-break and #v6c2; no tag, push, deploy, formal implementation ledger, Type stamp or protocol-version claim.

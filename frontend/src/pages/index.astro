@@ -1,9 +1,25 @@
 ---
 import Page from '../layouts/Page.astro';
-import { identity } from '../data/portfolio.mjs';
+import { identity } from '../data/site.ts';
+import { publicArticles } from '../lib/articles.ts';
+const articles = await publicArticles();
 ---
-<Page title={identity.name} description="Angel Jair Haro — Software Engineer.">
-  <p class="eyebrow">{identity.role}</p>
-  <h1>{identity.name}</h1>
-  <p>{identity.handle}</p>
+<Page title="Writing" description="Writing by Angel J. Haro, Software Engineer.">
+  <h1 class="name">{identity.name}</h1>
+  <p class="muted">{identity.role}</p>
+  <p>Writing about projects, harness research, and university and work.</p>
+  <h2>Writing</h2>
+  <ul class="writing">
+    {articles.map(entry => (
+      <li>
+        <a href={`/articles/${entry.id}/`}>{entry.data.title}</a>
+        <p class="muted">{entry.data.description}</p>
+        {entry.data.status === 'sample' ? (
+          <span class="sample">Sample article</span>
+        ) : entry.data.status === 'published' && (
+          <time datetime={entry.data.date}>{entry.data.date}</time>
+        )}
+      </li>
+    ))}
+  </ul>
 </Page>

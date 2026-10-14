@@ -1,0 +1,680 @@
+{
+  "schema_version": "1.0",
+  "topic": "frontend-foundations",
+  "cycle_type": "research",
+  "round": 2,
+  "verdicts": {
+    "Q1": {
+      "raw_primary_recommendations": {
+        "ADOPT": 9,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "full_question_locked": false,
+      "semantic_limit": "Q4 primary ADOPT is proposal/process only; all9 final values await Angel. Q1 all9 ADOPT different setups, not exact flags/commands. Q5 all9 ADOPT different route/schema/validation recipes. Never pool conditional recipes into full exact-contract unanimity. MEMO/KIMI thinking preambles no extra votes."
+    },
+    "Q3": {
+      "raw_primary_recommendations": {
+        "ADOPT": 9,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "full_question_locked": true,
+      "semantic_limit": "Q4 primary ADOPT is proposal/process only; all9 final values await Angel. Q1 all9 ADOPT different setups, not exact flags/commands. Q5 all9 ADOPT different route/schema/validation recipes. Never pool conditional recipes into full exact-contract unanimity. MEMO/KIMI thinking preambles no extra votes."
+    },
+    "Q4": {
+      "raw_primary_recommendations": {
+        "ADOPT": 7,
+        "DISMISS": 0,
+        "INVESTIGATE": 2
+      },
+      "active_panel": 9,
+      "full_question_locked": false,
+      "semantic_limit": "Q4 primary ADOPT is proposal/process only; all9 final values await Angel. Q1 all9 ADOPT different setups, not exact flags/commands. Q5 all9 ADOPT different route/schema/validation recipes. Never pool conditional recipes into full exact-contract unanimity. MEMO/KIMI thinking preambles no extra votes."
+    },
+    "Q5": {
+      "raw_primary_recommendations": {
+        "ADOPT": 9,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "full_question_locked": false,
+      "semantic_limit": "Q4 primary ADOPT is proposal/process only; all9 final values await Angel. Q1 all9 ADOPT different setups, not exact flags/commands. Q5 all9 ADOPT different route/schema/validation recipes. Never pool conditional recipes into full exact-contract unanimity. MEMO/KIMI thinking preambles no extra votes."
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": false,
+    "locked_decisions_robust_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "open-follow-up",
+  "action": "roll",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "responded": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "All9 substantive web submissions, no echo/offtopic/duplicate/format exclusions; effective identities unknown, no family credit.",
+    "Only authorized web paste; no agentic/C51 dispatch; MEMO/KIMI thinking/search preambles no extra votes.",
+    "Q4 process/candidate recommendations not an operator taste selection; research cannot close before dated Angel pick."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-12T03:38:04Z",
+  "decisions_locked": 4,
+  "investigate": 3,
+  "decisions": {
+    "carried_R1": [
+      "Q1 strict/checker/full typed migration core fromR1",
+      "Q2 owned CSS fromR1"
+    ],
+    "new_core": {
+      "Q3": "ADOPT accepted1512/390 widths/equal quality with content-driven breakpoints/single semantic order/visible native nav initial method;320 reflow and intermediates; Chromium function distinct from human design review and actual device evidence. Heights are explicit later harness choices, not device facts; no exact height package/breakpoint/theme/type value locked.",
+      "Q5_core": "ADOPT home intro/latest writing + three separate section pages with honest empty state (8/9, GPT home-anchor minority); neutral visibly undated retained sample/title-body, fresh accepted identity/contact/text-only, no forced About/duplicate index/filler/archive content; build-time metadata validation distinct from static types, deterministic ordering/local slash-consistent links and no origin/deploy assumptions. Exact slugs/validator/schema unresolved."
+    },
+    "strict_first_refinement": "8/9 strict-first scoped stronger policy; worst7/8, Claude strictest-trial minority. Exact flags/command unresolved."
+  },
+  "open_follow_ups": [
+    "Q1a exact stronger-flag policy and command sufficiency",
+    "Q4 Angel visual pick and final candidate values/budgets",
+    "Q5a exact route slugs, minimum schema and validation mechanism"
+  ],
+  "ballots": [
+    {
+      "seat": "GEMINI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/GEMINI.md",
+      "sha256": "b21f6099515aefcae13e506fc7f764723b9f2029b538e82b3426c083d2da68af",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**ADOPT**: A two-tier static verification gate combining `astro/tsconfigs/strict` as the baseline configuration with scoped stronger flags (`noUncheckedIndexedAccess: true`, `noFallthroughCasesInSwitch: true`, `verbatimModuleSyntax: true`, and `allowJs: false` in `src/`), executed through a unified check script: `\"check\": \"astro check && tsc --noEmit\"`.",
+          "source_line": 6,
+          "primary": "ADOPT",
+          "section_sha256": "6e528e3f62e36500f613131d02968e9dbe68af6d1e0a08cd7474861b3df8ca26"
+        },
+        {
+          "question": "Q3",
+          "quote": "**ADOPT**: A content-driven layout architecture anchored to the two accepted targets\u2014Laptop (~1512 CSSpx) and Mobile (390 CSSpx)\u2014supported by a 320 CSSpx reflow/stress check (WCAG 1.4.10) and an intermediate 768 CSSpx breakpoint check.",
+          "source_line": 80,
+          "primary": "ADOPT",
+          "section_sha256": "a1a0ce2dc08b3412777540412da2757ed0eeeeed1ae8112870f46df53c69ae96"
+        },
+        {
+          "question": "Q4",
+          "quote": "**ADOPT Proposal**: Recommend **Candidate 1 (\"Engineered Ledger\")** or **Candidate 3 (\"Modern Systems Sans\")** for Angel's choice.",
+          "source_line": 205,
+          "primary": "ADOPT",
+          "section_sha256": "62339941c519e64c21c473d91b30e610bf0c4942d7389e058d52b781098d908b"
+        },
+        {
+          "question": "Q5",
+          "quote": "**ADOPT**: A clean four-route structure with three section index pages plus the home landing, using Astro's built-in Content Collections (`src/content/config.ts`) for compile-time Markdown frontmatter validation. The existing sample article (`first.md`) is retained in a neutral path and surfaced under a designated \"Sample\" label, leaving section pages with honest, transparent empty states until real pieces are written.",
+          "source_line": 228,
+          "primary": "ADOPT",
+          "section_sha256": "8bd797469101086da819eaeda958f2352b90688597faf4afe38ef25ab52df9fc"
+        }
+      ],
+      "checker_command": "standing-dual",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "built-in"
+    },
+    {
+      "seat": "DEEPSEEK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/DEEPSEEK.md",
+      "sha256": "3d864f4237edef9b1db11d2852b7a25020e94fc93c59e04f43cae37e33a5bca1",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**Disposition: ADOPT a bounded strict baseline with conditional `tsc --noEmit`; INVESTIGATE stronger flags as an optional stricter phase; DISMISS immediate strictest and TS 7/latest-install as default.**",
+          "source_line": 9,
+          "primary": "ADOPT",
+          "section_sha256": "9ead4426825e2f6193627f0a28259e835841b35bcfff95a980a89faa8f6104a1"
+        },
+        {
+          "question": "Q3",
+          "quote": "**Disposition: ADOPT a concrete matrix and visible wrapping native navigation; INVESTIGATE optional engine smoke only if no new dependency and operator accepts browser download; DISMISS current 320x900/1280x900 alone as final acceptance.**",
+          "source_line": 46,
+          "primary": "ADOPT",
+          "section_sha256": "433203f4cdc921db0c0ecdd2c9e01f9820aad8cc88bb34cf25a77c23bc043832"
+        },
+        {
+          "question": "Q4",
+          "quote": "**Disposition: ADOPT a three-candidate comparison set; final visual values remain Angel\u2019s dated choice. DISMISS archive imitation, inherited Georgia/cream, \u201ccurrent shell DNA,\u201d invented brand, and arbitrary UI features. INVESTIGATE final palette/type/budgets only after Angel chooses.**",
+          "source_line": 81,
+          "primary": "ADOPT",
+          "section_sha256": "8c386bdb04743f764daa747f5d8d3aa640fb71114b43dd99dd914f040fab72ca"
+        },
+        {
+          "question": "Q5",
+          "quote": "**Disposition: ADOPT a minimal route/nav/schema plan; DISMISS fake launch pieces, archive skills/project tuples, forced About prose, and invented sample dates; INVESTIGATE built-in Astro collection validation vs owned validation without new packages.**",
+          "source_line": 117,
+          "primary": "ADOPT",
+          "section_sha256": "c8b83e969e54b6bb10b421eafd805c5a8160b9b488d95f18a2a826f32c84b9ba"
+        }
+      ],
+      "checker_command": "conditional-single",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "gated-alternative"
+    },
+    {
+      "seat": "MISTRAL",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/MISTRAL.md",
+      "sha256": "35c656b1243d86fd0c014b7447a24e406be4a7158f811fc43e769803d6fac9b6",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**Disposition: ADOPT** (scoped: strict core + a small flag set + `astro check` + `tsc --noEmit` over non-`.astro` sources). TS-vs-JS is not reopened; operator premise retained.",
+          "source_line": 7,
+          "primary": "ADOPT",
+          "section_sha256": "1cf44653b4ab60c55ed33441a868f3ff3be222f83786efc6b233ac2c94c3d8a6"
+        },
+        {
+          "question": "Q3",
+          "quote": "**Disposition: ADOPT** a two-tier matrix with explicit evidence labels.",
+          "source_line": 28,
+          "primary": "ADOPT",
+          "section_sha256": "20dfe8c6df06ffef4be2213d9a1ec924db3b70e2f0c700fa5b94250845ae67dc"
+        },
+        {
+          "question": "Q4",
+          "quote": "**Disposition: ADOPT the candidate process; INVESTIGATE final values until Angel picks.** Present these three:",
+          "source_line": 45,
+          "primary": "ADOPT",
+          "section_sha256": "2b9b771f1aae702e7b7dd853f25becc466d4d55d7cf92dd6e95936e40e661590"
+        },
+        {
+          "question": "Q5",
+          "quote": "**Disposition: ADOPT** a minimal fresh-IA plan.",
+          "source_line": 63,
+          "primary": "ADOPT",
+          "section_sha256": "9203c3bec92a465d1ef6a58ab549b9c02f470f799f9f64a273872b2694935512"
+        }
+      ],
+      "checker_command": "standing-dual",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "built-in"
+    },
+    {
+      "seat": "GROK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/GROK.md",
+      "sha256": "77c600a7a1eba8d504302bccf9a206a1aaf53f80fbb430b0cc47f2fd1bfdd1b3",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**ADOPT** strict baseline (R1 locked) + `astro check` as primary command, with optional later scoped stronger flags only after migration negative probes. Distinguish full migration (all `.astro`/`.ts`/data + configs/tests) from optional stricter phases. Do not start at strictest.",
+          "source_line": 5,
+          "primary": "ADOPT",
+          "section_sha256": "d61552efb7daed4ca05b9b3900538956c29bc98146989a15739a92db814e6ac3"
+        },
+        {
+          "question": "Q3",
+          "quote": "**ADOPT** content-driven breakpoints against accepted CSS widths (1512 laptop-first, 390 mobile, equal quality), fluid readable measure, single semantic content order, native navigation (wrap or simple disclosure only if labels require), and explicit design-quality matrix separate from functional no-JS tests.",
+          "source_line": 32,
+          "primary": "ADOPT",
+          "section_sha256": "605e76a10dbdcaf5c5e0f5854851fb9409649563e14bcea844ba1e910f7c2442"
+        },
+        {
+          "question": "Q4",
+          "quote": "**ADOPT** process of presenting 2\u20133 distinct candidates implementable with R1 owned scoped/global CSS + small tokens/utilities (zero new styling packages). Final values stay with Angel. Preferred recommendation below is one candidate, not a lock.",
+          "source_line": 66,
+          "primary": "ADOPT",
+          "section_sha256": "7af76f66df891bc4440ee5451e6e61862eeffc6dc8416aba5d9a61feacbbf912"
+        },
+        {
+          "question": "Q5",
+          "quote": "**ADOPT** minimal purpose-led routes that surface short intro + latest writing + three named sections; keep the one accepted sample as undated/sample; fresh identity/contact only; no empty-section filler, no invented dates/projects, no archive content, no analytics.",
+          "source_line": 96,
+          "primary": "ADOPT",
+          "section_sha256": "5223c197b48e28ea3a4502be9081096bb39a0a1ad3ee205ee51ba26c5d267746"
+        }
+      ],
+      "checker_command": "conditional-single",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "gated-alternative"
+    },
+    {
+      "seat": "MEMO",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/MEMO.md",
+      "sha256": "e0172676d82a3f472a6a77b0cc125894e5c7c8af0b5501e1bf4ae6d7f9b721a1",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "Disposition (setup option \"strict-baseline + scoped stronger flags, dual-command gate\"): ADOPT (bounded, process-level).DISMISS: \"immediate strictest as the sole first gate\" \u2014 as an unprobed first step it bundles flag costs with no per-class justification or error-count measurement. A strictest trial remains open (see INVESTIGATE).",
+          "source_line": 312,
+          "primary": "ADOPT",
+          "section_sha256": "f63e8d1670bf271a9a828d22851d78047fa6ce70b069c0bc8896866ab9ff307a"
+        },
+        {
+          "question": "Q3",
+          "quote": "Disposition (bounded acceptance matrix + three-tier verification): ADOPT.DISMISS: current 320\u00d7900 / 1280\u00d7900 functional matrix as final acceptance (it is retained as regression baseline only \u2014 it proves nothing about the accepted 1512/390 equal-quality goal).",
+          "source_line": 376,
+          "primary": "ADOPT",
+          "section_sha256": "61a1b5d9f3c3dd1ab499f648b4f4268c2c5333bc52781f1a2179612a6ec110d9"
+        },
+        {
+          "question": "Q4",
+          "quote": "Disposition (candidate process + three candidates): ADOPT (process-level only).",
+          "source_line": 421,
+          "primary": "ADOPT",
+          "section_sha256": "d80065e0908cd8ef9609d95bfb7eb2938bd8754b6aa5fc8083f4355beb0ab001"
+        },
+        {
+          "question": "Q5",
+          "quote": "Disposition (minimal route/nav/schema plan below): ADOPT.DISMISS: fake launch pieces, archive identity/skills/project tuples/portrait, a forced About page without supplied prose, duplicate category/tag indexes, RSS/OG/favicon/print/sitemap by default, analytics/trackers/visitor persistence (explicit Null), and any host-level redirect/410/canonical-origin machinery.",
+          "source_line": 479,
+          "primary": "ADOPT",
+          "section_sha256": "4c53db4415544b2839927bc24756d50a389ebc06ee79ffed9fb055bc997cfdbb"
+        }
+      ],
+      "checker_command": "standing-dual",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "owned"
+    },
+    {
+      "seat": "Z.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/Z.AI.md",
+      "sha256": "9b471263fd967a203defeaff5a88b0615e62109052893b833fef761811a6b08e",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**ADOPT** `strict` baseline supplemented with targeted stricter flags (`noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`), and a dual checking command (`astro check && tsc --noEmit`).",
+          "source_line": 5,
+          "primary": "ADOPT",
+          "section_sha256": "21bf1bc8ae3a997005d3e5966daa03cb1c5a5efbf46f2cdb98335079dce54093"
+        },
+        {
+          "question": "Q3",
+          "quote": "**ADOPT** a fluid-sizing layout strategy using `rem`/`em` and a single structural breakpoint (~768px) to manage navigation density and grid column shifts, ensuring a single semantic content order.",
+          "source_line": 31,
+          "primary": "ADOPT",
+          "section_sha256": "696aa11714706abefb3c6bd157b3dcdf4f3ce38bddca6e61b60257da8558afbe"
+        },
+        {
+          "question": "Q4",
+          "quote": "**ADOPT** the proposal of three distinct, text-only, owned-CSS candidate directions:",
+          "source_line": 59,
+          "primary": "ADOPT",
+          "section_sha256": "71401e7a80898d5f2ff70035e8b4abf36dc61b9208c038fcef1bc480a008ebce"
+        },
+        {
+          "question": "Q5",
+          "quote": "**ADOPT** an IA with Root (`/`) serving the short intro and latest writing, and distinct routes for `/projects/`, `/harness/`, and `/university-work/`.",
+          "source_line": 88,
+          "primary": "ADOPT",
+          "section_sha256": "09a76a787426fa532aaffb1fbad6e29c3e7d6c8951a410ab4e816ce2924da821"
+        }
+      ],
+      "checker_command": "standing-dual",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "built-in"
+    },
+    {
+      "seat": "CLAUDE.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/CLAUDE.AI.md",
+      "sha256": "a0ad3f287dfba136a9afacb8bee42e136898121e1029c4e17b057230848226a5",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**Disposition: ADOPT** the R1 strict core extended with `astro/tsconfigs/strictest`, using one `astro check` gate. `tsc --noEmit` is **DISMISSED** as a default and becomes conditional on a failing negative probe. The operator TS premise is retained. This question is only about which flags and which command.",
+          "source_line": 12,
+          "primary": "ADOPT",
+          "section_sha256": "19f1cf79fdbbe06b629ea84a975a83f01780f6e81d2a146822859c1b24a985c3"
+        },
+        {
+          "question": "Q3",
+          "quote": "**Disposition: ADOPT** a two-primary-target matrix with supporting checks, plus a separate human design review. **INVESTIGATE** real-device heights and zoom as later dated measurements.",
+          "source_line": 69,
+          "primary": "ADOPT",
+          "section_sha256": "bebcd38bfdebb7c7f29bc2cdee2811eaa4344f23a9d72ab879d5da6b6d56c3cc"
+        },
+        {
+          "question": "Q4",
+          "quote": "**Disposition: INVESTIGATE (candidate process ADOPT).** Below are three candidates. My preference is **B**. Angel chooses; nothing here is his taste.",
+          "source_line": 118,
+          "primary": "INVESTIGATE",
+          "section_sha256": "2e0092f1a4077932b64c9cb10760b4f40fd9c47a93674822f363d888d5df8ecc"
+        },
+        {
+          "question": "Q5",
+          "quote": "**Disposition: ADOPT** the structure. **INVESTIGATE** the three short items of section copy, which need Angel.",
+          "source_line": 173,
+          "primary": "ADOPT",
+          "section_sha256": "59f2fecd0c5720a76231426baa0dac653876b985a76c55b6f73eb7e9868e77d5"
+        }
+      ],
+      "checker_command": "conditional-single",
+      "strictness": "strictest-trial",
+      "section_representation": "separate-pages",
+      "validation_method": "built-in"
+    },
+    {
+      "seat": "KIMI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/KIMI.md",
+      "sha256": "ac3956b47528394bac211de6936dfcc340f019ec8dd060c1a78eb66c61eac1e4",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "Disposition: ADOPT (bounded). Retain the operator-fixed strict core (language premise is not re-opened); adopt scoped stronger flags in one staged second phase after the typed migration lands, not immediate strictest. Reject the Null option of \"strict only, forever\" only insofar as it defers the flag question \u2014 the flag set itself stays small and named.",
+          "source_line": 55,
+          "primary": "ADOPT",
+          "section_sha256": "3f4f4d4d5601d8f1d7153608c33d66f93fd7075811a110bae8f10dca8717f5eb"
+        },
+        {
+          "question": "Q3",
+          "quote": "Disposition: ADOPT. The accepted widths (1512/390, 50/50) are constraints; everything below about heights, intermediate widths, and engine coverage is a proposed testing choice, not a measured device fact.",
+          "source_line": 67,
+          "primary": "ADOPT",
+          "section_sha256": "93ddc3ad99debd02255771756f17a9628339ba7b1b6f7ab00cc5b6fa9bc61d56"
+        },
+        {
+          "question": "Q4",
+          "quote": "Disposition: INVESTIGATE (deliberately). What can be locked now is the process: 3 candidates, same content/IA skeleton, Angel picks by dated choice. No palette/type/budget value below is a claim about Angel's taste or an accepted constraint; all are proposals with measurement plans. No archive DNA, no inherited Georgia/cream, no invented brand.",
+          "source_line": 83,
+          "primary": "INVESTIGATE",
+          "section_sha256": "e23875038fee31b455c41ac21388d2f47319cb8b0f5bb582a06ffe869fc49fa4"
+        },
+        {
+          "question": "Q5",
+          "quote": "Disposition: ADOPT. Smallest structure that implements the accepted facts with zero invention.",
+          "source_line": 103,
+          "primary": "ADOPT",
+          "section_sha256": "cad4e6bbc7eaca04b493208c9fd2068be1253fd0a4aad4b30cdb35eeb5994dce"
+        }
+      ],
+      "checker_command": "conditional-single",
+      "strictness": "strict-first-scoped",
+      "section_representation": "separate-pages",
+      "validation_method": "built-in"
+    },
+    {
+      "seat": "GPT",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r2/GPT.md",
+      "sha256": "4824f69c36a9830815dc5d46040fc428de3243580cd1f9d53aeae70651dce556",
+      "records": [
+        {
+          "question": "Q1",
+          "quote": "**Q1 \u2014 ADOPT strict plus targeted stronger flags; INVESTIGATE installed checker sufficiency**",
+          "source_line": 5,
+          "primary": "ADOPT",
+          "section_sha256": "76a9328f7d1abad6bc790d8a3719a4527bf2f59cd7f54be6924605e0c1fc9a72"
+        },
+        {
+          "question": "Q3",
+          "quote": "**Q3 \u2014 ADOPT equal acceptance at 1512 and 390 CSSpx**",
+          "source_line": 44,
+          "primary": "ADOPT",
+          "section_sha256": "64e93d128fdcbf7c7c56242afc2eecd740bed34725694650c9f123d7835471bf"
+        },
+        {
+          "question": "Q4",
+          "quote": "**Q4 \u2014 ADOPT the comparison process; INVESTIGATE final visual choice**",
+          "source_line": 84,
+          "primary": "ADOPT",
+          "section_sha256": "a2c66902314f995f7f8c51706c60c55b92ccab42b77cb650148b57d0f7f22037"
+        },
+        {
+          "question": "Q5",
+          "quote": "**Q5 \u2014 ADOPT a home index with three section anchors and the neutral sample**",
+          "source_line": 122,
+          "primary": "ADOPT",
+          "section_sha256": "8bfd6664752660bfec3cab392646dc458e8c150d12a6aed28cc321efaf608b6e"
+        }
+      ],
+      "checker_command": "conditional-single",
+      "strictness": "strict-first-scoped",
+      "section_representation": "home-anchors",
+      "validation_method": "owned"
+    }
+  ],
+  "option_tallies": {
+    "strict-first-scoped": 8,
+    "strictest-trial": 1,
+    "conditional-single": 5,
+    "standing-dual": 4,
+    "section-pages": 8,
+    "home-anchors": 1,
+    "built-in-validation": 5,
+    "owned": 2,
+    "gated-alternative": 2
+  },
+  "every_single_removal": [
+    {
+      "removed": "GEMINI",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 5,
+        "standing_dual": 3,
+        "built_in_validation": 4
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": true,
+        "standing_dual": false,
+        "built_in_validation": false
+      }
+    },
+    {
+      "removed": "DEEPSEEK",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 4,
+        "standing_dual": 4,
+        "built_in_validation": 5
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": false,
+        "standing_dual": false,
+        "built_in_validation": true
+      }
+    },
+    {
+      "removed": "MISTRAL",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 5,
+        "standing_dual": 3,
+        "built_in_validation": 4
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": true,
+        "standing_dual": false,
+        "built_in_validation": false
+      }
+    },
+    {
+      "removed": "GROK",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 4,
+        "standing_dual": 4,
+        "built_in_validation": 5
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": false,
+        "standing_dual": false,
+        "built_in_validation": true
+      }
+    },
+    {
+      "removed": "MEMO",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 5,
+        "standing_dual": 3,
+        "built_in_validation": 5
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": true,
+        "standing_dual": false,
+        "built_in_validation": true
+      }
+    },
+    {
+      "removed": "Z.AI",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 5,
+        "standing_dual": 3,
+        "built_in_validation": 4
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": true,
+        "standing_dual": false,
+        "built_in_validation": false
+      }
+    },
+    {
+      "removed": "CLAUDE.AI",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 8,
+        "conditional_single": 4,
+        "standing_dual": 4,
+        "built_in_validation": 4
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": false,
+        "standing_dual": false,
+        "built_in_validation": false
+      }
+    },
+    {
+      "removed": "KIMI",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 7,
+        "strict_first": 7,
+        "conditional_single": 4,
+        "standing_dual": 4,
+        "built_in_validation": 4
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": false,
+        "standing_dual": false,
+        "built_in_validation": false
+      }
+    },
+    {
+      "removed": "GPT",
+      "denominator": 8,
+      "counts": {
+        "Q3_core": 8,
+        "Q5_section_pages": 8,
+        "strict_first": 7,
+        "conditional_single": 4,
+        "standing_dual": 4,
+        "built_in_validation": 5
+      },
+      "robust": {
+        "Q3_core": true,
+        "Q5_section_pages": true,
+        "strict_first": true,
+        "conditional_single": false,
+        "standing_dual": false,
+        "built_in_validation": true
+      }
+    }
+  ],
+  "independent_second_derivation": {
+    "methods": "Hand semantic source reading; reverse-order final-section anchor/count extraction and independently enumerated removal subsets",
+    "result": "zero differences",
+    "identity": "Same lead/two methods; not separate-agent/model/family corroboration"
+  },
+  "technical_corrections": [
+    "Official Astro docs say included TS files checked; no universal config/test skipping theorem. Prove local coverage later; tsc ignores Astro.",
+    "allowJs false is not a no-JS-file inventory guard; keep migration inventory separately.",
+    "Retained Astro7.3.5 rejectsTS>=7, asks6; no exact5.x6.x pin compatibility/timing/transitive cost proven.",
+    "Installed content config throws for legacy type/missingloader; living docs use src/content.config.ts, glob astro/loaders, z astro/zod; old recipes not adopted.",
+    "No invented coming-soon/active-work promise, authored date or pillar assignment.",
+    "No55\u201375ch mobile minimum or guessed palette contrast/performance/focus-compliance theorem; exact type/budgets remain Q4."
+  ],
+  "evidence": {
+    "raw_sha256": "847f107c1742254cdefa737d2ac82b1bb58874e2a610d295fe055c35a3c8be6d",
+    "intake_sha256": "1bc6b761137b64861daf2fdf6ce4a919329e2cf2206e05dd45b54b1f828bb417",
+    "analysis": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R2-ANALYSIS.json",
+    "split": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R2-SPLIT-MANIFEST.json",
+    "pick_sheet": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/Q4-DIRECTIONS.md",
+    "authority": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/BRIEF-codex-4.md"
+  }
+}

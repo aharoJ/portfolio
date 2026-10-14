@@ -1,0 +1,1064 @@
+{
+  "schema_version": "1.0",
+  "topic": "frontend-foundations",
+  "cycle_type": "research",
+  "round": 4,
+  "verdicts": {
+    "Q1": {
+      "A": 8,
+      "D": 1
+    },
+    "Q4": {
+      "Null_exact_Quiet": 6,
+      "changed_dark_ADOPT": 1,
+      "changed_dark_mixed_INVESTIGATE_ADOPT": 1,
+      "non_response": 1
+    },
+    "Q5": {
+      "raw_ADOPT_different_recipes": 8,
+      "non_response": 1,
+      "affirmative_complete_lead": 4,
+      "ambiguous_declared_lead": 1,
+      "conditional_operator_boundary": 1,
+      "incompatible_variants": 2
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": true,
+    "locked_decisions_robust_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "hard-cap",
+  "action": "halt",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "responded": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Nine distinct substantive source bodies; Gemini Q1 only, Q4/Q5 header cards do not receive vote credit. Conservative nine-seat denominator retained.",
+    "Angel Gemini note verbatim: yeah gemini did some stupid shit it made an HTML so i copy and paste",
+    "DeepSeek R3-only waiver expired; substantive R4 answer counted. MEMO/KIMI final answers counted once with preambles preserved.",
+    "Web-paste source labels; effective runtime identities unknown, no family/independent-model credit, no agentic/C51 dispatch."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-12T20:55:18Z",
+  "decisions_locked": 5,
+  "investigate": 1,
+  "decisions": {
+    "carried_R1_R3": "Five core decisions Q1 strict/full migration, Q2 ownedCSS, Q3 equalquality, Q4 operatorQuiet, Q5 IA/route/validator core remain locked.",
+    "Q1_exact_profile": "ADOPT Profile A: strict true + noUncheckedIndexedAccess true + noFallthroughCasesInSwitch true; other strengthening extras false/Null; retained base/noEmit/Bundler/verbatimModuleSyntax, allowJs false after separately inventoried full migration.8/9,worst7/8.",
+    "Q4_palette": "ADOPT Null exact A Quiet light/dark palettes, no nonpalette changes;6/9,worst5/8. No optimum/medical/comfort superiority claim."
+  },
+  "open_follow_ups": [
+    "Q5a complete metadata/source-identity/publication contract lacks single-removal-robust qualified majority at cap4."
+  ],
+  "ballots": [
+    {
+      "seat": "GEMINI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/GEMINI.md",
+      "sha256": "cd75e165691fd9034335e0ff241d944305437021132e8f54f118487f5f787d5a",
+      "bytes": 2573,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "NON_RESPONSE",
+          "reason": "Only header card Dark Bg #111111 Contrast ~15.9:1 (Anti-Glare); absent Q4 evidence/verdict/body; no palette vote inferred."
+        },
+        {
+          "question": "Q5",
+          "primary": "NON_RESPONSE",
+          "reason": "No Q5 answer: header card isSample:true / no fake date is not the requested complete contract."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 24,
+          "quote": "Decision outcome: ADOPT Command A with explicit compiler flags. Replaces ad-hoc JS/TS annotations with a unified project check gate while avoiding linter noise."
+        }
+      ]
+    },
+    {
+      "seat": "DEEPSEEK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/DEEPSEEK.md",
+      "sha256": "c8964c5adbf875730e0b2c0d2aafa241e34cd85b14ebba4b92208cae7ce9aa2a",
+      "bytes": 25585,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "D",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "changed dark palette",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 1,
+          "qualification": "Not complete lead support: explicitly makes real calendar validation optional/proportionate regex-only, falsely says regex rejects Feb 30; weakens sample/selector code. Raw ADOPT retained."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 9,
+          "quote": "### Recommendation: **ADOPT Profile D** — `strict` + `noUncheckedIndexedAccess` + `exactOptionalPropertyTypes` + `noImplicitOverride` + `noFallthroughCasesInSwitch`"
+        },
+        {
+          "line": 102,
+          "quote": "### Recommendation: **ADOPT a refined dark palette** with background `#1A1A1A` (dark warm-neutral grey), retaining A's light palette as-is."
+        },
+        {
+          "line": 203,
+          "quote": "### Recommendation: **ADOPT the lead proposal with two refinements** — add `.strict()` to the Zod object, and use `z.string().regex()` for date validation instead of `z.coerce.date()`."
+        },
+        {
+          "line": 209,
+          "quote": "**2. Date coercion alone does not prove calendar validity.** The lead's findings correctly note that \"Date coercion and Date instance alone do not prove genuine calendar/provenance\" and \"Non-strict Zod object strips unknown keys rather than rejecting forbidden sample date/section.\" Using `z.coerce.date()` would accept `\"2026-02-30\"` (invalid calendar date) and coerce it to March 2. A regex-based approach validates the *string format* before any coercion:"
+        },
+        {
+          "line": 216,
+          "quote": "This accepts `2026-02-28` but rejects `2026-02-30` and `2026-13-01`. For strict calendar validation (Feb 30), an additional refinement using `Date` roundtrip is needed, but for a static site with infrequent publishing, format validation is proportionate."
+        },
+        {
+          "line": 354,
+          "quote": "| Q1 | ADOPT Profile D (strict + indexed + exactOptional + implicitOverride + fallthrough) | High | Community convergence + bug-prevention mechanism + ADR precedent |"
+        },
+        {
+          "line": 355,
+          "quote": "| Q4 | ADOPT refined dark (#1A1A1A bg, #E8E8E6 text) retaining A's light palette | Medium | Controlled reading study (#121212 best) + halation research + operator preference |"
+        },
+        {
+          "line": 356,
+          "quote": "| Q5 | ADOPT lead proposal + `.strict()` + regex date validation | High | Zod documented behavior + Astro API + lead's own findings corrected |"
+        },
+        {
+          "line": 358,
+          "quote": "All three recommendations are **ADOPT** with explicit alternatives (Null options remain valid if evidence is deemed insufficient). No new packages are required. No implementation is authorized by this research alone."
+        }
+      ]
+    },
+    {
+      "seat": "MISTRAL",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/MISTRAL.md",
+      "sha256": "781a0385af12c5e1ccd9a299927c8f3a97a58affb8842107f4606fd959346c70",
+      "bytes": 18894,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "Null exact Quiet",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 1,
+          "qualification": "Conditional lead support: choose it only if repository private or source-visible drafts acceptable; that operator boundary is unrecorded. No unconditional vote credit for complete draft contract."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 11,
+          "quote": "## Q1 — Exact extra-flag profile: ADOPT **A** (strict + `noUncheckedIndexedAccess` + `noFallthroughCasesInSwitch`)"
+        },
+        {
+          "line": 13,
+          "quote": "**Verdict:** ADOPT option A. Operator TS premise explicitly retained — this is a within-TypeScript choice, never TS-vs-JS."
+        },
+        {
+          "line": 20,
+          "quote": "| `noUncheckedIndexedAccess` | true | ADOPT — only candidate flag that closes a soundness gap `strict` leaves open: indexed access is typed `T` instead of `T \\| undefined` ([TSConfig Reference](https://www.typescriptlang.org/tsconfig/), [noUncheckedIndexedAccess](https://www.typescriptlang.org/tsconfig/noUncheckedIndexedAccess.html)) |"
+        },
+        {
+          "line": 21,
+          "quote": "| `noFallthroughCasesInSwitch` | true | ADOPT — distinct control-flow bug class, near-zero false-positive surface |"
+        },
+        {
+          "line": 24,
+          "quote": "| `exactOptionalPropertyTypes` | false | **Null at launch** — real friction with optional Astro props/frontmatter interop; eligible as a later trial probe only if a negative probe shows need |"
+        },
+        {
+          "line": 43,
+          "quote": "## Q4 — Eye-comfort palette: ADOPT **Null** (retain A's exact selected palettes)"
+        },
+        {
+          "line": 45,
+          "quote": "**Verdict:** ADOPT Null. Evidence is insufficient to justify changing A, and what evidence exists points the *opposite* way from \"darker is better for everyone\": positive-polarity (dark-on-light) displays show a consistent objective performance advantage, and the one condition where negative polarity performed worst was dark ambient — where dark mode is most often preferred. Angel's dark lean is preference, not a science verdict, and it needs no palette change to be honored: A's dark scheme already ships via `prefers-color-scheme`."
+        },
+        {
+          "line": 77,
+          "quote": "## Q5 — Metadata contract: ADOPT the lead proposal, expressed as a discriminated union, with one conditional alternative"
+        },
+        {
+          "line": 79,
+          "quote": "**Verdict:** ADOPT. The lead proposal is coherent and closeable; the one refinement is to make each status's field rules *structural* rather than post-hoc refinements, which also makes \"sample forbids date/section\" fall out for free."
+        },
+        {
+          "line": 91,
+          "quote": "**Conditional alternative (complete, named):** a **no-draft contract** — `status: sample | published` only, with the explicit authoring boundary \"an unfinished piece does not exist in `src/content/` (or not in the repo) until it's ready to publish.\" Prefer this **if the repository will be public**: a static build excludes drafts from *output* but their prose remains readable in source. Choose the lead proposal only if the repo is private or source-visible drafts are acceptable. This is a boundary decision, not a validator re-contest; the boolean-vs-enum and other R3 recipe variants remain dismissed."
+        }
+      ]
+    },
+    {
+      "seat": "GROK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/GROK.md",
+      "sha256": "5ebadefe06426562f026ef1d76037c7cbae003daf4a88f74e5082b02f4002b8b",
+      "bytes": 15287,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "Null exact Quiet",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 1,
+          "qualification": "Affirmative lead semantic contract, including real Gregorian string dates and per-status rejection/publication behavior; implementation proof remains later."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 17,
+          "quote": "**ADOPT A**"
+        },
+        {
+          "line": 47,
+          "quote": "Status-quo C is acceptable only if later probes prove the two extras catch zero real defects; evidence from Astro’s own strictest and general TS guidance favors the indexed + fallthrough pair."
+        },
+        {
+          "line": 55,
+          "quote": "**ADOPT Null** — retain the exact selected A Quiet light/dark table:"
+        },
+        {
+          "line": 102,
+          "quote": "**ADOPT the LEADPROPOSAL** with the following precise, build-time-enforceable contract (no new parser/schema package)."
+        },
+        {
+          "line": 123,
+          "quote": "Derived from source identity → valid lowercase single-segment slug. Assert uniqueness **before** filter/generation (owned small check). Explicit override field only if later needed; state the alternative contract then. Loader-normalized IDs can collide; do not rely on “unique by filename”."
+        }
+      ]
+    },
+    {
+      "seat": "MEMO",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/MEMO.md",
+      "sha256": "ba058a066c44cef9acd0bf8799cbaba410f7274bdf0f7efcd92e3d6f4cc4c545",
+      "bytes": 66039,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 321,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "Null exact Quiet",
+          "final_start_line": 321,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 321,
+          "qualification": "Affirmative primary lead semantic contract. No-draft model retained as alternative; its choose-three-only-if-WIP-needed advice is recorded, not an operator fact or separate vote."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 336,
+          "quote": "Verdict: ADOPT Option A — strict + noUncheckedIndexedAccess: true + noFallthroughCasesInSwitch: true.DISMISS B as the selected profile: noUnusedLocals/noUnusedParameters are hygiene-class, not error-class; on a small zero-browser-JS surface they mainly generate _-prefix churn during migration (props destructuring, test scaffolding) without catching the defect classes this codebase actually has (array/record lookups in selectors, glob-entry resolution — the packet itself records loader-ID collision risk)."
+        },
+        {
+          "line": 365,
+          "quote": "Verdict: ADOPT Null — retain A's exact light/dark palettes unchanged. Evidence is insufficient to justify any hex change; Angel's stated darker lean is already materially served by A's dark scheme (background #111111, not pure black; text #ECECEA, ~15.96:1). The remaining conceivable delta (#000 vs #111111, ±few luminance points) is a heuristic trade-off with no verified evidence distinguishing it this session. DISMISS any palette change framed as science-driven at this time, and any change that weakens verified floors to \"soften\" text. INVESTIGATE only via the later recorded real-device comparison (below) — that is a measurement plan, not a verdict."
+        },
+        {
+          "line": 415,
+          "quote": "Verdict: ADOPT the lead contract as one explicit recipe (mechanism/routes/built-in validator not re-voted):"
+        },
+        {
+          "line": 417,
+          "quote": "Fields:title, description — required, trimmed non-empty strings. status — required enum sample | published | draft. date — optional at object level, strict YYYY-MM-DDstring (shape regex + real-calendar check, e.g. 2026-02-30 rejected). section — optional enum projects | harness-research | university-work."
+        },
+        {
+          "line": 427,
+          "quote": "Alternative / Null: two-value status (sample | published) with work-in-progress kept outside the scanned collection — smaller surface, deletes the whole draft-leak failure class, at the cost of no in-repo drafts. Reasonable for an infrequent solo publisher; choose the three-value enum only if in-repo WIP is a real need. The negative probe makes three-value defensible."
+        },
+        {
+          "line": 433,
+          "quote": "Implementation steps (later authorized): one collection outside pages//public/ in the existing Astro content config using the built-in glob loader + astro/zod (no new parser/schema package); schema with .strict(); shared selector module; route generation with pre-generation uniqueness assert; small owned cross-entry checks (calendar validity, cross-field per-status invariants, output filtering) where the built-in facility cannot express them; update Playwright assertions to the fresh ratified facts and text-only asset expectation; remove/replace archive-derived portfolio.mjs data, v0.5 page copy, and the old portrait under ratified choices."
+        }
+      ]
+    },
+    {
+      "seat": "Z.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/Z.AI.md",
+      "sha256": "ba02c7d56aaa0f541c18083b6026a88cfb7c9592d393890af2bc50a45ddc3b04",
+      "bytes": 9536,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "MIXED_INVESTIGATE_ADOPT",
+          "option": "changed dark palette",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 1,
+          "qualification": "Declared lead ADOPT, but recipe only checks date shape and uses rejected legacy collection API; no genuine-calendar enforcement demonstrated. Preserve ambiguous extra support in sensitivity count, not verified complete semantic support."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 7,
+          "quote": "**Recommendation:** ADOPT Option A (`strict` + `noUncheckedIndexedAccess` + `noFallthroughCasesInSwitch`)."
+        },
+        {
+          "line": 35,
+          "quote": "**Recommendation:** INVESTIGATE / ADOPT a \"Dark-Halation-Mitigated\" refinement (R4-Dark-Softened) for the dark scheme, while RETAINING Null (A's exact palette) for the light scheme."
+        },
+        {
+          "line": 84,
+          "quote": "**Recommendation:** ADOPT the Lead Proposal."
+        }
+      ]
+    },
+    {
+      "seat": "CLAUDE.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/CLAUDE.AI.md",
+      "sha256": "ce32398fe15d5caadf625f7dbe907e58c5140ca42be7e9b3dfb85d121eaee211",
+      "bytes": 14548,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "Null exact Quiet",
+          "final_start_line": 1,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 1,
+          "qualification": "Affirmative lead semantic contract. Calendar constructor and filename-uniqueness claims require actual corrections/proofs later; no proof claimed now."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 13,
+          "quote": "**Disposition: ADOPT profile A.** The operator TS premise is retained as fixed. This is a profile choice within TypeScript, not TS versus JS."
+        },
+        {
+          "line": 61,
+          "quote": "**Disposition: ADOPT Null (exact A palettes, both schemes).** A specific dark candidate is listed for the later device comparison, labeled **INVESTIGATE, heuristic only**."
+        },
+        {
+          "line": 138,
+          "quote": "**Disposition: ADOPT the lead proposal, with the precisions below.** The mechanism and routes are not re-voted."
+        },
+        {
+          "line": 169,
+          "quote": "- No explicit `slug` override field is added. Revisit only if a rename ever needs URL stability, and that would be a new operator decision."
+        }
+      ]
+    },
+    {
+      "seat": "KIMI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/KIMI.md",
+      "sha256": "c24279184c71f21a33c1bdf282fd359b10ed7772fe53bf8c839174b44fa45ef7",
+      "bytes": 28072,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 102,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "Null exact Quiet",
+          "final_start_line": 102,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 102,
+          "qualification": "Different contract: explicitly bans future published dates despite lead retaining them; proposes extra exactly-one-sample rule, normalizes loader IDs after potential dedup. Primary ADOPT retained, no exact-lead credit."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 103,
+          "quote": "Q1 — Exact extra-flag profile: ADOPT A"
+        },
+        {
+          "line": 112,
+          "quote": "exactOptionalPropertyTypes\tfalse\tGoverns API-surface rigor (prop?: T vs. prop: T | undefined). Valuable with external consumers; this site has none. Revisit only if a config/data boundary proves it catches a real defect in the negative probes."
+        },
+        {
+          "line": 120,
+          "quote": "Q4 — Eye-comfort palette: ADOPT Null (A's exact palettes), with a proposed later real-device comparison"
+        },
+        {
+          "line": 129,
+          "quote": "Decision — ADOPT Null (A's exact palettes). My in-session recomputation reproduces the packet's ratios exactly: light text/bg 17.4636, muted 6.5281, functional rule 3.1590, hairline 1.1951 (decorative only); dark 15.9633 / 7.4667 / 3.6918 / 1.2478. All exceed the 4.5:1 / 3:1 floors. Rationale: (1) evidence favors keeping positive polarity fully first-class, which Null does; (2) the dark pair already implements the only defensible dark-mode heuristics — near-black (#111111) rather than pure black, and slightly reduced off-white text — without surrendering contrast headroom; (3) softening dark text below current ratios would trade a proven accessibility margin for an unproven comfort gain — explicitly disallowed by the brief. Angel's darker lean is recorded as preference, not a science verdict, and Null keeps dark available via prefers-color-scheme for exactly the dim-environment users who aesthetically want it. CSS hex values are not physical luminance: OLED vs. LCD, display brightness, ambient light, and individual vision all dominate any CSS-level \"eye comfort\" effect; no palette change can be claimed to treat eyestrain."
+        },
+        {
+          "line": 132,
+          "quote": "Q5 — Metadata contract: ADOPT the lead proposal, with the exact semantics below made explicit"
+        },
+        {
+          "line": 143,
+          "quote": "published: genuine operator-supplied date required + exactly one section; build-time check that the date is not in the future (no scheduling)."
+        }
+      ]
+    },
+    {
+      "seat": "GPT",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r4/GPT.md",
+      "sha256": "b09a7b583e01f98f64befd9636f5e992bb9114107e4f2cd741175afd92b2c58e",
+      "bytes": 15411,
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "option": "A",
+          "final_start_line": 33,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "option": "Null exact Quiet",
+          "final_start_line": 33,
+          "qualification": "Whole named profile / exact pair counted; isolated recipe claims do not become new locks."
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "option": "lead or stated variant",
+          "final_start_line": 33,
+          "qualification": "Affirmative lead semantic contract; expressly permits future published dates, pre-insertion source inventory and public-output draft exclusion. Year 0001-9999 / flat directory details are bounded proposals, not new consensus locks."
+        }
+      ],
+      "final_recommendation_anchors": [
+        {
+          "line": 37,
+          "quote": "Q1\tADOPT Profile A\tStrict TypeScript plus two focused correctness checks."
+        },
+        {
+          "line": 38,
+          "quote": "Q4\tADOPT Null: retain exact A Quiet palettes\tPreserve the selected appearance and both system-selected schemes without claiming scientifically optimal colors."
+        },
+        {
+          "line": 39,
+          "quote": "Q5\tADOPT the lead proposal, specified below\tDeterministic publishing, strict metadata rejection, and no draft artifacts in public output."
+        }
+      ]
+    }
+  ],
+  "every_single_removal": [
+    {
+      "removed": "GEMINI",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 6,
+        "metadata_qualified": 4,
+        "metadata_generous_upper_bound": 5
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": true
+      }
+    },
+    {
+      "removed": "DEEPSEEK",
+      "denominator": 8,
+      "support": {
+        "profile_A": 8,
+        "palette_Null": 6,
+        "metadata_qualified": 4,
+        "metadata_generous_upper_bound": 5
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": true
+      }
+    },
+    {
+      "removed": "MISTRAL",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 5,
+        "metadata_qualified": 4,
+        "metadata_generous_upper_bound": 5
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": true
+      }
+    },
+    {
+      "removed": "GROK",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 5,
+        "metadata_qualified": 3,
+        "metadata_generous_upper_bound": 4
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": false
+      }
+    },
+    {
+      "removed": "MEMO",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 5,
+        "metadata_qualified": 3,
+        "metadata_generous_upper_bound": 4
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": false
+      }
+    },
+    {
+      "removed": "Z.AI",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 6,
+        "metadata_qualified": 4,
+        "metadata_generous_upper_bound": 4
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": false
+      }
+    },
+    {
+      "removed": "CLAUDE.AI",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 5,
+        "metadata_qualified": 3,
+        "metadata_generous_upper_bound": 4
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": false
+      }
+    },
+    {
+      "removed": "KIMI",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 5,
+        "metadata_qualified": 4,
+        "metadata_generous_upper_bound": 5
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": true
+      }
+    },
+    {
+      "removed": "GPT",
+      "denominator": 8,
+      "support": {
+        "profile_A": 7,
+        "palette_Null": 5,
+        "metadata_qualified": 3,
+        "metadata_generous_upper_bound": 4
+      },
+      "majority": {
+        "profile_A": true,
+        "palette_Null": true,
+        "metadata_qualified": false,
+        "metadata_generous_upper_bound": false
+      }
+    }
+  ],
+  "independent_second_derivation": {
+    "method": "Forward final-section semantic reading versus reverse categorical re-reading and exhaustive survivor summation",
+    "result": "zero arithmetic discrepancies",
+    "identity": "Same lead/two methods; no second agent, authenticated model, or family claim."
+  },
+  "evidence": {
+    "analysis": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R4-ANALYSIS.json",
+    "split": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R4-SPLIT-MANIFEST.json",
+    "raw_snapshot": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R4-RAW-SNAPSHOT.md",
+    "raw_sha256": "dfdc52284b210de546efd36b6a9d78455367f9ae868b6fe650c85e273731ad50",
+    "intake_sha256": "b26e84b6881a07b60590ebd0c4318cc60f429fcc152cacfef7f979659bd772c8",
+    "brief": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/BRIEF-R4-RESOLVE.md",
+    "operator_addendum": "/Users/aharoj/desk/tmp/relay/6d539846.md"
+  },
+  "semantic_limits": "Raw ADOPT 8/8 is not exact Q5 unanimity. Affirmative exact semantic support4/9; crediting ambiguous Z.AI gives5/9, loses majority4/8 on supporter removal. Mistral private/source-visible-draft condition unaccepted; DeepSeek regex-only downgrade and KIMI future-date ban not interchangeable with lead. No force disposition inferred from cap or auto-approval.",
+  "Q5_vote_history": {
+    "GEMINI": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 268,
+          "quote": "**Recommendation:** ADOPT Astro Content Collections (`astro:content`) with Strict Schema Validation and Cleaned Four-Route Architecture. DISMISS all archive-derived content, old project tuples, and legacy assets.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**ADOPT**: A clean four-route structure with three section index pages plus the home landing, using Astro's built-in Content Collections (`src/content/config.ts`) for compile-time Markdown frontmatter validation. The existing sample article (`first.md`) is retained in a neutral path and surfaced under a designated \"Sample\" label, leaving section pages with honest, transparent empty states until real pieces are written.",
+          "source_line": 228,
+          "primary": "ADOPT",
+          "section_sha256": "8bd797469101086da819eaeda958f2352b90688597faf4afe38ef25ab52df9fc"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "- **ADOPT:** The lead proposal for exact URL slugs and built-in Astro Content Collections (Zod) for metadata validation.",
+          "source_line": 40
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "DEEPSEEK": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 170,
+          "quote": "**Verdict: INVESTIGATE.** No IA can be honestly produced without fresh Angel facts. I supply a decision framework, a removal/replacement checklist, and an explicit Null.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**Disposition: ADOPT a minimal route/nav/schema plan; DISMISS fake launch pieces, archive skills/project tuples, forced About prose, and invented sample dates; INVESTIGATE built-in Astro collection validation vs owned validation without new packages.**",
+          "source_line": 117,
+          "primary": "ADOPT",
+          "section_sha256": "c8b83e969e54b6bb10b421eafd805c5a8160b9b488d95f18a2a826f32c84b9ba"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "primary": "NON_RESPONSE",
+          "reason": "R3-only authorized DeepSeek omission"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "MISTRAL": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 85,
+          "quote": "**Verdict: INVESTIGATE** — an IA can be proposed but cannot be ratified without fresh Angel-supplied facts. Missing before any copy: identity/role/contact facts, the actual publishable pieces, branch priority, tone, and About content.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**Disposition: ADOPT** a minimal fresh-IA plan.",
+          "source_line": 63,
+          "primary": "ADOPT",
+          "section_sha256": "9203c3bec92a465d1ef6a58ab549b9c02f470f799f9f64a273872b2694935512"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**ADOPT the LEAD PROPOSAL route set** — `/`, `/projects/`, `/harness-research/`, `/university-work/`, `/articles/first/` — with `trailingSlash: 'always'` retained as baseline, local hrefs, no canonical origin/redirects (nothing publicly served; deploy deferred).",
+          "source_line": 55
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "GROK": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 114,
+          "quote": "**ADOPT** purpose-led IA built only from the supplied public short-article purpose (technical project write-ups, `$review` harness research, university/work pieces) plus fresh Angel-supplied facts/pieces. Default to text-only; remove old portrait and all archive-derived claims/assets.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**ADOPT** minimal purpose-led routes that surface short intro + latest writing + three named sections; keep the one accepted sample as undated/sample; fresh identity/contact only; no empty-section filler, no invented dates/projects, no archive content, no analytics.",
+          "source_line": 96,
+          "primary": "ADOPT",
+          "section_sha256": "5223c197b48e28ea3a4502be9081096bb39a0a1ad3ee205ee51ba26c5d267746"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**ADOPT**",
+          "source_line": 9
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "MEMO": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 372,
+          "quote": "ADOPT — minimum owned content schema + removal/replacement checklist + explicit demo-fixture disposition (below).",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "Disposition (minimal route/nav/schema plan below): ADOPT.DISMISS: fake launch pieces, archive identity/skills/project tuples/portrait, a forced About page without supplied prose, duplicate category/tag indexes, RSS/OG/favicon/print/sitemap by default, analytics/trackers/visitor persistence (explicit Null), and any host-level redirect/410/canonical-origin machinery.",
+          "source_line": 479,
+          "primary": "ADOPT",
+          "section_sha256": "4c53db4415544b2839927bc24756d50a389ebc06ee79ffed9fb055bc997cfdbb"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "ADOPT the parallel route set, the built-in collection validation, and the stated invariants as one contract. DISMISS the no-draft model as the primary (retained as a documented alternative only), legacy collection recipes (type:'content', src/content/config.ts), and any absolute canonical origin/redirect/410 policy. INVESTIGATE (local, before adoption): that the retained Astro exposes astro/loaders/astro/zod and the src/content.config.ts shape — the intake records those as lead-inspected; my retrieval did not show those export names, so they are unverified in my session.",
+          "source_line": 141
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "Z.AI": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 364,
+          "quote": "### INVESTIGATE — IA structure depends on Angel's content priority/volume; removal/replacement checklist is executable now",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**ADOPT** an IA with Root (`/`) serving the short intro and latest writing, and distinct routes for `/projects/`, `/harness/`, and `/university-work/`.",
+          "source_line": 88,
+          "primary": "ADOPT",
+          "section_sha256": "09a76a787426fa532aaffb1fbad6e29c3e7d6c8951a410ab4e816ce2924da821"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**ADOPT** Lead Proposal Routes + Built-in Astro Content Collections Validator.",
+          "source_line": 38
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "CLAUDE.AI": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 187,
+          "quote": "**Recommendation:** ADOPT a single `articles` content collection with a section field and a small route set. ADOPT text-only. INVESTIGATE whether URL continuity matters at all.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**Disposition: ADOPT** the structure. **INVESTIGATE** the three short items of section copy, which need Angel.",
+          "source_line": 173,
+          "primary": "ADOPT",
+          "section_sha256": "59f2fecd0c5720a76231426baa0dac653876b985a76c55b6f73eb7e9868e77d5"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**Routes: ADOPT the lead proposal.** `/`, `/projects/`, `/harness-research/`, `/university-work/`, `/articles/first/`, with `trailingSlash: 'always'` and relative hrefs.",
+          "source_line": 190
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "KIMI": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 125,
+          "quote": "Verdict: ADOPT a minimal three-lane article model with explicit route continuity; INVESTIGATE every content fact with Angel before any copy exists.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "Disposition: ADOPT. Smallest structure that implements the accepted facts with zero invention.",
+          "source_line": 103,
+          "primary": "ADOPT",
+          "section_sha256": "cad4e6bbc7eaca04b493208c9fd2068be1253fd0a4aad4b30cdb35eeb5994dce"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "   Verdict: ADOPT — the lead proposal route set as-is: /, /projects/, /harness-research/, /university-work/, /articles/first/, retaining trailingSlash: 'always' and relative/local hrefs. No canonical origin, no redirects, no 410s, no absolute URLs; base-path support deferred with hosting. This resolves the slug split (research/harness variants, work/university-work variants) with a consistent, permanent-word-first scheme: /harness-research/ and /university-work/ are stable, self-describing, and match the accepted nav labels. No duplicate writing index; no forced About.",
+          "source_line": 201
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ],
+    "GPT": [
+      {
+        "round": 1,
+        "record": {
+          "question": "Q5",
+          "source_line": 105,
+          "quote": "Q5 — ADOPT a small validated article model and text-only baseline; INVESTIGATE final labels, routes, and content.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 2,
+        "record": {
+          "question": "Q5",
+          "quote": "**Q5 — ADOPT a home index with three section anchors and the neutral sample**",
+          "source_line": 122,
+          "primary": "ADOPT",
+          "section_sha256": "8bfd6664752660bfec3cab392646dc458e8c150d12a6aed28cc321efaf608b6e"
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      },
+      {
+        "round": 3,
+        "record": {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**Q5 — ADOPT the proposed routes and built-in collection validation with explicit publication control.**",
+          "source_line": 208
+        },
+        "interpretation": "Earlier IA/routes/mechanism scope; not an exact R4 metadata vote."
+      }
+    ]
+  },
+  "source_checks": [
+    {
+      "source": "https://www.typescriptlang.org/tsconfig/noUncheckedIndexedAccess.html",
+      "access": "official live option reference",
+      "finding": "Adds undefined to unchecked index-signature reads; actual project coverage and diagnostics remain later proofs."
+    },
+    {
+      "source": "https://www.typescriptlang.org/tsconfig/noFallthroughCasesInSwitch.html",
+      "access": "official live option reference",
+      "finding": "Flags nonempty falling-through cases; does not prove exhaustiveness."
+    },
+    {
+      "source": "https://pubmed.ncbi.nlm.nih.gov/17510822/",
+      "access": "primary abstract, live 2026-10-12",
+      "finding": "Proofreading performance favors positive polarity; measured physiological strain and reported fatigue/eyestrain did not differ. Counts/durations/device absent in accessed abstract; no exact hex or all-day comfort conclusion."
+    },
+    {
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "access": "primary guidance live",
+      "finding": "4.5:1 ordinary text / 3:1 large text floors are accessibility, not comfort metrics."
+    },
+    {
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "access": "primary guidance live",
+      "finding": "3:1 applicable essential nontext contrast; decorative hairlines cannot convey required state."
+    },
+    {
+      "source": "/Users/aharoj/.repository/portfolio/frontend/node_modules/astro/dist/content/loaders/glob.js",
+      "access": "installed source read lines 11-29 / 74-155",
+      "finding": "Default IDs use supplied slug or normalized source slug; duplicate existing-path IDs throw under prerenderConflictBehavior error, otherwise can warn/ignore before store.set. No universal always-silent collision claim; own raw identity/invariant proof required."
+    }
+  ],
+  "source_corrections": [
+    "No medical benefit, exact best-palette, halation reduction, pure-black inferiority or dark-mode weight claim adopted. Z.AI no-live-source evidence does not prove its numerical/medical claims; DeepSeek alternative claims remain attributed, not current authority.",
+    "Installed retained Astro dictates API/pins; no old type:content, astro:content z recipe, TS5 pin or target override adopted.",
+    "Regex alone accepts Feb 30; Date.UTC constructors special-case years 0-99. Require actual calendar validator later; do not copy snippets blindly.",
+    "Draft exclusion concerns emitted public files, not repository-source confidentiality; the unresolved Mistral condition needs explicit authority before counting."
+  ],
+  "operator_force_disposition": null
+}

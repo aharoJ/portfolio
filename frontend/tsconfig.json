@@ -1,0 +1,31 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "moduleResolution": "Bundler",
+    "verbatimModuleSyntax": true,
+    "allowJs": false,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false
+  },
+  "include": [
+    ".astro/types.d.ts",
+    "src/**/*",
+    "astro.config.ts",
+    "playwright.config.ts",
+    "tests/**/*.ts",
+    "tools/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "test-results",
+    "playwright-report"
+  ]
+}

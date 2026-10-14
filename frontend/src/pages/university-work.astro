@@ -1,0 +1,20 @@
+---
+import Page from '../layouts/Page.astro';
+import { publicArticles } from '../lib/articles.ts';
+const articles = await publicArticles('university-work');
+---
+<Page title="University/Work" description="University/Work writing by Angel J. Haro.">
+  <h1>University/Work</h1>
+  {articles.length === 0 ? (
+    <p>Nothing published here yet.</p>
+  ) : (
+    <ul class="writing">
+      {articles.map(entry => (
+        <li>
+          <a href={`/articles/${entry.id}/`}>{entry.data.title}</a>
+          <p class="muted">{entry.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  )}
+</Page>

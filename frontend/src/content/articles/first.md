@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Article.astro
+status: sample
 title: Start with the reader
 description: A short note on giving an idea room to be understood.
 ---
@@ -14,4 +14,4 @@ Good writing needs space. Keep the lines comfortable, let the headings guide the
 
 A small beginning is enough. Publish one complete thought, see how it reads, and build from there.
 
-[Back to all articles](/articles/)
+[Back to writing](/)

@@ -1,0 +1,646 @@
+{
+  "schema_version": "1.0",
+  "topic": "frontend-foundations",
+  "cycle_type": "research",
+  "round": 1,
+  "verdicts": {
+    "Q1": {
+      "raw_primary_recommendations": {
+        "ADOPT": 9,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "locked": true,
+      "scope": "Q1 bounded minimum-strict/checking/migration core only; Q2 styling method only; conditional recipes for Q3-Q5 not final decisions",
+      "robust_majority_after_any_single_removal": true
+    },
+    "Q2": {
+      "raw_primary_recommendations": {
+        "ADOPT": 9,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 9,
+      "locked": true,
+      "scope": "Q1 bounded minimum-strict/checking/migration core only; Q2 styling method only; conditional recipes for Q3-Q5 not final decisions",
+      "robust_majority_after_any_single_removal": true
+    },
+    "Q3": {
+      "raw_primary_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 1
+      },
+      "active_panel": 9,
+      "locked": false,
+      "scope": "Q1 bounded minimum-strict/checking/migration core only; Q2 styling method only; conditional recipes for Q3-Q5 not final decisions",
+      "robust_majority_after_any_single_removal": false
+    },
+    "Q4": {
+      "raw_primary_recommendations": {
+        "ADOPT": 1,
+        "DISMISS": 0,
+        "INVESTIGATE": 8
+      },
+      "active_panel": 9,
+      "locked": false,
+      "scope": "Q1 bounded minimum-strict/checking/migration core only; Q2 styling method only; conditional recipes for Q3-Q5 not final decisions",
+      "robust_majority_after_any_single_removal": false
+    },
+    "Q5": {
+      "raw_primary_recommendations": {
+        "ADOPT": 6,
+        "DISMISS": 0,
+        "INVESTIGATE": 3
+      },
+      "active_panel": 9,
+      "locked": false,
+      "scope": "Q1 bounded minimum-strict/checking/migration core only; Q2 styling method only; conditional recipes for Q3-Q5 not final decisions",
+      "robust_majority_after_any_single_removal": false
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": false,
+    "locked_decisions_robust_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "open-follow-up",
+  "action": "roll",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "responded": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "distinct_sources": 9,
+    "pastes_received": 9,
+    "non_response": []
+  },
+  "panel_set_notes": [
+    "Authorized web paste only; no agentic/C51 dispatch. Effective web identities unknown; no independent-family credit.",
+    "Gemini corrected by Angel gemini fixed (#v6r3); original intake-equivalent body superseded operator paste error, not model echo.",
+    "One vote per seat; MEMO/KIMI thinking/search preambles are retained but contribute no extra votes."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-12T02:40:42Z",
+  "decisions_locked": 2,
+  "investigate": 4,
+  "decisions": {
+    "Q1-core": "ADOPT at least strict Astro TS checking, full typed migration/fresh data replacement, compatible typescript + @astrojs/check development tooling, proven coverage, no silent JS retention",
+    "Q2": "ADOPT plain scoped/global CSS with small owned tokens/utilities; zero new styling dependencies; Tailwind not selected for current scope"
+  },
+  "open_follow_ups": [
+    "Q1a stronger flags, compatible versions and minimal sufficient command",
+    "Q3 actual viewport/50-50/browser/navigation acceptance",
+    "Q4 fresh visual direction and measured budgets",
+    "Q5 final IA/schema/routes/fresh content"
+  ],
+  "ballots": [
+    {
+      "seat": "GEMINI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/GEMINI.md",
+      "sha256": "9d05259987d94b4634ced823ad5d151a3be00b0921c94c76b4b799f03fd5c3bc",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 4,
+          "quote": "**Recommendation:** ADOPT Minimal Strict Astro TypeScript Setup (`@astrojs/check` + `typescript` with `astro/tsconfigs/strict`). DISMISS ad-hoc/unverified JSDoc casting and loose `base` tsconfig presets.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 76,
+          "quote": "**Recommendation:** ADOPT Astro Built-in Scoped CSS with an Owned Token System (`src/styles/tokens.css`). DISMISS Tailwind CSS and third-party CSS-in-JS runtimes.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 158,
+          "quote": "**Recommendation:** ADOPT Fluid Content-Driven Viewport Architecture with Dual Target Verification (1280px/1440px Laptop and 360px/390px Mobile, with 320px Stress Boundary).",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 219,
+          "quote": "**Recommendation:** ADOPT an Owned \"Content-Led Technical Dossier\" Direction with System Font Typography and WCAG AAA Contrast. INVESTIGATE Operator Aesthetic Tone.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 268,
+          "quote": "**Recommendation:** ADOPT Astro Content Collections (`astro:content`) with Strict Schema Validation and Cleaned Four-Route Architecture. DISMISS all archive-derived content, old project tuples, and legacy assets.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "DEEPSEEK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/DEEPSEEK.md",
+      "sha256": "8052b72f4ddd36bd56d217606dfbebb3de8a786e5b7c1003da9ab84a2e21173d",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 12,
+          "quote": "**Verdict: ADOPT** the minimal strict Astro/TS project setup, with a documented escalation path to stricter flags. Not TS-vs-JS; the language decision is fixed and I retain it explicitly.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 52,
+          "quote": "**Verdict: ADOPT** plain Astro-scoped/global CSS with a small owned token/utility convention. **DISMISS** Tailwind as unjustified for this scope. **INVESTIGATE** only if a concrete missing capability is named.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 89,
+          "quote": "**Verdict: INVESTIGATE.** Numeric CSS targets cannot be finalized without Angel's actual browser `innerWidth`/`innerHeight`/zoom. I can propose a provisional matrix and a content-driven breakpoint method, but I cannot convert the 14-inch diagonal or \"50/50\" into accepted constraints.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 128,
+          "quote": "**Verdict: INVESTIGATE.** A direction cannot be chosen without Angel's audience priority, tone, visual references (none from the archive), and portrait decision. I present two purpose-led candidate directions and proposed budgets; I do not choose Georgia/cream/single-column or any other default.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 170,
+          "quote": "**Verdict: INVESTIGATE.** No IA can be honestly produced without fresh Angel facts. I supply a decision framework, a removal/replacement checklist, and an explicit Null.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "MISTRAL",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/MISTRAL.md",
+      "sha256": "81ae09bb268b5bacbad851e401208d8946ffa7126de2c73c1b0d18cd8df7be2a",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 7,
+          "quote": "**Verdict: ADOPT** \u2014 minimal strict `tsconfig` + `astro check`, with a phased stricter follow-up. The operator's TypeScript requirement is fixed and controlling; this is a setup question only.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 30,
+          "quote": "**Verdict: ADOPT (Null)** \u2014 plain CSS with Astro-scoped styles plus a small owned token layer (`src/styles/tokens.css`, imported once, all component CSS scoped by default). **DISMISS Tailwind** for now.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 48,
+          "quote": "**Verdict: ADOPT the two-tier laptop-first strategy as proposed; record it as proposed targets, not accepted constraints, until Angel confirms actual browser innerWidth/innerHeight/zoom.**",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 66,
+          "quote": "**Verdict: INVESTIGATE** \u2014 two bounded candidates, gated on missing operator input. No direction can be selected without Angel's priority/taste facts; flag these explicitly before any copy or palette:",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 85,
+          "quote": "**Verdict: INVESTIGATE** \u2014 an IA can be proposed but cannot be ratified without fresh Angel-supplied facts. Missing before any copy: identity/role/contact facts, the actual publishable pieces, branch priority, tone, and About content.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "GROK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/GROK.md",
+      "sha256": "92a731d2b7b28198138c490797b3ab30eb94039976193f0545cabe32886e7d17",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 7,
+          "quote": "**ADOPT** minimal strict Astro/TS project setup (extend `astro/tsconfigs/strict` or `strictest`; add explicit type-check command and coverage for `.astro`/standalone `.ts`/config/tests/Markdown-bound metadata). Phased stricter setup is a viable alternative only if migration friction appears high; start with strict and promote selected flags.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 33,
+          "quote": "**ADOPT** plain Astro-scoped/global CSS with a small owned token/utility convention (CSS custom properties for colors/spacing/type scale + a few reusable utility classes or mixins if needed).",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 61,
+          "quote": "**ADOPT** content-driven breakpoints against confirmed CSS viewports, with laptop as primary design target and mobile as full second-class citizen (not an afterthought). Proposed confirmation targets (operator must supply actual browser innerWidth/innerHeight/zoom): laptop 1280\u00d7800 and 1440\u00d7900; mobile 360\u00d7800 and 390\u00d7844; 320 px as stress/minimum boundary. Existing 320\u00d7900 / 1280\u00d7900 functional matrix remains baseline only.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 85,
+          "quote": "**INVESTIGATE / ADOPT direction only after operator priority and taste input.** Two purpose-led candidates (neither chosen yet):",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 114,
+          "quote": "**ADOPT** purpose-led IA built only from the supplied public short-article purpose (technical project write-ups, `$review` harness research, university/work pieces) plus fresh Angel-supplied facts/pieces. Default to text-only; remove old portrait and all archive-derived claims/assets.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "MEMO",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/MEMO.md",
+      "sha256": "534a13fac5fdd6bace0788d5de55dd78780f548dde6c1ddee956cdb554578bf1",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 218,
+          "quote": "ADOPT \u2014 minimal strict setup: tsconfig.json extending Astro's strict preset + astro check/tsc --noEmit gate + full .mjs \u2192 .ts migration (Phase 1).",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 271,
+          "quote": "ADOPT \u2014 Astro-scoped CSS + one owned token layer (global :root custom properties) + tiny owned utility classes only where a pattern repeats \u22653\u00d7.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 307,
+          "quote": "ADOPT (strategy) \u2014 mobile-first fluid baseline, single-column reading core (fits \"short articles\"), content-driven breakpoints, both targets as first-class acceptance surfaces.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 341,
+          "quote": "INVESTIGATE (gated on M1, M5, M6, M10) \u2014 cannot ratify a visual direction without Angel's priority/tone input. This is the correct answer: the intake itself forbids inventing taste.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 372,
+          "quote": "ADOPT \u2014 minimum owned content schema + removal/replacement checklist + explicit demo-fixture disposition (below).",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "Z.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/Z.AI.md",
+      "sha256": "74c23365547f4fac4921ab87ef96a3c9e55fbb2c68b574bdfcb00be90554c6e6",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 10,
+          "quote": "### ADOPT \u2014 Minimal strict Astro/TS setup, full `.mjs`\u2192`.ts` migration, zero silent JS retention",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 82,
+          "quote": "### ADOPT \u2014 Astro-scoped CSS + owned custom-property token convention (zero new dependencies)",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 171,
+          "quote": "### ADOPT \u2014 Content-driven breakpoints, laptop-primary and mobile-secondary design targets, with explicit CSS-pixel confirmation pending from operator",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 247,
+          "quote": "### INVESTIGATE \u2014 Two directions require operator priority/taste input; no direction is locked without it",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 364,
+          "quote": "### INVESTIGATE \u2014 IA structure depends on Angel's content priority/volume; removal/replacement checklist is executable now",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "CLAUDE.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/CLAUDE.AI.md",
+      "sha256": "8caad26a158e34f1f51df7624962c15524130e5a4f08f1d0c1dbd043ea1ebca8",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 25,
+          "quote": "**Recommendation:** ADOPT a one-step strict setup with full migration. INVESTIGATE `strictest` versus `strict` with a single trial run. DISMISS a phased setup, because the codebase is too small to need phasing. The TS premise is retained.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 77,
+          "quote": "**Recommendation:** ADOPT plain CSS with an owned token file, cascade layers, and Astro-scoped component styles. DISMISS Tailwind for now. DISMISS any component library.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 108,
+          "quote": "**Recommendation:** ADOPT the proposed matrix as provisional. INVESTIGATE the actual laptop dimensions before any visual implementation.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 146,
+          "quote": "**Recommendation:** INVESTIGATE. The direction cannot be selected without Angel's priority and taste input. ADOPT the measurable primitives and budgets below, which hold for either direction.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 187,
+          "quote": "**Recommendation:** ADOPT a single `articles` content collection with a section field and a small route set. ADOPT text-only. INVESTIGATE whether URL continuity matters at all.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "KIMI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/KIMI.md",
+      "sha256": "f10945435aef7c01e5da92c399b20ae8dd169f8aad02d665a32cf32916234f75",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 63,
+          "quote": "Verdict: ADOPT a single-phase strict setup, not a phased one. Phasing buys almost nothing on a five-route static site with a handful of .mjs files; the migration cost is dominated by writing the types once, and a \"loose now, strict later\" plan tends to leave strict: false as a permanent untraced default \u2014 the exact failure mode this corrective round exists to fix.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 82,
+          "quote": "Verdict: ADOPT plain Astro CSS with a small owned token/utility convention (option 2). DISMISS Tailwind for this project, and dismiss any third option as unneeded \u2014 neither the token approach nor Tailwind has a demonstrated missing-capability gap here.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 95,
+          "quote": "Verdict: ADOPT laptop-first content-driven breakpoints with two full design targets and 320px as an enforced floor. INVESTIGATE the exact CSS pixel width/zoom of Angel's 14-inch laptop \u2014 the intake is right that a physical diagonal fixes nothing.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 108,
+          "quote": "Verdict: INVESTIGATE \u2014 not because the work is unclear, but because every substantive input is an operator fact that does not exist yet. I can specify the decision structure and measurable criteria; I will not pick Angel's palette, typeface, or landing direction for him (the intake explicitly forbids it). The strongest recommendation I can make is to present exactly two directions for a forced small choice, plus the Null.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 125,
+          "quote": "Verdict: ADOPT a minimal three-lane article model with explicit route continuity; INVESTIGATE every content fact with Angel before any copy exists.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    },
+    {
+      "seat": "GPT",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-fixed/GPT.md",
+      "sha256": "ab6efabeb1faadddc9e43767a14f34eed78392e4dda75f3a2ef42e8aecd17d89",
+      "records": [
+        {
+          "question": "Q1",
+          "source_line": 3,
+          "quote": "Q1 \u2014 ADOPT a minimal strict TypeScript setup; INVESTIGATE version compatibility before selecting package versions.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q2",
+          "source_line": 33,
+          "quote": "Q2 \u2014 ADOPT scoped/global plain CSS with a small owned token convention; DISMISS Tailwind for this scope unless a concrete need emerges.",
+          "raw_primary": "ADOPT",
+          "core_support": true,
+          "contingent_final_choice": false
+        },
+        {
+          "question": "Q3",
+          "source_line": 52,
+          "quote": "   Q3 \u2014 ADOPT equal acceptance criteria for laptop and mobile; INVESTIGATE actual target dimensions.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q4",
+          "source_line": 74,
+          "quote": "   Q4 \u2014 INVESTIGATE two bounded visual directions; ADOPT accessibility and budget proposals for ratification.",
+          "raw_primary": "INVESTIGATE",
+          "core_support": false,
+          "contingent_final_choice": true
+        },
+        {
+          "question": "Q5",
+          "source_line": 105,
+          "quote": "Q5 \u2014 ADOPT a small validated article model and text-only baseline; INVESTIGATE final labels, routes, and content.",
+          "raw_primary": "ADOPT",
+          "core_support": false,
+          "contingent_final_choice": true
+        }
+      ]
+    }
+  ],
+  "every_single_removal": [
+    {
+      "removed": "GEMINI",
+      "active_remaining": 8,
+      "Q1_core_support": 8,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "DEEPSEEK",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "MISTRAL",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "GROK",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "MEMO",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "Z.AI",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "CLAUDE.AI",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "KIMI",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    },
+    {
+      "removed": "GPT",
+      "active_remaining": 8,
+      "Q1_core_support": 7,
+      "Q2_support": 8,
+      "active_majority": true,
+      "conservative_authorized_remaining": 8,
+      "conservative_majority": true
+    }
+  ],
+  "semantic_limits": "Primary labels do not exhaust mixed option recommendations. Q3 ADOPT is conditional strategy, Q4 final direction INVESTIGATE, Q5 ADOPT model/removal/text-only while final IA/facts open. Secondary D/I remain in raw source, no extra votes. Q1 minimum strict core locks; extra flags/version/command sufficiency open Q1a.",
+  "gemini_semantics": "Strict/checker core support; full-migration support excluded because astro.config.mjs retention offered without accepted exception. Q3/Q4/Q5 ADOPT recipes do not approve operator taste/facts. Gemini proposed package pins, moduleResolution:node, palette/contrast/Lighthouse/feed requirements not locked.",
+  "Q1_exact_core_support": 8,
+  "Q2_exact_support": 9,
+  "independent_second_derivation": {
+    "method": "Reverse-order final-section source-anchor extraction and count derivation compared to hand semantic matrix; exhaustive removal arithmetic",
+    "result": "zero differences",
+    "identity": "Same lead, two methods; no independent-agent/model/family claim"
+  },
+  "evidence": {
+    "analysis": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R1-FINAL-ANALYSIS.json",
+    "split": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R1-FINAL-SPLIT-MANIFEST.json",
+    "raw_source_sha256": "836baf488ec492cd0e3e5cd12acb7e9d5dd19aa4a08ffa800a95739829d22ea9",
+    "intake_sha256": "08fcb89dad3a62a6d6e05a2f0a42e969d8cbc90e0a3af3ccd6b2943294e94401",
+    "paste_correction_authority": "~/desk/tmp/relay/2f7f3033.md"
+  }
+}

@@ -1,0 +1,553 @@
+{
+  "schema_version": "1.0",
+  "topic": "frontend-foundations",
+  "cycle_type": "research",
+  "round": 3,
+  "verdicts": {
+    "Q1": {
+      "raw_primary_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "semantic_limits": "Primary ADOPT is not an exact specification majority. Whole profiles remain3/2/1/1/1; do not concatenate flag majorities into fake whole-profile support. Gemini label conflicts with exact named list/code; no guessed indexed support. Q5 route/validator robust, precise sample/draft date/section/key semantics still differ. Q4 exact A is OPERATOR PICK, not8/8same visual spec."
+    },
+    "Q4": {
+      "raw_primary_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "semantic_limits": "Primary ADOPT is not an exact specification majority. Whole profiles remain3/2/1/1/1; do not concatenate flag majorities into fake whole-profile support. Gemini label conflicts with exact named list/code; no guessed indexed support. Q5 route/validator robust, precise sample/draft date/section/key semantics still differ. Q4 exact A is OPERATOR PICK, not8/8same visual spec."
+    },
+    "Q5": {
+      "raw_primary_recommendations": {
+        "ADOPT": 8,
+        "DISMISS": 0,
+        "INVESTIGATE": 0
+      },
+      "active_panel": 8,
+      "semantic_limits": "Primary ADOPT is not an exact specification majority. Whole profiles remain3/2/1/1/1; do not concatenate flag majorities into fake whole-profile support. Gemini label conflicts with exact named list/code; no guessed indexed support. Q5 route/validator robust, precise sample/draft date/section/key semantics still differ. Q4 exact A is OPERATOR PICK, not8/8same visual spec."
+    }
+  },
+  "predicates": {
+    "all_decisions_locked": false,
+    "open_follow_up_questions": true,
+    "research_cap_reached": false,
+    "locked_decisions_robust_after_any_single_removal": true,
+    "source_and_scope_check_complete": true
+  },
+  "selected_branch": "open-follow-up",
+  "action": "roll",
+  "cap": 4,
+  "hard_cap_override_state": "not_applicable",
+  "panel": {
+    "dispatched": [
+      "GEMINI",
+      "DEEPSEEK",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "responded": [
+      "GEMINI",
+      "MISTRAL",
+      "GROK",
+      "MEMO",
+      "Z.AI",
+      "CLAUDE.AI",
+      "KIMI",
+      "GPT"
+    ],
+    "distinct_sources": 8,
+    "pastes_received": 9,
+    "non_response": [
+      "DEEPSEEK"
+    ]
+  },
+  "panel_set_notes": [
+    "R3only operator waiver: DeepSeek note verbatim broke dont count as a seat; provider A message is being generated, please try again later.; excluded active denominator, preserved raw.",
+    "Eight substantive web responses; model/profile identities unknown, no family credit; thinking/search preambles no extra votes. No agentic/C51dispatch.",
+    "#v6p1 received during resolve: exactAvisual package selected by Angel, not panel8/8same-values vote. New eye-comfort palette research requested, Null=Apalettes."
+  ],
+  "cited_constraints": [],
+  "planned_constraint_appends": [],
+  "findings": [],
+  "timestamp": "2026-10-12T05:04:11Z",
+  "decisions_locked": 5,
+  "investigate": 3,
+  "decisions": {
+    "carried": [
+      "Q1strict/migrationcore",
+      "Q2ownedCSS",
+      "Q3equalquality",
+      "Q5launchcore"
+    ],
+    "refinements": {
+      "Q1_command": "astro check initially with explicit inclusion and isolated per-class negative probes; repair includes first, targeted tsc only proven remaining gap.8/8",
+      "Q5_routes": "/,/projects/,/harness-research/,/university-work/,/articles/first/; future section-independent details /articles/<id>/; always slash/local href/noorigin/deploy.8/8",
+      "Q5_validator": "existing built-in Astro collection glob+schema, no new direct parser/schema package; later localAPI/build proof; owned cross-entry/output checks as needed.7/8primary+1conditional, worst6/7",
+      "Q4": "A Quiet exact package selected by Angel verbatim #v6p1; source OPERATOR-Q4-PICK.md, Q4-FINAL-PICK.md. New palette refinement requested, Null=A palettes; all otherAvalues fixed."
+    }
+  },
+  "open_follow_ups": [
+    "Q1a exact named stronger flag profile",
+    "Q4a operator-requested eye-comfort palette refinement within A/no-accent, Null=A exact palettes",
+    "Q5a precise sample/draft/published metadata, date/key validation refinements"
+  ],
+  "ballots": [
+    {
+      "seat": "GEMINI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/GEMINI.md",
+      "sha256": "1c059e5219cc2a55d90bb342b3e691b7d2115b60c17e2918fa7795dff330611f",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "- **ADOPT:** Indexed exact-optional flags (`noUnusedLocals`, `noUnusedParameters`, `noImplicitReturns`, `noFallthroughCasesInSwitch`) added to the strict core.",
+          "source_line": 5
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "- **ADOPT:** The following coherent 8-point specification to achieve the \"bleeding modern,\" high-end aesthetic requested in #v6d1, using 0 browser JS, 0 custom fonts, and owned CSS.",
+          "source_line": 21
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "- **ADOPT:** The lead proposal for exact URL slugs and built-in Astro Content Collections (Zod) for metadata validation.",
+          "source_line": 40
+        }
+      ],
+      "flags": [
+        "noUnusedLocals",
+        "noUnusedParameters",
+        "noImplicitReturns",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    },
+    {
+      "seat": "MISTRAL",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/MISTRAL.md",
+      "sha256": "3fcc271bef142f800d834b9678cfaea9f50c4bcd70f44bbf4efe5c613c245a30",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "**ADOPT: (A) single `astro check` first, with explicit `include`/`exclude` and per-class negative probes; add `tsc` only on a documented uncovered class. Optional flags: `noUncheckedIndexedAccess` ADOPT; `exactOptionalPropertyTypes` Null for now (later trial probe); `noFallthroughCasesInSwitch`/`noUnusedLocals` optional INVESTIGATE.**",
+          "source_line": 11
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "**ADOPT (one coherent spec; alternative noted only at item 2 and 7):**",
+          "source_line": 36
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**ADOPT the LEAD PROPOSAL route set** \u2014 `/`, `/projects/`, `/harness-research/`, `/university-work/`, `/articles/first/` \u2014 with `trailingSlash: 'always'` retained as baseline, local hrefs, no canonical origin/redirects (nothing publicly served; deploy deferred).",
+          "source_line": 55
+        }
+      ],
+      "flags": [
+        "noUncheckedIndexedAccess"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "conditional-built-in"
+    },
+    {
+      "seat": "GROK",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/GROK.md",
+      "sha256": "4d5c181d2773dd340e5f4dffd54d81cd0e514c0959b0216f3225aaa7c080b3d0",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "**ADOPT**",
+          "source_line": 9
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "**ADOPT** one coherent owned-CSS specification (no new packages, system fonts only, zero motion by default).",
+          "source_line": 74
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**ADOPT**",
+          "source_line": 9
+        }
+      ],
+      "flags": [
+        "noUncheckedIndexedAccess",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    },
+    {
+      "seat": "MEMO",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/MEMO.md",
+      "sha256": "8ccbf081d3e41f6179f27945313c07518f285a038569dd4eab207de9dd730d53",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "Stronger flags: noUnusedLocals + noUnusedParameters + noFallthroughCasesInSwitch (on top of locked strict) ADOPT one named set",
+          "source_line": 26
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "ADOPT the complete specification below as one package (all values proposals; the direction itself is Angel's and is not mine to re-choose). DISMISS as elements of it: viewport-scaled type (clamp(...vw...)), any accent color in the base, any transition/animation/smooth-scroll, downloaded fonts, the inherited uppercase-eyebrow system, and the inherited 46rem/Georgia/cream values (all explicitly not inherited). INVESTIGATE (implementation-time): re-running my hand-computed contrast values, real-device rendering of the system stack, forced-colors behavior, and Angel's rendered acceptance.",
+          "source_line": 67
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "ADOPT the parallel route set, the built-in collection validation, and the stated invariants as one contract. DISMISS the no-draft model as the primary (retained as a documented alternative only), legacy collection recipes (type:'content', src/content/config.ts), and any absolute canonical origin/redirect/410 policy. INVESTIGATE (local, before adoption): that the retained Astro exposes astro/loaders/astro/zod and the src/content.config.ts shape \u2014 the intake records those as lead-inspected; my retrieval did not show those export names, so they are unverified in my session.",
+          "source_line": 141
+        }
+      ],
+      "flags": [
+        "noUnusedLocals",
+        "noUnusedParameters",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    },
+    {
+      "seat": "Z.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/Z.AI.md",
+      "sha256": "fad868458fa4ed9fb24dfe4cd4fd6d64a0d939b4123638b569adbe10d40e8bb8",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "**ADOPT** Policy A (Primary `astro check`, add `tsc` only for documented gaps).",
+          "source_line": 6
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "**ADOPT** System-Font Narrow-Column Monochrome Specification.",
+          "source_line": 21
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**ADOPT** Lead Proposal Routes + Built-in Astro Content Collections Validator.",
+          "source_line": 38
+        }
+      ],
+      "flags": [
+        "noUnusedLocals",
+        "noUnusedParameters",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    },
+    {
+      "seat": "CLAUDE.AI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/CLAUDE.AI.md",
+      "sha256": "6a89993cd31ab169589a2253fc47a79079aa38844903d5d35f7ac9ed0b3878be",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "**Primary vote: ADOPT option (A), conditional single checker.** The bounded flag set is `strict` plus `noUncheckedIndexedAccess` plus `noFallthroughCasesInSwitch`. This moves me from my R2 strictest-trial minority onto a bounded set; the strictest comparison becomes a one-time probe.",
+          "source_line": 12
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "**Primary vote: ADOPT the specification below.** Its idea is that restraint comes from one size, one family, one column and no ornament. It reads as refined through rhythm and contrast discipline rather than effects. No leerob.com values were copied, and I did not browse it this round.",
+          "source_line": 50
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**Routes: ADOPT the lead proposal.** `/`, `/projects/`, `/harness-research/`, `/university-work/`, `/articles/first/`, with `trailingSlash: 'always'` and relative hrefs.",
+          "source_line": 190
+        }
+      ],
+      "flags": [
+        "noUncheckedIndexedAccess",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    },
+    {
+      "seat": "KIMI",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/KIMI.md",
+      "sha256": "fe8e7f88599bff84dff53db7190764f9824fed00243ac3a0dac628b6299dc44c",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "Verdict: ADOPT (A) \u2014 single astro check as the standing checker, plus a bounded named flag set. The operator TS premise is retained unconditionally; nothing here reopens JS-vs-TS (that question does not exist).",
+          "source_line": 132
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "Verdict: ADOPT \u2014 one coherent specification below; the operator's ultra-minimal direction is fixed and everything here serves it. No A/B/C, no leerob.com copying, no percentile/\"high-end\" certification claims. All numeric values are proposals pending ratified resolution + implementation evidence, not locks.",
+          "source_line": 157
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "   Verdict: ADOPT \u2014 the lead proposal route set as-is: /, /projects/, /harness-research/, /university-work/, /articles/first/, retaining trailingSlash: 'always' and relative/local hrefs. No canonical origin, no redirects, no 410s, no absolute URLs; base-path support deferred with hosting. This resolves the slug split (research/harness variants, work/university-work variants) with a consistent, permanent-word-first scheme: /harness-research/ and /university-work/ are stable, self-describing, and match the accepted nav labels. No duplicate writing index; no forced About.",
+          "source_line": 201
+        }
+      ],
+      "flags": [
+        "noUncheckedIndexedAccess",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    },
+    {
+      "seat": "GPT",
+      "source": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/responses-r3/GPT.md",
+      "sha256": "8de4560517e53c0f3d183d37cd0b539993d137f6c5cba2ede76548191083838b",
+      "records": [
+        {
+          "question": "Q1",
+          "primary": "ADOPT",
+          "quote": "**Q1 \u2014 ADOPT strict with four additional checks and command policy A.** TypeScript remains an operator requirement, not a ballot choice.",
+          "source_line": 13
+        },
+        {
+          "question": "Q4",
+          "primary": "ADOPT",
+          "quote": "**Q4 \u2014 ADOPT the following exact visual proposal.** Its intended refinement comes from typography, alignment, whitespace, and clear reading hierarchy. It preserves the three visible section links and honest empty pages.",
+          "source_line": 77
+        },
+        {
+          "question": "Q5",
+          "primary": "ADOPT",
+          "quote": "**Q5 \u2014 ADOPT the proposed routes and built-in collection validation with explicit publication control.**",
+          "source_line": 208
+        }
+      ],
+      "flags": [
+        "noUncheckedIndexedAccess",
+        "exactOptionalPropertyTypes",
+        "noImplicitOverride",
+        "noFallthroughCasesInSwitch"
+      ],
+      "command": "A-conditional-single",
+      "exact_routes": "lead-five-route-set",
+      "validator": "built-in"
+    }
+  ],
+  "exact_profile_counts": {
+    "exactOptionalPropertyTypes | noFallthroughCasesInSwitch | noImplicitOverride | noUncheckedIndexedAccess": 1,
+    "noFallthroughCasesInSwitch | noUncheckedIndexedAccess": 3,
+    "noFallthroughCasesInSwitch | noImplicitReturns | noUnusedLocals | noUnusedParameters": 1,
+    "noFallthroughCasesInSwitch | noUnusedLocals | noUnusedParameters": 2,
+    "noUncheckedIndexedAccess": 1
+  },
+  "every_single_removal": [
+    {
+      "removed": "GEMINI",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 3,
+        "indexed_flag": 5,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "MISTRAL",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 7,
+        "exact_two_flag_profile": 3,
+        "indexed_flag": 4,
+        "fallthrough_flag": 7
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "GROK",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 2,
+        "indexed_flag": 4,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "MEMO",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 3,
+        "indexed_flag": 5,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "Z.AI",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 3,
+        "indexed_flag": 5,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "CLAUDE.AI",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 2,
+        "indexed_flag": 4,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "KIMI",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 2,
+        "indexed_flag": 4,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    },
+    {
+      "removed": "GPT",
+      "denominator": 7,
+      "support": {
+        "commandA": 7,
+        "exact_routes": 7,
+        "builtin_primary": 6,
+        "exact_two_flag_profile": 3,
+        "indexed_flag": 4,
+        "fallthrough_flag": 6
+      },
+      "majority": {
+        "commandA": true,
+        "exact_routes": true,
+        "builtin_primary": true,
+        "exact_two_flag_profile": false,
+        "indexed_flag": true,
+        "fallthrough_flag": true
+      }
+    }
+  ],
+  "independent_second_derivation": {
+    "method": "Hand semantic reading vs reverse final-section anchors/counts/full-profile set counts and independent active-seat removal arithmetic",
+    "result": "zero differences",
+    "identity": "Same lead/two methods, no separate-agent/model/family claim"
+  },
+  "operator_pick": "# #v6p1 v0.6 Q4 operator pick (Angel, 2026-10-11, verbatim)\nCC presented Q4-FINAL-PICK.md A (Quiet, Claude.ai) vs B (Clearer, GPT), rendered at https://claude.ai/artifact/26CS55WU2dtJDfgKYzSYRo v3.\nAngel replied: \"A bro is much much cleaner cuz its quiet soft on the eyes... we want to conduct reseach on the best colors for the eyes for long steering at a screen but I am thinking naturally to go for a darker shade you know? but for now I am cool with A\"\nCC reading:\n- Q4 = A (Quiet) exact package selected now: type, 34rem width, spacing, light and dark palettes, nav, no motion, budgets.\n- New operator research request: eye-comfort palette for long reading sessions, with Angel leaning toward a darker shade. Null = A's exact palettes as picked. Must stay within the ultra-minimal, no-accent direction and contrast rules; evidence-based (readability/visual-fatigue research, contrast/halation trade-offs of dark vs light, pure-black vs dark-grey, text-weight in dark mode), no taste assertions presented as science.\n",
+  "evidence": {
+    "analysis": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R3-ANALYSIS.json",
+    "split": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/R3-SPLIT-MANIFEST.json",
+    "raw_sha256": "d919f4165cce7bdc1b352df8c833a1718bf82a84b411b9305808a58f408e771b",
+    "intake_sha256": "7b03651d84e13839fb516ca20ce1db53780d9934ecdfaa5eea16e183496cc3e3",
+    "Q4palettecontrast": "/Users/aharoj/desk/tmp/portfolio/v0.6-foundations/Q4-PICK-CONTRAST.json",
+    "authority": [
+      "BRIEF-codex-5.md",
+      "~/desk/tmp/relay/d7ff417e.md"
+    ]
+  }
+}

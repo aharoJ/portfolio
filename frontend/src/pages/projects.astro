@@ -1,12 +1,20 @@
 ---
 import Page from '../layouts/Page.astro';
-import { projects } from '../data/portfolio.mjs';
-const categories = [...new Set(projects.map(project => project.category))];
+import { publicArticles } from '../lib/articles.ts';
+const articles = await publicArticles('projects');
 ---
-<Page title="Projects" description="Projects by Angel Jair Haro, grouped by category.">
+<Page title="Projects" description="Projects writing by Angel J. Haro.">
   <h1>Projects</h1>
-  {categories.map(category => <section aria-label={category}>
-    <h2>{category}</h2>
-    <ul>{projects.filter(project => project.category === category).map(project => <li><a href={project.href}>{project.title}</a></li>)}</ul>
-  </section>)}
+  {articles.length === 0 ? (
+    <p>Nothing published here yet.</p>
+  ) : (
+    <ul class="writing">
+      {articles.map(entry => (
+        <li>
+          <a href={`/articles/${entry.id}/`}>{entry.data.title}</a>
+          <p class="muted">{entry.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  )}
 </Page>

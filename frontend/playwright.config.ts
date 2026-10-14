@@ -1,11 +1,12 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
-const port = process.env.PORTFOLIO_TEST_PORT ?? '4173';
+const port = process.env.PORTFOLIO_TEST_PORT ?? "4173";
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
+  testMatch: "static.spec.ts",
   use: {
-    browserName: 'chromium',
+    browserName: "chromium",
     baseURL: `http://127.0.0.1:${port}`,
     javaScriptEnabled: false,
   },

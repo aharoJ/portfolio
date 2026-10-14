@@ -1,13 +1,17 @@
 ---
 import Page from './Page.astro';
-
+import type { ArticleData } from '../lib/article-contract.ts';
 interface Props {
-  frontmatter: { title: string; description: string };
+  data: ArticleData;
 }
-
-const { title, description } = Astro.props.frontmatter;
+const { data } = Astro.props;
 ---
-
-<Page title={title} description={description}>
-  <article><slot /></article>
+<Page title={data.title} description={data.description}>
+  <article>
+    {data.status === 'sample' && <p class="sample">Sample article</p>}
+    {data.status === 'published' && (
+      <p><time datetime={data.date}>{data.date}</time></p>
+    )}
+    <slot />
+  </article>
 </Page>
