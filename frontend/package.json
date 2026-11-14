@@ -18,7 +18,7 @@
     "test:acceptance": "npm run test:unit && npm run prove:contracts && playwright test"
   },
   "dependencies": {
-    "astro": "^7.3.5"
+    "astro": "^7.4.7"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
